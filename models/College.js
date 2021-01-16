@@ -115,4 +115,5 @@ const schema = new mongoose.Schema({
     }
 });
 
+
 module.exports = Post = mongoose.model('College', schema);
