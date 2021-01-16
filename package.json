@@ -1,0 +1,24 @@
+{
+  "name": "meuni",
+  "version": "1.0.0",
+  "description": "A MeUni é uma plataforma gameficada que tem como objetivo agrupar e disponibilizar informações sobre o acesso e permanência em instituições de ensino superior de forma colaborativa. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrohb88/meuni.git"
+  },
+  "keywords": [
+    "universidade",
+    "educação",
+    "jovens"
+  ],
+  "author": "Camilla Maia, Cecília Braz, Diana de Sales, Pedro Leal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrohb88/meuni/issues"
+  },
+  "homepage": "https://github.com/pedrohb88/meuni#readme"
+}
