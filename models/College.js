@@ -115,9 +115,4 @@ const schema = new mongoose.Schema({
     }
 });
 
-schema.pre('validate', function(next) {
-    if (this.location.length > 1) throw("Uma instituição só pode estar localizada em um lugar.");
-    next();
-});
-
 module.exports = Post = mongoose.model('College', schema);

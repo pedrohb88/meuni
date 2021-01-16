@@ -1,6 +1,0 @@
-{
-    "development": {
-        "MONGO_URI": "mongodb+srv://pedro123:pJDShfSV0XmUmifE@devconnector-pfop2.mongodb.net/meuni?retryWrites=true&w=majority",
-        "JWT_SECRET": "ejwiqej9JD98J938QJ12idjwq892"
-    }
-}
