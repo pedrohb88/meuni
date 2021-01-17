@@ -37,9 +37,16 @@ class SuggestionFieldCollege extends React.Component {
     const inputValue = value.trim().toLowerCase();
     const inputLength = inputValue.length;
   
-    return inputLength === 0 ? [] : this.props.suggestionValues.filter(s => 
-      s.name.toLowerCase().indexOf(inputValue) != -1
-    );
+    return inputLength === 0 ? [] : this.props.suggestionValues.filter(s => {
+
+      if(s.name.toLowerCase().indexOf(inputValue) != -1)
+        return true;
+
+      if(s.acronym && s.acronym.toLowerCase().indexOf(inputValue) != -1)
+        return true;
+
+      return false;
+    });
   };
 
   onChange = (event, { newValue }) => {
