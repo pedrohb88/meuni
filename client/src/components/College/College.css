@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+   
+}
+.general-container {
+    height: 80vh;
+}
+
+.category-menu-container {
+    border-radius: 10px;
+    height: 100%;
+}
+
+.info-category-menu {
+    overflow-y:auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 20px solid rgba(12, 0, 26, 0.3);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.info-category-menu h1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.info-category-menu p {
+    font-size: 0.7em;
+    margin-bottom: 0.5em;
+}
+
+.info-category-menu-item {
+    border-bottom: 1px solid rgba(55, 55 ,55 ,0.2);
+    margin-bottom: 1em;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.info-category-menu-item:hover{
+    cursor: pointer;
+    background-color: rgba(81, 8, 172, 0.1);
+}
+
+.row-1 {
+    height: 15%;
+}
+
+.row-1 h1{
+    font-size: 1.2em;
+}
+
+.row-2{
+    height: 85%;
+}
+
+.active h1{
+    color:  #0267A0
+}
+.active h1::before {
+    content: '🞄 ';
+}
+
+.uni-sigla{
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+.uni-nome {
+    font-size: 0.8em;
+    margin-bottom: 0.2em;
+}
+.uni-location {
+    font-size: 0.8em;
+}
+
+.infos {
+    height: 100%;
+}
+
+.infos h2{
+    font-size: 1em;
+    font-weight: bold;
+    color: rgba(12, 0, 26, 0.6);
+    margin-bottom: 0;
+}
+
+.infos p {
+    font-size: 0.8em;
+}
+
+.myCard {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    height: 20%;
+}
+
+.info-list {
+    background-color: rgba(12, 0, 26, 0.3);
+    padding: 1em;
+    height: 60%;
+    overflow-y: auto;
+}
+.bold {
+    font-weight: bold;
+}
+
+.info-list p {
+    margin-bottom: 0;
+}
+
+.infoCard {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 1.5em;
+    padding: 1em;
+}
+.addInfoInput{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: rgba(12, 0, 26, 0.3);
+}
+.addInfoInput input {
+    width: 70%;
+}
+.addInfoInput button {
+    width: auto;
+}

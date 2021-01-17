@@ -1,28 +1,42 @@
 const mongoose = require('mongoose');
 
 const schema = new mongoose.Schema({
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+    photo: {
+        type: String,
     },
     name: {
         type: String,
         required: true
     },
+    category: {
+        type: String
+    },
+    address: {
+        type: String,
+    },
+    district: {
+        type: String
+    },
+    phone: {
+        type: String
+    },
+    email: {
+        type: String
+    },
+    cep: {
+        type: String
+    },
+    website: {
+        type: String
+    },
+    organization: {
+        type: String
+    },
     acronym: {
-        value: {type: String},
-        user: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'User'
-        }
+       type: String,
     },
     collegeType: {
-        value: {type: String, enum: ['pública', 'privada']},
-        description: {type: String},
-        user: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'User'
-        }
+        type: String
     },
     restaurant: {
         value: {type: Boolean},
@@ -33,82 +47,18 @@ const schema = new mongoose.Schema({
         }
     },
     location: {
-        value: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Location'
-        },
-        user: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'User'
-        }
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Location'
     },
-    courses: [
-        {
-            user: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'User'
-            },
-            course: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'Course'
-            }
-        }
-    ],
-    scholarships: [
-        {   
-            user: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'User'
-            },
-            title: {type: String, required: true},
-            description: {type: String, required: true},
-        }
-    ],
-    enterMethods: [
-        {   
-            user: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'User'
-            },
-            title: {type: String, required: true},
-            description: {type: String, required: true},
-        }
-    ],
-    replies: [
-        {
-            user: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'User'
-            },
-            text: {
-                type: String,
-                required: true
-            },
-            name: {
-                type: String,
-            },
-            upVotes: [
-                {
-                    user: {
-                        type: mongoose.Schema.Types.ObjectId,
-                        ref: 'User'
-                    }
-                }
-            ],
-            downVotes: [
-                {
-                    user: {
-                        type: mongoose.Schema.Types.ObjectId,
-                        ref: 'User'
-                    }
-                }
-            ],
-            date: {
-                type: Date,
-                default: Date.now
-            }
-        }
-    ],
+    institutional: [],
+    enterMethods: [],
+    costs: [],
+    scholarships: [],
+    courses: [],
+    community: [],
+    interestingPlaces: [],
+    forum: [],
+
     date: {
         type: Date,
         default: Date.now

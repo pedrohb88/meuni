@@ -1,0 +1,11375 @@
+const colleges = [
+	{
+		_id: "600368369fb4a00c54229344",
+		name: "UNIVERSIDADE DE BRASÍLIA",
+		acronym: "UNB",
+	},
+	{
+		_id: "600368369fb4a00c54229347",
+		name: "UNIVERSIDADE FEDERAL DE SERGIPE",
+		acronym: "UFS",
+	},
+	{
+		_id: "600368379fb4a00c5422934a",
+		name: "UNIVERSIDADE FEDERAL DE OURO PRETO",
+		acronym: "UFOP",
+	},
+	{
+		_id: "600368379fb4a00c5422934d",
+		name: "UNIVERSIDADE FEDERAL DO AMAZONAS",
+		acronym: "UFAM",
+	},
+	{
+		_id: "600368379fb4a00c54229350",
+		name: "UNIVERSIDADE FEDERAL DE MATO GROSSO",
+		acronym: "UFMT",
+	},
+	{
+		_id: "600368389fb4a00c54229353",
+		name: "UNIVERSIDADE FEDERAL DO PIAUÍ",
+		acronym: "UFPI",
+	},
+	{
+		_id: "600368389fb4a00c54229356",
+		name: "UNIVERSIDADE FEDERAL DE SÃO CARLOS",
+		acronym: "UFSCAR",
+	},
+	{
+		_id: "600368389fb4a00c54229359",
+		name: "UNIVERSIDADE ESTADUAL DE LONDRINA",
+		acronym: "UEL",
+	},
+	{
+		_id: "600368399fb4a00c5422935c",
+		name: "UNIVERSIDADE FEDERAL DE VIÇOSA",
+		acronym: "UFV",
+	},
+	{
+		_id: "600368399fb4a00c5422935f",
+		name: "UNIVERSIDADE CATÓLICA DE PERNAMBUCO",
+		acronym: "UNICAP",
+	},
+	{
+		_id: "6003683a9fb4a00c54229362",
+		name: "PONTIFÍCIA UNIVERSIDADE CATÓLICA DO PARANÁ",
+		acronym: "PUCPR",
+	},
+	{
+		_id: "6003683a9fb4a00c54229365",
+		name: "UNIVERSIDADE FEDERAL DO RIO GRANDE",
+		acronym: "FURG",
+	},
+	{
+		_id: "6003683a9fb4a00c54229368",
+		name: "UNIVERSIDADE DE CAXIAS DO SUL",
+		acronym: "UCS",
+	},
+	{
+		_id: "6003683b9fb4a00c5422936b",
+		name: "UNIVERSIDADE DO VALE DO RIO DOS SINOS",
+		acronym: "UNISINOS",
+	},
+	{
+		_id: "6003683b9fb4a00c5422936e",
+		name: "UNIVERSIDADE CATÓLICA DE PETRÓPOLIS",
+		acronym: "UCP",
+	},
+	{
+		_id: "6003683b9fb4a00c54229371",
+		name: "UNIVERSIDADE GAMA FILHO",
+		acronym: "UGF",
+	},
+	{
+		_id: "6003683c9fb4a00c54229374",
+		name: "UNIVERSIDADE FEDERAL DE UBERLÂNDIA",
+		acronym: "UFU",
+	},
+	{
+		_id: "6003683c9fb4a00c54229377",
+		name: "UNIVERSIDADE CATÓLICA DE PELOTAS",
+		acronym: "UCPEL",
+	},
+	{
+		_id: "6003683d9fb4a00c5422937a",
+		name: "PONTIFÍCIA UNIVERSIDADE CATÓLICA DE CAMPINAS",
+		acronym: "PUC-CAMPINAS",
+	},
+	{
+		_id: "6003683d9fb4a00c5422937d",
+		name: "UNIVERSIDADE DE PASSO FUNDO",
+		acronym: "UPF",
+	},
+	{
+		_id: "6003683d9fb4a00c54229380",
+		name: "PONTIFÍCIA UNIVERSIDADE CATÓLICA DO RIO GRANDE DO SUL",
+		acronym: "PUCRS",
+	},
+	{
+		_id: "6003683e9fb4a00c54229383",
+		name: "UNIVERSIDADE PRESBITERIANA MACKENZIE",
+		acronym: "MACKENZIE",
+	},
+	{
+		_id: "6003683e9fb4a00c54229386",
+		name: "UNIVERSIDADE FEEVALE",
+		acronym: "FEEVALE",
+	},
+	{
+		_id: "6003683e9fb4a00c54229388",
+		name: "ESCOLA NACIONAL DE CIÊNCIAS ESTATÍSTICAS",
+		acronym: "ENCE",
+	},
+	{
+		_id: "6003683f9fb4a00c5422938b",
+		name: "UNIVERSIDADE ESTADUAL DE SANTA CRUZ",
+		acronym: "UESC",
+	},
+	{
+		_id: "6003683f9fb4a00c5422938e",
+		name: "UNIVERSIDADE VALE DO RIO VERDE",
+		acronym: "UNINCOR",
+	},
+	{
+		_id: "6003683f9fb4a00c54229391",
+		name: "UNIVERSIDADE ESTADUAL DO CEARÁ",
+		acronym: "UECE",
+	},
+	{
+		_id: "600368409fb4a00c54229394",
+		name: "UNIVERSIDADE JOSÉ DO ROSÁRIO VELLANO",
+		acronym: "UNIFENAS",
+	},
+	{
+		_id: "600368409fb4a00c54229397",
+		name: "CENTRO DE EDUCAÇÃO TÉCNICA DA UTRAMIG",
+		acronym: "UTRAMIG",
+	},
+	{
+		_id: "600368409fb4a00c5422939a",
+		name: "UNIVERSIDADE ESTADUAL DE CIÊNCIAS DA SAÚDE DE ALAGOAS - UNCISAL",
+		acronym: "UNCISAL",
+	},
+	{
+		_id: "600368419fb4a00c5422939d",
+		name: "FACULDADE DE TECNOLOGIA DE SOROCABA",
+		acronym: "FATEC SO",
+	},
+	{
+		_id: "600368419fb4a00c5422939f",
+		name: "FACULDADE DE TECNOLOGIA DE SÃO PAULO",
+		acronym: "FATEC-SP",
+	},
+	{
+		_id: "600368419fb4a00c542293a2",
+		name: "FACULDADE DE TECNOLOGIA DE AMERICANA",
+		acronym: "FATEC-AM",
+	},
+	{
+		_id: "600368429fb4a00c542293a5",
+		name: "FACULDADE DE TECNOLOGIA RUBENS LARA",
+		acronym: "FATEC-BS",
+	},
+	{
+		_id: "600368429fb4a00c542293a8",
+		name: "FACULDADE DE TECNOLOGIA DE JAHU",
+		acronym: "FATEC-JAHU",
+	},
+	{
+		_id: "600368439fb4a00c542293ab",
+		name: "UNIVERSIDADE DO ESTADO DO PARÁ",
+		acronym: "UEPA",
+	},
+	{
+		_id: "600368439fb4a00c542293ae",
+		name: "UNIVERSIDADE DO ESTADO DA BAHIA",
+		acronym: "UNEB",
+	},
+	{
+		_id: "600368439fb4a00c542293b1",
+		name: "FUNDAÇÃO UNIVERSIDADE DO ESTADO DE SANTA CATARINA",
+		acronym: "UDESC",
+	},
+	{
+		_id: "600368449fb4a00c542293b4",
+		name: "UNIVERSIDADE ESTADUAL DE GOIÁS",
+		acronym: "UEG",
+	},
+	{
+		_id: "600368449fb4a00c542293b6",
+		name: "UNIVERSIDADE ESTADUAL DE CAMPINAS",
+		acronym: "UNICAMP",
+	},
+	{
+		_id: "600368449fb4a00c542293b9",
+		name: "FACULDADE ESTADUAL DE CIÊNCIAS ECONÔMICAS DE APUCARANA",
+		acronym: "FECEA",
+	},
+	{
+		_id: "600368459fb4a00c542293bb",
+		name: "UNIVERSIDADE DE SÃO PAULO",
+		acronym: "USP",
+	},
+	{
+		_id: "600368459fb4a00c542293bd",
+		name: "UNIVERSIDADE ESTADUAL PAULISTA JÚLIO DE MESQUITA FILHO",
+		acronym: "UNESP",
+	},
+	{
+		_id: "600368459fb4a00c542293c0",
+		name: "UNIVERSIDADE ESTADUAL DE MARINGÁ",
+		acronym: "UEM",
+	},
+	{
+		_id: "600368469fb4a00c542293c3",
+		name: "FACULDADE DE DIREITO DE SÃO BERNARDO DO CAMPO",
+		acronym: "FDSBC",
+	},
+	{
+		_id: "600368469fb4a00c542293c6",
+		name: "FACULDADE DE DIREITO DE FRANCA",
+		acronym: "FDF",
+	},
+	{
+		_id: "600368469fb4a00c542293c8",
+		name: "CENTRO UNIVERSITÁRIO DE FRANCA",
+		acronym: "UNI-FACEF",
+	},
+	{
+		_id: "600368479fb4a00c542293cb",
+		name: "ESCOLA DE ENGENHARIA DE PIRACICABA",
+		acronym: "EEP/FUMEP",
+	},
+	{
+		_id: "600368479fb4a00c542293ce",
+		name: "FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS DE PENÁPOLIS",
+		acronym: "FAFIPE",
+	},
+	{
+		_id: "600368479fb4a00c542293d1",
+		name: "UNIVERSIDADE DO ESTADO DO RIO GRANDE DO NORTE",
+		acronym: "UERN",
+	},
+	{
+		_id: "600368489fb4a00c542293d4",
+		name: "FACULDADE DE FORMAÇÃO DE PROFESSORES DA MATA SUL",
+		acronym: "FAMASUL",
+	},
+	{
+		_id: "600368489fb4a00c542293d7",
+		name: "CENTRO DE ENSINO SUPERIOR DE ARCOVERDE",
+		acronym: "CESA",
+	},
+	{
+		_id: "600368489fb4a00c542293da",
+		name: "FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS DE SÃO JOSÉ DO RIO PARDO",
+		acronym: "FFCL",
+	},
+	{
+		_id: "600368499fb4a00c542293dd",
+		name: "FACULDADE ESTADUAL DE EDUCAÇÃO CIÊNCIAS E LETRAS DE PARANAVAÍ",
+		acronym: "FAFIPA",
+	},
+	{
+		_id: "600368499fb4a00c542293e0",
+		name: "UNIVERSIDADE REGIONAL DE BLUMENAU",
+		acronym: "FURB",
+	},
+	{
+		_id: "600368499fb4a00c542293e3",
+		name: "FACULDADE DA REGIÃO DOS LAGOS",
+		acronym: "FERLAGOS",
+	},
+	{
+		_id: "6003684a9fb4a00c542293e6",
+		name: "FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS DE ALEGRE",
+		acronym: "FAFIA",
+	},
+	{
+		_id: "6003684a9fb4a00c542293e9",
+		name: "INSTITUTO MUNICIPAL DE ENSINO SUPERIOR DE CATANDUVA",
+		acronym: "IMES CATANDUVA",
+	},
+	{
+		_id: "6003684b9fb4a00c542293ec",
+		name: "CENTRO UNIVERSITÁRIO PARA O DESENVOLVIMENTO DO ALTO VALE DO ITAJAÍ",
+		acronym: "UNIDAVI",
+	},
+	{
+		_id: "6003684b9fb4a00c542293ef",
+		name: "UNIVERSIDADE DA REGIÃO DE JOINVILLE",
+		acronym: "UNIVILLE",
+	},
+	{
+		_id: "6003684b9fb4a00c542293f2",
+		name: "UNIVERSIDADE DO OESTE DE SANTA CATARINA",
+		acronym: "UNOESC",
+	},
+	{
+		_id: "6003684c9fb4a00c542293f5",
+		name: "UNIVERSIDADE DO VALE DO ITAJAÍ",
+		acronym: "UNIVALI",
+	},
+	{
+		_id: "6003684c9fb4a00c542293f8",
+		name: "FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS DE MACAÉ",
+		acronym: "FAFIMA",
+	},
+	{
+		_id: "6003684c9fb4a00c542293fb",
+		name: "CENTRO UNIVERSITÁRIO DE BRUSQUE",
+		acronym: "UNIFEBE",
+	},
+	{
+		_id: "6003684d9fb4a00c542293fe",
+		name: "FACULDADE DE FORMAÇÃO DE PROFESSORES DE PENEDO",
+		acronym: "FFPP",
+	},
+	{
+		_id: "6003684d9fb4a00c54229401",
+		name: "ESCOLA SUPERIOR DE EDUCAÇÃO FÍSICA DE JUNDIAÍ",
+		acronym: "ESEFJ",
+	},
+	{
+		_id: "6003684d9fb4a00c54229403",
+		name: "FACULDADE DE MEDICINA DE JUNDIAÍ",
+		acronym: "FMJ",
+	},
+	{
+		_id: "6003684e9fb4a00c54229406",
+		name: "UNIVERSIDADE ESTADUAL DO VALE DO ACARAÚ",
+		acronym: "UVA",
+	},
+	{
+		_id: "6003684e9fb4a00c54229409",
+		name: "UNIVERSIDADE FEDERAL DE SÃO JOÃO DEL REI",
+		acronym: "UFSJ",
+	},
+	{
+		_id: "6003684f9fb4a00c5422940c",
+		name: "FACULDADE DE DIREITO DE CONSELHEIRO LAFAIETE",
+		acronym: "FDCL",
+	},
+	{
+		_id: "6003684f9fb4a00c5422940f",
+		name: "FACULDADES INTEGRADAS RUI BARBOSA",
+		acronym: "FIRB",
+	},
+	{
+		_id: "6003684f9fb4a00c54229412",
+		name: "CENTRO UNIVERSITÁRIO DE ARARAQUARA",
+		acronym: "UNIARA",
+	},
+	{
+		_id: "600368509fb4a00c54229415",
+		name: "CENTRO UNIVERSITÁRIO DE ARARAS -",
+		acronym: "UNAR",
+	},
+	{
+		_id: "600368509fb4a00c54229418",
+		name: "INSTITUTO NACIONAL DE TELECOMUNICAÇÕES",
+		acronym: "INATEL",
+	},
+	{
+		_id: "600368509fb4a00c5422941b",
+		name: "FACULDADE DE EDUCAÇÃO FÍSICA DE BARRA BONITA",
+		acronym: "FAEFI",
+	},
+	{
+		_id: "600368519fb4a00c5422941e",
+		name: "CENTRO UNIVERSITÁRIO CLARETIANO",
+		acronym: "CEUCLAR",
+	},
+	{
+		_id: "600368519fb4a00c54229421",
+		name: "UNIVERSIDADE DO SAGRADO CORAÇÃO",
+		acronym: "USC",
+	},
+	{
+		_id: "600368519fb4a00c54229424",
+		name: "FACULDADE DE DIREITO DE VARGINHA - FADIVA",
+		acronym: "FADIVA",
+	},
+	{
+		_id: "600368529fb4a00c54229427",
+		name: "CENTRO UNIVERSITÁRIO BARÃO DE MAUÁ",
+		acronym: "CBM",
+	},
+	{
+		_id: "600368529fb4a00c5422942a",
+		name: "FACULDADE DE CIÊNCIAS ECONÔMICAS DO TRIÂNGULO MINEIRO",
+		acronym: "FCETM",
+	},
+	{
+		_id: "600368539fb4a00c5422942d",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS DE OLINDA",
+		acronym: "FACHO",
+	},
+	{
+		_id: "600368539fb4a00c5422942f",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS E SOCIAIS",
+		acronym: "FACULDADE AGES",
+	},
+	{
+		_id: "600368539fb4a00c54229432",
+		name: "CENTRO UNIVERSITÁRIO DE RIO PRETO",
+		acronym: "UNIRP",
+	},
+	{
+		_id: "600368539fb4a00c54229434",
+		name: "FACULDADE DE MEDICINA DE SÃO JOSÉ DO RIO PRETO",
+		acronym: "FAMERP",
+	},
+	{
+		_id: "600368549fb4a00c54229436",
+		name: "UNIVERSIDADE DE SOROCABA",
+		acronym: "UNISO",
+	},
+	{
+		_id: "600368549fb4a00c54229438",
+		name: "ESCOLA DE ADMINISTRAÇÃO DE EMPRESAS DE SÃO PAULO",
+		acronym: "FGV-EAESP",
+	},
+	{
+		_id: "600368549fb4a00c5422943a",
+		name: "UNIVERSIDADE DE UBERABA",
+		acronym: "UNIUBE",
+	},
+	{
+		_id: "600368549fb4a00c5422943c",
+		name: "CENTRO UNIVERSITÁRIO DO TRIÂNGULO",
+		acronym: "UNITRI",
+	},
+	{
+		_id: "600368559fb4a00c5422943f",
+		name: "UNIVERSIDADE SEVERINO SOMBRA",
+		acronym: "USS",
+	},
+	{
+		_id: "600368559fb4a00c54229441",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS",
+		acronym: "FACIC",
+	},
+	{
+		_id: "600368559fb4a00c54229443",
+		name: "FACULDADE FRASSINETTI DO RECIFE",
+		acronym: "FAFIRE",
+	},
+	{
+		_id: "600368569fb4a00c54229446",
+		name: "FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS DE CARUARU",
+		acronym: "FAFICA",
+	},
+	{
+		_id: "600368569fb4a00c54229448",
+		name: "CENTRO UNIVERSITÁRIO BELAS ARTES DE SÃO PAULO",
+		acronym: "FEBASP",
+	},
+	{
+		_id: "600368569fb4a00c5422944a",
+		name: "UNIVERSIDADE ESTÁCIO DE SÁ",
+		acronym: "UNESA",
+	},
+	{
+		_id: "600368569fb4a00c5422944c",
+		name: "UNIVERSIDADE VEIGA DE ALMEIDA",
+		acronym: "UVA",
+	},
+	{
+		_id: "600368579fb4a00c5422944f",
+		name: "FAI - CENTRO DE ENSINO SUPERIOR EM GESTÃO",
+		acronym: "TECNOLOGIA E EDUCAÇÃO",
+	},
+	{
+		_id: "600368579fb4a00c54229451",
+		name: "UNIVERSIDADE METODISTA DE SÃO PAULO",
+		acronym: "UMESP",
+	},
+	{
+		_id: "600368579fb4a00c54229453",
+		name: "CONSERVATÓRIO BRASILEIRO DE MÚSICA - CENTRO UNIVERSITÁRIO",
+		acronym: "CBM/CEU",
+	},
+	{
+		_id: "600368579fb4a00c54229455",
+		name: "CENTRO UNIVERSITÁRIO ASSUNÇÃO",
+		acronym: "UNIFAI",
+	},
+	{
+		_id: "600368589fb4a00c54229458",
+		name: "FACULDADES DA FUNDAÇÃO DE ENSINO DE MOCOCA",
+		acronym: "FAFEM",
+	},
+	{
+		_id: "600368589fb4a00c5422945b",
+		name: "FACULDADE DE DIREITO DO SUL DE MINAS",
+		acronym: "FDSM",
+	},
+	{
+		_id: "600368589fb4a00c5422945d",
+		name: "UNIVERSIDADE CASTELO BRANCO",
+		acronym: "UCB",
+	},
+	{
+		_id: "600368599fb4a00c5422945f",
+		name:
+			"ESCOLA DE MEDICINA SOUZA MARQUES DA FUNDAÇÃO TÉCNICO-EDUCACIONAL SOUZA MARQUES",
+		acronym: "EMSM",
+	},
+	{
+		_id: "600368599fb4a00c54229461",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS E DE ADMINISTRAÇÃO DE EMPRESAS",
+		acronym: "FCCAE",
+	},
+	{
+		_id: "600368599fb4a00c54229463",
+		name: "FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS SOUZA MARQUES",
+		acronym: "FFCLSM",
+	},
+	{
+		_id: "600368599fb4a00c54229465",
+		name: "FACULDADE DE ENGENHARIA SOUZA MARQUES",
+		acronym: "FESM",
+	},
+	{
+		_id: "6003685a9fb4a00c54229467",
+		name: "ESCOLA DE ENFERMAGEM DA FUNDAÇÃO TÉCNICO EDUCACIONAL SOUZA MARQUES",
+		acronym: "EEFTESM",
+	},
+	{
+		_id: "6003685a9fb4a00c54229469",
+		name: "FACULDADE MORAES JÚNIOR - MACKENZIE RIO",
+		acronym: "FMJ - MACKENZIE RIO",
+	},
+	{
+		_id: "6003685a9fb4a00c5422946b",
+		name: "FACULDADE DE EDUCAÇÃO SUPERIOR DO PARANÁ",
+		acronym: "FESPRR",
+	},
+	{
+		_id: "6003685a9fb4a00c5422946d",
+		name: "CENTRO UNIVERSITÁRIO DA CIDADE",
+		acronym: "UNIVERCIDADE",
+	},
+	{
+		_id: "6003685b9fb4a00c5422946f",
+		name: "FACULDADE CÁSPER LÍBERO",
+		acronym: "FCL",
+	},
+	{
+		_id: "6003685b9fb4a00c54229471",
+		name: "FACULDADE BRASILEIRA DE CIÊNCIAS JURÍDICAS",
+		acronym: "FBCJ",
+	},
+	{
+		_id: "6003685b9fb4a00c54229473",
+		name: "FACULDADE DE ECONOMIA E FINANÇAS DO RIO DE JANEIRO",
+		acronym: "FEFRJ",
+	},
+	{
+		_id: "6003685b9fb4a00c54229475",
+		name: "CENTRO UNIVERSITÁRIO ÍTALO-BRASILEIRO",
+		acronym: "UNIÍTALO",
+	},
+	{
+		_id: "6003685c9fb4a00c54229477",
+		name: "UNIVERSIDADE SÃO JUDAS TADEU",
+		acronym: "USJT",
+	},
+	{
+		_id: "6003685c9fb4a00c54229479",
+		name: "CENTRO UNIVERSITÁRIO MOURA LACERDA",
+		acronym: "CUML",
+	},
+	{
+		_id: "6003685c9fb4a00c5422947b",
+		name: "UNIVERSIDADE DE RIBEIRÃO PRETO",
+		acronym: "UNAERP",
+	},
+	{
+		_id: "6003685c9fb4a00c5422947d",
+		name: "CENTRO UNIVERSITÁRIO METODISTA IZABELA HENDRIX",
+		acronym: "IMIH",
+	},
+	{
+		_id: "6003685d9fb4a00c54229480",
+		name: "CENTRO UNIVERSITÁRIO DAS FACULDADES ASSOCIADAS DE ENSINO - FAE",
+		acronym: "UNIFAE",
+	},
+	{
+		_id: "6003685d9fb4a00c54229483",
+		name: "FACULDADE DE EDUCAÇÃO CIÊNCIAS E ARTES DOM BOSCO DE MONTE APRAZÍVEL",
+		acronym: "FAECA DOM BOSCO",
+	},
+	{
+		_id: "6003685d9fb4a00c54229485",
+		name: "FACULDADE SÃO JUDAS TADEU",
+		acronym: "FSJT",
+	},
+	{
+		_id: "6003685e9fb4a00c54229487",
+		name: "UNIVERSIDADE CRUZEIRO DO SUL",
+		acronym: "UNICSUL",
+	},
+	{
+		_id: "6003685e9fb4a00c54229489",
+		name: "CENTRO UNIVERSITÁRIO FECAP",
+		acronym: "FECAP",
+	},
+	{
+		_id: "6003685e9fb4a00c5422948c",
+		name: "UNIVERSIDADE DO GRANDE ABC",
+		acronym: "UNIABC",
+	},
+	{
+		_id: "6003685e9fb4a00c5422948e",
+		name: "FACULDADE DE MEDICINA DO ABC",
+		acronym: "FMABC",
+	},
+	{
+		_id: "6003685f9fb4a00c54229491",
+		name: "CENTRO UNIVERSITÁRIO DE VOTUPORANGA",
+		acronym: "UNIFEV",
+	},
+	{
+		_id: "6003685f9fb4a00c54229493",
+		name: "INSTITUTO DE ENSINO SUPERIOR SANTO ANDRÉ",
+		acronym: "IESA",
+	},
+	{
+		_id: "6003685f9fb4a00c54229495",
+		name: "FACULDADE DE ENGENHARIA DE MINAS GERAIS - FEAMIG",
+		acronym: "FEAMIG",
+	},
+	{
+		_id: "600368609fb4a00c54229497",
+		name: "CENTRO UNIVERSITÁRIO LUSÍADA",
+		acronym: "UNILUS",
+	},
+	{
+		_id: "600368609fb4a00c54229499",
+		name: "UNIVERSIDADE SANTA ÚRSULA",
+		acronym: "USU",
+	},
+	{
+		_id: "600368609fb4a00c5422949b",
+		name: "CENTRO UNIVERSITÁRIO ANHANGUERA",
+		acronym: "UNIA",
+	},
+	{
+		_id: "600368609fb4a00c5422949e",
+		name: "FACULDADE DO CLUBE NÁUTICO MOGIANO",
+		acronym: "FCNM",
+	},
+	{
+		_id: "600368619fb4a00c542294a1",
+		name: "CENTRO UNIVERSITÁRIO FIEO",
+		acronym: "UNIFIEO",
+	},
+	{
+		_id: "600368619fb4a00c542294a3",
+		name: "CENTRO UNIVERSITÁRIO CAPITAL",
+		acronym: "UNICAPITAL",
+	},
+	{
+		_id: "600368619fb4a00c542294a6",
+		name: "FACULDADE DE ENGENHARIA E AGRIMENSURA DE PIRASSUNUNGA - FEAP",
+		acronym: "FEAP",
+	},
+	{
+		_id: "600368629fb4a00c542294a8",
+		name: "FACULDADE DE SÃO BERNARDO DO CAMPO - FASB",
+		acronym: "FASB I",
+	},
+	{
+		_id: "600368629fb4a00c542294aa",
+		name: "UNIVERSIDADE CATÓLICA DE SANTOS",
+		acronym: "UNISANTOS",
+	},
+	{
+		_id: "600368629fb4a00c542294ac",
+		name: "FACULDADES OSWALDO CRUZ",
+		acronym: "FOC",
+	},
+	{
+		_id: "600368639fb4a00c542294af",
+		name: "FACULDADE DE FILOSOFIA",
+		acronym: "CIÊNCIAS E LETRAS DE IBITINGA",
+	},
+	{
+		_id: "600368639fb4a00c542294b1",
+		name: "FACULDADES INTEGRADAS CAMPOS SALLES",
+		acronym: "FICS",
+	},
+	{
+		_id: "600368639fb4a00c542294b4",
+		name: "FACULDADES INTEGRADAS DE OURINHOS",
+		acronym: "FIO",
+	},
+	{
+		_id: "600368639fb4a00c542294b7",
+		name: "FACULDADE FACCAT",
+		acronym: "FACCAT",
+	},
+	{
+		_id: "600368649fb4a00c542294ba",
+		name: "FACULDADES INTEGRADAS ESPÍRITO SANTENSES",
+		acronym: "FAESA I",
+	},
+	{
+		_id: "600368649fb4a00c542294bc",
+		name: "FACULDADE DE DIREITO DA ALTA PAULISTA",
+		acronym: "FADAP",
+	},
+	{
+		_id: "600368649fb4a00c542294be",
+		name: "UNIVERSIDADE METODISTA DE PIRACICABA",
+		acronym: "UNIMEP",
+	},
+	{ _id: "600368659fb4a00c542294c0", name: "FACULDADES ESEFAP", acronym: "" },
+	{
+		_id: "600368659fb4a00c542294c3",
+		name: "UNIVERSIDADE DO OESTE PAULISTA",
+		acronym: "UNOESTE",
+	},
+	{
+		_id: "600368659fb4a00c542294c6",
+		name: "UNIVERSIDADE DO VALE DO PARAÍBA",
+		acronym: "UNIVAP",
+	},
+	{
+		_id: "600368669fb4a00c542294c8",
+		name: "FACULDADES INTEGRADAS SIMONSEN",
+		acronym: "FIS",
+	},
+	{
+		_id: "600368669fb4a00c542294ca",
+		name: "FACULDADE DE DIREITO DE SOROCABA",
+		acronym: "FADI",
+	},
+	{
+		_id: "600368669fb4a00c542294cc",
+		name: "CENTRO UNIVERSITÁRIO AUGUSTO MOTTA",
+		acronym: "UNISUAM",
+	},
+	{
+		_id: "600368669fb4a00c542294ce",
+		name: "FACULDADES INTEGRADAS HÉLIO ALONSO",
+		acronym: "FACHA",
+	},
+	{
+		_id: "600368679fb4a00c542294d1",
+		name: "FACULDADE DE MEDICINA DE ITAJUBÁ",
+		acronym: "FMIT",
+	},
+	{
+		_id: "600368679fb4a00c542294d4",
+		name: "FACULDADE TRÊS DE MAIO",
+		acronym: "SETREM",
+	},
+	{
+		_id: "600368679fb4a00c542294d7",
+		name: "UNIVERSIDADE DE SANTA CRUZ DO SUL",
+		acronym: "UNISC",
+	},
+	{
+		_id: "600368689fb4a00c542294da",
+		name: "FACULDADE DE DIREITO DO VALE DO RIO DOCE",
+		acronym: "FADIVALE",
+	},
+	{
+		_id: "600368689fb4a00c542294dd",
+		name: "UNIVERSIDADE DA REGIÃO DA CAMPANHA",
+		acronym: "URCAMP",
+	},
+	{
+		_id: "600368689fb4a00c542294df",
+		name: "UNIVERSIDADE NORTE DO PARANÁ",
+		acronym: "UNOPAR",
+	},
+	{
+		_id: "600368699fb4a00c542294e2",
+		name: "FACULDADE DE JANDAIA DO SUL",
+		acronym: "FAFIJAN",
+	},
+	{
+		_id: "600368699fb4a00c542294e5",
+		name: "FACULDADE DE MEDICINA DE BARBACENA",
+		acronym: "FAME",
+	},
+	{
+		_id: "600368699fb4a00c542294e7",
+		name: "FACULDADE DE CIÊNCIAS ECONÔMICAS",
+		acronym: "FACAMP",
+	},
+	{
+		_id: "6003686a9fb4a00c542294e9",
+		name: "UNIVERSIDADE PRESIDENTE ANTÔNIO CARLOS",
+		acronym: "UNIPAC",
+	},
+	{
+		_id: "6003686a9fb4a00c542294eb",
+		name: "UNIVERSIDADE CAMILO CASTELO BRANCO",
+		acronym: "UNICASTELO",
+	},
+	{
+		_id: "6003686a9fb4a00c542294ed",
+		name: "UNIVERSIDADE NOVE DE JULHO",
+		acronym: "UNINOVE",
+	},
+	{
+		_id: "6003686a9fb4a00c542294ef",
+		name: "UNIVERSIDADE PAULISTA",
+		acronym: "UNIP",
+	},
+	{
+		_id: "6003686b9fb4a00c542294f2",
+		name: "UNIVERSIDADE IGUAÇU",
+		acronym: "UNIG",
+	},
+	{
+		_id: "6003686b9fb4a00c542294f5",
+		name: "FACULDADE MACHADO SOBRINHO",
+		acronym: "FMS",
+	},
+	{
+		_id: "6003686b9fb4a00c542294f7",
+		name: "CENTRO DE ENSINO SUPERIOR DE JUIZ DE FORA",
+		acronym: "CES/JF",
+	},
+	{
+		_id: "6003686c9fb4a00c542294f9",
+		name: "PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS",
+		acronym: "PUC MINAS",
+	},
+	{
+		_id: "6003686c9fb4a00c542294fc",
+		name: "FACULDADE SANTA EMÍLIA DE RODAT",
+		acronym: "FASER",
+	},
+	{
+		_id: "6003686c9fb4a00c542294fe",
+		name: "CENTRO UNIVERSITÁRIO NEWTON PAIVA",
+		acronym: "NEWTON PAIVA",
+	},
+	{
+		_id: "6003686c9fb4a00c54229500",
+		name: "CENTRO UNIVERSITÁRIO UNA",
+		acronym: "UNA",
+	},
+	{
+		_id: "6003686d9fb4a00c54229503",
+		name: "INSTITUTO SUPERIOR DE CIÊNCIAS APLICADAS - ISCA",
+		acronym: "ISCA",
+	},
+	{
+		_id: "6003686d9fb4a00c54229505",
+		name: "ESCOLA DE ENGENHARIA KENNEDY",
+		acronym: "EEK",
+	},
+	{
+		_id: "6003686d9fb4a00c54229507",
+		name: "CENTRO UNIVERSITÁRIO DE BELO HORIZONTE",
+		acronym: "UNI-BH",
+	},
+	{
+		_id: "6003686e9fb4a00c54229509",
+		name: "FACULDADE DE CIÊNCIAS MÉDICAS DE MINAS GERAIS",
+		acronym: "FCMMG",
+	},
+	{
+		_id: "6003686e9fb4a00c5422950b",
+		name: "CENTRO UNIVERSITÁRIO DE JOÃO PESSOA",
+		acronym: "UNIPÊ",
+	},
+	{
+		_id: "6003686e9fb4a00c5422950d",
+		name: "UNIVERSIDADE TUIUTI DO PARANÁ",
+		acronym: "UTP",
+	},
+	{
+		_id: "6003686e9fb4a00c5422950f",
+		name: "FACULDADE EVANGÉLICA DO PARANÁ",
+		acronym: "FEPAR",
+	},
+	{
+		_id: "6003686f9fb4a00c54229511",
+		name: "CENTRO UNIVERSITÁRIO PAULISTANO",
+		acronym: "UNIPAULISTANA",
+	},
+	{
+		_id: "6003686f9fb4a00c54229514",
+		name: "FACULDADE PAULISTA DE SERVIÇO SOCIAL DE SÃO CAETANO DO SUL",
+		acronym: "FAPSS-SCS",
+	},
+	{
+		_id: "6003686f9fb4a00c54229516",
+		name: "FACULDADE PAULISTA DE SERVIÇO SOCIAL",
+		acronym: "FAPSS-SP.",
+	},
+	{
+		_id: "6003686f9fb4a00c54229518",
+		name: "FACULDADE MOZARTEUM DE SÃO PAULO",
+		acronym: "FAMOSP",
+	},
+	{
+		_id: "600368709fb4a00c5422951b",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS DE PONTE NOVA",
+		acronym: "FACE",
+	},
+	{
+		_id: "600368709fb4a00c5422951e",
+		name: "UNIVERSIDADE ESTADUAL DE MONTES CLAROS",
+		acronym: "UNIMONTES",
+	},
+	{
+		_id: "600368709fb4a00c54229520",
+		name:
+			"FACULDADE DE EDUCAÇÃO FÍSICA DA ASSOCIAÇÃO CRISTÃ DE MOÇOS DE SOROCABA",
+		acronym: "FEFISO",
+	},
+	{
+		_id: "600368719fb4a00c54229522",
+		name: "FACULDADE PAULISTA DE ARTES",
+		acronym: "FPA",
+	},
+	{
+		_id: "600368719fb4a00c54229524",
+		name: "FACULDADE DE MÚSICA CARLOS GOMES",
+		acronym: "FMCG",
+	},
+	{
+		_id: "600368719fb4a00c54229526",
+		name: "FACULDADE DE BIBLIOTECONOMIA E CIÊNCIA DA INFORMAÇÃO",
+		acronym: "FABCI",
+	},
+	{
+		_id: "600368719fb4a00c54229528",
+		name: "ESCOLA DE SOCIOLOGIA E POLÍTICA DE SÃO PAULO",
+		acronym: "ESP",
+	},
+	{
+		_id: "600368729fb4a00c5422952a",
+		name: "CENTRO UNIVERSITÁRIO DAS FACULDADES METROPOLITANAS UNIDAS",
+		acronym: "FMU",
+	},
+	{
+		_id: "600368729fb4a00c5422952c",
+		name: "CENTRO UNIVERSITÁRIO ANHANGUERA DE SÃO PAULO",
+		acronym: "",
+	},
+	{
+		_id: "600368729fb4a00c5422952e",
+		name: "UNIVERSIDADE DE SANTO AMARO",
+		acronym: "UNISA",
+	},
+	{
+		_id: "600368729fb4a00c54229530",
+		name: "UNIVERSIDADE DA AMAZÔNIA",
+		acronym: "UNAMA",
+	},
+	{
+		_id: "600368739fb4a00c54229532",
+		name: "CENTRO UNIVERSITÁRIO DE ANÁPOLIS",
+		acronym: "UNIEVANGÉLICA",
+	},
+	{
+		_id: "600368739fb4a00c54229534",
+		name: "UNIVERSIDADE SALVADOR",
+		acronym: "UNIFACS",
+	},
+	{
+		_id: "600368739fb4a00c54229537",
+		name: "CENTRO UNIVERSITÁRIO DE GOIÁS",
+		acronym: "UNI-ANHANGÜERA",
+	},
+	{
+		_id: "600368749fb4a00c5422953a",
+		name: "UNIVERSIDADE CATÓLICA DOM BOSCO",
+		acronym: "UCDB",
+	},
+	{
+		_id: "600368749fb4a00c5422953d",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS DE LUCÉLIA",
+		acronym: "CEALPA",
+	},
+	{
+		_id: "600368749fb4a00c5422953f",
+		name: "FACULDADE RUY BARBOSA",
+		acronym: "FRBA",
+	},
+	{
+		_id: "600368759fb4a00c54229542",
+		name: "UNIVERSIDADE TIRADENTES",
+		acronym: "UNIT",
+	},
+	{
+		_id: "600368759fb4a00c54229544",
+		name: "ESCOLA DE ENGENHARIA DE AGRIMENSURA",
+		acronym: "EEA",
+	},
+	{
+		_id: "600368759fb4a00c54229546",
+		name: "CENTRO UNIVERSITÁRIO DE BRASÍLIA",
+		acronym: "UNICEUB",
+	},
+	{
+		_id: "600368759fb4a00c54229548",
+		name: "UNIVERSIDADE CATÓLICA DE BRASÍLIA",
+		acronym: "UCB",
+	},
+	{
+		_id: "600368759fb4a00c5422954a",
+		name: "FACULDADES INTEGRADAS DA UPIS",
+		acronym: "UPIS",
+	},
+	{
+		_id: "600368769fb4a00c5422954c",
+		name: "FOCCA - FACULDADE DE OLINDA",
+		acronym: "FOCCA",
+	},
+	{
+		_id: "600368769fb4a00c5422954e",
+		name: "ESCOLA SUPERIOR DE RELAÇÕES PÚBLICAS",
+		acronym: "ESURP",
+	},
+	{
+		_id: "600368769fb4a00c54229550",
+		name: "UNIVERSIDADE DE PERNAMBUCO",
+		acronym: "UPE",
+	},
+	{
+		_id: "600368769fb4a00c54229552",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS ESUDA",
+		acronym: "FCHE",
+	},
+	{
+		_id: "600368779fb4a00c54229554",
+		name: "FACULDADE DE CIÊNCIAS MÉDICAS DA SANTA CASA SÃO PAULO",
+		acronym: "FCMSCSP",
+	},
+	{
+		_id: "600368779fb4a00c54229556",
+		name: "FACULDADE DE SÃO PAULO",
+		acronym: "FATEMA",
+	},
+	{
+		_id: "600368779fb4a00c54229558",
+		name: "UNIVERSIDADE CIDADE DE SÃO PAULO",
+		acronym: "",
+	},
+	{
+		_id: "600368789fb4a00c5422955b",
+		name: "UNIVERSIDADE DE MARÍLIA",
+		acronym: "UNIMAR",
+	},
+	{
+		_id: "600368789fb4a00c5422955d",
+		name: "CENTRO UNIVERSITÁRIO FILADÉLFIA",
+		acronym: "UNIFIL",
+	},
+	{
+		_id: "600368789fb4a00c5422955f",
+		name: "FACULDADE DE MEDICINA DE MARÍLIA",
+		acronym: "FAMEMA",
+	},
+	{
+		_id: "600368789fb4a00c54229562",
+		name: "FACULDADE PARANAENSE",
+		acronym: "FAPAR",
+	},
+	{
+		_id: "600368799fb4a00c54229564",
+		name: "FACULDADE SANTA MARCELINA",
+		acronym: "FASM",
+	},
+	{
+		_id: "600368799fb4a00c54229567",
+		name: "FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS SANTA MARCELINA",
+		acronym: "FAFISM",
+	},
+	{
+		_id: "600368799fb4a00c5422956a",
+		name: "UNIVERSIDADE PARANAENSE",
+		acronym: "UNIPAR",
+	},
+	{
+		_id: "6003687a9fb4a00c5422956d",
+		name: "FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS DE ITUVERAVA",
+		acronym: "FFCL",
+	},
+	{
+		_id: "6003687a9fb4a00c5422956f",
+		name: "FACULDADE DOUTOR FRANCISCO MAEDA",
+		acronym: "FAFRAM",
+	},
+	{
+		_id: "6003687a9fb4a00c54229572",
+		name: "FACULDADE DE DIREITO DE ITÚ",
+		acronym: "FADITU",
+	},
+	{
+		_id: "6003687b9fb4a00c54229575",
+		name: "UNIVERSIDADE DO CONTESTADO",
+		acronym: "UNC",
+	},
+	{
+		_id: "6003687b9fb4a00c54229578",
+		name: "UNIVERSIDADE DE CRUZ ALTA",
+		acronym: "UNICRUZ",
+	},
+	{
+		_id: "6003687c9fb4a00c5422957b",
+		name: "FACULDADE ESTADUAL DE CIÊNCIAS E LETRAS DE CAMPO MOURÃO",
+		acronym: "FECILCAM",
+	},
+	{
+		_id: "6003687c9fb4a00c5422957e",
+		name: "UNIVERSIDADE REGIONAL INTEGRADA DO ALTO URUGUAI E DAS MISSÕES",
+		acronym: "URI",
+	},
+	{
+		_id: "6003687c9fb4a00c54229580",
+		name: "CENTRO UNIVERSITÁRIO RITTER DOS REIS",
+		acronym: "UNIRITTER",
+	},
+	{
+		_id: "6003687c9fb4a00c54229583",
+		name: "CENTRO UNIVERSITÁRIO FRANCISCANO",
+		acronym: "UNIFRA",
+	},
+	{
+		_id: "6003687d9fb4a00c54229586",
+		name: "UNIVERSIDADE LUTERANA DO BRASIL",
+		acronym: "ULBRA",
+	},
+	{
+		_id: "6003687d9fb4a00c54229589",
+		name: "CENTRO UNIVERSITÁRIO LUTERANO DE JI-PARANÁ",
+		acronym: "CEULJI/ULBRA",
+	},
+	{
+		_id: "6003687e9fb4a00c5422958c",
+		name: "CENTRO UNIVERSITÁRIO LUTERANO DE SANTARÉM",
+		acronym: "CEULS",
+	},
+	{
+		_id: "6003687e9fb4a00c5422958e",
+		name: "CENTRO UNIVERSITÁRIO LUTERANO DE MANAUS",
+		acronym: "CEULM/ULBRA",
+	},
+	{
+		_id: "6003687e9fb4a00c54229591",
+		name: "CENTRO UNIVERSITÁRIO LUTERANO DE PALMAS",
+		acronym: "CEULP",
+	},
+	{
+		_id: "6003687f9fb4a00c54229594",
+		name: "FACULDADE CAMAQÜENSE DE CIÊNCIAS CONTÁBEIS E ADMINISTRATIVAS",
+		acronym: "FACCCA",
+	},
+	{
+		_id: "6003687f9fb4a00c54229596",
+		name: "FACULDADE DE FORMAÇÃO DE PROFESSORES E ESPECIALISTAS DE EDUCAÇÃO",
+		acronym: "FAFOPEE",
+	},
+	{
+		_id: "6003687f9fb4a00c54229598",
+		name: "CENTRO UNIVERSITÁRIO SANT´ANNA",
+		acronym: "UNISANT'ANNA",
+	},
+	{
+		_id: "6003687f9fb4a00c5422959a",
+		name: "UNIVERSIDADE BANDEIRANTE DE SÃO PAULO",
+		acronym: "UNIBAN",
+	},
+	{
+		_id: "600368809fb4a00c5422959c",
+		name: "UNIVERSIDADE IBIRAPUERA",
+		acronym: "UNIB",
+	},
+	{
+		_id: "600368809fb4a00c5422959e",
+		name: "FACULDADE DE ARTES PLÁSTICAS DA FUNDAÇÃO ARMANDO ALVARES PENTEADO",
+		acronym: "FAAP",
+	},
+	{
+		_id: "600368809fb4a00c542295a0",
+		name: "FACULDADE DE ADMINISTRAÇÃO DA FUNDAÇÃO ARMANDO ALVARES PENTEADO",
+		acronym: "FAE-FAAP",
+	},
+	{
+		_id: "600368809fb4a00c542295a2",
+		name:
+			"FACULDADE DE COMUNICAÇÃO E MARKETING DA - FUNDAÇÃO ARMANDO ÁLVARES PENTEADO",
+		acronym: "FACOM-FAAP",
+	},
+	{
+		_id: "600368819fb4a00c542295a4",
+		name: "FACULDADE DE ENGENHARIA DA FUNDAÇÃO ARMANDO ALVARES PENTEADO",
+		acronym: "FEFAAP",
+	},
+	{
+		_id: "600368819fb4a00c542295a6",
+		name: "FACULDADE DE ECONOMIA DA FUNDAÇÃO ARMANDO ALVARES PENTEADO",
+		acronym: "FEC-FAAP",
+	},
+	{
+		_id: "600368819fb4a00c542295a8",
+		name:
+			"FACULDADE DE COMPUTAÇÃO E INFORMÁTICA DA FUNDAÇÃO ARMANDO ALVARES PENTEADO",
+		acronym: "FCI-FAAP",
+	},
+	{
+		_id: "600368819fb4a00c542295aa",
+		name: "UNIVERSIDADE ANHEMBI MORUMBI",
+		acronym: "UAM",
+	},
+	{
+		_id: "600368829fb4a00c542295ad",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS DE ITAPETININGA",
+		acronym: "FCCI",
+	},
+	{ _id: "600368829fb4a00c542295af", name: "FACULDADE DE FILOSOFIA" },
+	{
+		_id: "600368829fb4a00c542295b2",
+		name: "UNIVERSIDADE DO GRANDE RIO PROFESSOR JOSÉ DE SOUZA HERDY",
+		acronym: "UNIGRANRIO",
+	},
+	{ _id: "600368839fb4a00c542295b5", name: "FACULDADE DE CIÊNCIAS ECONÔMICAS" },
+	{
+		_id: "600368839fb4a00c542295b8",
+		name: "FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS DOM BOSCO",
+		acronym: "FFCLDB",
+	},
+	{
+		_id: "600368839fb4a00c542295ba",
+		name: "FACULDADE DE MEDICINA DE PETRÓPOLIS",
+		acronym: "FMP",
+	},
+	{
+		_id: "600368849fb4a00c542295bd",
+		name: "CENTRO UNIVERSITÁRIO SERRA DOS ÓRGÃOS",
+		acronym: "UNIFESO",
+	},
+	{
+		_id: "600368849fb4a00c542295c0",
+		name: "UNIVERSIDADE GUARULHOS",
+		acronym: "UNG",
+	},
+	{
+		_id: "600368849fb4a00c542295c3",
+		name: "UNIVERSIDADE DO EXTREMO SUL CATARINENSE",
+		acronym: "UNESC",
+	},
+	{
+		_id: "600368859fb4a00c542295c5",
+		name: "CENTRO UNIVERSITÁRIO METROPOLITANO DE SÃO PAULO",
+		acronym: "UNIMESP",
+	},
+	{
+		_id: "600368859fb4a00c542295c8",
+		name: "CENTRO UNIVERSITÁRIO DE VOLTA REDONDA",
+		acronym: "UNIFOA",
+	},
+	{
+		_id: "600368859fb4a00c542295cb",
+		name: "CENTRO DE ENSINO SUPERIOR DE VALENÇA",
+		acronym: "CESVA",
+	},
+	{
+		_id: "600368869fb4a00c542295ce",
+		name: "FACULDADE DE EDUCAÇÃO CIÊNCIAS E LETRAS DON DOMÊNICO",
+		acronym: "FECLE",
+	},
+	{
+		_id: "600368869fb4a00c542295d1",
+		name:
+			"FACULDADE DE ADMINISTRAÇÃO CIÊNCIAS ECON E CONTÁBEIS DE GUARATINGUETÁ",
+		acronym: "FACEAG",
+	},
+	{
+		_id: "600368869fb4a00c542295d3",
+		name: "FACULDADE DE EDUCAÇÃO DE GUARATINGUETÁ",
+		acronym: "FACEG",
+	},
+	{
+		_id: "600368879fb4a00c542295d6",
+		name: "UNIVERSIDADE DO SUL DE SANTA CATARINA",
+		acronym: "UNISUL",
+	},
+	{
+		_id: "600368879fb4a00c542295d9",
+		name: "FACULDADE DE CIÊNCIAS E LETRAS DE BRAGANÇA PAULISTA",
+		acronym: "FESB",
+	},
+	{
+		_id: "600368879fb4a00c542295db",
+		name: "UNIVERSIDADE DE FRANCA",
+		acronym: "UNIFRAN",
+	},
+	{
+		_id: "600368889fb4a00c542295dd",
+		name:
+			"ESCOLA SUPERIOR DE CIÊNCIAS DA SANTA CASA DE MISERICÓRDIA DE VITÓRIA",
+		acronym: "EMESCAM",
+	},
+	{
+		_id: "600368889fb4a00c542295e0",
+		name: "FACULDADE DE MEDICINA DE CAMPOS",
+		acronym: "FMC",
+	},
+	{
+		_id: "600368889fb4a00c542295e2",
+		name: "CENTRO UNIVERSITÁRIO MONTE SERRAT",
+		acronym: "UNIMONTE",
+	},
+	{
+		_id: "600368889fb4a00c542295e5",
+		name: "FACULDADE TRIÂNGULO MINEIRO",
+		acronym: "FTM",
+	},
+	{
+		_id: "600368899fb4a00c542295e7",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS DO SUL DE MINAS - FACESM",
+		acronym: "FACESM",
+	},
+	{
+		_id: "600368899fb4a00c542295ea",
+		name: "FACULDADES INTEGRADAS DE CRUZEIRO",
+		acronym: "FIC",
+	},
+	{
+		_id: "600368899fb4a00c542295ec",
+		name: "UNIVERSIDADE VALE DO RIO DOCE",
+		acronym: "UNIVALE",
+	},
+	{
+		_id: "6003688a9fb4a00c542295ee",
+		name: "CENTRO UNIVERSITÁRIO MOACYR SREDER BASTOS",
+		acronym: "UNIMSB",
+	},
+	{
+		_id: "6003688a9fb4a00c542295f1",
+		name: "FACULDADE DE EDUCAÇÃO SÃO LUÍS",
+		acronym: "FESL",
+	},
+	{
+		_id: "6003688a9fb4a00c542295f3",
+		name: "CENTRO UNIVERSITÁRIO DO DISTRITO FEDERAL",
+		acronym: "UDF",
+	},
+	{
+		_id: "6003688a9fb4a00c542295f5",
+		name: "UNIVERSIDADE CATÓLICA DO SALVADOR",
+		acronym: "UCSAL",
+	},
+	{
+		_id: "6003688b9fb4a00c542295f7",
+		name: "UNIVERSIDADE DE MOGI DAS CRUZES",
+		acronym: "UMC",
+	},
+	{
+		_id: "6003688b9fb4a00c542295f9",
+		name: "ESCOLA DE ENFERMAGEM WENCESLAU BRAZ",
+		acronym: "EEWB",
+	},
+	{
+		_id: "6003688b9fb4a00c542295fb",
+		name: "CENTRO UNIVERSITÁRIO CELSO LISBOA",
+		acronym: "UCL",
+	},
+	{
+		_id: "6003688c9fb4a00c542295fe",
+		name: "CENTRO UNIVERSITÁRIO DE BARRA MANSA",
+		acronym: "UBM",
+	},
+	{
+		_id: "6003688c9fb4a00c54229601",
+		name: "CENTRO UNIVERSITÁRIO PLÍNIO LEITE",
+		acronym: "UNIPLI",
+	},
+	{
+		_id: "6003688c9fb4a00c54229603",
+		name: "FACULDADE DE MÚSICA DO ESPÍRITO SANTO",
+		acronym: "FAMES",
+	},
+	{
+		_id: "6003688c9fb4a00c54229606",
+		name: "UNIVERSIDADE REGIONAL DO NOROESTE DO ESTADO DO RIO GRANDE DO SUL",
+		acronym: "UNIJUI",
+	},
+	{
+		_id: "6003688d9fb4a00c54229608",
+		name: "FACULDADES INTEGRADAS DE ITAPETININGA",
+		acronym: "FII",
+	},
+	{
+		_id: "6003688d9fb4a00c5422960a",
+		name: "ESCOLA BAHIANA DE MEDICINA E SAÚDE PÚBLICA",
+		acronym: "EBMSP",
+	},
+	{
+		_id: "6003688d9fb4a00c5422960d",
+		name: "FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS DE MANDAGUARI",
+		acronym: "FAFIMAN",
+	},
+	{
+		_id: "6003688e9fb4a00c5422960f",
+		name: "PONTIFÍCIA UNIVERSIDADE CATÓLICA DO RIO DE JANEIRO",
+		acronym: "PUC-RIO",
+	},
+	{
+		_id: "6003688e9fb4a00c54229611",
+		name: "FACULDADE DE CIÊNCIAS DA FUNDAÇÃO INSTITUTO TECNOLÓGICO DE OSASCO",
+		acronym: "FAC-FITO",
+	},
+	{
+		_id: "6003688e9fb4a00c54229614",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS DE ITABIRA",
+		acronym: "FACHI",
+	},
+	{
+		_id: "6003688e9fb4a00c54229616",
+		name: "FACULDADE DE CIÊNCIAS ADMINISTRATIVAS E CONTÁBEIS DE ITABIRA",
+		acronym: "FACCI",
+	},
+	{
+		_id: "6003688f9fb4a00c54229618",
+		name: "PONTIFÍCIA UNIVERSIDADE CATÓLICA DE SÃO PAULO",
+		acronym: "PUCSP",
+	},
+	{
+		_id: "6003688f9fb4a00c5422961a",
+		name: "PONTIFÍCIA UNIVERSIDADE CATÓLICA DE GOIÁS",
+		acronym: "PUC GOIÁS",
+	},
+	{
+		_id: "6003688f9fb4a00c5422961c",
+		name: "UNIVERSIDADE DO ESTADO DO RIO DE JANEIRO",
+		acronym: "UERJ",
+	},
+	{
+		_id: "600368909fb4a00c5422961f",
+		name: "UNIVERSIDADE FEDERAL DO ACRE",
+		acronym: "UFAC",
+	},
+	{
+		_id: "600368909fb4a00c54229622",
+		name: "UNIVERSIDADE ESTADUAL DA PARAÍBA",
+		acronym: "UEPB",
+	},
+	{
+		_id: "600368909fb4a00c54229624",
+		name: "UNIVERSIDADE DE FORTALEZA",
+		acronym: "UNIFOR",
+	},
+	{
+		_id: "600368909fb4a00c54229626",
+		name: "CONSERVATÓRIO DE MÚSICA DE NITERÓI",
+		acronym: "CMN",
+	},
+	{
+		_id: "600368919fb4a00c54229628",
+		name: "ESCOLA DE MÚSICA E BELAS ARTES DO PARANÁ",
+		acronym: "EMBAP",
+	},
+	{
+		_id: "600368919fb4a00c5422962a",
+		name: "UNIVERSIDADE BRAZ CUBAS",
+		acronym: "UBC",
+	},
+	{
+		_id: "600368919fb4a00c5422962c",
+		name: "FACULDADE DE ARTES DO PARANÁ",
+		acronym: "FAP",
+	},
+	{
+		_id: "600368929fb4a00c5422962f",
+		name: "UNIVERSIDADE FEDERAL DO MARANHÃO",
+		acronym: "UFMA",
+	},
+	{
+		_id: "600368929fb4a00c54229631",
+		name: "UNIVERSIDADE ESTADUAL DO MARANHÃO",
+		acronym: "UEMA",
+	},
+	{
+		_id: "600368929fb4a00c54229633",
+		name: "UNIVERSIDADE FEDERAL DO PARÁ",
+		acronym: "UFPA",
+	},
+	{
+		_id: "600368929fb4a00c54229635",
+		name: "UNIVERSIDADE FEDERAL DO PARANÁ",
+		acronym: "UFPR",
+	},
+	{
+		_id: "600368939fb4a00c54229638",
+		name: "UNIVERSIDADE FEDERAL RURAL DO RIO DE JANEIRO",
+		acronym: "UFRRJ",
+	},
+	{
+		_id: "600368939fb4a00c5422963a",
+		name: "UNIVERSIDADE FEDERAL DE MINAS GERAIS",
+		acronym: "UFMG",
+	},
+	{
+		_id: "600368939fb4a00c5422963d",
+		name: "UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE",
+		acronym: "UFRN",
+	},
+	{
+		_id: "600368939fb4a00c5422963f",
+		name: "UNIVERSIDADE FEDERAL DE ALAGOAS",
+		acronym: "UFAL",
+	},
+	{
+		_id: "600368949fb4a00c54229641",
+		name: "UNIVERSIDADE FEDERAL DA BAHIA",
+		acronym: "UFBA",
+	},
+	{
+		_id: "600368949fb4a00c54229643",
+		name: "UNIVERSIDADE FEDERAL FLUMINENSE",
+		acronym: "UFF",
+	},
+	{
+		_id: "600368949fb4a00c54229645",
+		name: "UNIVERSIDADE FEDERAL DA PARAÍBA",
+		acronym: "UFPB",
+	},
+	{
+		_id: "600368949fb4a00c54229647",
+		name: "UNIVERSIDADE FEDERAL DE PERNAMBUCO",
+		acronym: "UFPE",
+	},
+	{
+		_id: "600368959fb4a00c54229649",
+		name: "UNIVERSIDADE FEDERAL DO ESPÍRITO SANTO",
+		acronym: "UFES",
+	},
+	{
+		_id: "600368959fb4a00c5422964b",
+		name: "UNIVERSIDADE FEDERAL DE JUIZ DE FORA",
+		acronym: "UFJF",
+	},
+	{
+		_id: "600368959fb4a00c5422964d",
+		name: "UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL",
+		acronym: "UFRGS",
+	},
+	{
+		_id: "600368959fb4a00c5422964f",
+		name: "UNIVERSIDADE FEDERAL DE SANTA MARIA",
+		acronym: "UFSM",
+	},
+	{
+		_id: "600368969fb4a00c54229651",
+		name: "UNIVERSIDADE FEDERAL DO CEARÁ",
+		acronym: "UFC",
+	},
+	{
+		_id: "600368969fb4a00c54229653",
+		name: "UNIVERSIDADE FEDERAL DE GOIÁS",
+		acronym: "UFG",
+	},
+	{
+		_id: "600368969fb4a00c54229655",
+		name: "UNIVERSIDADE FEDERAL DE SANTA CATARINA",
+		acronym: "UFSC",
+	},
+	{
+		_id: "600368969fb4a00c54229657",
+		name: "UNIVERSIDADE FEDERAL DO RIO DE JANEIRO",
+		acronym: "UFRJ",
+	},
+	{
+		_id: "600368979fb4a00c54229659",
+		name: "UNIVERSIDADE FEDERAL RURAL DE PERNAMBUCO",
+		acronym: "UFRPE",
+	},
+	{
+		_id: "600368979fb4a00c5422965b",
+		name: "UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ",
+		acronym: "UTFPR",
+	},
+	{
+		_id: "600368979fb4a00c5422965d",
+		name: "UNIVERSIDADE FEDERAL RURAL DO SEMI-ÁRIDO",
+		acronym: "UFERSA",
+	},
+	{
+		_id: "600368979fb4a00c5422965f",
+		name: "UNIVERSIDADE FEDERAL RURAL DA AMAZÔNIA",
+		acronym: "UFRA",
+	},
+	{
+		_id: "600368989fb4a00c54229661",
+		name: "UNIVERSIDADE FEDERAL DE SÃO PAULO",
+		acronym: "UNIFESP",
+	},
+	{
+		_id: "600368989fb4a00c54229664",
+		name: "UNIVERSIDADE FEDERAL DE LAVRAS",
+		acronym: "UFLA",
+	},
+	{
+		_id: "600368989fb4a00c54229666",
+		name: "CENTRO FEDERAL DE EDUCAÇÃO TECNOLÓGICA CELSO SUCKOW DA FONSECA",
+		acronym: "CEFET/RJ",
+	},
+	{
+		_id: "600368989fb4a00c54229668",
+		name: "CENTRO FEDERAL DE EDUCAÇÃO TECNOLÓGICA DE MINAS GERAIS",
+		acronym: "CEFET/MG",
+	},
+	{
+		_id: "600368999fb4a00c5422966a",
+		name: "UNIVERSIDADE FEDERAL DE ALFENAS",
+		acronym: "UNIFAL-MG",
+	},
+	{
+		_id: "600368999fb4a00c5422966d",
+		name: "UNIVERSIDADE FEDERAL DOS VALES DO JEQUITINHONHA E MUCURI",
+		acronym: "UFVJM",
+	},
+	{
+		_id: "600368999fb4a00c5422966f",
+		name: "UNIVERSIDADE FEDERAL DO TRIÂNGULO MINEIRO",
+		acronym: "UFTM",
+	},
+	{
+		_id: "6003689a9fb4a00c54229671",
+		name: "UNIVERSIDADE FEDERAL DE ITAJUBÁ - UNIFEI",
+		acronym: "UNIFEI",
+	},
+	{
+		_id: "6003689a9fb4a00c54229674",
+		name: "INSTITUTO FEDERAL DE EDUCAÇÃO",
+		acronym: "CIÊNCIA E TECNOLOGIA DO AMAPÁ",
+	},
+	{ _id: "6003689a9fb4a00c54229677", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{ _id: "6003689b9fb4a00c5422967a", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "6003689b9fb4a00c5422967c",
+		name: "INSTITUTO TECNOLÓGICO DE AERONÁUTICA",
+		acronym: "ITA",
+	},
+	{
+		_id: "6003689b9fb4a00c5422967e",
+		name: "UNIVERSIDADE MUNICIPAL DE SÃO CAETANO DO SUL",
+		acronym: "USCS",
+	},
+	{
+		_id: "6003689b9fb4a00c54229681",
+		name: "FACULDADE DE DIREITO DE CACHOEIRO DO ITAPEMIRIM",
+		acronym: "FDCI",
+	},
+	{
+		_id: "6003689c9fb4a00c54229683",
+		name:
+			"FACULDADE DE CIÊNCIAS CONTÁBEIS E ADMINISTRATIVAS DE CACHOEIRO DO ITAPEMIRIM",
+		acronym: "FACCACI",
+	},
+	{
+		_id: "6003689c9fb4a00c54229685",
+		name: "ESCOLA SUPERIOR DE CRUZEIRO PREFEITO HAMILTON VIEIRA MENDES",
+		acronym: "ESEFIC",
+	},
+	{
+		_id: "6003689c9fb4a00c54229688",
+		name: "UNIVERSIDADE ESTADUAL DO OESTE DO PARANÁ",
+		acronym: "UNIOESTE",
+	},
+	{
+		_id: "6003689d9fb4a00c5422968a",
+		name: "CENTRO UNIVERSITÁRIO METODISTA BENNETT",
+		acronym: "BENNETT",
+	},
+	{
+		_id: "6003689d9fb4a00c5422968d",
+		name: "FACULDADE DE FILOSOFIA SANTA DOROTÉIA",
+		acronym: "FFSD",
+	},
+	{
+		_id: "6003689d9fb4a00c54229690",
+		name:
+			"FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS PROFESSORA NAIR FORTES ABU-MERHY",
+		acronym: "FAFI - PRONAFOR",
+	},
+	{
+		_id: "6003689e9fb4a00c54229692",
+		name: "CENTRO DE ESTUDOS SUPERIORES DE MACEIÓ",
+		acronym: "CESMAC",
+	},
+	{
+		_id: "6003689e9fb4a00c54229694",
+		name: "FACULDADES INTEGRADAS SILVA E SOUZA",
+		acronym: "FAU",
+	},
+	{
+		_id: "6003689e9fb4a00c54229697",
+		name: "FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS CARLOS QUEIROZ",
+		acronym: "FAFIQUE",
+	},
+	{
+		_id: "6003689f9fb4a00c5422969a",
+		name: "FACULDADE CENECISTA DE CAPIVARI",
+		acronym: "FACECAP",
+	},
+	{
+		_id: "6003689f9fb4a00c5422969d",
+		name: "FACULDADE CENECISTA DE OSÓRIO",
+		acronym: "FACOS",
+	},
+	{
+		_id: "6003689f9fb4a00c5422969f",
+		name: "FACULDADE CENECISTA DE VARGINHA",
+		acronym: "FACECA",
+	},
+	{
+		_id: "600368a09fb4a00c542296a2",
+		name: "CENTRO DE ENSINO SUPERIOR CENECISTA DE FARROUPILHA",
+		acronym: "CESF",
+	},
+	{
+		_id: "600368a09fb4a00c542296a4",
+		name: "INSTITUTO MILITAR DE ENGENHARIA",
+		acronym: "IME",
+	},
+	{
+		_id: "600368a09fb4a00c542296a6",
+		name: "UNIVERSIDADE FEDERAL DE PELOTAS",
+		acronym: "UFPEL",
+	},
+	{
+		_id: "600368a09fb4a00c542296a8",
+		name: "ESCOLA SUPERIOR DE PROPAGANDA E MARKETING",
+		acronym: "ESPM",
+	},
+	{
+		_id: "600368a19fb4a00c542296aa",
+		name: "FACULDADE DE ENGENHARIA SÃO PAULO",
+		acronym: "FESP",
+	},
+	{
+		_id: "600368a19fb4a00c542296ad",
+		name: "FACULDADE DE DIREITO MILTON CAMPOS",
+		acronym: "FDMC",
+	},
+	{
+		_id: "600368a19fb4a00c542296af",
+		name: "FACULDADES INTEGRADAS MARIA THEREZA",
+		acronym: "FAMATH",
+	},
+	{
+		_id: "600368a19fb4a00c542296b1",
+		name: "CENTRO UNIVERSITÁRIO LA SALLE",
+		acronym: "UNILASALLE",
+	},
+	{
+		_id: "600368a29fb4a00c542296b4",
+		name: "CENTRO UNIVERSITÁRIO DE JARAGUÁ DO SUL",
+		acronym: "UNERJ",
+	},
+	{
+		_id: "600368a29fb4a00c542296b6",
+		name: "FACULDADE DE ENFERMAGEM LUIZA DE MARILLAC",
+		acronym: "FELM",
+	},
+	{
+		_id: "600368a29fb4a00c542296b8",
+		name: "FACULDADES ASSOCIADAS DE UBERABA - FAZU",
+		acronym: "FAZU",
+	},
+	{
+		_id: "600368a39fb4a00c542296bb",
+		name: "CENTRO UNIVERSITÁRIO DE UNIÃO DA VITÓRIA",
+		acronym: "UNIUV",
+	},
+	{
+		_id: "600368a39fb4a00c542296be",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS E ADMINISTRATIVAS DE AVARÉ",
+		acronym: "IESA/FACCAA",
+	},
+	{
+		_id: "600368a39fb4a00c542296c0",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE GOVERNADOR VALADARES",
+		acronym: "FAGV",
+	},
+	{
+		_id: "600368a49fb4a00c542296c3",
+		name: "FACULDADE SANTA CECÍLIA",
+		acronym: "FASC",
+	},
+	{
+		_id: "600368a49fb4a00c542296c6",
+		name: "FACULDADE DE FORMAÇÃO DE PROFESSORES DE SERRA TALHADA",
+		acronym: "FAFOPST",
+	},
+	{
+		_id: "600368a49fb4a00c542296c8",
+		name: "FACULDADES INTEGRADAS CORAÇÃO DE JESUS",
+		acronym: "FAINC",
+	},
+	{
+		_id: "600368a59fb4a00c542296cb",
+		name: "UNIVERSIDADE SALGADO DE OLIVEIRA",
+		acronym: "UNIVERSO",
+	},
+	{
+		_id: "600368a59fb4a00c542296ce",
+		name: "CENTRO UNIVERSITÁRIO VILA VELHA",
+		acronym: "UVV",
+	},
+	{
+		_id: "600368a59fb4a00c542296d1",
+		name: "UNIVERSIDADE DE TAUBATÉ",
+		acronym: "UNITAU",
+	},
+	{
+		_id: "600368a69fb4a00c542296d4",
+		name: "UNIVERSIDADE ESTADUAL DE FEIRA DE SANTANA",
+		acronym: "UEFS",
+	},
+	{
+		_id: "600368a69fb4a00c542296d6",
+		name: "FACULDADES INTEGRADAS DE JACAREPAGUÁ",
+		acronym: "FIJ",
+	},
+	{
+		_id: "600368a69fb4a00c542296d8",
+		name: "CENTRO UNIVERSITÁRIO DE ENSINO SUPERIOR DO AMAZONAS",
+		acronym: "CIESA",
+	},
+	{
+		_id: "600368a69fb4a00c542296da",
+		name: "UNIVERSIDADE NILTON LINS",
+		acronym: "UNINILTONLINS",
+	},
+	{
+		_id: "600368a79fb4a00c542296dc",
+		name: "UNIVERSIDADE SÃO FRANCISCO",
+		acronym: "USF",
+	},
+	{
+		_id: "600368a79fb4a00c542296de",
+		name: "UNIVERSIDADE ANHANGUERA - UNIDERP",
+		acronym: "UNIDERP",
+	},
+	{
+		_id: "600368a79fb4a00c542296e0",
+		name: "FACULDADE DE ENGENHARIA DE SOROCABA",
+		acronym: "FACENS",
+	},
+	{
+		_id: "600368a89fb4a00c542296e3",
+		name: "CENTRO UNIVERSITÁRIO DA GRANDE DOURADOS",
+		acronym: "UNIGRAN",
+	},
+	{
+		_id: "600368a89fb4a00c542296e6",
+		name: "CENTRO DE ENSINO SUPERIOR DO VALE SÃO FRANCISCO",
+		acronym: "CESVASF",
+	},
+	{
+		_id: "600368a89fb4a00c542296e8",
+		name: "FACULDADE DE REABILITAÇÃO DA ASCE",
+		acronym: "FRASCE",
+	},
+	{
+		_id: "600368a89fb4a00c542296eb",
+		name: "FACULDADES INTEGRADAS DE PEDRO LEOPOLDO",
+		acronym: "FIPEL",
+	},
+	{
+		_id: "600368a99fb4a00c542296ee",
+		name: "FACULDADE DO NOROESTE DE MINAS",
+		acronym: "FINOM",
+	},
+	{
+		_id: "600368a99fb4a00c542296f1",
+		name: "FACULDADE DE FORMAÇÃO DE PROFESSORES DE BELO JARDIM",
+		acronym: "FABEJA",
+	},
+	{
+		_id: "600368aa9fb4a00c542296f4",
+		name: "FACULDADE DE CIÊNCIAS APLICADAS DE LIMOEIRO",
+		acronym: "FACAL",
+	},
+	{
+		_id: "600368aa9fb4a00c542296f6",
+		name: "FACULDADE ESTADUAL DE FILOSOFIA CIÊNCIAS LETRAS UNIÃO DA VITÓRIA",
+		acronym: "FAFIUV",
+	},
+	{
+		_id: "600368aa9fb4a00c542296f9",
+		name: "UNIVERSIDADE ESTADUAL DO SUDOESTE DA BAHIA",
+		acronym: "UESB",
+	},
+	{
+		_id: "600368ab9fb4a00c542296fc",
+		name: "FACULDADE DE CIÊNCIAS APLICADAS E SOCIAIS DE PETROLINA",
+		acronym: "FACAPE",
+	},
+	{
+		_id: "600368ab9fb4a00c542296fe",
+		name: "UNIVERSIDADE FEDERAL DO ESTADO DO RIO DE JANEIRO",
+		acronym: "UNIRIO",
+	},
+	{
+		_id: "600368ab9fb4a00c54229700",
+		name: "UNIVERSIDADE FEDERAL DE MATO GROSSO DO SUL",
+		acronym: "UFMS",
+	},
+	{
+		_id: "600368ab9fb4a00c54229703",
+		name: "FUNDAÇÃO UNIVERSIDADE FEDERAL DE RONDÔNIA",
+		acronym: "UNIR",
+	},
+	{
+		_id: "600368ac9fb4a00c54229706",
+		name: "FACULDADE DE FORMAÇÃO DE PROFESSORES DE GOIANA",
+		acronym: "F.F.P.G.",
+	},
+	{
+		_id: "600368ac9fb4a00c54229709",
+		name: "FACULDADE DE CIÊNCIAS DA ADMINISTRAÇÃO DE GARANHUNS",
+		acronym: "FAGA",
+	},
+	{
+		_id: "600368ad9fb4a00c5422970c",
+		name: "FACULDADE DE FORMAÇÃO DE PROFESSORES DE ARARIPINA",
+		acronym: "FAFOPA",
+	},
+	{
+		_id: "600368ad9fb4a00c5422970e",
+		name: "FACULDADE DE CIÊNCIAS AGRÁRIAS DE ARARIPINA",
+		acronym: "FACIAGRA",
+	},
+	{
+		_id: "600368ad9fb4a00c54229710",
+		name: "FACULDADE SÃO JOSÉ",
+		acronym: "FSJ",
+	},
+	{
+		_id: "600368ad9fb4a00c54229712",
+		name: "FACULDADE DE ARTES DULCINA DE MORAES",
+		acronym: "FADM",
+	},
+	{
+		_id: "600368ae9fb4a00c54229714",
+		name: "CENTRO UNIVERSITÁRIO CENTRAL PAULISTA",
+		acronym: "UNICEP",
+	},
+	{
+		_id: "600368ae9fb4a00c54229716",
+		name: "FACULDADE BÉTHENCOURT DA SILVA",
+		acronym: "FABES",
+	},
+	{
+		_id: "600368ae9fb4a00c54229718",
+		name: "CENTRO UNIVERSITÁRIO HERMÍNIO DA SILVEIRA",
+		acronym: "UNI IBMR",
+	},
+	{
+		_id: "600368ae9fb4a00c5422971a",
+		name: "CENTRO UNIVERSITÁRIO FRANCISCANO DO PARANÁ",
+		acronym: "FAE",
+	},
+	{
+		_id: "600368af9fb4a00c5422971d",
+		name: "FACULDADES INTEGRADAS DE BOTUCATU",
+		acronym: "UNIFAC",
+	},
+	{
+		_id: "600368af9fb4a00c5422971f",
+		name: "FUNDAÇÃO UNIVERSIDADE FEDERAL DE CIÊNCIAS DA SAÚDE DE PORTO ALEGRE",
+		acronym: "UFCSPA",
+	},
+	{
+		_id: "600368af9fb4a00c54229721",
+		name: "UNIVERSIDADE POTIGUAR",
+		acronym: "UNP",
+	},
+	{
+		_id: "600368af9fb4a00c54229724",
+		name: "UNIVERSIDADE DO ESTADO DE MATO GROSSO",
+		acronym: "UNEMAT",
+	},
+	{
+		_id: "600368b09fb4a00c54229727",
+		name:
+			"FACULDADE DE CIÊNCIAS HUMANAS E SOCIAIS APLICADAS DO CABO DE SANTO AGOSTINHO",
+		acronym: "FACHUCA",
+	},
+	{
+		_id: "600368b09fb4a00c5422972a",
+		name: "FACULDADE DE EDUCAÇÃO DE ASSIS",
+		acronym: "FAEDA",
+	},
+	{
+		_id: "600368b09fb4a00c5422972c",
+		name: "ESCOLA DE EDUCAÇÃO FÍSICA DE ASSIS",
+		acronym: "EEFA",
+	},
+	{
+		_id: "600368b19fb4a00c5422972e",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE ASSIS",
+		acronym: "FAA",
+	},
+	{
+		_id: "600368b19fb4a00c54229731",
+		name: "FACULDADE ESTADUAL DE FILOSOFIA",
+		acronym: "CIÊNCIAS E LETRAS DE PARANAGUÁ",
+	},
+	{
+		_id: "600368b19fb4a00c54229734",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS DE CURVELO",
+		acronym: "FACIC",
+	},
+	{
+		_id: "600368b29fb4a00c54229736",
+		name: "FACULDADES INTEGRADAS MARIA IMACULADA",
+		acronym: "FIMI",
+	},
+	{ _id: "600368b29fb4a00c54229738", name: "FACULDADE DE FILOSOFIA" },
+	{
+		_id: "600368b29fb4a00c5422973b",
+		name: "FACULDADE PITÁGORAS DE LINHARES",
+		acronym: "",
+	},
+	{
+		_id: "600368b39fb4a00c5422973d",
+		name: "CENTRO UNIVERSITÁRIO SÃO CAMILO",
+		acronym: "SAO CAMILO",
+	},
+	{
+		_id: "600368b39fb4a00c54229740",
+		name: "UNIVERSIDADE ESTADUAL DE PONTA GROSSA",
+		acronym: "UEPG",
+	},
+	{
+		_id: "600368b39fb4a00c54229743",
+		name: "FACULDADES INTEGRADAS TERESA D´ÁVILA",
+		acronym: "FATEA",
+	},
+	{
+		_id: "600368b49fb4a00c54229745",
+		name: "CENTRO UNIVERSITÁRIO SÃO CAMILO - ESPÍRITO SANTO",
+		acronym: "SÃO CAMILO-ES",
+	},
+	{
+		_id: "600368b49fb4a00c54229748",
+		name: "FACULDADE DE CIÊNCIAS",
+		acronym: "EDUCAÇÃO E TEOLOGIA DO NORTE DO BRASIL",
+	},
+	{
+		_id: "600368b49fb4a00c5422974b",
+		name: "UNIVERSIDADE REGIONAL DO CARIRI",
+		acronym: "URCA",
+	},
+	{
+		_id: "600368b49fb4a00c5422974d",
+		name: "CENTRO DE ENSINO SUPERIOR DO VALE DO PARNAÍBA",
+		acronym: "CESVALE",
+	},
+	{
+		_id: "600368b59fb4a00c54229750",
+		name: "INSTITUTO MUNICIPAL DE ENSINO SUPERIOR DE SÃO MANUEL",
+		acronym: "IMESSM",
+	},
+	{
+		_id: "600368b59fb4a00c54229753",
+		name: "FACULDADE DE PARÁ DE MINAS",
+		acronym: "FAPAM",
+	},
+	{
+		_id: "600368b69fb4a00c54229756",
+		name: "CENTRO UNIVERSITÁRIO UNIRG",
+		acronym: "UNIRG",
+	},
+	{
+		_id: "600368b69fb4a00c54229759",
+		name: "CENTRO DE ENSINO SUPERIOR DE CATALÃO",
+		acronym: "CESUC",
+	},
+	{
+		_id: "600368b69fb4a00c5422975c",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS DO SERTÃO CENTRAL",
+		acronym: "FACHUSC",
+	},
+	{
+		_id: "600368b79fb4a00c5422975e",
+		name: "ESCOLA SUPERIOR DE ENSINO HELENA ANTIPOFF",
+		acronym: "ESEHA",
+	},
+	{
+		_id: "600368b79fb4a00c54229761",
+		name: "FACULDADE DE EDUCAÇÃO E CIÊNCIAS HUMANAS DE ANICUNS",
+		acronym: "FECHA",
+	},
+	{
+		_id: "600368b79fb4a00c54229764",
+		name: "CENTRO DE ENSINO SUPERIOR DE JATAÍ",
+		acronym: "CESUT",
+	},
+	{
+		_id: "600368b89fb4a00c54229766",
+		name: "UNIVERSIDADE ESTADUAL DO PIAUÍ",
+		acronym: "UESPI",
+	},
+	{
+		_id: "600368b89fb4a00c54229768",
+		name: "FACULDADES INTEGRADAS DO TAPAJÓS",
+		acronym: "ISES",
+	},
+	{
+		_id: "600368b89fb4a00c5422976b",
+		name: "FACULDADE DE CIÊNCIAS MÉDICAS E PARAMÉDICAS FLUMINENSE",
+		acronym: "SEFLU",
+	},
+	{
+		_id: "600368b89fb4a00c5422976d",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS DE PERNAMBUCO",
+		acronym: "FCHPE",
+	},
+	{
+		_id: "600368b99fb4a00c5422976f",
+		name: "FACULDADES SPEI",
+		acronym: "FACSPEI",
+	},
+	{
+		_id: "600368b99fb4a00c54229771",
+		name: "INSTITUTO UNIFICADO DE ENSINO SUPERIOR OBJETIVO",
+		acronym: "IUESO",
+	},
+	{
+		_id: "600368b99fb4a00c54229773",
+		name: "FACULDADE PINHEIRO GUIMARÃES",
+		acronym: "FAPG",
+	},
+	{
+		_id: "600368ba9fb4a00c54229776",
+		name: "FACULDADES INTEGRADAS DE NAVIRAÍ",
+		acronym: "FINAV",
+	},
+	{
+		_id: "600368ba9fb4a00c54229778",
+		name: "FACULDADE ALVORADA DE INFORMÁTICA E PROCESSAMENTO DE DADOS",
+		acronym: "FAIPD",
+	},
+	{
+		_id: "600368ba9fb4a00c5422977a",
+		name: "FACULDADE ALVORADA DE EDUCAÇÃO FÍSICA E DESPORTO",
+		acronym: "FAEFD",
+	},
+	{
+		_id: "600368ba9fb4a00c5422977d",
+		name: "FACULDADE DE EDUCAÇÃO THEREZA PORTO MARQUES",
+		acronym: "FAETEC",
+	},
+	{
+		_id: "600368bb9fb4a00c5422977f",
+		name: "FACULDADE DE TECNOLOGIA THEREZA PORTO MARQUES",
+		acronym: "FAETEC",
+	},
+	{
+		_id: "600368bb9fb4a00c54229782",
+		name: "FACULDADE DE PONTA PORÃ",
+		acronym: "FAP",
+	},
+	{
+		_id: "600368bb9fb4a00c54229784",
+		name: "UNIVERSIDADE DE CUIABÁ",
+		acronym: "UNIC / PITÁGORAS",
+	},
+	{
+		_id: "600368bb9fb4a00c54229786",
+		name: "FACULDADE DE RONDÔNIA",
+		acronym: "FARO",
+	},
+	{
+		_id: "600368bc9fb4a00c54229789",
+		name: "FACULDADE DE EDUCAÇÃO DE TANGARÁ DA SERRA",
+		acronym: "FACEDUTS",
+	},
+	{
+		_id: "600368bc9fb4a00c5422978b",
+		name: "FACULDADE DE ENFERMAGEM DO HOSPITAL ISRAELITA ALBERT EINSTEIN",
+		acronym: "FEHIAE",
+	},
+	{
+		_id: "600368bc9fb4a00c5422978e",
+		name: "FACULDADE ANHANGUERA DE RONDONÓPOLIS",
+		acronym: "FAR",
+	},
+	{
+		_id: "600368bd9fb4a00c54229791",
+		name: "UNIVERSIDADE FEDERAL DE RORAIMA",
+		acronym: "UFRR",
+	},
+	{
+		_id: "600368bd9fb4a00c54229793",
+		name: "CENTRO UNIVERSITÁRIO DO ESTADO DO PARÁ",
+		acronym: "CESUPA",
+	},
+	{
+		_id: "600368bd9fb4a00c54229795",
+		name:
+			"Centro Universitário Estácio Radial de São Paulo - Estácio UNIRADIAL",
+		acronym: "RADIAL",
+	},
+	{
+		_id: "600368be9fb4a00c54229798",
+		name: "CENTRO UNIVERSITÁRIO DE VÁRZEA GRANDE",
+		acronym: "UNIVAG",
+	},
+	{
+		_id: "600368be9fb4a00c5422979b",
+		name: "FACULDADES INTEGRADAS DE DIAMANTINO",
+		acronym: "FID",
+	},
+	{
+		_id: "600368be9fb4a00c5422979e",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS DO VALE DO SÃO LOURENÇO",
+		acronym: "EDUVALE",
+	},
+	{
+		_id: "600368bf9fb4a00c542297a1",
+		name: "Faculdade AVEC de Vilhena",
+		acronym: "AVEC",
+	},
+	{
+		_id: "600368bf9fb4a00c542297a4",
+		name: "FACULDADE DE ARACRUZ",
+		acronym: "FAACZ",
+	},
+	{
+		_id: "600368bf9fb4a00c542297a7",
+		name: "FACULDADE MONTENEGRO",
+		acronym: "FAM",
+	},
+	{
+		_id: "600368c09fb4a00c542297a9",
+		name: "CENTRO UNIVERSITÁRIO CARIOCA",
+		acronym: "UNICARIOCA",
+	},
+	{
+		_id: "600368c09fb4a00c542297ab",
+		name: "FACULDADE INTERAÇÃO AMERICANA",
+		acronym: "FIA",
+	},
+	{
+		_id: "600368c09fb4a00c542297ae",
+		name:
+			"FACULDADE DE DIREITO E CIÊNCIAS SOCIAIS DO LESTE DE MINAS - FADILESTE",
+		acronym: "FADILESTE",
+	},
+	{
+		_id: "600368c19fb4a00c542297b1",
+		name: "CENTRO TÉCNICO-EDUCACIONAL SUPERIOR DO OESTE PARANAENSE",
+		acronym: "CTESOP",
+	},
+	{
+		_id: "600368c19fb4a00c542297b4",
+		name: "FACULDADES INTEGRADAS DE CASSILÂNDIA",
+		acronym: "FIC",
+	},
+	{
+		_id: "600368c19fb4a00c542297b6",
+		name: "ESCOLA SUPERIOR DE ESTUDOS EMPRESARIAIS E INFORMÁTICA",
+		acronym: "ESEEI",
+	},
+	{
+		_id: "600368c29fb4a00c542297b8",
+		name: "CENTRO UNIVERSITÁRIO DO MARANHÃO",
+		acronym: "UNICEUMA",
+	},
+	{
+		_id: "600368c29fb4a00c542297bb",
+		name: "FACULDADE DE FILOSOFIA E CIÊNCIAS HUMANAS DE GOIATUBA",
+		acronym: "FAFICH",
+	},
+	{
+		_id: "600368c29fb4a00c542297bd",
+		name: "FACULDADE PRESBITERIANA GAMMON",
+		acronym: "FAGAMMON",
+	},
+	{
+		_id: "600368c39fb4a00c542297c0",
+		name: "CENTRO UNIVERSITÁRIO DE DESENVOLVIMENTO DO CENTRO-OESTE",
+		acronym: "UNIDESC",
+	},
+	{
+		_id: "600368c39fb4a00c542297c3",
+		name: "FACULDADE DE SÃO LOURENÇO",
+		acronym: "FASAMA",
+	},
+	{
+		_id: "600368c39fb4a00c542297c6",
+		name: "UNIVERSIDADE FEDERAL DO AMAPÁ",
+		acronym: "UNIFAP",
+	},
+	{
+		_id: "600368c49fb4a00c542297c9",
+		name: "FACULDADES INTEGRADAS DE ARIQUEMES",
+		acronym: "FIAR",
+	},
+	{
+		_id: "600368c49fb4a00c542297cb",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS DE FORTALEZA",
+		acronym: "FCHFOR",
+	},
+	{
+		_id: "600368c49fb4a00c542297cd",
+		name: "FACULDADE DE CIÊNCIAS TECNOLÓGICAS DE FORTALEZA",
+		acronym: "FCTFOR",
+	},
+	{
+		_id: "600368c59fb4a00c542297d0",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS DO VALE DO RIO GRANDE",
+		acronym: "FCHVRG",
+	},
+	{
+		_id: "600368c59fb4a00c542297d2",
+		name: "FACULDADE VITORIANA DE CIÊNCIAS CONTÁBEIS",
+		acronym: "FAVI",
+	},
+	{
+		_id: "600368c59fb4a00c542297d4",
+		name: "FACULDADE VITORIANA DE TECNOLOGIA",
+		acronym: "FAVI",
+	},
+	{
+		_id: "600368c59fb4a00c542297d7",
+		name: "FACULDADE DE CIÊNCIAS E TECNOLOGIA DE BIRIGUI",
+		acronym: "FATEB",
+	},
+	{
+		_id: "600368c69fb4a00c542297d9",
+		name: "UNIVERSIDADE DO TOCANTINS",
+		acronym: "UNITINS",
+	},
+	{
+		_id: "600368c69fb4a00c542297db",
+		name: "FACULDADE DE CIÊNCIAS ADMINISTRATIVAS DE CURVELO",
+		acronym: "FACIAC",
+	},
+	{
+		_id: "600368c69fb4a00c542297de",
+		name: "FACULDADE DE AGRONOMIA E ENGENHARIA FLORESTAL DE GARÇA",
+		acronym: "FAEF",
+	},
+	{
+		_id: "600368c79fb4a00c542297e1",
+		name: "FACULDADE DA FUNDAÇÃO EDUCACIONAL ARAÇATUBA",
+		acronym: "FAC-FEA",
+	},
+	{
+		_id: "600368c79fb4a00c542297e3",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE TERESINA",
+		acronym: "FAT",
+	},
+	{
+		_id: "600368c79fb4a00c542297e5",
+		name: "FACULDADE PIAUIENSE DE PROCESSAMENTO DE DADOS",
+		acronym: "FPPD",
+	},
+	{
+		_id: "600368c79fb4a00c542297e7",
+		name: "FACULDADE PARAIBANA DE PROCESSAMENTO DE DADOS",
+		acronym: "FPPD",
+	},
+	{
+		_id: "600368c89fb4a00c542297e9",
+		name: "FACULDADE JESUÍTA DE FILOSOFIA E TEOLOGIA",
+		acronym: "FAJE",
+	},
+	{
+		_id: "600368c89fb4a00c542297eb",
+		name: "FACULDADE DE INFORMÁTICA E ADMINISTRAÇÃO PAULISTA",
+		acronym: "FIAP",
+	},
+	{
+		_id: "600368c89fb4a00c542297ed",
+		name: "CENTRO DE ENSINO SUPERIOR DO AMAPÁ",
+		acronym: "CEAP",
+	},
+	{
+		_id: "600368c89fb4a00c542297ef",
+		name: "FACULDADE DE INFORMÁTICA DE CUIABÁ",
+		acronym: "FIC",
+	},
+	{
+		_id: "600368c99fb4a00c542297f1",
+		name: "FACULDADE ESTÁCIO DE SÁ DE CAMPO GRANDE",
+		acronym: "FESCG",
+	},
+	{
+		_id: "600368c99fb4a00c542297f4",
+		name: "FACULDADES UNIFICADAS DE FOZ DO IGUAÇU",
+		acronym: "UNIFOZ",
+	},
+	{
+		_id: "600368c99fb4a00c542297f7",
+		name: "FACULDADE DE ESTUDOS SOCIAIS APLICADOS DE VIANA",
+		acronym: "FESAV",
+	},
+	{
+		_id: "600368ca9fb4a00c542297f9",
+		name: "FACULDADE DE ECONOMIA E PROCESSAMENTO DE DADOS DE FOZ DO IGUAÇU",
+		acronym: "FEPI",
+	},
+	{
+		_id: "600368ca9fb4a00c542297fc",
+		name: "CENTRO UNIVERSITÁRIO DO LESTE DE MINAS GERAIS",
+		acronym: "UNILESTEMG",
+	},
+	{
+		_id: "600368ca9fb4a00c542297fe",
+		name: "INSTITUTO MUNICIPAL DE ENSINO SUPERIOR DE ASSIS",
+		acronym: "IMESA",
+	},
+	{
+		_id: "600368cb9fb4a00c54229801",
+		name:
+			"INSTITUTO MUNICIPAL DE ENSINO SUPERIOR DE BEBEDOURO VICTÓRIO CARDASSI",
+		acronym: "IMESB",
+	},
+	{
+		_id: "600368cb9fb4a00c54229804",
+		name: "FACULDADE DE HORTOLÂNDIA",
+		acronym: "FACH",
+	},
+	{
+		_id: "600368cb9fb4a00c54229806",
+		name: "ESCOLA DE GOVERNO PROFESSOR PAULO NEVES DE CARVALHO",
+		acronym: "EG",
+	},
+	{
+		_id: "600368cb9fb4a00c54229808",
+		name: "FACULDADE ANHANGUERA DE BELO HORIZONTE",
+		acronym: "",
+	},
+	{
+		_id: "600368cc9fb4a00c5422980a",
+		name:
+			"FACULDADE DE CIÊNCIAS ECONÔMICAS E ADMINISTRATIVAS SANTA RITA DE CÁSSIA",
+		acronym: "FACEAS",
+	},
+	{
+		_id: "600368cc9fb4a00c5422980c",
+		name: "FACULDADE DE CIÊNCIAS ADMINISTRATIVAS E DE TECNOLOGIA",
+		acronym: "FATEC",
+	},
+	{
+		_id: "600368cc9fb4a00c5422980e",
+		name: "FACULDADE ESCOLA PAULISTA DE DIREITO",
+		acronym: "FACEPD",
+	},
+	{
+		_id: "600368cc9fb4a00c54229811",
+		name: "FACULDADE DE EDUCAÇÃO E CIÊNCIAS GERENCIAIS DE SUMARÉ",
+		acronym: "FECGS",
+	},
+	{
+		_id: "600368cd9fb4a00c54229814",
+		name: "FACULDADE DE EDUCAÇÃO E CIÊNCIAS GERENCIAIS DE INDAIATUBA",
+		acronym: "FECGI",
+	},
+	{
+		_id: "600368cd9fb4a00c54229816",
+		name: "FACULDADE ALAGOANA DE ADMINISTRAÇÃO",
+		acronym: "FAA",
+	},
+	{
+		_id: "600368cd9fb4a00c54229819",
+		name: "FACULDADE DE BELFORD ROXO",
+		acronym: "FABEL",
+	},
+	{
+		_id: "600368ce9fb4a00c5422981c",
+		name: "FACULDADE SANTA LÚCIA",
+		acronym: "FCACSL",
+	},
+	{
+		_id: "600368ce9fb4a00c5422981f",
+		name: "FACULDADES INTEGRADAS DE PARANAÍBA - FIPAR",
+		acronym: "FIPAR",
+	},
+	{
+		_id: "600368cf9fb4a00c54229822",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE FÁTIMA DO SUL",
+		acronym: "FAFS",
+	},
+	{ _id: "600368cf9fb4a00c54229825", name: "FACULDADE DE CIÊNCIAS" },
+	{
+		_id: "600368cf9fb4a00c54229827",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS DE NAVIRAI",
+		acronym: "FACINAV",
+	},
+	{
+		_id: "600368cf9fb4a00c54229829",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS DE CASCAVEL",
+		acronym: "FCSAC",
+	},
+	{
+		_id: "600368d09fb4a00c5422982c",
+		name: "FACULDADE REGES DE DRACENA",
+		acronym: "FCGD",
+	},
+	{
+		_id: "600368d09fb4a00c5422982f",
+		name: "FACULDADE DE ADMINISTRAÇÃO E CIÊNCIAS CONTÁBEIS DE SÃO ROQUE",
+		acronym: "FACCSR",
+	},
+	{
+		_id: "600368d09fb4a00c54229831",
+		name: "FACULDADE INTERLAGOS DE EDUCAÇÃO E CULTURA",
+		acronym: "FINTEC",
+	},
+	{
+		_id: "600368d19fb4a00c54229833",
+		name: "CENTRO UNIVERSITÁRIO ANHANGUERA DE CAMPO GRANDE",
+		acronym: "",
+	},
+	{
+		_id: "600368d19fb4a00c54229835",
+		name: "FACULDADE CATÓLICA DE ANÁPOLIS",
+		acronym: "CATÓLICA DE ANÁPOLIS",
+	},
+	{
+		_id: "600368d19fb4a00c54229837",
+		name: "Faculdades Magsul",
+		acronym: "FAMAG",
+	},
+	{
+		_id: "600368d19fb4a00c54229839",
+		name: "ESCOLA SUPERIOR DE PROPAGANDA E MARKETING DO RIO DE JANEIRO",
+		acronym: "ESPM",
+	},
+	{
+		_id: "600368d29fb4a00c5422983c",
+		name: "INSTITUTO DE CIÊNCIAS SOCIAIS E HUMANAS",
+		acronym: "ICSH",
+	},
+	{
+		_id: "600368d29fb4a00c5422983f",
+		name: "UNIÃO DE ENSINO SUPERIOR DE NOVA MUTUM",
+		acronym: "UNINOVA",
+	},
+	{
+		_id: "600368d29fb4a00c54229841",
+		name: "UNIVERSIDADE SANTA CECÍLIA",
+		acronym: "UNISANTA",
+	},
+	{
+		_id: "600368d39fb4a00c54229843",
+		name: "UNIVERSIDADE METROPOLITANA DE SANTOS",
+		acronym: "UNIMES",
+	},
+	{
+		_id: "600368d39fb4a00c54229846",
+		name: "FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS",
+		acronym: "FAFIL",
+	},
+	{
+		_id: "600368d39fb4a00c54229849",
+		name: "FACULDADE DE TECNOLOGIA DE TAQUARITINGA",
+		acronym: "FATEC/TQ",
+	},
+	{
+		_id: "600368d49fb4a00c5422984b",
+		name: "FACULDADE DE LUCÉLIA",
+		acronym: "",
+	},
+	{
+		_id: "600368d49fb4a00c5422984d",
+		name: "FACULDADES INTEGRADAS DE PONTA PORÃ",
+		acronym: "FIP",
+	},
+	{
+		_id: "600368d49fb4a00c5422984f",
+		name: "FACULDADE SÃO CAMILO",
+		acronym: "FASC-MG",
+	},
+	{
+		_id: "600368d49fb4a00c54229851",
+		name: "FACULDADE PRUDENTE DE MORAES",
+		acronym: "FPM",
+	},
+	{
+		_id: "600368d59fb4a00c54229854",
+		name: "FACULDADE DE CIÊNCIAS E EDUCAÇÃO DE RUBIATABA",
+		acronym: "FACER",
+	},
+	{
+		_id: "600368d59fb4a00c54229856",
+		name: "FACULDADE DE EDUCAÇÃO E CULTURA MONTESSORI",
+		acronym: "FAMEC",
+	},
+	{
+		_id: "600368d59fb4a00c54229859",
+		name: "ESCOLA SUPERIOR EM MEIO AMBIENTE",
+		acronym: "ESMA",
+	},
+	{
+		_id: "600368d69fb4a00c5422985c",
+		name: "FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS DE CONGONHAS",
+		acronym: "FAFIC",
+	},
+	{
+		_id: "600368d69fb4a00c5422985e",
+		name: "FACULDADE SENAI-CETIQT",
+		acronym: "SENAI-CETIQT",
+	},
+	{ _id: "600368d69fb4a00c54229860", name: "FACULDADE FLAMA", acronym: "" },
+	{
+		_id: "600368d69fb4a00c54229862",
+		name: "Centro Universitário de Bauru",
+		acronym: "",
+	},
+	{
+		_id: "600368d79fb4a00c54229865",
+		name: "FACULDADE DE FORMAÇÃO DE PROFESSORES DE AFOGADOS DA INGAZEIRA",
+		acronym: "FAFOPAI",
+	},
+	{
+		_id: "600368d79fb4a00c54229867",
+		name: "FACULDADE SUDOESTE PAULISTANO",
+		acronym: "FASUP",
+	},
+	{
+		_id: "600368d79fb4a00c54229869",
+		name:
+			"INSTITUTO SUPERIOR E CENTRO EDUCACIONAL LUTERANO - BOM JESUS - IELUSC",
+		acronym: "BOM JESUS/IELUSC",
+	},
+	{
+		_id: "600368d89fb4a00c5422986c",
+		name: "FACULDADE DE CIÊNCIAS E TECNOLOGIA DE UNAÍ - FACTU",
+		acronym: "FACTU",
+	},
+	{
+		_id: "600368d89fb4a00c5422986f",
+		name: "FACULDADE DE CIÊNCIAS DE TIMBAÚBA",
+		acronym: "FACET",
+	},
+	{
+		_id: "600368d89fb4a00c54229871",
+		name: "UNIVERSIDADE ESTADUAL DO NORTE FLUMINENSE DARCY RIBEIRO",
+		acronym: "UENF",
+	},
+	{
+		_id: "600368d89fb4a00c54229873",
+		name: "UNIVERSIDADE ESTADUAL DE MATO GROSSO DO SUL",
+		acronym: "UEMS",
+	},
+	{
+		_id: "600368d99fb4a00c54229875",
+		name: "UNIVERSIDADE DO ESTADO DE MINAS GERAIS",
+		acronym: "UEMG",
+	},
+	{
+		_id: "600368d99fb4a00c54229877",
+		name: "CENTRO UNIVERSITÁRIO SALESIANO DE SÃO PAULO",
+		acronym: "UNISAL",
+	},
+	{
+		_id: "600368d99fb4a00c54229879",
+		name: "FACULDADE DE ECONOMIA E FINANÇAS IBMEC",
+		acronym: "FACULDADES IBMEC",
+	},
+	{
+		_id: "600368d99fb4a00c5422987b",
+		name: "UNIÃO DE ESCOLAS SUPERIORES DA FUNESO",
+		acronym: "UNESF",
+	},
+	{
+		_id: "600368da9fb4a00c5422987e",
+		name: "FACULDADES INTEGRADAS DE TRÊS LAGOAS",
+		acronym: "AEMS",
+	},
+	{
+		_id: "600368da9fb4a00c54229881",
+		name: "CENTRO UNIVERSITÁRIO UNIVATES",
+		acronym: "UNIVATES",
+	},
+	{
+		_id: "600368da9fb4a00c54229883",
+		name: "CENTRO UNIVERSITÁRIO HERMINIO OMETTO DE ARARAS",
+		acronym: "UNIARARAS",
+	},
+	{
+		_id: "600368db9fb4a00c54229885",
+		name: "FACULDADE CAMPOS ELÍSEOS",
+		acronym: "FCE",
+	},
+	{
+		_id: "600368db9fb4a00c54229887",
+		name: "INSTITUTO DE ENSINO SUPERIOR FUCAPI",
+		acronym: "CESF",
+	},
+	{
+		_id: "600368db9fb4a00c54229889",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS - MACEIÓ",
+		acronym: "SEUNE",
+	},
+	{
+		_id: "600368db9fb4a00c5422988b",
+		name: "FACULDADE DE TECNOLOGIA E CIÊNCIAS DE FEIRA DE SANTANA",
+		acronym: "FTC",
+	},
+	{
+		_id: "600368dc9fb4a00c5422988d",
+		name: "FACULDADE MAURÍCIO DE NASSAU DE SALVADOR",
+		acronym: "FMN SALVADOR",
+	},
+	{
+		_id: "600368dc9fb4a00c5422988f",
+		name: "Centro Universitário Estácio da Bahia - Estácio FIB",
+		acronym: "FIB",
+	},
+	{
+		_id: "600368dc9fb4a00c54229891",
+		name: "FACULDADE LOURENÇO FILHO",
+		acronym: "FLF",
+	},
+	{
+		_id: "600368dc9fb4a00c54229893",
+		name: "UNIVERSIDADE POSITIVO",
+		acronym: "UP",
+	},
+	{
+		_id: "600368dd9fb4a00c54229895",
+		name:
+			"CENTRO UNIVERSITÁRIO DO INSTITUTO DE EDUCAÇÃO SUPERIOR DE BRASÍLIA - IESB",
+		acronym: "IESB",
+	},
+	{
+		_id: "600368dd9fb4a00c54229897",
+		name: "FACULDADE BATISTA DE VILA VELHA",
+		acronym: "FABAVI",
+	},
+	{
+		_id: "600368dd9fb4a00c5422989a",
+		name: "CENTRO UNIVERSITÁRIO ANHANGÜERA",
+		acronym: "UNIFIAN",
+	},
+	{
+		_id: "600368dd9fb4a00c5422989c",
+		name: "FACULDADE BATISTA DE VITÓRIA",
+		acronym: "FABAVI",
+	},
+	{
+		_id: "600368de9fb4a00c5422989e",
+		name: "FACULDADE DE CIÊNCIAS ECONÔMICAS E ADMINISTRATIVAS DE VILA VELHA",
+		acronym: "",
+	},
+	{
+		_id: "600368de9fb4a00c542298a0",
+		name: "INSTITUTO DE ENSINO E PESQUISA OBJETIVO",
+		acronym: "IEPO",
+	},
+	{
+		_id: "600368de9fb4a00c542298a3",
+		name: "FACULDADE DE JUSSARA",
+		acronym: "FAJ",
+	},
+	{
+		_id: "600368df9fb4a00c542298a5",
+		name: "UNIÃO DAS FACULDADES DOS GRANDES LAGOS - UNILAGO",
+		acronym: "UNILAGO",
+	},
+	{
+		_id: "600368df9fb4a00c542298a7",
+		name: "FACULDADE AFIRMATIVO",
+		acronym: "FAFI",
+	},
+	{
+		_id: "600368df9fb4a00c542298a9",
+		name: "INSTITUTO DE EDUCAÇÃO SUPERIOR DA PARAÍBA",
+		acronym: "IESP",
+	},
+	{ _id: "600368df9fb4a00c542298ac", name: "FACULDADE DE FILOSOFIA" },
+	{
+		_id: "600368e09fb4a00c542298ae",
+		name: "Faculdade Estácio do Recife - Estácio FIR",
+		acronym: "FIR",
+	},
+	{
+		_id: "600368e09fb4a00c542298b0",
+		name: "FACULDADE INTEGRADO DE CAMPO MOURÃO",
+		acronym: "CEI",
+	},
+	{
+		_id: "600368e09fb4a00c542298b2",
+		name: "FACULDADE MARINGÁ",
+		acronym: "CESPAR",
+	},
+	{
+		_id: "600368e09fb4a00c542298b4",
+		name: "INSTITUTO DE ENSINO SUPERIOR DA FUNLEC",
+		acronym: "IESF",
+	},
+	{
+		_id: "600368e19fb4a00c542298b6",
+		name: "FACULDADE ARTHUR SÁ EARP NETO",
+		acronym: "FASE",
+	},
+	{
+		_id: "600368e19fb4a00c542298b9",
+		name: "FACULDADE ALDETE MARIA ALVES",
+		acronym: "FAMA",
+	},
+	{
+		_id: "600368e19fb4a00c542298bb",
+		name: "INSTITUTO DE ENSINO SUPERIOR CENECISTA",
+		acronym: "INESC",
+	},
+	{
+		_id: "600368e19fb4a00c542298bd",
+		name: "FACULDADE DE ENGENHARIA DE RESENDE",
+		acronym: "FER",
+	},
+	{
+		_id: "600368e29fb4a00c542298c0",
+		name: "FACULDADE CENECISTA DE BENTO GONÇALVES",
+		acronym: "FACEBG",
+	},
+	{
+		_id: "600368e29fb4a00c542298c2",
+		name: "FACULDADES INTEGRADAS APARÍCIO CARVALHO",
+		acronym: "FIMCA",
+	},
+	{
+		_id: "600368e29fb4a00c542298c4",
+		name: "FACULDADE SÃO LUÍS DE FRANÇA",
+		acronym: "FSLF",
+	},
+	{
+		_id: "600368e39fb4a00c542298c6",
+		name: "FACULDADES INTEGRADAS DE BAURU",
+		acronym: "FIB",
+	},
+	{
+		_id: "600368e39fb4a00c542298c8",
+		name: "FACULDADE DE CIÊNCIAS JURÍDICAS E GERENCIAIS DE GARÇA",
+		acronym: "FAEG",
+	},
+	{
+		_id: "600368e39fb4a00c542298cb",
+		name: "FACULDADE DE PRESIDENTE EPITÁCIO - FAPE",
+		acronym: "FAPE",
+	},
+	{
+		_id: "600368e39fb4a00c542298cd",
+		name: "FACULDADES INTEGRADAS DE SÃO PAULO",
+		acronym: "FISP",
+	},
+	{
+		_id: "600368e49fb4a00c542298cf",
+		name: "FACULDADE DE EDUCAÇÃO E CIÊNCIAS GERENCIAIS DE SÃO PAULO",
+		acronym: "FECG-SP",
+	},
+	{
+		_id: "600368e49fb4a00c542298d1",
+		name: "FACULDADE CARLOS DRUMMOND DE ANDRADE",
+		acronym: "FCDA",
+	},
+	{
+		_id: "600368e49fb4a00c542298d3",
+		name: "FACULDADE DE ADMINISTRAÇÃO SÃO PAULO",
+		acronym: "FAPI",
+	},
+	{
+		_id: "600368e49fb4a00c542298d5",
+		name: "Faculdade Estácio do Ceará - Estácio FIC",
+		acronym: "FIC",
+	},
+	{ _id: "600368e59fb4a00c542298d7", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "600368e59fb4a00c542298d9",
+		name: "CENTRO UNIVERSITÁRIO EURO-AMERICANO",
+		acronym: "UNIEURO",
+	},
+	{
+		_id: "600368e59fb4a00c542298db",
+		name: "FACULDADE SANTA TEREZINHA",
+		acronym: "FAST",
+	},
+	{
+		_id: "600368e69fb4a00c542298de",
+		name: "UNIÃO DAS ESCOLAS DO GRUPO FAIMI DE EDUCAÇÃO",
+		acronym: "FAIMI",
+	},
+	{ _id: "600368e69fb4a00c542298e0", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "600368e69fb4a00c542298e2",
+		name: "FACULDADE METODISTA DE SANTA MARIA",
+		acronym: "FAMES",
+	},
+	{
+		_id: "600368e69fb4a00c542298e5",
+		name: "INSTITUTO DE EDUCAÇÃO SUPERIOR UNYAHNA DE BARREIRAS",
+		acronym: "IESUB",
+	},
+	{
+		_id: "600368e79fb4a00c542298e7",
+		name: "FACULDADES INTEGRADAS ESPÍRITA",
+		acronym: "FIES",
+	},
+	{
+		_id: "600368e79fb4a00c542298ea",
+		name: "UNIVERSIDADE ESTADUAL DO CENTRO OESTE",
+		acronym: "UNICENTRO",
+	},
+	{
+		_id: "600368e79fb4a00c542298ed",
+		name: "FACULDADE OSVALDO CRUZ",
+		acronym: "",
+	},
+	{
+		_id: "600368e89fb4a00c542298f0",
+		name: "FACULDADE DE EDUCAÇÃO DE COLORADO DO OESTE",
+		acronym: "FAEC",
+	},
+	{
+		_id: "600368e89fb4a00c542298f2",
+		name: "INSTITUTO DE EDUCAÇÃO SUPERIOR UNYAHNA DE SALVADOR",
+		acronym: "IESUS",
+	},
+	{
+		_id: "600368e89fb4a00c542298f4",
+		name: "FACULDADE METODISTA DE CIÊNCIAS HUMANAS E EXATAS",
+		acronym: "METODISTA",
+	},
+	{
+		_id: "600368e89fb4a00c542298f6",
+		name: "CENTRO UNIVERSITÁRIO DO NORTE PAULISTA",
+		acronym: "UNORP",
+	},
+	{
+		_id: "600368e99fb4a00c542298f9",
+		name: "UNIVERSIDADE DE ITAÚNA",
+		acronym: "UI",
+	},
+	{
+		_id: "600368e99fb4a00c542298fb",
+		name: "FACULDADE SANTO AGOSTINHO",
+		acronym: "FSA",
+	},
+	{
+		_id: "600368e99fb4a00c542298fe",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS E SOCIAIS DE IGARASSU",
+		acronym: "FACIG",
+	},
+	{
+		_id: "600368ea9fb4a00c54229900",
+		name: "FACULDADE DE ESTUDOS ADMINISTRATIVOS DE MINAS GERAIS - FEAD-MG",
+		acronym: "FEAD - MG",
+	},
+	{
+		_id: "600368ea9fb4a00c54229902",
+		name: "FACULDADE GAMA E SOUZA",
+		acronym: "FGS",
+	},
+	{
+		_id: "600368ea9fb4a00c54229904",
+		name: "FACULDADES INTEGRADAS DE VITÓRIA",
+		acronym: "FDV",
+	},
+	{
+		_id: "600368ea9fb4a00c54229906",
+		name: "FACULDADE DE EDUCAÇÃO SUPERIOR DE TIMBAÚBA",
+		acronym: "FAEST",
+	},
+	{
+		_id: "600368eb9fb4a00c54229909",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS",
+		acronym: "ECONÔMICAS E DA SAÚDE DE ARAGUAÍNA",
+	},
+	{
+		_id: "600368eb9fb4a00c5422990c",
+		name: "CENTRO UNIVERSITÁRIO NOSSA SENHORA DO PATROCÍNIO",
+		acronym: "CEUNSP",
+	},
+	{
+		_id: "600368eb9fb4a00c5422990e",
+		name: "FACULDADE SENAI DE TECNOLOGIA GRÁFICA",
+		acronym: "SP SENAI",
+	},
+	{
+		_id: "600368ec9fb4a00c54229910",
+		name: "FACULDADE DE ADMINISTRAÇÃO E NEGÓCIOS DE SERGIPE",
+		acronym: "FANESE",
+	},
+	{
+		_id: "600368ec9fb4a00c54229912",
+		name: "UNIVERSIDADE CÂNDIDO MENDES",
+		acronym: "UCAM",
+	},
+	{
+		_id: "600368ec9fb4a00c54229915",
+		name: "FACULDADE SALESIANA DE SANTA TERESA",
+		acronym: "FSST",
+	},
+	{
+		_id: "600368ed9fb4a00c54229918",
+		name: "FACULDADE CENECISTA DE ITABORAÍ",
+		acronym: "FACNEC",
+	},
+	{
+		_id: "600368ed9fb4a00c5422991b",
+		name: "ESCOLA SUPERIOR SÃO FRANCISCO DE ASSIS",
+		acronym: "ESFA",
+	},
+	{
+		_id: "600368ed9fb4a00c5422991d",
+		name: "CENTRO DE ENSINO SUPERIOR DE VITÓRIA",
+		acronym: "CESV",
+	},
+	{
+		_id: "600368ed9fb4a00c5422991f",
+		name: "FACULDADE CAMBURY",
+		acronym: "CAMBURY",
+	},
+	{
+		_id: "600368ee9fb4a00c54229921",
+		name: "INSPER INSTITUTO DE ENSINO E PESQUISA",
+		acronym: "INSPER",
+	},
+	{
+		_id: "600368ee9fb4a00c54229924",
+		name: "FACULDADE DE ALTA FLORESTA",
+		acronym: "FAF",
+	},
+	{ _id: "600368ee9fb4a00c54229926", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "600368ef9fb4a00c54229929",
+		name: "FACULDADE METROPOLITANA DE CAMAÇARI",
+		acronym: "FAMEC",
+	},
+	{
+		_id: "600368ef9fb4a00c5422992b",
+		name: "FACULDADE ANHANGUERA DE BRASÍLIA",
+		acronym: "FAB",
+	},
+	{
+		_id: "600368ef9fb4a00c5422992e",
+		name: "FACULDADE DE SABARÁ",
+		acronym: "SOECS",
+	},
+	{
+		_id: "600368f09fb4a00c54229930",
+		name: "FACULDADES RIOGRANDENSES",
+		acronym: "FARGS",
+	},
+	{
+		_id: "600368f09fb4a00c54229932",
+		name: "FACULDADE BRASÍLIA DE SÃO PAULO",
+		acronym: "FABRASP",
+	},
+	{
+		_id: "600368f09fb4a00c54229934",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE AMERICANA",
+		acronym: "IESA",
+	},
+	{
+		_id: "600368f09fb4a00c54229936",
+		name: "CENTRO UNIVERSITÁRIO JORGE AMADO",
+		acronym: "UNIJORGE",
+	},
+	{
+		_id: "600368f19fb4a00c54229939",
+		name: "CENTRO UNIVERSITÁRIO MÓDULO",
+		acronym: "MÓDULO",
+	},
+	{
+		_id: "600368f19fb4a00c5422993c",
+		name: "UNIVERSIDADE DO PLANALTO CATARINENSE",
+		acronym: "UNIPLAC",
+	},
+	{
+		_id: "600368f19fb4a00c5422993e",
+		name: "FACULDADE INTEGRAL CANTAREIRA",
+		acronym: "F.I.C.",
+	},
+	{
+		_id: "600368f19fb4a00c54229940",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE FORTALEZA",
+		acronym: "IESF",
+	},
+	{
+		_id: "600368f29fb4a00c54229942",
+		name: "FACULDADE DE CIÊNCIAS DA SAÚDE DE SÃO PAULO",
+		acronym: "FACIS",
+	},
+	{
+		_id: "600368f29fb4a00c54229944",
+		name: "FACULDADE DE TECNOLOGIA DE PONTA PORÃ",
+		acronym: "FATEP",
+	},
+	{
+		_id: "600368f29fb4a00c54229946",
+		name: "FACULDADE SENAI DE TECNOLOGIA MECATRÔNICA",
+		acronym: "SENAI",
+	},
+	{
+		_id: "600368f29fb4a00c54229948",
+		name: "CENTRO UNIVERSITÁRIO DE MARINGÁ - CEUMAR",
+		acronym: "CESUMAR",
+	},
+	{
+		_id: "600368f39fb4a00c5422994a",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS E APLICADAS DO PARANÁ",
+		acronym: "FACET",
+	},
+	{
+		_id: "600368f39fb4a00c5422994c",
+		name: "FACULDADE DE ADMINISTRAÇÃO MILTON CAMPOS",
+		acronym: "FAMC",
+	},
+	{
+		_id: "600368f39fb4a00c5422994e",
+		name: "FACULDADE SANTA RITA",
+		acronym: "FASAR",
+	},
+	{
+		_id: "600368f49fb4a00c54229951",
+		name: "FACULDADE DE AMAMBAI",
+		acronym: "FIAMA",
+	},
+	{
+		_id: "600368f49fb4a00c54229954",
+		name: "FACULDADE EDUCACIONAL DA LAPA",
+		acronym: "FAEL",
+	},
+	{
+		_id: "600368f49fb4a00c54229956",
+		name: "FACULDADE DE NATAL",
+		acronym: "FAL",
+	},
+	{
+		_id: "600368f49fb4a00c54229958",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS DE ASSIS",
+		acronym: "FCCA",
+	},
+	{
+		_id: "600368f59fb4a00c5422995a",
+		name: "FACULDADE FLEMING",
+		acronym: "SEF",
+	},
+	{
+		_id: "600368f59fb4a00c5422995c",
+		name: "INSTITUTO ITAPETININGANO DE ENSINO SUPERIOR",
+		acronym: "IIES",
+	},
+	{ _id: "600368f59fb4a00c5422995f", name: "FACULDADE GAMMON", acronym: "" },
+	{
+		_id: "600368f69fb4a00c54229962",
+		name: "CENTRO UNIVERSITÁRIO DE JALES",
+		acronym: "UNIJALES",
+	},
+	{
+		_id: "600368f69fb4a00c54229965",
+		name: "CENTRO UNIVERSITÁRIO AMPARENSE",
+		acronym: "UNIFIA",
+	},
+	{
+		_id: "600368f69fb4a00c54229967",
+		name: "INSTITUTO DE ENSINO SUPERIOR DO ACRE",
+		acronym: "IESACRE",
+	},
+	{
+		_id: "600368f69fb4a00c54229969",
+		name: "FACULDADE SÃO FRANCISCO DE BARREIRAS - FASB",
+		acronym: "FASB",
+	},
+	{
+		_id: "600368f79fb4a00c5422996c",
+		name: "CENTRO REGIONAL UNIVERSITÁRIO DE ESPÍRITO SANTO DO PINHAL",
+		acronym: "UNIPINHAL",
+	},
+	{
+		_id: "600368f79fb4a00c5422996f",
+		name: "INSTITUTO CENECISTA DE ENSINO SUPERIOR DE SANTO ÂNGELO",
+		acronym: "CNEC/IESA",
+	},
+	{
+		_id: "600368f79fb4a00c54229971",
+		name: "CENTRO UNIVERSITÁRIO CAMPOS DE ANDRADE",
+		acronym: "UNIANDRADE",
+	},
+	{
+		_id: "600368f89fb4a00c54229973",
+		name: "CENTRO UNIVERSITÁRIO CÂNDIDO RONDON",
+		acronym: "UNIRONDON",
+	},
+	{
+		_id: "600368f89fb4a00c54229976",
+		name: "FACULDADE NOSSA SENHORA APARECIDA",
+		acronym: "FANAP",
+	},
+	{ _id: "600368f89fb4a00c54229978", name: "FACULDADE PADRÃO", acronym: "-" },
+	{
+		_id: "600368f99fb4a00c5422997b",
+		name: "FACULDADE DE ESTUDOS SOCIAIS DO ESPÍRITO SANTO",
+		acronym: "PIO XII",
+	},
+	{
+		_id: "600368f99fb4a00c5422997e",
+		name: "FACULDADE DE ADMINISTRAÇÃO DA SERRA",
+		acronym: "FABAVI",
+	},
+	{
+		_id: "600368f99fb4a00c54229980",
+		name: "FACULDADE BRASILEIRA",
+		acronym: "",
+	},
+	{
+		_id: "600368fa9fb4a00c54229983",
+		name: "FACULDADE DE CASTELO",
+		acronym: "FACASTELO",
+	},
+	{
+		_id: "600368fa9fb4a00c54229985",
+		name: "FACULDADE CANDIDO MENDES DE VITÓRIA",
+		acronym: "FCMV",
+	},
+	{
+		_id: "600368fa9fb4a00c54229988",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS DE NOVA ANDRADINA - FACINAN",
+		acronym: "FACINAN",
+	},
+	{
+		_id: "600368fa9fb4a00c5422998a",
+		name: "FACULDADE DE PEDAGOGIA",
+		acronym: "ANAEC",
+	},
+	{
+		_id: "600368fb9fb4a00c5422998d",
+		name: "FACULDADE DE EDUCAÇÃO DE COSTA RICA",
+		acronym: "FECRA",
+	},
+	{
+		_id: "600368fb9fb4a00c5422998f",
+		name: "FACULDADE PROMOVE DE MINAS GERAIS",
+		acronym: "PROMOVE",
+	},
+	{
+		_id: "600368fb9fb4a00c54229991",
+		name: "FACULDADE METODISTA GRANBERY",
+		acronym: "FMG",
+	},
+	{
+		_id: "600368fc9fb4a00c54229994",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE ITABIRITO",
+		acronym: "FAI",
+	},
+	{
+		_id: "600368fc9fb4a00c54229996",
+		name: "FACULDADE BOA VIAGEM",
+		acronym: "FBV",
+	},
+	{
+		_id: "600368fc9fb4a00c54229998",
+		name: "FACULDADE DOM BOSCO",
+		acronym: "FDB",
+	},
+	{
+		_id: "600368fd9fb4a00c5422999b",
+		name: "FACULDADE DE ADMINISTRAÇÃO",
+		acronym: "ITPAC",
+	},
+	{
+		_id: "600368fd9fb4a00c5422999d",
+		name: "FACULDADE DE CIÊNCIAS APLICADAS DE CASCAVEL",
+		acronym: "FACIAP",
+	},
+	{
+		_id: "600368fd9fb4a00c5422999f",
+		name: "FACULDADE BEZERRA DE ARAÚJO",
+		acronym: "FABA",
+	},
+	{
+		_id: "600368fd9fb4a00c542299a1",
+		name: "FACULDADE NATALENSE PARA O DESENVOLVIMENTO DO RIO GRANDE DO NORTE",
+		acronym: "FARN",
+	},
+	{
+		_id: "600368fe9fb4a00c542299a4",
+		name: "FACULDADES INTEGRADAS URUBUPUNGÁ",
+		acronym: "FIU",
+	},
+	{
+		_id: "600368fe9fb4a00c542299a7",
+		name: "INSTITUTO DE ENSINO SUPERIOR DA GRANDE FLORIANÓPOLIS",
+		acronym: "IESGF",
+	},
+	{
+		_id: "600368fe9fb4a00c542299a9",
+		name: "CENTRO UNIVERSITÁRIO DO INSTITUTO DE ENSINO SUPERIOR COC",
+		acronym: "COC",
+	},
+	{
+		_id: "600368ff9fb4a00c542299ab",
+		name: "FACULDADE SANT´ANNA DE SALTO",
+		acronym: "FASAS",
+	},
+	{
+		_id: "600368ff9fb4a00c542299ae",
+		name: "FACULDADE CAMPO LIMPO PAULISTA",
+		acronym: "FACCAMP",
+	},
+	{
+		_id: "600368ff9fb4a00c542299b0",
+		name: "FACULDADE DO GUARUJÁ",
+		acronym: "FAGU",
+	},
+	{
+		_id: "600368ff9fb4a00c542299b2",
+		name: "INSTITUTO TAUBATÉ DE ENSINO SUPERIOR",
+		acronym: "I.T.E.S.",
+	},
+	{
+		_id: "600369009fb4a00c542299b5",
+		name: "FACULDADE DE ITÁPOLIS - FACITA",
+		acronym: "FACITA",
+	},
+	{
+		_id: "600369009fb4a00c542299b8",
+		name: "Faculdade Estácio Cotia - Estácio FAAC",
+		acronym: "IESC",
+	},
+	{
+		_id: "600369009fb4a00c542299bb",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS E AGRÁRIAS DE ITAPEVA",
+		acronym: "FAIT",
+	},
+	{
+		_id: "600369019fb4a00c542299bd",
+		name: "INSTITUTO MANCHESTER PAULISTA DE ENSINO SUPERIOR",
+		acronym: "IMAPES",
+	},
+	{
+		_id: "600369019fb4a00c542299bf",
+		name: "FACULDADE SENAI DE TECNOLOGIA AMBIENTAL",
+		acronym: "SENAI",
+	},
+	{
+		_id: "600369019fb4a00c542299c1",
+		name: "FACULDADE DE DIREITO DA FUNDAÇÃO ARMANDO ALVARES PENTEADO",
+		acronym: "FAD-FAAP",
+	},
+	{
+		_id: "600369019fb4a00c542299c3",
+		name: "FACULDADE ALBERT EINSTEIN DE SÃO PAULO",
+		acronym: "FAESP",
+	},
+	{
+		_id: "600369029fb4a00c542299c6",
+		name: "FACULDADE DO NORTE PIONEIRO",
+		acronym: "FANORPI",
+	},
+	{
+		_id: "600369029fb4a00c542299c9",
+		name: "FACULDADES ADAMANTINENSES INTEGRADAS",
+		acronym: "FAI",
+	},
+	{
+		_id: "600369029fb4a00c542299cb",
+		name: "FACULDADE DAS AMÉRICAS",
+		acronym: "FAM",
+	},
+	{
+		_id: "600369039fb4a00c542299cd",
+		name: "FACULDADE MORUMBI SUL",
+		acronym: "FMS",
+	},
+	{
+		_id: "600369039fb4a00c542299cf",
+		name: "ESCOLA SUPERIOR DE MARKETING",
+		acronym: "ESM",
+	},
+	{
+		_id: "600369039fb4a00c542299d1",
+		name: "Faculdade Estácio de Alagoas - Estácio FAL",
+		acronym: "FAL",
+	},
+	{
+		_id: "600369049fb4a00c542299d4",
+		name: "FACULDADES INTEGRADAS DE FERNANDÓPOLIS",
+		acronym: "FIFE",
+	},
+	{
+		_id: "600369049fb4a00c542299d6",
+		name:
+			"INSTITUTO TAQUARITINGUENSE DE ENSINO SUPERIOR DR. ARISTIDES DE CARVALHO SCHLOBACH",
+		acronym: "ITES",
+	},
+	{
+		_id: "600369049fb4a00c542299d9",
+		name: "INSTITUTO MATONENSE MUNICIPAL DE ENSINO SUPERIOR",
+		acronym: "IMMES",
+	},
+	{
+		_id: "600369059fb4a00c542299dc",
+		name: "FACULDADE DE CIÊNCIAS JURÍDICAS",
+		acronym: "GERENCIAIS E EDUCAÇÃO DE SINOP",
+	},
+	{
+		_id: "600369059fb4a00c542299de",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS DE GARÇA",
+		acronym: "FAHU",
+	},
+	{
+		_id: "600369059fb4a00c542299e0",
+		name: "FACULDADE NOVO MILÊNIO",
+		acronym: "FNM",
+	},
+	{
+		_id: "600369059fb4a00c542299e2",
+		name: "FACULDADE JESUS MARIA JOSÉ",
+		acronym: "FAJESU",
+	},
+	{
+		_id: "600369059fb4a00c542299e4",
+		name: "FACULDADE DE AMERICANA",
+		acronym: "FAM",
+	},
+	{
+		_id: "600369069fb4a00c542299e6",
+		name: "TREVISAN ESCOLA SUPERIOR DE NEGÓCIOS",
+		acronym: "TREVISAN",
+	},
+	{
+		_id: "600369069fb4a00c542299e8",
+		name: "FACULDADES INTEGRADAS DE RONDONÓPOLIS",
+		acronym: "UNIR",
+	},
+	{
+		_id: "600369069fb4a00c542299eb",
+		name: "FACULDADE UNIDA DE SUZANO",
+		acronym: "UNISUZ",
+	},
+	{
+		_id: "600369079fb4a00c542299ee",
+		name: "INSTITUTO DE ENSINO SUPERIOR JOÃO ALFREDO DE ANDRADE",
+		acronym: "IJAA",
+	},
+	{
+		_id: "600369079fb4a00c542299f0",
+		name: "FACULDADE DE EDUCAÇÃO DA SERRA",
+		acronym: "FASE",
+	},
+	{
+		_id: "600369079fb4a00c542299f2",
+		name: "FACULDADE BATISTA BRASILEIRA",
+		acronym: "FBB",
+	},
+	{ _id: "600369089fb4a00c542299f5", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "600369089fb4a00c542299f7",
+		name: "FACULDADE JUVÊNCIO TERRA",
+		acronym: "FJT",
+	},
+	{
+		_id: "600369089fb4a00c542299f9",
+		name: "FACULDADE SUDOESTE PAULISTA",
+		acronym: "FSP",
+	},
+	{
+		_id: "600369089fb4a00c542299fc",
+		name: "FACULDADES INTEGRADAS DE RIBEIRÃO PIRES",
+		acronym: "FIRP",
+	},
+	{
+		_id: "600369099fb4a00c542299fe",
+		name: "FACULDADE TECSOMA",
+		acronym: "FATEC",
+	},
+	{
+		_id: "600369099fb4a00c54229a00",
+		name: "FACULDADE EDUVALE DE AVARÉ",
+		acronym: "EDUVALE",
+	},
+	{
+		_id: "600369099fb4a00c54229a02",
+		name: "FACULDADE DE INFORMÁTICA LEMOS DE CASTRO",
+		acronym: "FILC",
+	},
+	{
+		_id: "600369099fb4a00c54229a04",
+		name: "FACULDADE DE APUCARANA",
+		acronym: "FAP",
+	},
+	{
+		_id: "6003690a9fb4a00c54229a06",
+		name: "ESCOLA SUPERIOR DE ENSINO ANÍSIO TEIXEIRA",
+		acronym: "CESAT",
+	},
+	{
+		_id: "6003690a9fb4a00c54229a08",
+		name: "ESCOLA SUPERIOR DE PROPAGANDA E MARKETING DE PORTO ALEGRE",
+		acronym: "ESPM - POA",
+	},
+	{
+		_id: "6003690a9fb4a00c54229a0a",
+		name: "FACULDADE DE COMUNICAÇÃO E TURISMO DE OLINDA",
+		acronym: "FACOTTUR",
+	},
+	{
+		_id: "6003690a9fb4a00c54229a0c",
+		name: "FACULDADE COTEMIG",
+		acronym: "COTEMIG",
+	},
+	{
+		_id: "6003690b9fb4a00c54229a0e",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS - FACISA",
+		acronym: "FACISA",
+	},
+	{
+		_id: "6003690b9fb4a00c54229a10",
+		name: "INSTITUTO DE ENSINO SUPERIOR THATHI",
+		acronym: "FACULDADE THATHI COC",
+	},
+	{
+		_id: "6003690b9fb4a00c54229a12",
+		name: "FACULDADE CECAP DO LAGO NORTE",
+		acronym: "CECAP",
+	},
+	{
+		_id: "6003690b9fb4a00c54229a14",
+		name: "FACULDADE ASSIS GURGACZ",
+		acronym: "FAG",
+	},
+	{
+		_id: "6003690c9fb4a00c54229a17",
+		name: "FACULDADE MATER DEI",
+		acronym: "FMD",
+	},
+	{
+		_id: "6003690c9fb4a00c54229a19",
+		name: "FACULDADE DE PEDAGOGIA DA SERRA",
+		acronym: "FABAVI",
+	},
+	{
+		_id: "6003690c9fb4a00c54229a1b",
+		name: "FACULDADE BORGES DE MENDONÇA",
+		acronym: "FBM",
+	},
+	{
+		_id: "6003690c9fb4a00c54229a1d",
+		name: "FACULDADE ANHANGUERA DE OSASCO",
+		acronym: "FIZO",
+	},
+	{
+		_id: "6003690d9fb4a00c54229a1f",
+		name: "FACULDADE BATISTA DE MINAS GERAIS",
+		acronym: "FBMG",
+	},
+	{
+		_id: "6003690d9fb4a00c54229a22",
+		name: "FACULDADE DO VALE DO JAGUARIBE",
+		acronym: "FVJ",
+	},
+	{
+		_id: "6003690d9fb4a00c54229a24",
+		name: "INSTITUTO SUPERIOR TUPY - IST",
+		acronym: "IST",
+	},
+	{
+		_id: "6003690e9fb4a00c54229a26",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE GARÇA",
+		acronym: "IESG",
+	},
+	{
+		_id: "6003690e9fb4a00c54229a28",
+		name: "FACULDADES INTEGRADAS DE JAHU",
+		acronym: "FIJ",
+	},
+	{
+		_id: "6003690e9fb4a00c54229a2b",
+		name: "FACULDADES INTEGRADAS DE SANTA FÉ DO SUL",
+		acronym: "FUNEC",
+	},
+	{
+		_id: "6003690e9fb4a00c54229a2d",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DO RIO DE JANEIRO",
+		acronym: "ISERJ",
+	},
+	{
+		_id: "6003690f9fb4a00c54229a30",
+		name: "FACULDADE DE PEDAGOGIA DE AFONSO CLÁUDIO",
+		acronym: "ISEAC",
+	},
+	{
+		_id: "6003690f9fb4a00c54229a32",
+		name: "FACULDADE VISCONDE DE CAIRÚ",
+		acronym: "FAVIC",
+	},
+	{
+		_id: "6003690f9fb4a00c54229a34",
+		name: "FACULDADE DE TECNOLOGIA E CIÊNCIAS DE VITÓRIA DA CONQUISTA",
+		acronym: "FTC",
+	},
+	{
+		_id: "600369109fb4a00c54229a36",
+		name: "CENTRO UNIVERSITÁRIO ADVENTISTA DE SÃO PAULO",
+		acronym: "UNASP",
+	},
+	{
+		_id: "600369109fb4a00c54229a38",
+		name: "FACULDADE BARDDAL",
+		acronym: "FB-SI",
+	},
+	{
+		_id: "600369109fb4a00c54229a3b",
+		name: "FACULDADE DE MIRANDÓPOLIS",
+		acronym: "FAM",
+	},
+	{
+		_id: "600369109fb4a00c54229a3d",
+		name: "FACULDADE SÃO GABRIEL",
+		acronym: "FSG",
+	},
+	{
+		_id: "600369119fb4a00c54229a40",
+		name: "FACULDADE CASA BRANCA",
+		acronym: "FACAB",
+	},
+	{
+		_id: "600369119fb4a00c54229a43",
+		name: "FACULDADE CAPIXABA DE NOVA VENÉCIA",
+		acronym: "",
+	},
+	{
+		_id: "600369119fb4a00c54229a46",
+		name: "FACULDADE UBAENSE OZANAM COELHO",
+		acronym: "FAGOC",
+	},
+	{
+		_id: "600369129fb4a00c54229a48",
+		name: "FACULDADE MARTHA FALCÃO",
+		acronym: "FMF",
+	},
+	{
+		_id: "600369129fb4a00c54229a4a",
+		name: "ESCOLA SUPERIOR DE TEOLOGIA",
+		acronym: "EST",
+	},
+	{
+		_id: "600369129fb4a00c54229a4d",
+		name: "FACULDADE CATÓLICA RAINHA DA PAZ DE ARAPUTANGA",
+		acronym: "FCARP",
+	},
+	{
+		_id: "600369139fb4a00c54229a50",
+		name: "FACULDADE JOSÉ LACERDA FILHO DE CIÊNCIAS APLICADAS",
+		acronym: "FAJOLCA",
+	},
+	{
+		_id: "600369139fb4a00c54229a52",
+		name: "FACULDADE SANTA HELENA",
+		acronym: "FSH",
+	},
+	{
+		_id: "600369139fb4a00c54229a54",
+		name: "FACULDADES INTEGRADAS IPEP",
+		acronym: "FIPEP",
+	},
+	{
+		_id: "600369139fb4a00c54229a56",
+		name: "ESCOLA SUPERIOR DE ADMINISTRAÇÃO",
+		acronym: "MARKETING E COMUNICAÇÃO DE PIRACICABA",
+	},
+	{
+		_id: "600369149fb4a00c54229a59",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS DE GUARANTÃ DO NORTE",
+		acronym: "FCSGN",
+	},
+	{
+		_id: "600369149fb4a00c54229a5b",
+		name: "FACULDADES INTEGRADAS SÃO PEDRO",
+		acronym: "FAESA",
+	},
+	{
+		_id: "600369149fb4a00c54229a5d",
+		name: "FACULDADE CASTRO ALVES",
+		acronym: "FCA",
+	},
+	{
+		_id: "600369159fb4a00c54229a5f",
+		name: "FACULDADE SUMARÉ",
+		acronym: "ISES",
+	},
+	{
+		_id: "600369159fb4a00c54229a62",
+		name: "FACULDADE UNISSA DE SARANDI",
+		acronym: "UNISSA",
+	},
+	{
+		_id: "600369159fb4a00c54229a64",
+		name: "FACULDADE ADELMAR ROSADO",
+		acronym: "FAR",
+	},
+	{
+		_id: "600369169fb4a00c54229a67",
+		name: "FACULDADE METROPOLITANA DE CURITIBA",
+		acronym: "FAMEC",
+	},
+	{
+		_id: "600369169fb4a00c54229a6a",
+		name: "FACULDADE DE CALDAS NOVAS",
+		acronym: "UNICALDAS",
+	},
+	{
+		_id: "600369169fb4a00c54229a6c",
+		name: "FACULDADE DINÂMICA DAS CATARATAS",
+		acronym: "UDC",
+	},
+	{
+		_id: "600369169fb4a00c54229a6f",
+		name: "INSTITUTO DE CIÊNCIAS SOCIAIS E HUMANAS",
+	},
+	{
+		_id: "600369179fb4a00c54229a72",
+		name: "FACULDADE DE PIMENTA BUENO",
+		acronym: "FAP",
+	},
+	{
+		_id: "600369179fb4a00c54229a75",
+		name: "FACULDADE DE PIRACANJUBA",
+		acronym: "FAP",
+	},
+	{
+		_id: "600369179fb4a00c54229a77",
+		name: "FACULDADE DO CENTRO LESTE",
+		acronym: "UCL",
+	},
+	{
+		_id: "600369189fb4a00c54229a79",
+		name: "FACULDADE DOIS DE JULHO",
+		acronym: "F2J",
+	},
+	{
+		_id: "600369189fb4a00c54229a7b",
+		name: "ÁREA1 - FACULDADE DE CIÊNCIA E TECNOLOGIA",
+		acronym: "ÁREA1",
+	},
+	{
+		_id: "600369189fb4a00c54229a7d",
+		name: "FACULDADE ANHAGUERA DE JUNDIAÍ",
+		acronym: "",
+	},
+	{
+		_id: "600369199fb4a00c54229a80",
+		name: "FACULDADE DE PRIMAVERA",
+		acronym: "CESPRI",
+	},
+	{
+		_id: "600369199fb4a00c54229a82",
+		name: "CENTRO UNIVERSITÁRIO TOLEDO",
+		acronym: "UNITOLEDO",
+	},
+	{
+		_id: "600369199fb4a00c54229a84",
+		name: "CENTRO UNIVERSITÁRIO CURITIBA",
+		acronym: "UNICURITIBA",
+	},
+	{
+		_id: "600369199fb4a00c54229a86",
+		name: "FACULDADE MAGISTER",
+		acronym: "MAGISTER",
+	},
+	{
+		_id: "6003691a9fb4a00c54229a88",
+		name: "FACULDADES DE DRACENA",
+		acronym: "",
+	},
+	{ _id: "6003691a9fb4a00c54229a8a", name: "FACULDADE IDEAL", acronym: "FACI" },
+	{
+		_id: "6003691a9fb4a00c54229a8c",
+		name: "CENTRO UNIVERSITÁRIO DO NORTE",
+		acronym: "UNINORTE",
+	},
+	{
+		_id: "6003691a9fb4a00c54229a8e",
+		name: "FACULDADE SÃO LUCAS",
+		acronym: "FSL",
+	},
+	{
+		_id: "6003691b9fb4a00c54229a91",
+		name: "FACULDADE CENECISTA DE CAMPO LARGO",
+		acronym: "FACECLA",
+	},
+	{
+		_id: "6003691b9fb4a00c54229a93",
+		name: "FACULDADE BATISTA DO RIO DE JANEIRO",
+		acronym: "FABAT",
+	},
+	{ _id: "6003691b9fb4a00c54229a95", name: "FACULDADE INGÁ", acronym: "" },
+	{
+		_id: "6003691b9fb4a00c54229a97",
+		name: "INSTITUTO DE ENSINO SUPERIOR PLANALTO",
+		acronym: "IESPLAN",
+	},
+	{
+		_id: "6003691c9fb4a00c54229a9a",
+		name: "FACULDADE ORÍGENES LESSA",
+		acronym: "FACOL",
+	},
+	{
+		_id: "6003691c9fb4a00c54229a9d",
+		name: "FACULDADE BERTIOGA",
+		acronym: "FABE",
+	},
+	{
+		_id: "6003691c9fb4a00c54229a9f",
+		name: "FACULDADE DE VILA VELHA",
+		acronym: "",
+	},
+	{
+		_id: "6003691d9fb4a00c54229aa2",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE ITAPIRA",
+		acronym: "IESI",
+	},
+	{
+		_id: "6003691d9fb4a00c54229aa5",
+		name: "INSTITUTO LUTERANO DE ENSINO SUPERIOR DE ITUMBIARA",
+		acronym: "ILES",
+	},
+	{
+		_id: "6003691d9fb4a00c54229aa7",
+		name: "FACULDADE DA SERRA GAÚCHA",
+		acronym: "FSG",
+	},
+	{
+		_id: "6003691e9fb4a00c54229aa9",
+		name: "ESCOLA SUPERIOR BATISTA DO AMAZONAS",
+		acronym: "ESBAM",
+	},
+	{
+		_id: "6003691e9fb4a00c54229aac",
+		name: "ESCOLA SUPERIOR DE TECNOLOGIA E EDUCAÇÃO DE RIO CLARO",
+		acronym: "ESRC",
+	},
+	{
+		_id: "6003691e9fb4a00c54229aae",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE EMPRESAS",
+		acronym: "FACAMP",
+	},
+	{ _id: "6003691e9fb4a00c54229ab0", name: "FACULDADE DE CIÊNCIAS ECONÔMICAS" },
+	{
+		_id: "6003691f9fb4a00c54229ab3",
+		name: "INSTITUTO APHONSIANO DE ENSINO SUPERIOR",
+		acronym: "IAESUP",
+	},
+	{
+		_id: "6003691f9fb4a00c54229ab5",
+		name: "FACULDADE DE TECNOLOGIA DO PIAUÍ",
+		acronym: "FATEPI",
+	},
+	{
+		_id: "6003691f9fb4a00c54229ab7",
+		name: "FACULDADE DE DIREITO DE TANGARÁ DA SERRA",
+		acronym: "UNIC",
+	},
+	{
+		_id: "600369209fb4a00c54229ab9",
+		name: "FACULDADES INTEGRADAS EINSTEIN DE LIMEIRA",
+		acronym: "FIEL",
+	},
+	{
+		_id: "600369209fb4a00c54229abb",
+		name: "FACULDADE NACIONAL",
+		acronym: "FINAC",
+	},
+	{
+		_id: "600369209fb4a00c54229abd",
+		name: "CENTRO UNIVERSITÁRIO DO INSTITUTO MAUÁ DE TECNOLOGIA",
+		acronym: "CEUN-IMT",
+	},
+	{
+		_id: "600369209fb4a00c54229abf",
+		name: "CENTRO UNIVERSITÁRIO PLANALTO DO DISTRITO FEDERAL - UNIPLAN",
+		acronym: "UNIPLAN",
+	},
+	{
+		_id: "600369209fb4a00c54229ac1",
+		name: "FACULDADE DE EDUCAÇÃO",
+		acronym: "TECNOLOGIA E ADMINISTRAÇÃO DE CAARAPÓ",
+	},
+	{
+		_id: "600369219fb4a00c54229ac4",
+		name: "CENTRO UNIVERSITÁRIO DO CERRADO-PATROCÍNIO",
+		acronym: "UNICERP",
+	},
+	{
+		_id: "600369219fb4a00c54229ac6",
+		name: "FACULDADES INTEGRADAS DE SÃO CARLOS",
+		acronym: "FADISC",
+	},
+	{
+		_id: "600369219fb4a00c54229ac8",
+		name: "FACULDADE ATENAS MARANHENSE",
+		acronym: "FAMA",
+	},
+	{ _id: "600369229fb4a00c54229aca", name: "FACULDADE CIODONTO", acronym: "-" },
+	{
+		_id: "600369229fb4a00c54229acc",
+		name: "FACULDADE SALESIANA DO NORDESTE",
+		acronym: "FASNE",
+	},
+	{
+		_id: "600369229fb4a00c54229acf",
+		name: "FACULDADE SANTÍSSIMO SACRAMENTO",
+		acronym: "FSSS",
+	},
+	{
+		_id: "600369239fb4a00c54229ad2",
+		name: "FACULDADE ANHANGUERA DE SERTÃOZINHO",
+		acronym: "FASERT",
+	},
+	{
+		_id: "600369239fb4a00c54229ad4",
+		name:
+			"Faculdade Estácio Euro- Panamericana de Humanidades e Tecnologias - Estácio EUROPAN",
+		acronym: "EUROPAN",
+	},
+	{
+		_id: "600369239fb4a00c54229ad7",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS E SOCIAIS",
+	},
+	{
+		_id: "600369239fb4a00c54229ad9",
+		name: "INSTITUTO PARAIBANO DE ENSINO RENOVADO",
+		acronym: "INPER",
+	},
+	{
+		_id: "600369249fb4a00c54229adb",
+		name: "FACULDADE DE TECNOLOGIA E CIÊNCIAS",
+		acronym: "FTC SALVADOR",
+	},
+	{
+		_id: "600369249fb4a00c54229ade",
+		name: "FACULDADE ALFACASTELO",
+		acronym: "FCGB",
+	},
+	{
+		_id: "600369249fb4a00c54229ae0",
+		name: "FACULDADE MÓDULO PAULISTA",
+		acronym: "FMP",
+	},
+	{
+		_id: "600369259fb4a00c54229ae2",
+		name: "FACULDADE DE RIBEIRÃO PRETO",
+		acronym: "FABAN",
+	},
+	{
+		_id: "600369259fb4a00c54229ae4",
+		name: "FACULDADE CENECISTA DE VILA VELHA",
+		acronym: "FACEVV",
+	},
+	{ _id: "600369259fb4a00c54229ae6", name: "ESCOLA SUPERIOR DE ADMINISTRAÇÃO" },
+	{
+		_id: "600369259fb4a00c54229ae8",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS DE FLORIANÓPOLIS",
+		acronym: "FCSF",
+	},
+	{
+		_id: "600369269fb4a00c54229aeb",
+		name: "CENTRO UNIVERSITÁRIO LEONARDO DA VINCI",
+		acronym: "UNIASSELVI",
+	},
+	{
+		_id: "600369269fb4a00c54229aed",
+		name: "FACULDADES INTEGRADAS INTERAMERICANAS",
+		acronym: "FAITER",
+	},
+	{
+		_id: "600369269fb4a00c54229aef",
+		name: "FACULDADE ANCHIETA",
+		acronym: "IGABC",
+	},
+	{
+		_id: "600369269fb4a00c54229af1",
+		name: "FACULDADE IBMEC",
+		acronym: "IBMEC",
+	},
+	{
+		_id: "600369279fb4a00c54229af3",
+		name: "FACULDADE ESTÁCIO DE SÁ DE VITÓRIA",
+		acronym: "FESV",
+	},
+	{ _id: "600369279fb4a00c54229af5", name: "FACULDADE DOM BOSCO" },
+	{
+		_id: "600369279fb4a00c54229af7",
+		name: "FACULDADE PARAÍSO",
+		acronym: "FAP",
+	},
+	{
+		_id: "600369279fb4a00c54229afa",
+		name: "FACULDADE DE JAGUARIÚNA",
+		acronym: "FAJ",
+	},
+	{
+		_id: "600369289fb4a00c54229afc",
+		name: "FACULDADE INTERNACIONAL DE CURITIBA",
+		acronym: "FACINTER",
+	},
+	{
+		_id: "600369289fb4a00c54229afe",
+		name: "FACULDADE PITÁGORAS DE UBERLÂNDIA",
+		acronym: "PIT UBERLÂNDIA",
+	},
+	{
+		_id: "600369289fb4a00c54229b00",
+		name: "FACULDADE ALVES FARIA",
+		acronym: "ALFA",
+	},
+	{
+		_id: "600369289fb4a00c54229b02",
+		name: "FACULDADE CATÓLICA SALESIANA DO ESPÍRITO SANTO",
+		acronym: "",
+	},
+	{
+		_id: "600369299fb4a00c54229b04",
+		name: "FACULDADE ESTÁCIO DE SÁ DE VILA VELHA",
+		acronym: "FESVV",
+	},
+	{
+		_id: "600369299fb4a00c54229b06",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE SANTA CRUZ DO RIO PARDO",
+		acronym: "FASC",
+	},
+	{
+		_id: "600369299fb4a00c54229b08",
+		name: "INSTITUTO DE ENSINO SUPERIOR E FORMAÇÃO AVANÇADA DE VITÓRIA",
+		acronym: "FAVI",
+	},
+	{
+		_id: "600369299fb4a00c54229b0b",
+		name: "FACULDADE ANHANGUERA DE TABOÃO DA SERRA",
+		acronym: "FATS",
+	},
+	{
+		_id: "6003692a9fb4a00c54229b0e",
+		name: "FACULDADE DE ENSINO SUPERIOR DE SÃO MIGUEL DO IGUAÇU",
+		acronym: "FAESI",
+	},
+	{
+		_id: "6003692a9fb4a00c54229b10",
+		name: "FACULDADE LATINO AMERICANA DE EDUCAÇÃO",
+		acronym: "FLATED",
+	},
+	{
+		_id: "6003692a9fb4a00c54229b12",
+		name: "FACULDADE PITÁGORAS DE JUNDIAÍ",
+		acronym: "PIT JUNDIAÍ",
+	},
+	{
+		_id: "6003692b9fb4a00c54229b14",
+		name: "FACULDADE DOUTOR LEOCÁDIO JOSÉ CORREIA",
+		acronym: "FALEC",
+	},
+	{
+		_id: "6003692b9fb4a00c54229b16",
+		name: "FACULDADE MAURÍCIO DE NASSAU DE MACEIÓ",
+		acronym: "",
+	},
+	{
+		_id: "6003692b9fb4a00c54229b18",
+		name: "FACULDADE DE MEDICINA VETERINÁRIA E ZOOTECNIA",
+		acronym: "FAMED",
+	},
+	{
+		_id: "6003692b9fb4a00c54229b1a",
+		name: "INSTITUTO CENECISTA FAYAL DE ENSINO SUPERIOR",
+		acronym: "IFES",
+	},
+	{
+		_id: "6003692c9fb4a00c54229b1c",
+		name: "FACULDADE PROJEÇÃO DE CEILÂNDIA",
+		acronym: "FACEB",
+	},
+	{
+		_id: "6003692c9fb4a00c54229b1e",
+		name: "FACULDADE METROPOLITANA DE MARINGÁ",
+		acronym: "UNIFAMMA",
+	},
+	{
+		_id: "6003692c9fb4a00c54229b20",
+		name: "FACULDADE ESTÁCIO DE SÁ DE BELO HORIZONTE",
+		acronym: "FESBH",
+	},
+	{
+		_id: "6003692c9fb4a00c54229b22",
+		name: "FACULDADE ESTÁCIO DE SÁ DE SANTA CATARINA",
+		acronym: "FESSC",
+	},
+	{
+		_id: "6003692d9fb4a00c54229b24",
+		name: "INSTITUTO DE CIÊNCIAS JURÍDICAS E SOCIAIS PROFESSOR CAMILLO FILHO",
+		acronym: "ICF",
+	},
+	{
+		_id: "6003692d9fb4a00c54229b27",
+		name: "FACULDADE VALE DO CRICARÉ",
+		acronym: "F.V.C.",
+	},
+	{
+		_id: "6003692d9fb4a00c54229b29",
+		name: "FACULDADE DE EDUCAÇÃO DE PORTO VELHO",
+		acronym: "UNIRON",
+	},
+	{
+		_id: "6003692e9fb4a00c54229b2c",
+		name: "FACULDADE DE VINHEDO",
+		acronym: "FV",
+	},
+	{ _id: "6003692e9fb4a00c54229b2e", name: "FACULDADE SANTA TEREZINHA" },
+	{
+		_id: "6003692e9fb4a00c54229b30",
+		name: "FACULDADE DE PATO BRANCO",
+		acronym: "FADEP",
+	},
+	{
+		_id: "6003692e9fb4a00c54229b32",
+		name: "FACULDADE FIA DE ADMINISTRAÇÃO E NEGÓCIOS",
+		acronym: "FFA",
+	},
+	{
+		_id: "6003692f9fb4a00c54229b34",
+		name: "INSTITUTO DE ESTUDOS SUPERIORES DA AMAZÔNIA",
+		acronym: "IESAM",
+	},
+	{
+		_id: "6003692f9fb4a00c54229b37",
+		name: "FACULDADE DE DIREITO FRANCISCO BELTRÃO",
+		acronym: "CESUL",
+	},
+	{
+		_id: "6003692f9fb4a00c54229b39",
+		name: "FACULDADES INTEGRADAS OLGA METTIG",
+		acronym: "FAMETTIG",
+	},
+	{
+		_id: "600369309fb4a00c54229b3b",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS DE AFONSO CLÁUDIO",
+		acronym: "ISEAC",
+	},
+	{
+		_id: "600369309fb4a00c54229b3d",
+		name: "FACULDADE SENAI DE SÃO PAULO",
+		acronym: "SENAI",
+	},
+	{
+		_id: "600369309fb4a00c54229b3f",
+		name: "FACULDADE CENECISTA DE JOINVILLE - FACE",
+		acronym: "FCJ",
+	},
+	{ _id: "600369309fb4a00c54229b41", name: "FACULDADE DE FILOSOFIA" },
+	{ _id: "600369309fb4a00c54229b43", name: "FACULDADE DE CIÊNCIAS" },
+	{
+		_id: "600369319fb4a00c54229b46",
+		name: "FACULDADE SÃO JUDAS TADEU DE PINHAIS",
+		acronym: "FAPI",
+	},
+	{
+		_id: "600369319fb4a00c54229b49",
+		name: "FACULDADE DE TELÊMACO BORBA",
+		acronym: "FATEB",
+	},
+	{
+		_id: "600369319fb4a00c54229b4b",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE RONDÔNIA",
+		acronym: "IESUR",
+	},
+	{
+		_id: "600369329fb4a00c54229b4d",
+		name: "FACULDADE PROJEÇÃO",
+		acronym: "FAPRO",
+	},
+	{ _id: "600369329fb4a00c54229b4f", name: "FACULDADE FLAMINGO", acronym: "" },
+	{
+		_id: "600369329fb4a00c54229b51",
+		name: "CENTRO UNIVERSITÁRIO GERALDO DI BIASE",
+		acronym: "UGB",
+	},
+	{
+		_id: "600369329fb4a00c54229b53",
+		name: "FACULDADE DECISÃO",
+		acronym: "FADE",
+	},
+	{
+		_id: "600369339fb4a00c54229b56",
+		name: "INSTITUTO DE EDUCAÇÃO SUPERIOR DE BOITUVA",
+		acronym: "FIB",
+	},
+	{
+		_id: "600369339fb4a00c54229b59",
+		name: "FACULDADE DE EDUCAÇÃO SÃO FRANCISCO",
+		acronym: "FAESF",
+	},
+	{
+		_id: "600369349fb4a00c54229b5c",
+		name: "FACULDADE DE MEDICINA ESTÁCIO DE JUAZEIRO DO NORTE",
+		acronym: "FMJ",
+	},
+	{
+		_id: "600369349fb4a00c54229b5e",
+		name: "FACULDADE DE EDUCAÇÃO FÍSICA DE FOZ DO IGUAÇU",
+		acronym: "FEPI",
+	},
+	{
+		_id: "600369349fb4a00c54229b61",
+		name: "FACULDADE PIAUIENSE",
+		acronym: "FAP",
+	},
+	{
+		_id: "600369359fb4a00c54229b64",
+		name: "FACULDADES INTEGRADAS DO VALE DO RIBEIRA",
+		acronym: "FIVR",
+	},
+	{
+		_id: "600369359fb4a00c54229b66",
+		name: "FACULDADE SETE DE SETEMBRO",
+		acronym: "FASETE",
+	},
+	{
+		_id: "600369359fb4a00c54229b68",
+		name: "UNIVERSIDADE FUMEC",
+		acronym: "FUMEC",
+	},
+	{
+		_id: "600369359fb4a00c54229b6b",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE JOÃO MONLEVADE",
+		acronym: "IES/FUNCEC",
+	},
+	{
+		_id: "600369369fb4a00c54229b6e",
+		name: "CENTRO UNIVERSITÁRIO DO ESPÍRITO SANTO",
+		acronym: "UNESC",
+	},
+	{ _id: "600369369fb4a00c54229b70", name: "ESCOLA SUPERIOR DE ADMINISTRAÇÃO" },
+	{
+		_id: "600369369fb4a00c54229b73",
+		name: "FACULDADE DE ILHA SOLTEIRA",
+		acronym: "FAISA",
+	},
+	{
+		_id: "600369379fb4a00c54229b76",
+		name: "FACULDADE DE SAÚDE",
+		acronym: "CIÊNCIAS HUMANAS E TECNOLÓGICAS DO PIAUÍ",
+	},
+	{
+		_id: "600369379fb4a00c54229b78",
+		name: "FACULDADE SUL FLUMINENSE",
+		acronym: "FASF",
+	},
+	{
+		_id: "600369379fb4a00c54229b7b",
+		name: "FACULDADE UNIME DE CIÊNCIAS JURÍDICAS",
+		acronym: "FCJ",
+	},
+	{
+		_id: "600369389fb4a00c54229b7e",
+		name: "FACULDADE VIZINHANÇA VALE DO IGUAÇU",
+		acronym: "VIZIVALI",
+	},
+	{
+		_id: "600369389fb4a00c54229b81",
+		name: "FACULDADES INTEGRADAS DE CARATINGA",
+		acronym: "FIC",
+	},
+	{
+		_id: "600369389fb4a00c54229b83",
+		name: "FACULDADES INTEGRADAS DE ARARAQUARA",
+		acronym: "FIAR",
+	},
+	{
+		_id: "600369399fb4a00c54229b85",
+		name: "FACULDADE ALFREDO NASSER",
+		acronym: "FAN",
+	},
+	{
+		_id: "600369399fb4a00c54229b87",
+		name: "FACULDADE UNIME DE CIÊNCIAS SOCIAIS",
+		acronym: "FCS",
+	},
+	{
+		_id: "600369399fb4a00c54229b8a",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS",
+		acronym: "FACISA - CELER",
+	},
+	{
+		_id: "6003693a9fb4a00c54229b8d",
+		name: "FACULDADE EDUCACIONAL DE MEDIANEIRA",
+		acronym: "FACEMED",
+	},
+	{
+		_id: "6003693a9fb4a00c54229b90",
+		name: "CENTRO UNIVERSITÁRIO DO PLANALTO DE ARAXÁ",
+		acronym: "UNIARAXÁ",
+	},
+	{
+		_id: "6003693a9fb4a00c54229b92",
+		name: "INSTITUTO DE ENSINO SUPERIOR BLAURO CARDOSO DE MATTOS",
+		acronym: "FASERRA",
+	},
+	{
+		_id: "6003693b9fb4a00c54229b95",
+		name: "FACULDADE INTERMUNICIPAL DO NOROESTE DO PARANÁ",
+		acronym: "FACINOR",
+	},
+	{ _id: "6003693b9fb4a00c54229b97", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "6003693b9fb4a00c54229b99",
+		name: "FACULDADE DE CIÊNCIAS E EDUCAÇÃO SENA AIRES",
+		acronym: "FACESA",
+	},
+	{
+		_id: "6003693b9fb4a00c54229b9b",
+		name: "FACULDADE DE TECNOLOGIA DE GUARATINGUETÁ",
+		acronym: "FATEC GT",
+	},
+	{
+		_id: "6003693c9fb4a00c54229b9d",
+		name: "FACULDADE ENERGIA DE ADMINISTRAÇÃO E NEGÓCIOS",
+		acronym: "FEAN",
+	},
+	{
+		_id: "6003693c9fb4a00c54229b9f",
+		name: "UNIVERSIDADE DO VALE DO SAPUCAÍ",
+		acronym: "UNIVÁS",
+	},
+	{
+		_id: "6003693c9fb4a00c54229ba1",
+		name: "FACULDADES INTEGRADAS DE TANGARÁ DA SERRA",
+		acronym: "FITS",
+	},
+	{
+		_id: "6003693c9fb4a00c54229ba3",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS E SOCIAIS APLICADAS",
+		acronym: "FACSÃOLUÍS",
+	},
+	{
+		_id: "6003693d9fb4a00c54229ba5",
+		name: "FACULDADE SEAMA",
+		acronym: "SEAMA",
+	},
+	{
+		_id: "6003693d9fb4a00c54229ba7",
+		name: "FACULDADE DE ODONTOLOGIA DE MANAUS",
+		acronym: "FOM",
+	},
+	{
+		_id: "6003693d9fb4a00c54229ba9",
+		name: "FACULDADE DE CIÊNCIAS E EDUCAÇÃO DO ESPÍRITO SANTO",
+		acronym: "UNIVES",
+	},
+	{
+		_id: "6003693d9fb4a00c54229bab",
+		name: "FACULDADE SANTA FÉ",
+		acronym: "CESSF",
+	},
+	{
+		_id: "6003693d9fb4a00c54229bad",
+		name: "FACULDADE POLITÉCNICA DE UBERLÂNDIA",
+		acronym: "FPU",
+	},
+	{
+		_id: "6003693e9fb4a00c54229baf",
+		name: "INSTITUTO DE ENSINO SUPERIOR PRESIDENTE TANCREDO DE ALMEIDA NEVES",
+		acronym: "IPTAN",
+	},
+	{
+		_id: "6003693e9fb4a00c54229bb1",
+		name: "INSTITUTO DE CIÊNCIAS DA SAÚDE",
+		acronym: "ICS",
+	},
+	{
+		_id: "6003693e9fb4a00c54229bb4",
+		name: "FACULDADE CIDADE DE COROMANDEL",
+		acronym: "FCC",
+	},
+	{
+		_id: "6003693f9fb4a00c54229bb6",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE NOVA ANDRADINA - FANOVA",
+		acronym: "FANOVA",
+	},
+	{
+		_id: "6003693f9fb4a00c54229bb8",
+		name: "FACULDADE VALE DO APORÉ",
+		acronym: "FAVA",
+	},
+	{
+		_id: "6003693f9fb4a00c54229bbb",
+		name: "FACULDADE LUTERANA SÃO MARCOS",
+		acronym: "FALSM",
+	},
+	{
+		_id: "600369409fb4a00c54229bbe",
+		name: "FACULDADE DOS CERRADOS PIAUIENSES",
+		acronym: "FCP",
+	},
+	{
+		_id: "600369409fb4a00c54229bc1",
+		name: "FACULDADE DA CIDADE DE SANTA LUZIA",
+		acronym: "FACSAL",
+	},
+	{ _id: "600369409fb4a00c54229bc4", name: "FACULDADE DECISÃO" },
+	{
+		_id: "600369419fb4a00c54229bc6",
+		name: "FACULDADE DE TECNOLOGIA DE INDAIATUBA",
+		acronym: "FATEC-ID",
+	},
+	{
+		_id: "600369419fb4a00c54229bc8",
+		name: "FACULDADE DAS ATIVIDADES EMPRESARIAIS DE TERESINA",
+		acronym: "FAETE",
+	},
+	{
+		_id: "600369419fb4a00c54229bcb",
+		name: "FACULDADE SUL BRASIL",
+		acronym: "FASUL",
+	},
+	{
+		_id: "600369429fb4a00c54229bce",
+		name: "FACULDADE EDUCACIONAL DE ARAPOTI",
+		acronym: "FATI",
+	},
+	{
+		_id: "600369429fb4a00c54229bd1",
+		name: "FACULDADE ADVENTISTA PARANAENSE",
+		acronym: "IAP",
+	},
+	{
+		_id: "600369429fb4a00c54229bd4",
+		name: "FACULDADE ASTORGA",
+		acronym: "FAAST",
+	},
+	{
+		_id: "600369429fb4a00c54229bd6",
+		name: "FACULDADE ERNESTO RISCALI",
+		acronym: "FAER",
+	},
+	{ _id: "600369439fb4a00c54229bd9", name: "FACULDADE SANTA RITA" },
+	{
+		_id: "600369439fb4a00c54229bdc",
+		name: "FACULDADE NETWORK",
+		acronym: "NWK",
+	},
+	{
+		_id: "600369439fb4a00c54229bde",
+		name: "FACULDADE DO INTERIOR PAULISTA",
+		acronym: "FIP",
+	},
+	{
+		_id: "600369449fb4a00c54229be0",
+		name: "FACULDADE DE CIÊNCIAS AGRÁRIAS DE ANDRADINA",
+		acronym: "FCAA",
+	},
+	{
+		_id: "600369449fb4a00c54229be2",
+		name: "FACULDADE MARECHAL RONDON",
+		acronym: "FMR",
+	},
+	{
+		_id: "600369449fb4a00c54229be4",
+		name: "FACULDADE REUNIDA",
+		acronym: "FAR",
+	},
+	{
+		_id: "600369459fb4a00c54229be7",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS DE AGUAÍ",
+		acronym: "FACHA",
+	},
+	{
+		_id: "600369459fb4a00c54229be9",
+		name: "FACULDADE PITÁGORAS DE LONDRINA",
+		acronym: "",
+	},
+	{
+		_id: "600369459fb4a00c54229beb",
+		name: "FACULDADE BATISTA DA SERRA",
+		acronym: "FABAVI",
+	},
+	{
+		_id: "600369459fb4a00c54229bee",
+		name: "CASTELLI ESCOLA SUPERIOR DE HOTELARIA",
+		acronym: "CASTELLI ESH",
+	},
+	{
+		_id: "600369469fb4a00c54229bf0",
+		name: "FACULDADE DE CIÊNCIAS JURÍDICAS E SOCIAIS DE MACEIÓ",
+		acronym: "FAMA",
+	},
+	{
+		_id: "600369469fb4a00c54229bf2",
+		name: "FACULDADE DO AMAZONAS",
+		acronym: "IAES",
+	},
+	{
+		_id: "600369469fb4a00c54229bf4",
+		name: "FACULDADE HÉLIO ROCHA",
+		acronym: "FHR",
+	},
+	{
+		_id: "600369479fb4a00c54229bf7",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS E SOCIAIS",
+	},
+	{
+		_id: "600369479fb4a00c54229bf9",
+		name: "FACULDADE SOCIAL DA BAHIA",
+		acronym: "FSBA",
+	},
+	{
+		_id: "600369479fb4a00c54229bfc",
+		name: "FACULDADE DE TECNOLOGIA E CIÊNCIAS DE ITABUNA",
+		acronym: "FTC",
+	},
+	{
+		_id: "600369479fb4a00c54229bfe",
+		name: "FACULDADE ANÍSIO TEIXEIRA DE FEIRA DE SANTANA",
+		acronym: "FAT",
+	},
+	{
+		_id: "600369489fb4a00c54229c01",
+		name: "INSTITUTO SUPERIOR DO LITORAL DO PARANÁ",
+		acronym: "ISULPAR",
+	},
+	{
+		_id: "600369489fb4a00c54229c03",
+		name: "FACULDADE ANGEL VIANNA",
+		acronym: "FAV",
+	},
+	{
+		_id: "600369489fb4a00c54229c05",
+		name: "INSTITUTO BLUMENAUENSE DE ENSINO SUPERIOR",
+		acronym: "IBES",
+	},
+	{
+		_id: "600369489fb4a00c54229c07",
+		name: "FACULDADE UNIME DE EDUCAÇÃO E COMUNICAÇÃO",
+		acronym: "FEC",
+	},
+	{
+		_id: "600369499fb4a00c54229c0a",
+		name: "FACULDADE DE TECNOLOGIA E CIÊNCIAS DE JEQUIÉ",
+		acronym: "FTC",
+	},
+	{
+		_id: "600369499fb4a00c54229c0d",
+		name: "FACULDADE DE EDUCAÇÃO CIÊNCIAS E LETRAS DE PARAÍSO",
+		acronym: "FECIPAR",
+	},
+	{
+		_id: "600369499fb4a00c54229c0f",
+		name: "FACULDADE DE ENSINO E CULTURA DO CEARÁ",
+		acronym: "FAECE",
+	},
+	{
+		_id: "6003694a9fb4a00c54229c12",
+		name: "FACULDADE J. SIMÕES ENSINO SUPERIOR",
+		acronym: "FABAVI",
+	},
+	{
+		_id: "6003694a9fb4a00c54229c14",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE TERESINA",
+		acronym: "IEST",
+	},
+	{
+		_id: "6003694a9fb4a00c54229c16",
+		name: "FACULDADE EDUCACIONAL DE DOIS VIZINHOS",
+		acronym: "FAED",
+	},
+	{
+		_id: "6003694b9fb4a00c54229c18",
+		name: "FACULDADE INTEGRADA DA GRANDE FORTALEZA",
+		acronym: "FGF",
+	},
+	{
+		_id: "6003694b9fb4a00c54229c1a",
+		name: "FACULDADE ESTÁCIO DE SÁ DE OURINHOS",
+		acronym: "FAESO",
+	},
+	{
+		_id: "6003694b9fb4a00c54229c1c",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS E TECNOLÓGICAS FACITEC",
+		acronym: "FACITEC",
+	},
+	{
+		_id: "6003694b9fb4a00c54229c1e",
+		name: "FACULDADE DE ADMINISTRAÇÃO ESCOLA SUPERIOR PROFESSOR PAULO MARTINS",
+		acronym: "ESPAM",
+	},
+	{
+		_id: "6003694b9fb4a00c54229c20",
+		name: "FACULDADE CAPIXABA DE ADMINISTRAÇÃO E EDUCAÇÃO",
+		acronym: "UNICES",
+	},
+	{
+		_id: "6003694c9fb4a00c54229c22",
+		name: "FACULDADE ARAGUAIA",
+		acronym: "FARA",
+	},
+	{
+		_id: "6003694c9fb4a00c54229c25",
+		name: "FACULDADE DA SAÚDE E ECOLOGIA HUMANA",
+		acronym: "FASEH",
+	},
+	{ _id: "6003694c9fb4a00c54229c27", name: "FACULDADE KENNEDY", acronym: "FK" },
+	{
+		_id: "6003694d9fb4a00c54229c29",
+		name: "FACULDADE NOVOS HORIZONTES",
+		acronym: "NOVOS HORIZONTES",
+	},
+	{
+		_id: "6003694d9fb4a00c54229c2b",
+		name: "FACULDADE DE NEGÓCIOS DE BELO HORIZONTE",
+		acronym: "",
+	},
+	{
+		_id: "6003694d9fb4a00c54229c2e",
+		name: "FACULDADE DE GUAÇUÍ",
+		acronym: "UVV GUAÇUÍ",
+	},
+	{
+		_id: "6003694e9fb4a00c54229c31",
+		name: "INSTITUTO METROPOLITANO DE ENSINO SUPERIOR",
+		acronym: "IMES",
+	},
+	{
+		_id: "6003694e9fb4a00c54229c34",
+		name: "FACULDADE ASA DE BRUMADINHO",
+		acronym: "IECEMB - FAB",
+	},
+	{
+		_id: "6003694e9fb4a00c54229c36",
+		name: "INSTITUTO ESPERANÇA DE ENSINO SUPERIOR",
+		acronym: "IESPES",
+	},
+	{
+		_id: "6003694e9fb4a00c54229c38",
+		name: "INSTITUTO SALESIANO DE FILOSOFIA",
+		acronym: "INSAF",
+	},
+	{
+		_id: "6003694f9fb4a00c54229c3b",
+		name: "FACULDADE METROPOLITANA DA GRANDE RECIFE",
+		acronym: "UNESJ",
+	},
+	{
+		_id: "6003694f9fb4a00c54229c3d",
+		name: "FACULDADE SÃO MIGUEL",
+		acronym: "FACULDADE SÃO MIGUEL",
+	},
+	{
+		_id: "6003694f9fb4a00c54229c40",
+		name: "FACULDADE CENECISTA DE SETE LAGOAS",
+		acronym: "FCSL",
+	},
+	{ _id: "600369509fb4a00c54229c42", name: "FACULDADE DE EDUCAÇÃO" },
+	{
+		_id: "600369509fb4a00c54229c44",
+		name: "FACULDADE DE ENSINO SUPERIOR DO PIAUÍ",
+		acronym: "FAESPI",
+	},
+	{
+		_id: "600369509fb4a00c54229c47",
+		name: "FACULDADE DE CIÊNCIAS DE WENCESLAU BRAZ",
+		acronym: "FACIBRA",
+	},
+	{
+		_id: "600369519fb4a00c54229c4a",
+		name: "FACULDADE DE CAMPINA GRANDE DO SUL",
+		acronym: "FACSUL",
+	},
+	{
+		_id: "600369519fb4a00c54229c4c",
+		name: "FACULDADE DE CIÊNCIAS E TECNOLOGIA MATER CHRISTI",
+		acronym: "MATER CHRISTI",
+	},
+	{
+		_id: "600369519fb4a00c54229c4e",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS IBMEC",
+		acronym: "FACULDADES IBMEC",
+	},
+	{ _id: "600369519fb4a00c54229c50", name: "FACULDADE PIAUIENSE" },
+	{
+		_id: "600369529fb4a00c54229c52",
+		name: "FACULDADE BARDDAL DE CIÊNCIAS CONTÁBEIS",
+		acronym: "FB-CC",
+	},
+	{
+		_id: "600369529fb4a00c54229c54",
+		name: "FACULDADE BARDDAL DE ARTES APLICADAS",
+		acronym: "FB-AA",
+	},
+	{
+		_id: "600369529fb4a00c54229c56",
+		name: "FACULDADE SANTA IZILDINHA",
+		acronym: "FIESI",
+	},
+	{
+		_id: "600369529fb4a00c54229c59",
+		name: "FACULDADE DE SÃO VICENTE",
+		acronym: "FSV",
+	},
+	{
+		_id: "600369539fb4a00c54229c5b",
+		name: "FACULDADE PRÁXIS",
+		acronym: "FIPEP",
+	},
+	{
+		_id: "600369539fb4a00c54229c5e",
+		name: "ESCOLA SUPERIOR DE TECNOLOGIA E EDUCAÇÃO DE PORTO FERREIRA",
+		acronym: "ESPF",
+	},
+	{
+		_id: "600369539fb4a00c54229c61",
+		name: "FACULDADE ITANHAÉM",
+		acronym: "FAITA",
+	},
+	{
+		_id: "600369549fb4a00c54229c63",
+		name: "ESCOLA SUPERIOR DE CRICIÚMA - ESUCRI",
+		acronym: "ESUCRI",
+	},
+	{
+		_id: "600369549fb4a00c54229c66",
+		name: "FACULDADE DE EDUCAÇÃO DE BOM DESPACHO",
+		acronym: "FACEB",
+	},
+	{
+		_id: "600369549fb4a00c54229c69",
+		name: "FACULDADE CENTRAL DE CRISTALINA",
+		acronym: "FACEC",
+	},
+	{
+		_id: "600369559fb4a00c54229c6c",
+		name: "FACULDADE ESCRITOR OSMAN DA COSTA LINS",
+		acronym: "FACOL",
+	},
+	{
+		_id: "600369559fb4a00c54229c6f",
+		name: "FACULDADE DE EDUCAÇÃO DE JARU",
+		acronym: "UNICENTRO",
+	},
+	{
+		_id: "600369559fb4a00c54229c71",
+		name: "FACULDADE PROMOVE DE SETE LAGOAS",
+		acronym: "FSLMG",
+	},
+	{
+		_id: "600369569fb4a00c54229c73",
+		name: "FACULDADE MACHADO DE ASSIS",
+		acronym: "FAMA",
+	},
+	{
+		_id: "600369569fb4a00c54229c75",
+		name: "FACULDADE ATUAL DA AMAZÔNIA",
+		acronym: "FAA",
+	},
+	{
+		_id: "600369569fb4a00c54229c78",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE RIO VERDE",
+		acronym: "IESRIVER",
+	},
+	{
+		_id: "600369569fb4a00c54229c7a",
+		name: "FACULDADE DE INFORMÁTICA DO RECIFE",
+		acronym: "FACIR",
+	},
+	{
+		_id: "600369579fb4a00c54229c7c",
+		name: "FACULDADE SALESIANA MARIA AUXILIADORA",
+		acronym: "FSMA",
+	},
+	{
+		_id: "600369579fb4a00c54229c7e",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS DE RECIFE",
+		acronym: "FACCOR",
+	},
+	{
+		_id: "600369579fb4a00c54229c80",
+		name: "INSTITUTO PERNAMBUCANO DE ENSINO SUPERIOR",
+		acronym: "IPESU",
+	},
+	{
+		_id: "600369579fb4a00c54229c82",
+		name: "FACULDADE INTEGRADA DE PERNAMBUCO",
+		acronym: "FACIPE",
+	},
+	{
+		_id: "600369589fb4a00c54229c84",
+		name: "FACULDADE DE NEGÓCIOS E TECNOLOGIAS DA INFORMAÇÃO",
+		acronym: "FACNET",
+	},
+	{
+		_id: "600369589fb4a00c54229c86",
+		name: "FACULDADE DE PRESIDENTE PRUDENTE",
+		acronym: "FAPEPE",
+	},
+	{
+		_id: "600369589fb4a00c54229c88",
+		name: "FACULDADE DE TECNOLOGIA DE SÃO VICENTE",
+		acronym: "FATEF",
+	},
+	{
+		_id: "600369589fb4a00c54229c8a",
+		name: "ESCOLA SUPERIOR DE GESTÃO COMERCIAL E MARKETING",
+		acronym: "ESIC",
+	},
+	{
+		_id: "600369599fb4a00c54229c8d",
+		name: "FACULDADE DO SUL DA BAHIA",
+		acronym: "FASB",
+	},
+	{
+		_id: "600369599fb4a00c54229c8f",
+		name: "FACULDADE UNIÃO DAS AMÉRICAS",
+		acronym: "",
+	},
+	{
+		_id: "600369599fb4a00c54229c92",
+		name: "FACULDADE DE IMPERATRIZ",
+		acronym: "FACIMP",
+	},
+	{
+		_id: "6003695a9fb4a00c54229c94",
+		name: "FACULDADE NOBRE DE FEIRA DE SANTANA",
+		acronym: "FAN",
+	},
+	{
+		_id: "6003695a9fb4a00c54229c96",
+		name: "FACULDADE DE VIÇOSA",
+		acronym: "FDV",
+	},
+	{
+		_id: "6003695a9fb4a00c54229c98",
+		name: "FACULDADE DE PORTO VELHO",
+		acronym: "FIP",
+	},
+	{
+		_id: "6003695a9fb4a00c54229c9a",
+		name: "ESCOLA SUPERIOR DE ADMINISTRAÇÃO E GESTÃO",
+		acronym: "ESAGS",
+	},
+	{
+		_id: "6003695b9fb4a00c54229c9d",
+		name: "FACULDADE DE GUARARAPES",
+		acronym: "FAG",
+	},
+	{
+		_id: "6003695b9fb4a00c54229ca0",
+		name: "FACULDADE XV DE AGOSTO",
+		acronym: "FAQ",
+	},
+	{
+		_id: "6003695b9fb4a00c54229ca2",
+		name: "FACULDADE SANTA AMÉLIA",
+		acronym: "SECAL",
+	},
+	{
+		_id: "6003695c9fb4a00c54229ca4",
+		name: "FACULDADE DE CARIACICA",
+		acronym: "FAC DE CARIACICA",
+	},
+	{
+		_id: "6003695c9fb4a00c54229ca6",
+		name: "FACULDADE INTERAMERICANA DE PORTO VELHO",
+		acronym: "UNIRON",
+	},
+	{
+		_id: "6003695c9fb4a00c54229ca9",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS",
+	},
+	{
+		_id: "6003695d9fb4a00c54229cac",
+		name: "FACULDADE GENNARI E PEARTREE",
+		acronym: "FGP",
+	},
+	{
+		_id: "6003695d9fb4a00c54229caf",
+		name: "FACULDADE DE ENSINO SUPERIOR DE MARECHAL CÂNDIDO RONDON",
+		acronym: "ISEPE  RONDON",
+	},
+	{
+		_id: "6003695d9fb4a00c54229cb1",
+		name: "FACULDADE INTEGRAL DIFERENCIAL",
+		acronym: "FACID",
+	},
+	{
+		_id: "6003695d9fb4a00c54229cb3",
+		name: "FACULDADE DE CIÊNCIAS E TECNOLOGIA DE TERESINA",
+		acronym: "FACET",
+	},
+	{
+		_id: "6003695e9fb4a00c54229cb5",
+		name: "FACULDADE DE CIÊNCIAS APLICADAS DOUTOR LEÃO SAMPAIO",
+		acronym: "FLS",
+	},
+	{
+		_id: "6003695e9fb4a00c54229cb7",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO LA SALLE - ISE La Salle/RJ",
+		acronym: "ISE LA SALLE/RJ",
+	},
+	{
+		_id: "6003695e9fb4a00c54229cb9",
+		name: "INSTITUTO LUTERANO DE ENSINO SUPERIOR DE PORTO VELHO",
+		acronym: "ULBRA ILES",
+	},
+	{
+		_id: "6003695e9fb4a00c54229cbb",
+		name: "IMP de Ensino Superior - IMP",
+		acronym: "IMP",
+	},
+	{
+		_id: "6003695f9fb4a00c54229cbd",
+		name: "FACULDADE DE TECNOLOGIA INTERAMÉRICA",
+		acronym: "INTERAMERICA",
+	},
+	{
+		_id: "6003695f9fb4a00c54229cbf",
+		name: "FACULDADE DE TECNOLOGIA CARLOS DRUMMOND DE ANDRADE",
+		acronym: "CSET DRUMMOND",
+	},
+	{
+		_id: "6003695f9fb4a00c54229cc1",
+		name: "FACULDADE AUTÔNOMA DE DIREITO",
+		acronym: "FADISP",
+	},
+	{
+		_id: "6003695f9fb4a00c54229cc3",
+		name: "FACULDADE DE ENFERMAGEM NOVA ESPERANÇA",
+		acronym: "FACENE",
+	},
+	{
+		_id: "600369609fb4a00c54229cc5",
+		name: "FACULDADE ASSOCIADA BRASIL",
+		acronym: "FAB",
+	},
+	{
+		_id: "600369609fb4a00c54229cc7",
+		name: "FACULDADE INDEPENDENTE DO NORDESTE",
+		acronym: "FAINOR",
+	},
+	{
+		_id: "600369609fb4a00c54229cc9",
+		name: "FACULDADE PADRE JOÃO BAGOZZI",
+		acronym: "FACULDADE BAGOZZI",
+	},
+	{
+		_id: "600369609fb4a00c54229ccb",
+		name: "FACULDADE DE TECNOLOGIA E NEGÓCIOS CARLOS DRUMMOND DE ANDRADE",
+		acronym: "FTNCDA",
+	},
+	{
+		_id: "600369619fb4a00c54229ccd",
+		name: "FACULDADE DE TECNOLOGIA OSWALDO CRUZ",
+		acronym: "FATEC OSWALDO CRUZ",
+	},
+	{
+		_id: "600369619fb4a00c54229cd0",
+		name: "FACULDADE LUSO-BRASILEIRA",
+		acronym: "FALUB",
+	},
+	{
+		_id: "600369619fb4a00c54229cd2",
+		name: "UNIDADE DE ENSINO SUPERIOR EXPOENTE",
+		acronym: "UNIEXP",
+	},
+	{
+		_id: "600369629fb4a00c54229cd5",
+		name: "FACULDADE DE TECNOLOGIA SENAI CHAPECÓ",
+		acronym: "SENAI",
+	},
+	{
+		_id: "600369629fb4a00c54229cd8",
+		name: "FACULDADE DE EDUCAÇÃO REGIONAL SERRANA",
+		acronym: "FUNPAC",
+	},
+	{
+		_id: "600369629fb4a00c54229cda",
+		name: "FACULDADE ESPÍRITO SANTENSE",
+		acronym: "UNICAPE",
+	},
+	{
+		_id: "600369629fb4a00c54229cdd",
+		name: "FACULDADE DE JOSÉ BONIFÁCIO",
+		acronym: "FJB",
+	},
+	{
+		_id: "600369639fb4a00c54229cdf",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS",
+	},
+	{
+		_id: "600369639fb4a00c54229ce2",
+		name: "FACULDADE REGIONAL SERRANA",
+		acronym: "FUNPAC",
+	},
+	{
+		_id: "600369639fb4a00c54229ce4",
+		name: "FACULDADE SANTA MARIA",
+		acronym: "FSM",
+	},
+	{
+		_id: "600369649fb4a00c54229ce6",
+		name: "FACULDADE NORDESTE",
+		acronym: "FANOR",
+	},
+	{
+		_id: "600369649fb4a00c54229ce9",
+		name: "FACULDADE DE ITAPIRANGA",
+		acronym: "SEI/FAI",
+	},
+	{
+		_id: "600369649fb4a00c54229ceb",
+		name: "FACULDADE EDUCACIONAL DE PONTA GROSSA",
+		acronym: "UNIÃO",
+	},
+	{
+		_id: "600369649fb4a00c54229ced",
+		name: "FACULDADE DO VALE DO IPOJUCA",
+		acronym: "FAVIP",
+	},
+	{
+		_id: "600369659fb4a00c54229cef",
+		name: "FACULDADE DE TECNOLOGIA PROF. LUIZ ROSA",
+		acronym: "FATEC PROF LUIZ ROSA",
+	},
+	{
+		_id: "600369659fb4a00c54229cf2",
+		name: "FACULDADE METROPOLITANA DE GUARAMIRIM",
+		acronym: "FAMEG",
+	},
+	{
+		_id: "600369659fb4a00c54229cf4",
+		name: "FACULDADE AIEC",
+		acronym: "AIEC / FAAB",
+	},
+	{
+		_id: "600369669fb4a00c54229cf7",
+		name: "FACULDADE HORIZONTINA",
+		acronym: "FAHOR",
+	},
+	{
+		_id: "600369669fb4a00c54229cfa",
+		name: "FACULDADE INTESP",
+		acronym: "INTESP",
+	},
+	{
+		_id: "600369669fb4a00c54229cfc",
+		name: "FACULDADE DE ARTES",
+		acronym: "CIÊNCIAS E TECNOLOGIAS",
+	},
+	{
+		_id: "600369679fb4a00c54229cff",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS",
+	},
+	{
+		_id: "600369679fb4a00c54229d01",
+		name: "Faculdade Anhanguera de São Caetano",
+		acronym: "Fasc",
+	},
+	{
+		_id: "600369679fb4a00c54229d04",
+		name: "FACULDADE DE COLIDER",
+		acronym: "FACIDER",
+	},
+	{
+		_id: "600369689fb4a00c54229d07",
+		name: "INSTITUTO MACHADENSE DE ENSINO SUPERIOR",
+		acronym: "IMES",
+	},
+	{
+		_id: "600369689fb4a00c54229d09",
+		name: "FACULDADE DE ADMINISTRAÇÃO E ARTES DE LIMEIRA",
+		acronym: "FAAL",
+	},
+	{
+		_id: "600369689fb4a00c54229d0c",
+		name: "FACULDADE CATUAÍ",
+		acronym: "ICES",
+	},
+	{
+		_id: "600369689fb4a00c54229d0e",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DO SUL DA BAHIA",
+		acronym: "ISESB",
+	},
+	{
+		_id: "600369699fb4a00c54229d10",
+		name: "FACULDADE DE EDUCAÇÃO DE VITÓRIA",
+		acronym: "AUFES",
+	},
+	{
+		_id: "600369699fb4a00c54229d12",
+		name: "FACULDADE NORTE PARANAENSE",
+		acronym: "UNINORTE",
+	},
+	{
+		_id: "600369699fb4a00c54229d15",
+		name: "FACULDADE EDUCACIONAL DE CORNÉLIO PROCÓPIO",
+		acronym: "FACED",
+	},
+	{
+		_id: "6003696a9fb4a00c54229d18",
+		name: "FACULDADE DE REALEZA",
+		acronym: "CESREAL",
+	},
+	{
+		_id: "6003696a9fb4a00c54229d1b",
+		name: "FACULDADE DOM BOSCO DE UBIRATÃ",
+		acronym: "DOM BOSCO UBIRATÃ",
+	},
+	{
+		_id: "6003696a9fb4a00c54229d1d",
+		name: "FACULDADE DE CIÊNCIAS DA SAÚDE",
+		acronym: "FASU",
+	},
+	{
+		_id: "6003696b9fb4a00c54229d1f",
+		name: "FACULDADE DE TECNOLOGIA E CIÊNCIAS DE PERNAMBUCO",
+		acronym: "FATEC",
+	},
+	{
+		_id: "6003696b9fb4a00c54229d22",
+		name: "FACULDADE DE MAUÁ - FAMA",
+		acronym: "FAMA",
+	},
+	{
+		_id: "6003696b9fb4a00c54229d24",
+		name: "FACULDADE DOS GUARARAPES",
+		acronym: "FG",
+	},
+	{
+		_id: "6003696b9fb4a00c54229d26",
+		name: "FACULDADE FERNÃO DIAS",
+		acronym: "FAFE",
+	},
+	{ _id: "6003696c9fb4a00c54229d29", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{ _id: "6003696c9fb4a00c54229d2c", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{ _id: "6003696c9fb4a00c54229d2f", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{ _id: "6003696d9fb4a00c54229d31", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{ _id: "6003696d9fb4a00c54229d33", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{ _id: "6003696d9fb4a00c54229d36", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{ _id: "6003696e9fb4a00c54229d39", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "6003696e9fb4a00c54229d3b",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS E APLICADAS DE DIAMANTINO",
+		acronym: "UNED",
+	},
+	{
+		_id: "6003696e9fb4a00c54229d3d",
+		name: "FACULDADE DO INSTITUTO BRASIL",
+		acronym: "FIBRA",
+	},
+	{
+		_id: "6003696e9fb4a00c54229d3f",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE BAURU",
+		acronym: "IESB",
+	},
+	{
+		_id: "6003696f9fb4a00c54229d41",
+		name: "Faculdade Estácio de Curitiba",
+		acronym: "",
+	},
+	{
+		_id: "6003696f9fb4a00c54229d43",
+		name: "FACULDADE PITÁGORAS DE BELO HORIZONTE",
+		acronym: "FPAS",
+	},
+	{
+		_id: "6003696f9fb4a00c54229d45",
+		name: "FACULDADE FARIAS BRITO",
+		acronym: "FFB",
+	},
+	{ _id: "6003696f9fb4a00c54229d47", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "600369709fb4a00c54229d49",
+		name: "FACULDADE LIONS",
+		acronym: "FAC-LIONS",
+	},
+	{
+		_id: "600369709fb4a00c54229d4b",
+		name: "FACULDADE SUL-AMERICANA",
+		acronym: "FASAM",
+	},
+	{
+		_id: "600369709fb4a00c54229d4d",
+		name: "INSTITUTO DE ENSINO SUPERIOR DO AMAPÁ",
+		acronym: "IESAP",
+	},
+	{
+		_id: "600369709fb4a00c54229d4f",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS DE ITABIRITO",
+		acronym: "FACCI",
+	},
+	{
+		_id: "600369719fb4a00c54229d51",
+		name: "FACULDADE DE ESTUDOS SUPERIORES DE MINAS GERAIS",
+		acronym: "FEAD",
+	},
+	{
+		_id: "600369719fb4a00c54229d54",
+		name: "FACULDADE LUTERANA DE TEOLOGIA",
+		acronym: "FLT",
+	},
+	{
+		_id: "600369719fb4a00c54229d56",
+		name: "ESCOLA DA CIDADE - FACULDADE DE ARQUITETURA E URBANISMO",
+		acronym: "ESCOLA DA CIDADE",
+	},
+	{
+		_id: "600369719fb4a00c54229d58",
+		name: "FACULDADE ANHANGUERA DE PASSO FUNDO",
+		acronym: "",
+	},
+	{
+		_id: "600369729fb4a00c54229d5b",
+		name: "FACULDADE CENTRO PAULISTA",
+		acronym: "CESI",
+	},
+	{
+		_id: "600369729fb4a00c54229d5d",
+		name: "FACULDADE DE JABOTICABAL",
+		acronym: "FAJAB",
+	},
+	{
+		_id: "600369729fb4a00c54229d60",
+		name: "FACULDADE DE ARUJÁ",
+		acronym: "FAR",
+	},
+	{
+		_id: "600369739fb4a00c54229d63",
+		name: "FACULDADE DE AGUDOS",
+		acronym: "FAAG",
+	},
+	{
+		_id: "600369739fb4a00c54229d66",
+		name: "FACULDADE INTEGRADA DE ENSINO SUPERIOR DE COLINAS",
+		acronym: "FIESC",
+	},
+	{
+		_id: "600369739fb4a00c54229d68",
+		name: "CENTRO UNIVERSITÁRIO FUNDAÇÃO DE ENSINO OCTÁVIO BASTOS - FEOB",
+		acronym: "UNIFEOB",
+	},
+	{
+		_id: "600369749fb4a00c54229d6a",
+		name: "ESCOLA DE ESTUDOS SUPERIORES DE VIÇOSA",
+		acronym: "ESUV",
+	},
+	{
+		_id: "600369749fb4a00c54229d6c",
+		name: "FACULDADES INTEGRADAS RIO BRANCO",
+		acronym: "FRB",
+	},
+	{
+		_id: "600369749fb4a00c54229d6e",
+		name: "FACULDADES INTEGRADAS DE VÁRZEA GRANDE",
+		acronym: "FIAVEC",
+	},
+	{
+		_id: "600369749fb4a00c54229d70",
+		name: "FACULDADE CASTELO BRANCO",
+		acronym: "FCB",
+	},
+	{
+		_id: "600369759fb4a00c54229d72",
+		name:
+			"FACULDADES INTEGRADAS ANTÔNIO EUFRÁSIO DE TOLEDO DE PRESIDENTE PRUDENTE",
+		acronym: "FIAETPP",
+	},
+	{
+		_id: "600369759fb4a00c54229d75",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE CAMPO BELO",
+		acronym: "FACAMP",
+	},
+	{
+		_id: "600369759fb4a00c54229d78",
+		name: "FACULDADES INTEGRADAS MACHADO DE ASSIS",
+		acronym: "FEMA",
+	},
+	{
+		_id: "600369769fb4a00c54229d7a",
+		name: "FACULDADES INTEGRADAS STELLA MARIS DE ANDRADINA",
+		acronym: "FISMA",
+	},
+	{
+		_id: "600369769fb4a00c54229d7c",
+		name: "FEFISA - FACULDADES INTEGRADAS DE SANTO ANDRÉ",
+		acronym: "FEFISA",
+	},
+	{
+		_id: "600369769fb4a00c54229d7f",
+		name: "CENTRO UNIVERSITÁRIO DE LINS",
+		acronym: "UNILINS",
+	},
+	{
+		_id: "600369769fb4a00c54229d81",
+		name: "FACULDADE ATENAS MARANHENSE DE IMPERATRIZ",
+		acronym: "FAMA",
+	},
+	{
+		_id: "600369779fb4a00c54229d83",
+		name: "FACULDADE ALVORADA DE TECNOLOGIA E EDUCAÇÃO DE MARINGÁ",
+		acronym: "FACULDADE ALVORADA",
+	},
+	{
+		_id: "600369779fb4a00c54229d85",
+		name: "ESCOLA BRASILEIRA DE ADMINISTRAÇÃO PÚBLICA E DE EMPRESAS",
+		acronym: "EBAPE",
+	},
+	{
+		_id: "600369779fb4a00c54229d87",
+		name: "FACULDADE SABERES",
+		acronym: "SABERES",
+	},
+	{
+		_id: "600369779fb4a00c54229d89",
+		name: "FACULDADES INTEGRADAS CLARETIANAS",
+		acronym: "FIC",
+	},
+	{
+		_id: "600369789fb4a00c54229d8b",
+		name: "FACULDADE DE TECNOLOGIA IBTA",
+		acronym: "IBTA",
+	},
+	{
+		_id: "600369789fb4a00c54229d8d",
+		name: "FACULDADE DO NORTE NOVO DE APUCARANA",
+		acronym: "FACNOPAR",
+	},
+	{
+		_id: "600369789fb4a00c54229d8f",
+		name: "FACULDADE DEHONIANA",
+		acronym: "DEHONIANA",
+	},
+	{
+		_id: "600369789fb4a00c54229d91",
+		name: "FACULDADE INTEGRADA EUCLIDES FERNANDES",
+		acronym: "FAJ",
+	},
+	{
+		_id: "600369799fb4a00c54229d93",
+		name: "FACULDADE DE CIÊNCIAS GERENCIAIS PADRE ARNALDO JANSSEN",
+		acronym: "FAJANSSEN",
+	},
+	{
+		_id: "600369799fb4a00c54229d96",
+		name: "FACULDADE DA REGIÃO SERRANA",
+		acronym: "FARESE",
+	},
+	{
+		_id: "600369799fb4a00c54229d99",
+		name: "FACULDADE DE MANTENA",
+		acronym: "FAMA",
+	},
+	{
+		_id: "6003697a9fb4a00c54229d9c",
+		name: "FACULDADE DE ADMINISTRAÇÃO DA ASSOCIAÇÃO BRASILIENSE DE EDUCAÇÃO",
+		acronym: "FABE",
+	},
+	{
+		_id: "6003697a9fb4a00c54229d9e",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO ALVORADA PLUS",
+		acronym: "ISEAP",
+	},
+	{
+		_id: "6003697a9fb4a00c54229da0",
+		name: "FACULDADE DE CIÊNCIAS EMPRESARIAIS E ESTUDOS COSTEIROS DE NATAL",
+		acronym: "FACEN",
+	},
+	{
+		_id: "6003697b9fb4a00c54229da3",
+		name: "FACULDADE DE CIÊNCIAS GERENCIAIS DE SANTOS DUMONT",
+		acronym: "FACIG",
+	},
+	{
+		_id: "6003697b9fb4a00c54229da5",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE SANTOS DUMONT",
+		acronym: "ISESD",
+	},
+	{
+		_id: "6003697b9fb4a00c54229da7",
+		name: "CENTRO UNIVERSITÁRIO DE ITAJUBÁ",
+		acronym: "UNIVERSITAS",
+	},
+	{
+		_id: "6003697b9fb4a00c54229da9",
+		name: "FACULDADES INTEGRADAS REGIONAIS DE AVARÉ",
+		acronym: "FIRA",
+	},
+	{
+		_id: "6003697c9fb4a00c54229dab",
+		name: "FACULDADES INTEGRADAS SANTA CRUZ DE CURITIBA",
+		acronym: "FARESC",
+	},
+	{
+		_id: "6003697c9fb4a00c54229dad",
+		name: "FACULDADE MERCÚRIO",
+		acronym: "FAMERC",
+	},
+	{
+		_id: "6003697c9fb4a00c54229daf",
+		name: "FACULDADE DE TECNOLOGIA DE OURINHOS",
+		acronym: "FATEC",
+	},
+	{ _id: "6003697c9fb4a00c54229db1", name: "FACULDADE DE FILOSOFIA" },
+	{
+		_id: "6003697d9fb4a00c54229db4",
+		name: "FACULDADE MUNICIPAL PROFESSOR FRANCO MONTORO DE MOGI GUAÇU",
+		acronym: "FMPFM",
+	},
+	{ _id: "6003697d9fb4a00c54229db6", name: "FACULDADE ATUAL", acronym: "FAAT" },
+	{
+		_id: "6003697d9fb4a00c54229db8",
+		name:
+			"CENTRO UNIVERSITÁRIO DA FUNDAÇÃO EDUCACIONAL INACIANA PE SABÓIA DE MEDEIROS",
+		acronym: "FEI",
+	},
+	{
+		_id: "6003697e9fb4a00c54229dbb",
+		name: "FACULDADE EDUCACIONAL DE ARAUCÁRIA",
+		acronym: "FACEAR",
+	},
+	{
+		_id: "6003697e9fb4a00c54229dbd",
+		name: "FACULDADE CASA DO ESTUDANTE",
+		acronym: "FACE",
+	},
+	{
+		_id: "6003697e9fb4a00c54229dc0",
+		name: "FACULDADE DA ESCADA",
+		acronym: "FAESC",
+	},
+	{
+		_id: "6003697e9fb4a00c54229dc2",
+		name: "FACULDADE DE CIÊNCIAS AGRÁRIAS E DA SAÚDE",
+		acronym: "FAS",
+	},
+	{
+		_id: "6003697f9fb4a00c54229dc5",
+		name: "FACULDADE RANCHARIENSE",
+		acronym: "FRAN",
+	},
+	{
+		_id: "6003697f9fb4a00c54229dc8",
+		name: "FACULDADE DE MONTE ALTO",
+		acronym: "FMA",
+	},
+	{
+		_id: "6003697f9fb4a00c54229dca",
+		name: "UNIDADE DE ENSINO SUPERIOR DOM BOSCO",
+		acronym: "UNDB",
+	},
+	{
+		_id: "600369809fb4a00c54229dcc",
+		name: "FACULDADE DE DIREITO DA SERRA",
+		acronym: "FABAVI",
+	},
+	{ _id: "600369809fb4a00c54229dce", name: "FACULDADE ÁVILA", acronym: "FAC" },
+	{
+		_id: "600369809fb4a00c54229dd0",
+		name: "Faculdade Sartre COC",
+		acronym: "FACOC SALVADOR",
+	},
+	{
+		_id: "600369809fb4a00c54229dd2",
+		name: "FACULDADE ENIAC",
+		acronym: "ENIAC",
+	},
+	{
+		_id: "600369819fb4a00c54229dd4",
+		name: "ESCOLA DE NEGÓCIOS DO ESTADO DA BAHIA - ENEB",
+		acronym: "ENEB",
+	},
+	{
+		_id: "600369819fb4a00c54229dd6",
+		name: "FACULDADE EUROPÉIA DE ADMINISTRAÇÃO E MARKETING",
+		acronym: "FEPAM",
+	},
+	{
+		_id: "600369819fb4a00c54229dd8",
+		name: "FACULDADE CHRISTUS",
+		acronym: "CHRISTUS",
+	},
+	{
+		_id: "600369819fb4a00c54229ddb",
+		name: "FACULDADE DO LITORAL SUL PAULISTA",
+		acronym: "FALS",
+	},
+	{
+		_id: "600369829fb4a00c54229dde",
+		name: "FACULDADE DO NOROESTE PARANAENSE",
+		acronym: "FANP",
+	},
+	{
+		_id: "600369829fb4a00c54229de0",
+		name: "FACULDADE ANCHIETA DE ENSINO SUPERIOR DO PARANÁ",
+		acronym: "FAESP",
+	},
+	{
+		_id: "600369829fb4a00c54229de2",
+		name: "FACULDADE CATÓLICA DE UBERLÂNDIA",
+		acronym: "CATÓLICA",
+	},
+	{
+		_id: "600369839fb4a00c54229de4",
+		name: "FACULDADE CRISTO REI",
+		acronym: "FACCREI",
+	},
+	{ _id: "600369839fb4a00c54229de6", name: "FACULDADE SÃO CAMILO" },
+	{
+		_id: "600369839fb4a00c54229de8",
+		name: "INSTITUTO DE ENSINO SUPERIOR MATERDEI",
+		acronym: "IES-MATERDEI",
+	},
+	{
+		_id: "600369839fb4a00c54229deb",
+		name: "FACULDADE EDUCACIONAL DE COLOMBO",
+		acronym: "FAEC",
+	},
+	{
+		_id: "600369849fb4a00c54229ded",
+		name: "ESCOLA DE ENSINO SUPERIOR ALTERNATIVO",
+		acronym: "CESA",
+	},
+	{
+		_id: "600369849fb4a00c54229def",
+		name: "FACULDADE PEREIRA DE FREITAS",
+		acronym: "FPF",
+	},
+	{
+		_id: "600369849fb4a00c54229df1",
+		name: "FACULDADE BAIANA DE CIÊNCIAS",
+		acronym: "FABAC",
+	},
+	{
+		_id: "600369849fb4a00c54229df4",
+		name: "FACULDADE DE CIÊNCIAS BIOMÉDICAS DE CACOAL",
+		acronym: "FACIMED",
+	},
+	{
+		_id: "600369859fb4a00c54229df6",
+		name: "FACULDADE DE MINAS",
+		acronym: "FAMINAS",
+	},
+	{
+		_id: "600369859fb4a00c54229df9",
+		name: "FACULDADE CAPIVARI",
+		acronym: "FUCAP",
+	},
+	{
+		_id: "600369859fb4a00c54229dfb",
+		name: "FACULDADE DE CIÊNCIAS EXATAS E TECNOLÓGICAS SANTO AGOSTINHO - FACET",
+		acronym: "FACET",
+	},
+	{
+		_id: "600369869fb4a00c54229dfd",
+		name: "FACULDADE DE SÃO BENTO",
+		acronym: "FSB",
+	},
+	{
+		_id: "600369869fb4a00c54229dff",
+		name: "FACULDADE DE DIREITO PADRE ARNALDO JANSSEN",
+		acronym: "FAJANSSEN",
+	},
+	{
+		_id: "600369869fb4a00c54229e01",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS SANTO AGOSTINHO",
+		acronym: "FACISA",
+	},
+	{
+		_id: "600369869fb4a00c54229e04",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE CATAGUASES",
+		acronym: "UNIPACAT",
+	},
+	{
+		_id: "600369879fb4a00c54229e06",
+		name: "FACULDADES INTEGRADAS DO VALE DO IGUAÇU",
+		acronym: "",
+	},
+	{
+		_id: "600369879fb4a00c54229e08",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE SÃO PAULO",
+		acronym: "SINGULARIDADES/ISESP",
+	},
+	{
+		_id: "600369879fb4a00c54229e0a",
+		name: "FACULDADE CENECISTA ILHA DO GOVERNADOR",
+		acronym: "FACIG",
+	},
+	{
+		_id: "600369889fb4a00c54229e0d",
+		name: "INSTITUTO DE ENSINO SUPERIOR FRANCISCANO",
+		acronym: "IESF",
+	},
+	{
+		_id: "600369889fb4a00c54229e0f",
+		name: "FACULDADE PALOTINA",
+		acronym: "FAPAS",
+	},
+	{
+		_id: "600369889fb4a00c54229e11",
+		name: "FACULDADE BIRIGUI",
+		acronym: "FABI",
+	},
+	{ _id: "600369889fb4a00c54229e14", name: "FACULDADE LA SALLE", acronym: "" },
+	{
+		_id: "600369899fb4a00c54229e17",
+		name: "FACULDADE SINOP",
+		acronym: "FASIP",
+	},
+	{
+		_id: "600369899fb4a00c54229e19",
+		name: "FACULDADE EVANGÉLICA DE SALVADOR",
+		acronym: "FACESA",
+	},
+	{
+		_id: "600369899fb4a00c54229e1b",
+		name: "FACULDADE GLOBAL DE UMUARAMA",
+		acronym: "FGU",
+	},
+	{
+		_id: "6003698a9fb4a00c54229e1d",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE LONDRINA - INESUL",
+		acronym: "INESUL",
+	},
+	{
+		_id: "6003698a9fb4a00c54229e20",
+		name: "FACULDADE DE NOVA SERRANA",
+		acronym: "FANS",
+	},
+	{
+		_id: "6003698a9fb4a00c54229e22",
+		name: "FACULDADE CUIABÁ",
+		acronym: "FAUC",
+	},
+	{
+		_id: "6003698a9fb4a00c54229e24",
+		name: "FACULDADE SERRANA DE ENSINO SUPERIOR",
+		acronym: "FASEP",
+	},
+	{
+		_id: "6003698b9fb4a00c54229e26",
+		name: "FACULDADE DE TECNOLOGIA IBRATEC",
+		acronym: "UNIBRATEC",
+	},
+	{
+		_id: "6003698b9fb4a00c54229e29",
+		name: "FACULDADE DE SORRISO",
+		acronym: "FAIS",
+	},
+	{
+		_id: "6003698b9fb4a00c54229e2b",
+		name: "FACULDADE LEGALE",
+		acronym: "FALEG",
+	},
+	{
+		_id: "6003698b9fb4a00c54229e2d",
+		name: "FACULDADE DE ENSINO SUPERIOR DA PARAÍBA",
+		acronym: "FESP",
+	},
+	{
+		_id: "6003698c9fb4a00c54229e30",
+		name: "FACULDADE DE ORLÂNDIA",
+		acronym: "FAO",
+	},
+	{
+		_id: "6003698c9fb4a00c54229e33",
+		name: "FACULDADE DE PAULÍNIA",
+		acronym: "FACP",
+	},
+	{
+		_id: "6003698c9fb4a00c54229e35",
+		name: "INSTITUTO DE EDUCAÇÃO E ENSINO SUPERIOR DE SAMAMBAIA",
+		acronym: "IESA",
+	},
+	{
+		_id: "6003698d9fb4a00c54229e38",
+		name: "FACULDADE DE CIÊNCIAS JURÍDICAS E SOCIAIS APLICADAS DO ARAGUAIA",
+		acronym: "FACULDADES CATHEDRAL",
+	},
+	{
+		_id: "6003698d9fb4a00c54229e3a",
+		name: "INSTITUTO BATISTA DE ENSINO SUPERIOR DE ALAGOAS",
+		acronym: "IBESA",
+	},
+	{
+		_id: "6003698d9fb4a00c54229e3c",
+		name: "FACULDADE DE TECNOLOGIA SENAI JOINVILLE",
+		acronym: "SENAI DE JOINVILLE",
+	},
+	{
+		_id: "6003698e9fb4a00c54229e3e",
+		name: "FACULDADE DE TECNOLOGIA SENAI BLUMENAU",
+		acronym: "CET BLUMENAU",
+	},
+	{
+		_id: "6003698e9fb4a00c54229e40",
+		name:
+			"INSTITUTO TECNOLÓGICO E DAS CIÊNCIAS SOCIAIS APLICADAS E DA SAÚDE DO CENTRO EDUC. N. SRª AUXILIADORA",
+		acronym: "ITCSAS/CENSA",
+	},
+	{
+		_id: "6003698e9fb4a00c54229e42",
+		name:
+			"INSTITUTO SUPERIOR DE EDUCAÇÃO DO CENTRO EDUCACIONAL NOSSA SENHORA AUXILIADORA",
+		acronym: "ISECENSA",
+	},
+	{
+		_id: "6003698e9fb4a00c54229e44",
+		name: "FACULDADE DE TECNOLOGIA EM HOTELARIA",
+		acronym: "GASTRONOMIA E TURISMO DE SÃO PAULO",
+	},
+	{
+		_id: "6003698f9fb4a00c54229e46",
+		name: "FACULDADE DE TECNOLOGIA DE ALAGOAS",
+		acronym: "FAT/AL",
+	},
+	{
+		_id: "6003698f9fb4a00c54229e48",
+		name: "FACULDADE ALBERT EINSTEIN",
+		acronym: "FALBE",
+	},
+	{
+		_id: "6003698f9fb4a00c54229e4b",
+		name: "FACULDADE DO VALE DO ITAPECURÚ",
+		acronym: "FAI",
+	},
+	{
+		_id: "6003698f9fb4a00c54229e4d",
+		name: "FACULDADE ATLÂNTICO",
+		acronym: "FA",
+	},
+	{
+		_id: "600369909fb4a00c54229e4f",
+		name: "FACULDADE DOS IMIGRANTES - FAI",
+		acronym: "FAI",
+	},
+	{
+		_id: "600369909fb4a00c54229e51",
+		name: "FACULDADE DO ESPÍRITO SANTO",
+		acronym: "FACES",
+	},
+	{
+		_id: "600369909fb4a00c54229e53",
+		name: "FACULDADE TIJUCUSSU",
+		acronym: "TIJUCUSSU",
+	},
+	{
+		_id: "600369909fb4a00c54229e55",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO ORÍGENES LESSA",
+		acronym: "ISEOL",
+	},
+	{
+		_id: "600369919fb4a00c54229e57",
+		name: "CENTRO DE ESTUDOS SUPERIORES APRENDIZ",
+		acronym: "CESA",
+	},
+	{
+		_id: "600369919fb4a00c54229e59",
+		name: "FACULDADE METROPOLITANA DA GRANDE FORTALEZA",
+		acronym: "FAMETRO",
+	},
+	{
+		_id: "600369919fb4a00c54229e5c",
+		name: "FACULDADE SINERGIA",
+		acronym: "SINERGIA",
+	},
+	{
+		_id: "600369929fb4a00c54229e5f",
+		name: "FACULDADE DE CIÊNCIAS GERENCIAIS DE MANHUAÇU",
+		acronym: "FACIG",
+	},
+	{
+		_id: "600369929fb4a00c54229e61",
+		name: "FACULDADE ESTÁCIO DE SÁ DE JUIZ DE FORA",
+		acronym: "FESJF",
+	},
+	{
+		_id: "600369929fb4a00c54229e64",
+		name: "FACULDADE AVANTIS",
+		acronym: "AVANTIS",
+	},
+	{
+		_id: "600369929fb4a00c54229e66",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE PIEDADE",
+		acronym: "IESP",
+	},
+	{
+		_id: "600369939fb4a00c54229e68",
+		name: "FACULDADE DE MEDICINA NOVA ESPERANÇA",
+		acronym: "FAMENE",
+	},
+	{
+		_id: "600369939fb4a00c54229e6a",
+		name: "INSTITUTO CUIABÁ DE ENSINO E CULTURA",
+		acronym: "ICEC",
+	},
+	{
+		_id: "600369939fb4a00c54229e6d",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO ELVIRA DAYRELL",
+		acronym: "ISEED",
+	},
+	{
+		_id: "600369949fb4a00c54229e70",
+		name: "SEMINÁRIO ADVENTISTA LATINO-AMERICANO DE TEOLOGIA",
+		acronym: "SALT",
+	},
+	{
+		_id: "600369949fb4a00c54229e72",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS DE SINOP",
+		acronym: "FACISAS",
+	},
+	{
+		_id: "600369949fb4a00c54229e74",
+		name: "FACULDADE DE TAQUARITINGA",
+		acronym: "FSG",
+	},
+	{
+		_id: "600369949fb4a00c54229e76",
+		name: "FACULDADE DE CIÊNCIAS E LETRAS",
+		acronym: "ACADEMIA DE ENSINO",
+	},
+	{
+		_id: "600369959fb4a00c54229e79",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE PESQUEIRA",
+		acronym: "ISEP",
+	},
+	{
+		_id: "600369959fb4a00c54229e7b",
+		name: "FACULDADE SETELAGOANA DE CIÊNCIAS GERENCIAIS",
+		acronym: "FASCIG",
+	},
+	{
+		_id: "600369959fb4a00c54229e7d",
+		name: "INSTITUTO SANTO TOMÁS DE AQUINO",
+		acronym: "ISTA",
+	},
+	{
+		_id: "600369959fb4a00c54229e7f",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE SALGUEIRO",
+		acronym: "ISES",
+	},
+	{
+		_id: "600369969fb4a00c54229e81",
+		name: "FACULDADE JK - UNIDADE II - GAMA",
+		acronym: "",
+	},
+	{
+		_id: "600369969fb4a00c54229e84",
+		name: "FACULDADE DE ROLIM DE MOURA",
+		acronym: "FAROL",
+	},
+	{
+		_id: "600369969fb4a00c54229e87",
+		name: "FACULDADE DE GUANAMBI",
+		acronym: "",
+	},
+	{
+		_id: "600369979fb4a00c54229e89",
+		name: "FACULDADE DE CAMPINA GRANDE",
+		acronym: "FAC-CG",
+	},
+	{
+		_id: "600369979fb4a00c54229e8c",
+		name: "FACULDADE DE PEDAGOGIA E FORMAÇÃO DE NORMALISTAS DE ARAGUAÍNA",
+		acronym: "ITPAC",
+	},
+	{
+		_id: "600369979fb4a00c54229e8e",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO CAMPO LIMPO PAULISTA",
+		acronym: "ISECAMP",
+	},
+	{
+		_id: "600369989fb4a00c54229e91",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE FLORESTA",
+		acronym: "ISEF",
+	},
+	{
+		_id: "600369989fb4a00c54229e93",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS DE ARAGUAÍNA",
+		acronym: "ITPAC",
+	},
+	{
+		_id: "600369989fb4a00c54229e96",
+		name: "FACULDADE JAGUARIAÍVA",
+		acronym: "FAJAR",
+	},
+	{
+		_id: "600369999fb4a00c54229e98",
+		name: "Faculdade Estácio do Pará - Estácio FAP",
+		acronym: "FAP",
+	},
+	{
+		_id: "600369999fb4a00c54229e9a",
+		name: "FACULDADE UNIME DE CIÊNCIAS EXATAS E TECNOLÓGICAS",
+		acronym: "FCT",
+	},
+	{
+		_id: "600369999fb4a00c54229e9c",
+		name: "FACULDADE CIDADE LUZ",
+		acronym: "FACILUZ",
+	},
+	{
+		_id: "600369999fb4a00c54229e9e",
+		name: "FACULDADE DO FUTURO",
+		acronym: "FAF",
+	},
+	{
+		_id: "6003699a9fb4a00c54229ea0",
+		name: "FACULDADE SUDAMÉRICA",
+		acronym: "SUDAMÉRICA",
+	},
+	{
+		_id: "6003699a9fb4a00c54229ea2",
+		name: "FACULDADE FIGUEIREDO COSTA - FIC",
+		acronym: "",
+	},
+	{
+		_id: "6003699a9fb4a00c54229ea5",
+		name: "FACULDADE VALE DO SALGADO",
+		acronym: "FVS",
+	},
+	{
+		_id: "6003699a9fb4a00c54229ea7",
+		name: "FACULDADE AMADEUS",
+		acronym: "FAMA",
+	},
+	{
+		_id: "6003699b9fb4a00c54229ea9",
+		name: "INSTITUTO DE ESTUDOS SUPERIORES DO MARANHÃO",
+		acronym: "IESMA",
+	},
+	{
+		_id: "6003699b9fb4a00c54229eab",
+		name: "FACULDADE DE EDUCAÇÃO DE NOVA ANDRADINA",
+		acronym: "FENA",
+	},
+	{
+		_id: "6003699b9fb4a00c54229ead",
+		name: "FACULDADE DA ALTA PAULISTA",
+		acronym: "FAP",
+	},
+	{
+		_id: "6003699b9fb4a00c54229eaf",
+		name: "FACULDADE METROPOLITANA",
+		acronym: "UNNESA",
+	},
+	{
+		_id: "6003699c9fb4a00c54229eb2",
+		name: "FACULDADE DE CIÊNCIAS EMPRESARIAIS",
+		acronym: "FACEMP",
+	},
+	{
+		_id: "6003699c9fb4a00c54229eb4",
+		name: "FACULDADE DE TEOLOGIA E CIÊNCIAS HUMANAS",
+		acronym: "ITEPAFACULDADES",
+	},
+	{
+		_id: "6003699c9fb4a00c54229eb7",
+		name: "FACULDADE DE DESENVOLVIMENTO SUSTENTÁVEL DE CRUZEIRO DO SUL",
+		acronym: "IEVAL",
+	},
+	{
+		_id: "6003699d9fb4a00c54229eb9",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE ALAGOAS",
+		acronym: "IESA",
+	},
+	{
+		_id: "6003699d9fb4a00c54229ebb",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO PADRÃO",
+		acronym: "ISE-PADRAO",
+	},
+	{
+		_id: "6003699d9fb4a00c54229ebd",
+		name: "FACULDADE ANGLO-AMERICANO",
+		acronym: "FAA",
+	},
+	{
+		_id: "6003699d9fb4a00c54229ebf",
+		name: "FACULDADE REGIONAL DA BAHIA",
+		acronym: "FARB",
+	},
+	{
+		_id: "6003699e9fb4a00c54229ec2",
+		name: "FACULDADE DE ITAITUBA",
+		acronym: "FAI",
+	},
+	{
+		_id: "6003699e9fb4a00c54229ec4",
+		name: "FACULDADE DE CIÊNCIAS MÉDICAS DA PARAÍBA",
+		acronym: "FCM-PB",
+	},
+	{
+		_id: "6003699e9fb4a00c54229ec7",
+		name: "FACULDADE CENECISTA DE NOVA PETRÓPOLIS",
+		acronym: "FACENP",
+	},
+	{
+		_id: "6003699f9fb4a00c54229ec9",
+		name: "INSTITUTO BAIANO DE ENSINO SUPERIOR",
+		acronym: "IBES",
+	},
+	{
+		_id: "6003699f9fb4a00c54229ecb",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE FOZ DO IGUAÇU",
+		acronym: "IESFI",
+	},
+	{
+		_id: "6003699f9fb4a00c54229ecd",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO PRÓ-SABER",
+		acronym: "ISEPS",
+	},
+	{
+		_id: "6003699f9fb4a00c54229ecf",
+		name: "FACULDADE DE CIÊNCIAS JURÍDICAS E GERENCIAIS DE MANHUAÇU",
+		acronym: "FACULDADES DOCTUM",
+	},
+	{ _id: "600369a09fb4a00c54229ed2", name: "FACULDADE KURIOS", acronym: "FAK" },
+	{
+		_id: "600369a09fb4a00c54229ed5",
+		name: "FACULDADE DE AURIFLAMA",
+		acronym: "FAU",
+	},
+	{
+		_id: "600369a09fb4a00c54229ed7",
+		name: "INSTITUTO SUPERIOR DE TEOLOGIA APLICADA",
+		acronym: "INTA",
+	},
+	{
+		_id: "600369a09fb4a00c54229ed9",
+		name: "FACULDADE DOM BOSCO DE PORTO ALEGRE",
+		acronym: "FDB",
+	},
+	{
+		_id: "600369a19fb4a00c54229edc",
+		name: "FACULDADE DE CIÊNCIA E TECNOLOGIA",
+		acronym: "FACITEC",
+	},
+	{
+		_id: "600369a19fb4a00c54229ede",
+		name: "INSTITUTO DE FILOSOFIA E DE TEOLOGIA PAULO VI",
+		acronym: "IFITEPS",
+	},
+	{
+		_id: "600369a19fb4a00c54229ee0",
+		name: "Faculdade Estácio de Sergipe - Estácio FASE",
+		acronym: "FASE",
+	},
+	{
+		_id: "600369a29fb4a00c54229ee3",
+		name: "FACULDADE CALAFIORI",
+		acronym: "CALAFIORI",
+	},
+	{
+		_id: "600369a29fb4a00c54229ee5",
+		name: "ESCOLA DE ECONOMIA DE SÃO PAULO",
+		acronym: "EESP",
+	},
+	{
+		_id: "600369a29fb4a00c54229ee7",
+		name: "FACULDADE FAPAN",
+		acronym: "FAPAN",
+	},
+	{
+		_id: "600369a29fb4a00c54229ee9",
+		name: "FACULDADE BARÃO DO RIO BRANCO",
+		acronym: "FAB",
+	},
+	{ _id: "600369a39fb4a00c54229eec", name: "FACULDADE DE CIÊNCIAS" },
+	{
+		_id: "600369a39fb4a00c54229eee",
+		name: "FACULDADE MAX PLANCK",
+		acronym: "AESI",
+	},
+	{
+		_id: "600369a39fb4a00c54229ef0",
+		name: "FACULDADE DA IGREJA MINISTÉRIO FAMA",
+		acronym: "FAIFA",
+	},
+	{
+		_id: "600369a49fb4a00c54229ef3",
+		name: "FACULDADE CATÓLICA RAINHA DO SERTÃO",
+		acronym: "FCRS",
+	},
+	{
+		_id: "600369a49fb4a00c54229ef5",
+		name: "ESCOLA DE DIREITO DO RIO DE JANEIRO",
+		acronym: "DIREITO RIO",
+	},
+	{
+		_id: "600369a49fb4a00c54229ef8",
+		name: "FACULDADE SÃO MARCOS",
+		acronym: "FASAMAR",
+	},
+	{
+		_id: "600369a49fb4a00c54229efa",
+		name: "ESCOLA DE DIREITO DE SÃO PAULO",
+		acronym: "DIREITO GV",
+	},
+	{
+		_id: "600369a59fb4a00c54229efd",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO NOSSA SENHORA DE LOURDES",
+		acronym: "FNSL",
+	},
+	{
+		_id: "600369a59fb4a00c54229eff",
+		name: "FACULDADE TEOLÓGICA BATISTA DO PARANÁ",
+		acronym: "FTBP",
+	},
+	{
+		_id: "600369a59fb4a00c54229f01",
+		name: "FACULDADE INFÓRIUM DE TECNOLOGIA",
+		acronym: "FIT",
+	},
+	{
+		_id: "600369a69fb4a00c54229f03",
+		name: "FACULDADE DO ACRE",
+		acronym: "FAC",
+	},
+	{
+		_id: "600369a69fb4a00c54229f05",
+		name: "FACULDADE METROPOLITANA DE MANAUS",
+		acronym: "FAMETRO",
+	},
+	{
+		_id: "600369a69fb4a00c54229f07",
+		name: "FACULDADE DE PALMAS",
+		acronym: "FAPAL",
+	},
+	{
+		_id: "600369a69fb4a00c54229f09",
+		name: "FACULDADE MATO GROSSO DO SUL",
+		acronym: "FACSUL",
+	},
+	{
+		_id: "600369a79fb4a00c54229f0b",
+		name: "FACULDADE DO PIAUÍ",
+		acronym: "FAPI",
+	},
+	{
+		_id: "600369a79fb4a00c54229f0d",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO BERLAAR",
+		acronym: "IBERLAAR",
+	},
+	{
+		_id: "600369a79fb4a00c54229f0f",
+		name: "INSTITUTO SUPERIOR DE CIÊNCIAS HUMANAS E SOCIAIS ANÍSIO TEIXEIRA",
+		acronym: "ISAT",
+	},
+	{
+		_id: "600369a79fb4a00c54229f12",
+		name: "FACULDADE SÃO TOMÁS DE AQUINO",
+		acronym: "FACESTA",
+	},
+	{
+		_id: "600369a89fb4a00c54229f14",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO SANT´ANA",
+		acronym: "ISESA",
+	},
+	{
+		_id: "600369a89fb4a00c54229f16",
+		name: "FACULDADE FOZ DO IGUAÇU",
+		acronym: "FAFIG",
+	},
+	{
+		_id: "600369a89fb4a00c54229f18",
+		name: "FACULDADE CAMPO GRANDE",
+		acronym: "FCG",
+	},
+	{
+		_id: "600369a89fb4a00c54229f1a",
+		name: "INSTITUTO BELO HORIZONTE DE ENSINO SUPERIOR",
+		acronym: "IBHES",
+	},
+	{ _id: "600369a99fb4a00c54229f1d", name: "FACULDADE SANTA MARIA" },
+	{
+		_id: "600369a99fb4a00c54229f1f",
+		name: "FACULDADE SANT'ANA",
+		acronym: "IESSA",
+	},
+	{
+		_id: "600369a99fb4a00c54229f22",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO EUGÊNIO GOMES",
+		acronym: "ISEGO",
+	},
+	{
+		_id: "600369aa9fb4a00c54229f24",
+		name: "FACULDADE DE SANTA CATARINA",
+		acronym: "FASC",
+	},
+	{
+		_id: "600369aa9fb4a00c54229f26",
+		name: "RATIO - FACULDADE TEOLÓGICA E FILOSÓFICA",
+		acronym: "RATIO",
+	},
+	{
+		_id: "600369aa9fb4a00c54229f28",
+		name: "CENTRO UNIVERSITÁRIO FUNDAÇÃO SANTO ANDRÉ",
+		acronym: "CUFSA",
+	},
+	{
+		_id: "600369aa9fb4a00c54229f2a",
+		name: "FACULDADE GUAIANÁS",
+		acronym: "FAG",
+	},
+	{
+		_id: "600369ab9fb4a00c54229f2d",
+		name: "FACULDADE CENECISTA NOSSA SENHORA DOS ANJOS",
+		acronym: "FACENSA",
+	},
+	{
+		_id: "600369ab9fb4a00c54229f2f",
+		name: "INSTITUTO PAULISTA DE ENSINO",
+		acronym: "FIPEN",
+	},
+	{
+		_id: "600369ab9fb4a00c54229f31",
+		name: "FACULDADE SALESIANA DOM BOSCO",
+		acronym: "FSDB",
+	},
+	{
+		_id: "600369ab9fb4a00c54229f33",
+		name: "FACULDADE METROPOLITANA DE BLUMENAU",
+		acronym: "FAMEBLU",
+	},
+	{
+		_id: "600369ac9fb4a00c54229f35",
+		name: "FACULDADE DO MARANHÃO",
+		acronym: "FACAM-MA",
+	},
+	{
+		_id: "600369ac9fb4a00c54229f37",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO NOSSA SENHORA DE SION",
+		acronym: "ISE - SION",
+	},
+	{
+		_id: "600369ac9fb4a00c54229f39",
+		name: "FACULDADE ANHANGUERA DE PELOTAS",
+		acronym: "",
+	},
+	{
+		_id: "600369ad9fb4a00c54229f3c",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO IVOTI",
+		acronym: "ISEI",
+	},
+	{
+		_id: "600369ad9fb4a00c54229f3e",
+		name: "FACULDADE ANHANGUERA DO RIO GRANDE",
+		acronym: "",
+	},
+	{
+		_id: "600369ad9fb4a00c54229f40",
+		name: "FACULDADE MONTEIRO LOBATO",
+		acronym: "FATO",
+	},
+	{
+		_id: "600369ad9fb4a00c54229f43",
+		name: "FACULDADE VALE DO GORUTUBA",
+		acronym: "FAVAG",
+	},
+	{
+		_id: "600369ae9fb4a00c54229f46",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE GUARATUBA",
+		acronym: "ISEPE",
+	},
+	{
+		_id: "600369ae9fb4a00c54229f49",
+		name: "FACULDADE DE TUPI PAULISTA",
+		acronym: "CESTUPI",
+	},
+	{
+		_id: "600369ae9fb4a00c54229f4b",
+		name: "FACULDADE FAE SÃO JOSÉ DOS PINHAIS",
+		acronym: "",
+	},
+	{
+		_id: "600369af9fb4a00c54229f4d",
+		name: "FACULDADE DE CIÊNCIAS JURÍDICAS DE JUIZ DE FORA",
+		acronym: "FACULDADES DOCTUM",
+	},
+	{ _id: "600369af9fb4a00c54229f50", name: "FACULDADE SETE DE SETEMBRO" },
+	{
+		_id: "600369af9fb4a00c54229f52",
+		name: "FACULDADE VICTOR HUGO",
+		acronym: "FVH",
+	},
+	{
+		_id: "600369af9fb4a00c54229f54",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS DE BELO HORIZONTE",
+		acronym: "FACISABH",
+	},
+	{
+		_id: "600369b09fb4a00c54229f56",
+		name: "FACULDADE DE FORTALEZA",
+		acronym: "FAFOR",
+	},
+	{
+		_id: "600369b09fb4a00c54229f58",
+		name: "FACULDADE PARAÍBANA",
+		acronym: "FAP",
+	},
+	{
+		_id: "600369b09fb4a00c54229f5a",
+		name: "FACULDADE DA CIDADE DE MACEIÓ",
+		acronym: "FACIMA",
+	},
+	{ _id: "600369b09fb4a00c54229f5c", name: "FACULDADE DO ESPÍRITO SANTO" },
+	{
+		_id: "600369b19fb4a00c54229f5f",
+		name: "FACULDADE UNIÃO AMERICANA",
+		acronym: "UNIÃO AMERICANA",
+	},
+	{
+		_id: "600369b19fb4a00c54229f61",
+		name: "FACULDADE CHAFIC",
+		acronym: "CHAFIC",
+	},
+	{
+		_id: "600369b19fb4a00c54229f63",
+		name: "FACULDADE SERGIPANA",
+		acronym: "FASER",
+	},
+	{
+		_id: "600369b29fb4a00c54229f65",
+		name: "FACULDADE TEOLÓGICA BATISTA EQUATORIAL",
+		acronym: "FATEBE",
+	},
+	{
+		_id: "600369b29fb4a00c54229f67",
+		name: "FACULDADE DO SUDESTE MINEIRO",
+		acronym: "FACSUM",
+	},
+	{
+		_id: "600369b29fb4a00c54229f69",
+		name: "FACULDADE DO RECIFE",
+		acronym: "FAREC",
+	},
+	{
+		_id: "600369b29fb4a00c54229f6b",
+		name: "FACULDADE STELLA MARIS",
+		acronym: "FSM",
+	},
+	{
+		_id: "600369b39fb4a00c54229f6e",
+		name: "FACULDADE DIADEMA",
+		acronym: "FAD",
+	},
+	{
+		_id: "600369b39fb4a00c54229f70",
+		name: "FACULDADE DE COMUNICAÇÃO PITÁGORAS UNIDADE GUARAPARI",
+		acronym: "PIT GUARAPARI",
+	},
+	{
+		_id: "600369b39fb4a00c54229f73",
+		name: "FACULDADE CAMBURY DE FORMOSA",
+		acronym: "CAMBURY",
+	},
+	{
+		_id: "600369b49fb4a00c54229f76",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS DE EXTREMA",
+		acronym: "FAEX",
+	},
+	{
+		_id: "600369b49fb4a00c54229f78",
+		name: "FACULDADE PITÁGORAS DE IPATINGA",
+		acronym: "FPI",
+	},
+	{
+		_id: "600369b49fb4a00c54229f7a",
+		name: "FACULDADE DE DIREITO SANTO AGOSTINHO",
+		acronym: "FADISA",
+	},
+	{
+		_id: "600369b49fb4a00c54229f7c",
+		name: "FACULDADE INTEGRADA METROPOLITANA DE CAMPINAS",
+		acronym: "METROCAMP",
+	},
+	{
+		_id: "600369b59fb4a00c54229f7f",
+		name: "FACULDADE DE CAFELÂNDIA",
+		acronym: "FAC",
+	},
+	{
+		_id: "600369b59fb4a00c54229f81",
+		name: "ESCOLA SUPERIOR DE TEOLOGIA E ESPIRITUALIDADE FRANCISCANA",
+		acronym: "ESTEF",
+	},
+	{
+		_id: "600369b59fb4a00c54229f83",
+		name: "FACULDADE ALMEIDA RODRIGUES",
+		acronym: "FAR",
+	},
+	{
+		_id: "600369b59fb4a00c54229f85",
+		name: "FACULDADES INTEGRADAS DE ANGELES",
+		acronym: "FIA",
+	},
+	{
+		_id: "600369b69fb4a00c54229f87",
+		name: "FACULDADE DE DIREITO DE SANTA MARIA",
+		acronym: "FADISMA",
+	},
+	{ _id: "600369b69fb4a00c54229f89", name: "FACULDADE FIDELIS", acronym: "FF" },
+	{
+		_id: "600369b69fb4a00c54229f8b",
+		name: "FACULDADE GEREMÁRIO DANTAS",
+		acronym: "SFNSC",
+	},
+	{
+		_id: "600369b69fb4a00c54229f8d",
+		name: "FACULDADE DE CIÊNCIAS JURÍDICAS PROFESSOR ALBERTO DEODATO",
+		acronym: "FCJPAD",
+	},
+	{
+		_id: "600369b79fb4a00c54229f8f",
+		name: "FACULDADE LUTERANA RUI BARBOSA",
+		acronym: "FALURB",
+	},
+	{
+		_id: "600369b79fb4a00c54229f92",
+		name: "FACULDADE DO DESCOBRIMENTO",
+		acronym: "FACDESCO",
+	},
+	{
+		_id: "600369b79fb4a00c54229f94",
+		name: "ESCOLA SUPERIOR DE EDUCAÇÃO CORPORATIVA",
+		acronym: "ESEC",
+	},
+	{
+		_id: "600369b89fb4a00c54229f96",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO ATENEU",
+		acronym: "ISEAT",
+	},
+	{
+		_id: "600369b89fb4a00c54229f98",
+		name: "FACULDADE ATENEU",
+		acronym: "FATE",
+	},
+	{
+		_id: "600369b89fb4a00c54229f9a",
+		name: "FACULDADE DA AMAZÔNIA",
+		acronym: "FAAM",
+	},
+	{
+		_id: "600369b89fb4a00c54229f9c",
+		name: "FACULDADE UNIÃO BANDEIRANTE",
+		acronym: "FACULDADE UNIBAN",
+	},
+	{
+		_id: "600369b99fb4a00c54229f9e",
+		name: "FACULDADE ITEANA DE BOTUCATU",
+		acronym: "FITB",
+	},
+	{
+		_id: "600369b99fb4a00c54229fa0",
+		name: "FACULDADE CÂNDIDO RONDON - FCR",
+		acronym: "FCR",
+	},
+	{
+		_id: "600369b99fb4a00c54229fa3",
+		name: "FACULDADE CORPORATIVA CESPI",
+		acronym: "FACESPI",
+	},
+	{
+		_id: "600369b99fb4a00c54229fa6",
+		name: "INSTITUTO SUPERIOR MENDES DE ALMEIDA",
+		acronym: "IMA",
+	},
+	{
+		_id: "600369ba9fb4a00c54229fa9",
+		name: "FACULDADE MONTES BELOS",
+		acronym: "FMB",
+	},
+	{
+		_id: "600369ba9fb4a00c54229fac",
+		name: "FACULDADE DA ALDEIA DE CARAPICUÍBA",
+		acronym: "FALC",
+	},
+	{
+		_id: "600369ba9fb4a00c54229fae",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO CERES",
+		acronym: "ISE-CERES",
+	},
+	{
+		_id: "600369bb9fb4a00c54229fb0",
+		name: "FACULDADE DA AMAZÔNIA OCIDENTAL",
+		acronym: "FAAO",
+	},
+	{
+		_id: "600369bb9fb4a00c54229fb2",
+		name: "INSTITUTO SUPERIOR DE FILOSOFIA BERTHIER",
+		acronym: "IFIBE",
+	},
+	{
+		_id: "600369bb9fb4a00c54229fb4",
+		name: "INSTITUIÇÃO DE ENSINO SÃO FRANCISCO",
+		acronym: "IESF",
+	},
+	{
+		_id: "600369bc9fb4a00c54229fb7",
+		name: "ESCOLA SUPERIOR MADRE CELESTE",
+		acronym: "ESMAC",
+	},
+	{
+		_id: "600369bc9fb4a00c54229fb9",
+		name: "FACULDADE ESPÍRITO SANTENSE DE CIÊNCIAS JURÍDICAS",
+		acronym: "PIO XII - DIR",
+	},
+	{
+		_id: "600369bc9fb4a00c54229fbb",
+		name: "FACULDADE ANHANGUERA DE MATÃO",
+		acronym: "",
+	},
+	{
+		_id: "600369bc9fb4a00c54229fbe",
+		name: "FACULDADE PAN AMERICANA",
+		acronym: "FPA",
+	},
+	{ _id: "600369bd9fb4a00c54229fc0", name: "FACULDADE PADRÃO" },
+	{
+		_id: "600369bd9fb4a00c54229fc2",
+		name: "FACULDADE DE CIÊNCIAS MÉDICAS DE CAMPINA GRANDE",
+		acronym: "FCM",
+	},
+	{
+		_id: "600369bd9fb4a00c54229fc4",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE EMPRESAS DE PARAÍSO DO TOCANTINS",
+		acronym: "FAP",
+	},
+	{
+		_id: "600369bd9fb4a00c54229fc6",
+		name: "FACULDADE CATÓLICA DO TOCANTINS",
+		acronym: "FACTO",
+	},
+	{
+		_id: "600369be9fb4a00c54229fc8",
+		name: "FACULDADE DE SISTEMAS DE INFORMAÇÃO DE PARAÍSO DO TOCANTINS",
+		acronym: "FSIP",
+	},
+	{
+		_id: "600369be9fb4a00c54229fca",
+		name: "FACULDADE DE ODONTOLOGIA SÃO LEOPOLDO MANDIC",
+		acronym: "SLMANDIC",
+	},
+	{
+		_id: "600369be9fb4a00c54229fcc",
+		name: "INSTITUTO DE ENSINO SUPERIOR SANTO ANTÔNIO",
+		acronym: "INESA",
+	},
+	{
+		_id: "600369be9fb4a00c54229fce",
+		name: "Faculdade Estácio do Amapá - Estácio FAMAP",
+		acronym: "FAMAP",
+	},
+	{
+		_id: "600369bf9fb4a00c54229fd0",
+		name: "FACULDADE MERIDIONAL",
+		acronym: "IMED",
+	},
+	{
+		_id: "600369bf9fb4a00c54229fd2",
+		name: "FACULDADE INTEGRADA DO BRASIL",
+		acronym: "FAIBRA",
+	},
+	{
+		_id: "600369bf9fb4a00c54229fd4",
+		name: "FACULDADE DE FILOSOFIA E TEOLOGIA PAULO VI",
+		acronym: "FFTP",
+	},
+	{
+		_id: "600369c09fb4a00c54229fd7",
+		name: "FACULDADE DE CAMPO VERDE",
+		acronym: "FCV",
+	},
+	{
+		_id: "600369c09fb4a00c54229fd9",
+		name: "FACULDADE FUCAPE",
+		acronym: "FUCAPE",
+	},
+	{
+		_id: "600369c09fb4a00c54229fdb",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE CAMPO VERDE",
+		acronym: "ISE - CAMPO VERDE",
+	},
+	{
+		_id: "600369c09fb4a00c54229fdd",
+		name: "FACULDADE DE SOROCABA",
+		acronym: "",
+	},
+	{
+		_id: "600369c19fb4a00c54229fdf",
+		name: "FACULDADE CIDADE DO SALVADOR",
+		acronym: "FCS",
+	},
+	{
+		_id: "600369c19fb4a00c54229fe1",
+		name: "FACULDADE ASCES",
+		acronym: "ASCES",
+	},
+	{ _id: "600369c19fb4a00c54229fe3", name: "ESCOLA SUPERIOR DE ADMINISTRAÇÃO" },
+	{
+		_id: "600369c19fb4a00c54229fe5",
+		name: "FACULDADE CEARENSE",
+		acronym: "FAC",
+	},
+	{
+		_id: "600369c29fb4a00c54229fe8",
+		name: "FACULDADE DE ENSINO SUPERIOR DE FLORIANO",
+		acronym: "FAESF",
+	},
+	{ _id: "600369c29fb4a00c54229fea", name: "FACULDADE PARANAENSE" },
+	{
+		_id: "600369c29fb4a00c54229fec",
+		name: "FACULDADE DE CIÊNCIA E TECNOLOGIA DE MONTES CLAROS",
+		acronym: "FACIT",
+	},
+	{
+		_id: "600369c29fb4a00c54229fee",
+		name: "FACULDADE INTEGRADA BRASIL AMAZONIA - FIBRA",
+		acronym: "FIBRA",
+	},
+	{
+		_id: "600369c39fb4a00c54229ff1",
+		name: "FACULDADE DE CIÊNCIAS E TECNOLOGIAS DE CAMPOS GERAIS",
+		acronym: "FACICA",
+	},
+	{
+		_id: "600369c39fb4a00c54229ff4",
+		name: "FACULDADE ESTÁCIO MONTESSORI DE IBIÚNA",
+		acronym: "FMI",
+	},
+	{
+		_id: "600369c39fb4a00c54229ff6",
+		name: "FACULDADE DE CIÊNCIAS CONTÁBEIS LUIZ MENDES",
+		acronym: "LUMEN FACULDADES",
+	},
+	{ _id: "600369c49fb4a00c54229ff8", name: "FACULDADE TÁHIRIH", acronym: "FT" },
+	{
+		_id: "600369c49fb4a00c54229ffa",
+		name: "FACULDADE PITÁGORAS DE TEIXEIRA DE FREITAS",
+		acronym: "PIT TEIXEIRA",
+	},
+	{
+		_id: "600369c49fb4a00c54229ffd",
+		name: "FACULDADE CIDADE DE JOÃO PINHEIRO",
+		acronym: "FCJP",
+	},
+	{
+		_id: "600369c49fb4a00c54229fff",
+		name: "FACULDADE DE CIÊNCIAS BIOMÉDICAS DO ESPÍRITO SANTO",
+		acronym: "PIO XII - BIO",
+	},
+	{
+		_id: "600369c59fb4a00c5422a002",
+		name: "FACULDADE PROMOVE DE JANAÚBA",
+		acronym: "",
+	},
+	{
+		_id: "600369c59fb4a00c5422a004",
+		name: "FACULDADE JOÃO CALVINO",
+		acronym: "FJC",
+	},
+	{
+		_id: "600369c59fb4a00c5422a007",
+		name: "INSTITUTO EDUCACIONAL DE CASTRO",
+		acronym: "INEC",
+	},
+	{
+		_id: "600369c69fb4a00c5422a009",
+		name: "FACULDADE DE DIREITO PROMOVE",
+		acronym: "PROMOVE",
+	},
+	{
+		_id: "600369c69fb4a00c5422a00b",
+		name: "FACULDADES INTEGRADAS IPIRANGA",
+		acronym: "FAINTIPI",
+	},
+	{
+		_id: "600369c69fb4a00c5422a00e",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE CHAPADÃO DO SUL",
+		acronym: "FACHASUL",
+	},
+	{
+		_id: "600369c79fb4a00c5422a010",
+		name: "FACULDADE DE ESTUDOS AVANÇADOS DO PARÁ",
+		acronym: "FEAPA",
+	},
+	{
+		_id: "600369c79fb4a00c5422a012",
+		name: "Faculdade Estácio de Natal",
+		acronym: "FCC",
+	},
+	{ _id: "600369c79fb4a00c5422a014", name: "FACULDADE CBES", acronym: "CBES" },
+	{
+		_id: "600369c79fb4a00c5422a016",
+		name: "FACULDADE SÃO LUÍS",
+		acronym: "FSL",
+	},
+	{
+		_id: "600369c89fb4a00c5422a018",
+		name: "FACULDADE JOANA D'ARC",
+		acronym: "FJD",
+	},
+	{
+		_id: "600369c89fb4a00c5422a01a",
+		name: "FACULDADE DE DIREITO PROFESSOR DAMÁSIO DE JESUS",
+		acronym: "FDDJ",
+	},
+	{
+		_id: "600369c89fb4a00c5422a01d",
+		name: "FACUDADE IEDUCARE - FIED",
+		acronym: "FIED",
+	},
+	{
+		_id: "600369c89fb4a00c5422a01f",
+		name: "INSTITUTO TEOLÓGICO FRANCISCANO",
+		acronym: "ITF",
+	},
+	{
+		_id: "600369c99fb4a00c5422a021",
+		name: "INSTITUTO MACAPAENSE DE ENSINO SUPERIOR",
+		acronym: "IMMES",
+	},
+	{
+		_id: "600369c99fb4a00c5422a023",
+		name: "INSTITUTO SALVADOR DE ENSINO E CULTURA",
+		acronym: "ISEC",
+	},
+	{
+		_id: "600369c99fb4a00c5422a026",
+		name: "FACULDADE MARIA MILZA",
+		acronym: "FAMAM",
+	},
+	{
+		_id: "600369ca9fb4a00c5422a029",
+		name: "FACULDADE ARQUIDIOCESANA DE MARIANA",
+		acronym: "FAM",
+	},
+	{
+		_id: "600369ca9fb4a00c5422a02b",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE MARIANA",
+		acronym: "FAMA",
+	},
+	{
+		_id: "600369ca9fb4a00c5422a02e",
+		name: "FACULDADE DE INTEGRAÇÃO DO ENSINO SUPERIOR DO CONE SUL",
+		acronym: "FISUL",
+	},
+	{
+		_id: "600369ca9fb4a00c5422a030",
+		name: "FACULDADE PROCESSUS",
+		acronym: "PFD",
+	},
+	{
+		_id: "600369cb9fb4a00c5422a032",
+		name: "FACULDADE CATÓLICA DE FORTALEZA",
+		acronym: "FCF",
+	},
+	{
+		_id: "600369cb9fb4a00c5422a034",
+		name: "FACULDADE LEONARDO DA VINCI",
+		acronym: "ULBRA",
+	},
+	{
+		_id: "600369cb9fb4a00c5422a036",
+		name: "FACULDADE ANGLICANA DE ERECHIM",
+		acronym: "FAE",
+	},
+	{
+		_id: "600369cb9fb4a00c5422a038",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DO CECAP",
+		acronym: "ISCECAP",
+	},
+	{
+		_id: "600369cc9fb4a00c5422a03a",
+		name: "FACULDADE DE PINDAMONHANGABA",
+		acronym: "FAPI",
+	},
+	{ _id: "600369cc9fb4a00c5422a03c", name: "FACULDADE ATENEU" },
+	{ _id: "600369cc9fb4a00c5422a03e", name: "FACULDADE APOIO", acronym: "FA" },
+	{ _id: "600369cc9fb4a00c5422a040", name: "FACULDADE EINSTEIN", acronym: "" },
+	{
+		_id: "600369cd9fb4a00c5422a042",
+		name: "FACULDADE ESTÁCIO DE SÁ DE GOIÁS",
+		acronym: "FESGO",
+	},
+	{
+		_id: "600369cd9fb4a00c5422a045",
+		name: "FACULDADE DIVINÓPOLIS",
+		acronym: "FACED",
+	},
+	{
+		_id: "600369cd9fb4a00c5422a047",
+		name: "FACULDADE DE ARTE E DESIGN",
+		acronym: "FAD",
+	},
+	{
+		_id: "600369ce9fb4a00c5422a049",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO SANTO AGOSTINHO",
+		acronym: "ISA",
+	},
+	{
+		_id: "600369ce9fb4a00c5422a04b",
+		name: "FACULDADE DE DIREITO UNIDADE GUARAPARI",
+		acronym: "FADIG",
+	},
+	{
+		_id: "600369ce9fb4a00c5422a04d",
+		name: "FACULDADE ARTHUR THOMAS",
+		acronym: "CESA",
+	},
+	{
+		_id: "600369ce9fb4a00c5422a050",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DO SUL DO PIAUÍ",
+		acronym: "ISESPI",
+	},
+	{
+		_id: "600369cf9fb4a00c5422a052",
+		name: "INSTITUTO NATALENSE DE EDUCAÇÃO SUPERIOR",
+		acronym: "INAES",
+	},
+	{
+		_id: "600369cf9fb4a00c5422a055",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE IGUAPE",
+		acronym: "ISE IGUAPE",
+	},
+	{
+		_id: "600369cf9fb4a00c5422a058",
+		name: "FACULDADE DO SUDESTE GOIANO",
+		acronym: "FASUG",
+	},
+	{
+		_id: "600369d09fb4a00c5422a05a",
+		name: "FACULDADE RORAIMENSE DE ENSINO SUPERIOR",
+		acronym: "FARES",
+	},
+	{
+		_id: "600369d09fb4a00c5422a05c",
+		name: "FACULDADE SÃO GERALDO",
+		acronym: "FSG",
+	},
+	{
+		_id: "600369d09fb4a00c5422a05e",
+		name: "FACULDADE VENDA NOVA DO IMIGRANTE",
+		acronym: "FAVENI",
+	},
+	{
+		_id: "600369d09fb4a00c5422a061",
+		name: "FACULDADE EVANGÉLICA DO MEIO NORTE",
+		acronym: "FAEME",
+	},
+	{
+		_id: "600369d19fb4a00c5422a063",
+		name: "FACULDADE DE TEOLOGIA",
+		acronym: "FILOSOFIA E CIÊNCIAS HUMANAS GAMALIEL",
+	},
+	{
+		_id: "600369d19fb4a00c5422a065",
+		name: "FACULDADE PAULISTA DE EDUCAÇÃO E COMUNICAÇÃO",
+		acronym: "FAPEC",
+	},
+	{
+		_id: "600369d19fb4a00c5422a067",
+		name: "INSTITUTO SUPERIOR DE CIÊNCIAS DA SAÚDE",
+		acronym: "INCISA",
+	},
+	{
+		_id: "600369d19fb4a00c5422a069",
+		name: "FACULDADE DE EDUCAÇÃO SANTA TEREZINHA",
+		acronym: "FEST",
+	},
+	{
+		_id: "600369d29fb4a00c5422a06b",
+		name: "FIAM-FAAM - CENTRO UNIVERSITÁRIO",
+		acronym: "UNIFIAM-FAAM",
+	},
+	{
+		_id: "600369d29fb4a00c5422a06d",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS DE PENEDO",
+		acronym: "FCSAP",
+	},
+	{
+		_id: "600369d29fb4a00c5422a06f",
+		name: "FACULDADE DE DIREITO DE VILA VELHA",
+		acronym: "",
+	},
+	{
+		_id: "600369d29fb4a00c5422a071",
+		name: "FACULDADE DE ENSINO SUPERIOR DA CIDADE DE FEIRA DE SANTANA",
+		acronym: "FAESF/UNEF",
+	},
+	{
+		_id: "600369d39fb4a00c5422a073",
+		name: "FACULDADE DE CIÊNCIAS ADMINISTRATIVAS",
+		acronym: "FCA",
+	},
+	{
+		_id: "600369d39fb4a00c5422a075",
+		name: "UNIVERSIDADE FEDERAL DE CAMPINA GRANDE",
+		acronym: "UFCG",
+	},
+	{
+		_id: "600369d39fb4a00c5422a077",
+		name: "ABEU - CENTRO UNIVERSITÁRIO",
+		acronym: "UNIABEU",
+	},
+	{
+		_id: "600369d39fb4a00c5422a079",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE OLINDA",
+		acronym: "IESO",
+	},
+	{
+		_id: "600369d49fb4a00c5422a07b",
+		name: "FACULDADE ZACARIAS DE GÓES",
+		acronym: "FAZAG",
+	},
+	{
+		_id: "600369d49fb4a00c5422a07d",
+		name: "FACULDADE DE TECNOLOGIA FAESA",
+		acronym: "CET-FAESA",
+	},
+	{
+		_id: "600369d49fb4a00c5422a07f",
+		name: "FACULDADE DE CIÊNCIAS EDUCACIONAIS",
+		acronym: "FACE",
+	},
+	{
+		_id: "600369d49fb4a00c5422a082",
+		name: "FACULDADE REDENTOR",
+		acronym: "FACREDENTOR",
+	},
+	{
+		_id: "600369d59fb4a00c5422a084",
+		name: "FACULDADE REGIONAL DE FILOSOFIA",
+		acronym: "CIÊNCIAS E LETRAS DE CANDEIAS",
+	},
+	{
+		_id: "600369d59fb4a00c5422a086",
+		name: "FACULDADE TEOLÓGICA SUL AMERICANA",
+		acronym: "FTSA",
+	},
+	{
+		_id: "600369d59fb4a00c5422a089",
+		name: "FACULDADES INTEGRADAS SOARES DE OLIVEIRA",
+		acronym: "FISO",
+	},
+	{
+		_id: "600369d69fb4a00c5422a08b",
+		name: "INSTITUTO SUPERIOR DE MÚSICA DE SÃO LEOPOLDO",
+		acronym: "ISM",
+	},
+	{
+		_id: "600369d69fb4a00c5422a08d",
+		name: "FACULDADES PITÁGORAS UNIDADE GUARAPARI",
+		acronym: "FIPAG",
+	},
+	{ _id: "600369d69fb4a00c5422a08f", name: "FACULDADE ATENAS", acronym: "" },
+	{
+		_id: "600369d69fb4a00c5422a091",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO PAULO MARTINS",
+		acronym: "ISPAM",
+	},
+	{
+		_id: "600369d79fb4a00c5422a093",
+		name: "FACULDADE SÃO SALVADOR",
+		acronym: "FSS",
+	},
+	{
+		_id: "600369d79fb4a00c5422a095",
+		name: "FACULDADE TEOLÓGICA BATISTA ANA WOLLERMAN",
+		acronym: "FTBAW",
+	},
+	{ _id: "600369d79fb4a00c5422a097", name: "FACULDADE PENSAR", acronym: "FP" },
+	{
+		_id: "600369d79fb4a00c5422a099",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE TUPI PAULISTA",
+		acronym: "ISETP",
+	},
+	{
+		_id: "600369d89fb4a00c5422a09b",
+		name: "Faculdade Meta",
+		acronym: "FAMETA",
+	},
+	{
+		_id: "600369d89fb4a00c5422a09e",
+		name: "FACULDADE SANTO ANTÔNIO DE PÁDUA",
+		acronym: "FASAP",
+	},
+	{
+		_id: "600369d89fb4a00c5422a0a0",
+		name: "FACULDADE SÃO BENTO DO RIO DE JANEIRO",
+		acronym: "FSB/RJ",
+	},
+	{
+		_id: "600369d89fb4a00c5422a0a2",
+		name: "FACULDADE DE DIREITO DE ITABIRA",
+		acronym: "FDI",
+	},
+	{
+		_id: "600369d99fb4a00c5422a0a5",
+		name: "FACULDADE DE ENSINO SUPERIOR DO CENTRO DO PARANÁ",
+		acronym: "UCP",
+	},
+	{
+		_id: "600369d99fb4a00c5422a0a8",
+		name: "FACULDADE DE AMPÉRE",
+		acronym: "FAMPER",
+	},
+	{
+		_id: "600369d99fb4a00c5422a0aa",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DA SERRA",
+		acronym: "FABAVI",
+	},
+	{
+		_id: "600369da9fb4a00c5422a0ac",
+		name: "FACULDADE DO TAPAJÓS",
+		acronym: "FAT",
+	},
+	{
+		_id: "600369da9fb4a00c5422a0ae",
+		name: "FACULDADE DO LITORAL PARANAENSE",
+		acronym: "FLP",
+	},
+	{
+		_id: "600369da9fb4a00c5422a0b0",
+		name: "ESCOLA BRASILEIRA DE ECONOMIA E FINANÇAS",
+		acronym: "EBEF",
+	},
+	{
+		_id: "600369da9fb4a00c5422a0b2",
+		name: "FACULDADE DE JUAZEIRO DO NORTE",
+		acronym: "FJN",
+	},
+	{
+		_id: "600369db9fb4a00c5422a0b4",
+		name: "FACULDADE DE TECNOLOGIA IBTA - SÃO JOSÉ DOS CAMPOS",
+		acronym: "IBTA",
+	},
+	{
+		_id: "600369db9fb4a00c5422a0b7",
+		name:
+			"FACULDADE DE CIÊNCIAS CONTÁBEIS E DE ADMINISTRAÇÃO DO VALE DO JURUENA",
+		acronym: "AJES",
+	},
+	{
+		_id: "600369db9fb4a00c5422a0b9",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DO VALE DO JURUENA",
+		acronym: "AJES",
+	},
+	{
+		_id: "600369dc9fb4a00c5422a0bc",
+		name: "FACULDADES INTEGRADAS DO EXTREMO SUL DA BAHIA",
+		acronym: "UNISULBAHIA",
+	},
+	{
+		_id: "600369dc9fb4a00c5422a0bf",
+		name: "FACULDADE SÃO VICENTE",
+		acronym: "FASVIPA",
+	},
+	{
+		_id: "600369dc9fb4a00c5422a0c1",
+		name: "FACULDADE INTEGRADA DE SANTA MARIA",
+		acronym: "FISMA",
+	},
+	{
+		_id: "600369dc9fb4a00c5422a0c3",
+		name: "FACULDADE TAMANDARÉ",
+		acronym: "FAT",
+	},
+	{
+		_id: "600369dd9fb4a00c5422a0c5",
+		name: "FACULDADE DINÂMICA DO VALE DO PIRANGA",
+		acronym: "FADIP",
+	},
+	{
+		_id: "600369dd9fb4a00c5422a0c7",
+		name: "FACULDADE SANTA CATARINA",
+		acronym: "FASC",
+	},
+	{
+		_id: "600369dd9fb4a00c5422a0ca",
+		name: "FACULDADE DE TECNOLOGIA SENAI CONCÓRDIA",
+		acronym: "CET CONCÓRDIA",
+	},
+	{
+		_id: "600369de9fb4a00c5422a0cc",
+		name: "FACULDADE UNIDA DE VITÓRIA",
+		acronym: "FACULDADE UNIDA",
+	},
+	{
+		_id: "600369de9fb4a00c5422a0cf",
+		name: "FACULDADE PHÊNIX DE CIÊNCIAS HUMANAS E SOCIAIS DO BRASIL",
+		acronym: "PHENIX",
+	},
+	{ _id: "600369de9fb4a00c5422a0d1", name: "FACULDADE LA SALLE" },
+	{
+		_id: "600369de9fb4a00c5422a0d3",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO SÃO JUDAS TADEU",
+		acronym: "ISESJT",
+	},
+	{
+		_id: "600369df9fb4a00c5422a0d5",
+		name: "FACULDADE DOM ALBERTO",
+		acronym: "FDA",
+	},
+	{
+		_id: "600369df9fb4a00c5422a0d7",
+		name: "FACULDADE INESP - INSTITUTO NACIONAL DE ENSINO E PESQUISA",
+		acronym: "INESP",
+	},
+	{
+		_id: "600369df9fb4a00c5422a0d9",
+		name: "FACULDADE DE CIÊNCIAS JURÍDICAS DE PARAÍSO DO TOCANTINS",
+		acronym: "FCJP",
+	},
+	{
+		_id: "600369df9fb4a00c5422a0db",
+		name: "FACULDADE DE CIÊNCIAS DA SAÚDE DA SERRA",
+		acronym: "FABAVI",
+	},
+	{
+		_id: "600369e09fb4a00c5422a0de",
+		name: "FACULDADE SENAC MINAS",
+		acronym: "FSM",
+	},
+	{
+		_id: "600369e09fb4a00c5422a0e0",
+		name: "FACULDADE CATÓLICA DO CEARÁ",
+		acronym: "FCC",
+	},
+	{
+		_id: "600369e09fb4a00c5422a0e2",
+		name: "FACULDADE MARISTA",
+		acronym: "FMR",
+	},
+	{
+		_id: "600369e09fb4a00c5422a0e4",
+		name: "INSTITUTO DE ENSINO SUPERIOR DO SUL DO MARANHÃO",
+		acronym: "IESMA",
+	},
+	{
+		_id: "600369e19fb4a00c5422a0e6",
+		name: "ESCOLA SUPERIOR DE ADMINISTRAÇÃO DE EMPRESAS",
+		acronym: "INEA",
+	},
+	{
+		_id: "600369e19fb4a00c5422a0e8",
+		name: "UNIPB - FACULDADE UNIDA DA PARAÍBA",
+		acronym: "UNIPB",
+	},
+	{
+		_id: "600369e19fb4a00c5422a0ea",
+		name: "INSTITUTO TECNOLÓGICO DE CARATINGA",
+		acronym: "ITC",
+	},
+	{
+		_id: "600369e19fb4a00c5422a0ec",
+		name: "FACULDADE CATÓLICA DOM ORIONE",
+		acronym: "FACDO",
+	},
+	{
+		_id: "600369e29fb4a00c5422a0ee",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO VERA CRUZ",
+		acronym: "ISE VERA CRUZ",
+	},
+	{
+		_id: "600369e29fb4a00c5422a0f0",
+		name: "ESCOLA SUPERIOR DA AMAZÔNIA",
+		acronym: "ESAMAZ",
+	},
+	{
+		_id: "600369e29fb4a00c5422a0f3",
+		name: "FACULDADE DE TECNOLOGIA SENAI LUZERNA",
+		acronym: "SENAI LUZERNA",
+	},
+	{
+		_id: "600369e39fb4a00c5422a0f6",
+		name: "FACULDADE DE CIÊNCIAS EDUCACIONAIS CAPIM GROSSO",
+		acronym: "FACE",
+	},
+	{
+		_id: "600369e39fb4a00c5422a0f8",
+		name: "FACULDADE SÃO PAULO",
+		acronym: "FACSP",
+	},
+	{
+		_id: "600369e39fb4a00c5422a0fa",
+		name: "FACULDADE DO VALE DO ITAJAÍ MIRIM",
+		acronym: "FAVIM",
+	},
+	{
+		_id: "600369e39fb4a00c5422a0fc",
+		name: "FACULDADE ANHANGUERA DE VALPARAÍSO",
+		acronym: "FAV",
+	},
+	{
+		_id: "600369e49fb4a00c5422a0ff",
+		name: "FACULDADE DO SERTÃO",
+		acronym: "UESSBA",
+	},
+	{
+		_id: "600369e49fb4a00c5422a102",
+		name: "FACULDADE DE CIÊNCIAS GERENCIAIS DE SÃO GOTARDO",
+		acronym: "CESG",
+	},
+	{
+		_id: "600369e49fb4a00c5422a104",
+		name: "FACULDADE EMPRESARIAL DE CHAPECÓ",
+		acronym: "FAEM",
+	},
+	{
+		_id: "600369e59fb4a00c5422a106",
+		name: "FACULDADE UNIDA DE CAMPINAS",
+		acronym: "FACUNICAMPS",
+	},
+	{
+		_id: "600369e59fb4a00c5422a108",
+		name: "CENTRO DE ENSINO SUPERIOR DE ILHÉUS",
+		acronym: "CESUPI",
+	},
+	{
+		_id: "600369e59fb4a00c5422a10a",
+		name: "FACULDADE DE MACAPÁ",
+		acronym: "FAMA",
+	},
+	{
+		_id: "600369e59fb4a00c5422a10c",
+		name: "Centro Universitário UNIFAFIBE",
+		acronym: "FAFIBE",
+	},
+	{
+		_id: "600369e69fb4a00c5422a10e",
+		name: "FACULDADES INTEGRADAS DESEMBARGADOR SÁVIO BRANDÃO - FAUSB",
+		acronym: "FAUSB",
+	},
+	{
+		_id: "600369e69fb4a00c5422a111",
+		name: "FACULDADE DE INFORMÁTICA DE OURO PRETO DO OESTE",
+		acronym: "FIOURO",
+	},
+	{
+		_id: "600369e69fb4a00c5422a113",
+		name: "FACULDADE DE TECNOLOGIA DO NORDESTE",
+		acronym: "FATENE",
+	},
+	{
+		_id: "600369e69fb4a00c5422a115",
+		name: "FACULDADE FAE BLUMENAU",
+		acronym: "",
+	},
+	{
+		_id: "600369e79fb4a00c5422a117",
+		name: "FACULDADES PEQUENO PRÍNCIPE",
+		acronym: "FPP",
+	},
+	{
+		_id: "600369e79fb4a00c5422a119",
+		name: "FACULDADE DE CIÊNCIAS AGRÁRIAS E EXATAS DE PRIMAVERA DO LESTE",
+		acronym: "FCAE",
+	},
+	{
+		_id: "600369e79fb4a00c5422a11b",
+		name: "FACULDADE UNIÃO",
+		acronym: "FACULDADE UNIÃO",
+	},
+	{
+		_id: "600369e79fb4a00c5422a11d",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS E HUMANAS SOBRAL PINTO",
+		acronym: "FAIESP",
+	},
+	{
+		_id: "600369e89fb4a00c5422a120",
+		name: "FACULDADE SÃO FRANCISCO DE ASSIS",
+		acronym: "UNIFIN",
+	},
+	{
+		_id: "600369e89fb4a00c5422a123",
+		name: "FACULDADE DE IPORÁ",
+		acronym: "FAI",
+	},
+	{
+		_id: "600369e89fb4a00c5422a125",
+		name:
+			"FANEESP - FACULDADE NACIONAL DE EDUCAÇÃO E ENSINO SUPERIOR DO PARANÁ",
+		acronym: "FANEESP",
+	},
+	{
+		_id: "600369e99fb4a00c5422a127",
+		name: "FACULDADE CCAA",
+		acronym: "FAC CCAA",
+	},
+	{
+		_id: "600369e99fb4a00c5422a129",
+		name: "FACULDADE MODELO",
+		acronym: "FACIMOD",
+	},
+	{
+		_id: "600369e99fb4a00c5422a12b",
+		name: "FACULDADE EVANGÉLICA DE SÃO PAULO",
+		acronym: "",
+	},
+	{
+		_id: "600369e99fb4a00c5422a12d",
+		name: "FACULDADES ITECNE DE CASCAVEL",
+		acronym: "ITECNE",
+	},
+	{
+		_id: "600369ea9fb4a00c5422a130",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO ANÍSIO TEIXEIRA",
+		acronym: "ISEAT",
+	},
+	{
+		_id: "600369ea9fb4a00c5422a132",
+		name: "FACULDADE PAULUS DE TECNOLOGIA E COMUNICAÇÃO",
+		acronym: "FAPCOM",
+	},
+	{
+		_id: "600369ea9fb4a00c5422a135",
+		name: "FACULDADE SÃO SEBASTIÃO",
+		acronym: "FASS",
+	},
+	{ _id: "600369eb9fb4a00c5422a137", name: "FACULDADE IDC", acronym: "IDC" },
+	{
+		_id: "600369eb9fb4a00c5422a139",
+		name: "FACULDADE NOSSA SENHORA DE FÁTIMA",
+		acronym: "FACULDADE FÁTIMA",
+	},
+	{
+		_id: "600369eb9fb4a00c5422a13b",
+		name: "FACULDADE EVANGÉLICA DO PIAUI",
+		acronym: "FAEPI",
+	},
+	{
+		_id: "600369eb9fb4a00c5422a13e",
+		name: "FACULDADE DOM BOSCO DE GOIOERÊ",
+		acronym: "DOM BOSCO GOIOERÊ",
+	},
+	{
+		_id: "600369ec9fb4a00c5422a141",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO PROGRAMUS",
+		acronym: "ISEPRO",
+	},
+	{
+		_id: "600369ec9fb4a00c5422a143",
+		name: "FACULDADE MAURÍCIO DE NASSAU",
+		acronym: "FMN",
+	},
+	{
+		_id: "600369ec9fb4a00c5422a145",
+		name: "FACULDADE SUL DA AMÉRICA",
+		acronym: "SULDAMÉRICA",
+	},
+	{
+		_id: "600369ed9fb4a00c5422a147",
+		name: "FACULDADE METODISTA DE TEOLOGIA E CIÊNCIAS HUMANAS DA AMAZÔNIA",
+		acronym: "FATEO-PVH",
+	},
+	{
+		_id: "600369ed9fb4a00c5422a14a",
+		name: "FACULDADE PARANAPANEMA",
+		acronym: "FP",
+	},
+	{
+		_id: "600369ed9fb4a00c5422a14c",
+		name: "FACULDADE DE CIÊNCIAS MÉDICAS E DA SAÚDE DE JUIZ DE FORA",
+		acronym: "FCMS/JF",
+	},
+	{
+		_id: "600369ed9fb4a00c5422a14e",
+		name: "FACULDADE SALESIANA DOM BOSCO DE PIRACICABA",
+		acronym: "FSDB",
+	},
+	{
+		_id: "600369ee9fb4a00c5422a150",
+		name: "FACULDADE REINALDO RAMOS",
+		acronym: "FARR",
+	},
+	{
+		_id: "600369ee9fb4a00c5422a152",
+		name: "FACULDADE DE TEOLOGIA UMBANDISTA",
+		acronym: "F.T.U.",
+	},
+	{
+		_id: "600369ee9fb4a00c5422a154",
+		name: "ESCOLA SUPERIOR DOM HELDER CÂMARA",
+		acronym: "ESDHC",
+	},
+	{
+		_id: "600369ee9fb4a00c5422a156",
+		name: "FACULDADE PITÁGORAS DE TECNOLOGIA DE GUARAPARI",
+		acronym: "",
+	},
+	{ _id: "600369ef9fb4a00c5422a158", name: "FACULDADE SÃO FRANCISCO DE ASSIS" },
+	{
+		_id: "600369ef9fb4a00c5422a15a",
+		name: "FACULDADE DE BELÉM",
+		acronym: "FABEL",
+	},
+	{
+		_id: "600369ef9fb4a00c5422a15c",
+		name: "FACULDADE SERRA DO CARMO",
+		acronym: "FASEC",
+	},
+	{
+		_id: "600369ef9fb4a00c5422a15f",
+		name: "FACULDADE METROPOLITANA DE CAIEIRAS",
+		acronym: "FMC",
+	},
+	{ _id: "600369f09fb4a00c5422a161", name: "FACULDADE SÃO CAMILO" },
+	{
+		_id: "600369f09fb4a00c5422a163",
+		name: "FACULDADE ZUMBI DOS PALMARES",
+		acronym: "FAZP",
+	},
+	{
+		_id: "600369f09fb4a00c5422a165",
+		name: "FACULDADE BARÃO DE PIRATININGA",
+		acronym: "AES",
+	},
+	{
+		_id: "600369f19fb4a00c5422a168",
+		name: "FACULDADE DE EDUCAÇÃO E TECNOLOGIA DA REGIÃO MISSIONEIRA",
+		acronym: "FETREMIS",
+	},
+	{
+		_id: "600369f19fb4a00c5422a16a",
+		name: "FACULDADE SATC",
+		acronym: "FASATC",
+	},
+	{
+		_id: "600369f19fb4a00c5422a16c",
+		name: "FACULDADE CONCÓRDIA",
+		acronym: "FACC",
+	},
+	{
+		_id: "600369f19fb4a00c5422a16e",
+		name: "FACULDADE JK - GUARÁ",
+		acronym: "ESAMC BRASÍLIA",
+	},
+	{
+		_id: "600369f29fb4a00c5422a170",
+		name: "FACULDADE NATALENSE DE ENSINO E CULTURA",
+		acronym: "FANEC",
+	},
+	{
+		_id: "600369f29fb4a00c5422a172",
+		name: "FACULDADE DO ESTADO DO MARANHÃO",
+		acronym: "FACEM",
+	},
+	{
+		_id: "600369f29fb4a00c5422a175",
+		name: "FACULDADE VERDE NORTE",
+		acronym: "FAVENORTE",
+	},
+	{
+		_id: "600369f29fb4a00c5422a177",
+		name: "FACULDADE PAN AMAZÔNIA",
+		acronym: "FAPAN",
+	},
+	{
+		_id: "600369f39fb4a00c5422a17a",
+		name: "FACULDADE CIDADE DE PATOS DE MINAS",
+		acronym: "FPM",
+	},
+	{
+		_id: "600369f39fb4a00c5422a17c",
+		name: "FACULDADE DE CIÊNCIA E TECNOLOGIA ALBERT EINSTEIN",
+		acronym: "FACTAE",
+	},
+	{
+		_id: "600369f39fb4a00c5422a17e",
+		name: "FACULDADE BRASIL NORTE",
+		acronym: "FABRAN",
+	},
+	{
+		_id: "600369f49fb4a00c5422a181",
+		name: "FACULDADE DE ENSINO SUPERIOR DA AMAZÔNIA REUNIDA",
+		acronym: "FESAR",
+	},
+	{
+		_id: "600369f49fb4a00c5422a183",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE BARRETOS",
+		acronym: "ISEB",
+	},
+	{
+		_id: "600369f49fb4a00c5422a185",
+		name: "FACULDADE DEL REY",
+		acronym: "FDR",
+	},
+	{
+		_id: "600369f49fb4a00c5422a187",
+		name: "FACULDADE DE TALENTOS HUMANOS",
+		acronym: "FACTHUS",
+	},
+	{
+		_id: "600369f59fb4a00c5422a189",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO FRANCISCANO NOSSA SENHORA DE FÁTIMA",
+		acronym: "FATIMA",
+	},
+	{
+		_id: "600369f59fb4a00c5422a18b",
+		name: "FACULDADE DO SUL",
+		acronym: "FACSUL",
+	},
+	{
+		_id: "600369f59fb4a00c5422a18e",
+		name: "FACULDADE DO BAIXO PARNAÍBA",
+		acronym: "FAP",
+	},
+	{
+		_id: "600369f59fb4a00c5422a190",
+		name: "FACULDADE DO PANTANAL MATOGROSSENSE",
+		acronym: "FAPAN",
+	},
+	{ _id: "600369f69fb4a00c5422a192", name: "ESCOLA SUPERIOR DE ADMINISTRAÇÃO" },
+	{
+		_id: "600369f69fb4a00c5422a194",
+		name: "FACULDADE PROJEÇÃO DO GUARÁ",
+		acronym: "",
+	},
+	{
+		_id: "600369f69fb4a00c5422a196",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO OCIDENTE",
+		acronym: "OCIDEMNTE",
+	},
+	{
+		_id: "600369f69fb4a00c5422a198",
+		name: "FACULDADE BARRETOS",
+		acronym: "FB",
+	},
+	{
+		_id: "600369f79fb4a00c5422a19a",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS E BIOLÓGICAS E DA SAÚDE",
+		acronym: "FCHBS",
+	},
+	{
+		_id: "600369f79fb4a00c5422a19c",
+		name:
+			"FACULDADE DE CIÊNCIAS JURÍDICAS E SOCIAIS APLICADAS DE PRIMAVERA DO LESTE",
+		acronym: "FCJSA",
+	},
+	{
+		_id: "600369f79fb4a00c5422a19e",
+		name: "FACULDADE CENECISTA DE RONDONÓPOLIS",
+		acronym: "FACER",
+	},
+	{
+		_id: "600369f89fb4a00c5422a1a1",
+		name: "INSTITUTO DE ENSINO SUPERIOR SANTA CECÍLIA",
+		acronym: "IESC",
+	},
+	{
+		_id: "600369f89fb4a00c5422a1a3",
+		name: "FACULDADE DO INSTITUTO NACIONAL DE PÓS-GRADUAÇÃO DE CAMPINAS",
+		acronym: "FAC. INPG - CAMPINAS",
+	},
+	{
+		_id: "600369f89fb4a00c5422a1a5",
+		name:
+			"FACULDADE DO INSTITUTO NACIONAL DE PÓS-GRADUAÇÃO DE SÃO JOSÉ DOS CAMPOS",
+		acronym: "FACULDADE INPG - SJC",
+	},
+	{
+		_id: "600369f89fb4a00c5422a1a7",
+		name: "FAJOPA - FACULDADE JOÃO PAULO II",
+		acronym: "FAJOPA",
+	},
+	{
+		_id: "600369f99fb4a00c5422a1a9",
+		name: "FACULDADE SANTA RITA DE CÁSSIA",
+		acronym: "UNIFASC",
+	},
+	{
+		_id: "600369f99fb4a00c5422a1ab",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO SANTA RITA DE CÁSSIA",
+		acronym: "ISESC",
+	},
+	{
+		_id: "600369f99fb4a00c5422a1ae",
+		name: "FACULDADE DE CIÊNCIAS EDUCACIONAIS E SISTEMAS INTEGRADOS",
+		acronym: "FACESI",
+	},
+	{ _id: "600369f99fb4a00c5422a1b0", name: "FACULDADE DA AMAZÔNIA" },
+	{
+		_id: "600369fa9fb4a00c5422a1b2",
+		name: "FACULDADE DELTA",
+		acronym: "FACULDADE DELTA",
+	},
+	{
+		_id: "600369fa9fb4a00c5422a1b5",
+		name: "CHRISTUS FACULDADE DO PIAUÍ",
+		acronym: "CHRISFAPI",
+	},
+	{
+		_id: "600369fa9fb4a00c5422a1b7",
+		name: "FACULDADE TEOLÓGICA DE CIÊNCIAS HUMANAS E SOCIAIS LOGOS",
+		acronym: "FAETEL",
+	},
+	{
+		_id: "600369fa9fb4a00c5422a1b9",
+		name: "FACULDADE POTIGUAR DA PARAÍBA",
+		acronym: "FPB",
+	},
+	{
+		_id: "600369fb9fb4a00c5422a1bb",
+		name: "FACULDADE DE SAÚDE E DESENVOLVIMENTO HUMANO SANTO AGOSTINHO",
+		acronym: "FS",
+	},
+	{
+		_id: "600369fb9fb4a00c5422a1bd",
+		name: "FACULDADE DE ODONTOLOGIA DO RECIFE",
+		acronym: "FOR",
+	},
+	{
+		_id: "600369fb9fb4a00c5422a1bf",
+		name: "FACULDADE ANCHIETA DO RECIFE",
+		acronym: "FAR",
+	},
+	{
+		_id: "600369fb9fb4a00c5422a1c1",
+		name: "FACULDADE PITÁGORAS DE DIVINÓPOLIS - FPD",
+		acronym: "FPD",
+	},
+	{
+		_id: "600369fc9fb4a00c5422a1c3",
+		name: "UNIVERSIDADE COMUNITÁRIA DA REGIÃO DE CHAPECÓ",
+		acronym: "UNOCHAPECÓ",
+	},
+	{
+		_id: "600369fc9fb4a00c5422a1c5",
+		name: "FACULDADE DE TECNOLOGIA SENAI RIO DO SUL",
+		acronym: "SENAI RIO DO SUL",
+	},
+	{
+		_id: "600369fc9fb4a00c5422a1c7",
+		name: "FACULDADE DE TECNOLOGIA SENAI JARAGUÁ DO SUL",
+		acronym: "FATEC",
+	},
+	{
+		_id: "600369fc9fb4a00c5422a1c9",
+		name: "FACULDADE DE TECNOLOGIA SENAI BRUSQUE",
+		acronym: "SENAI/SC BRUSQUE",
+	},
+	{
+		_id: "600369fd9fb4a00c5422a1cb",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO ALMEIDA RODRIGUES",
+		acronym: "ISEAR",
+	},
+	{
+		_id: "600369fd9fb4a00c5422a1cd",
+		name: "Instituto Federal de Educação",
+		acronym: "Ciência e Tecnologia do Acre",
+	},
+	{ _id: "600369fd9fb4a00c5422a1d0", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{ _id: "600369fe9fb4a00c5422a1d2", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{ _id: "600369fe9fb4a00c5422a1d4", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{ _id: "600369fe9fb4a00c5422a1d6", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "600369fe9fb4a00c5422a1d8",
+		name: "FACULDADE DE TECNOLOGIA IBTA CAMPINAS",
+		acronym: "IBTA",
+	},
+	{
+		_id: "600369fe9fb4a00c5422a1da",
+		name: "FACULDADES INTEGRADAS ASSOCIAÇÃO DE ENSINO DE SANTA CATARINA",
+		acronym: "FASSESC",
+	},
+	{ _id: "600369ff9fb4a00c5422a1dd", name: "FACULDADE EQUIPE", acronym: "FAE" },
+	{
+		_id: "600369ff9fb4a00c5422a1df",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO ANGLO-AMERICANO DE FOZ DO IGUAÇU",
+		acronym: "ISEAAFI",
+	},
+	{
+		_id: "600369ff9fb4a00c5422a1e1",
+		name: "UNIVERSIDADE DO ESTADO DO AMAZONAS",
+		acronym: "UEA",
+	},
+	{
+		_id: "60036a009fb4a00c5422a1e3",
+		name: "FACULDADE DE TECNOLOGIA DO COMÉRCIO",
+		acronym: "FATEC-COMERCIO",
+	},
+	{
+		_id: "60036a009fb4a00c5422a1e5",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO EQUIPE",
+		acronym: "ISEE",
+	},
+	{
+		_id: "60036a009fb4a00c5422a1e7",
+		name: "FACULDADE DE TECNOLOGIA SENAI FLORIANÓPOLIS",
+		acronym: "SENAI -SC - CTAI",
+	},
+	{ _id: "60036a009fb4a00c5422a1ea", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "60036a019fb4a00c5422a1ec",
+		name: "FACULDADE DE ADMINISTRAÇÃO DA FESPSP",
+		acronym: "FADFESPSP",
+	},
+	{
+		_id: "60036a019fb4a00c5422a1ee",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO UNIÃO DAS AMÉRICAS",
+		acronym: "UNIAMÉRICA",
+	},
+	{
+		_id: "60036a019fb4a00c5422a1f0",
+		name: "CENTRO DE ENSINO SUPERIOR ARCANJO MIKAEL DE ARAPIRACA",
+		acronym: "CESAMA",
+	},
+	{ _id: "60036a029fb4a00c5422a1f3", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{ _id: "60036a029fb4a00c5422a1f5", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "60036a029fb4a00c5422a1f7",
+		name: "FACULDADE DE SÃO ROQUE",
+		acronym: "FAEV",
+	},
+	{
+		_id: "60036a029fb4a00c5422a1fa",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO CORAÇÃO DE JESUS",
+		acronym: "ISECJ",
+	},
+	{ _id: "60036a039fb4a00c5422a1fc", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{ _id: "60036a039fb4a00c5422a1fe", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "60036a039fb4a00c5422a200",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE GARÇA",
+		acronym: "ISEG",
+	},
+	{
+		_id: "60036a039fb4a00c5422a202",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE CAJAZEIRAS",
+		acronym: "ISEC",
+	},
+	{
+		_id: "60036a049fb4a00c5422a204",
+		name: "FACULDADES INTEGRADAS DOS CAMPOS GERAIS",
+		acronym: "CESCAGE",
+	},
+	{
+		_id: "60036a049fb4a00c5422a206",
+		name: "FACULDADE DE MINAS BH",
+		acronym: "FAMINAS-BH",
+	},
+	{
+		_id: "60036a049fb4a00c5422a208",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO ALBERT EINSTEIN",
+		acronym: "ISALBE",
+	},
+	{
+		_id: "60036a049fb4a00c5422a20b",
+		name: "FACULDADE DE QUATRO MARCOS",
+		acronym: "FQM",
+	},
+	{
+		_id: "60036a059fb4a00c5422a20d",
+		name: "FACULDADE DE CIÊNCIAS BIOLÓGICAS E DA SAÚDE",
+		acronym: "FACISA",
+	},
+	{
+		_id: "60036a059fb4a00c5422a20f",
+		name: "FACULDADE DE ARAÇATUBA",
+		acronym: "",
+	},
+	{
+		_id: "60036a059fb4a00c5422a211",
+		name: "FACULDADE ENTRE RIOS DO PIAUÍ",
+		acronym: "FAERPI",
+	},
+	{
+		_id: "60036a059fb4a00c5422a213",
+		name: "FACULDADE DE CIÊNCIAS DA BAHIA - FACIBA",
+		acronym: "FACIBA",
+	},
+	{
+		_id: "60036a069fb4a00c5422a215",
+		name: "FACULDADE DE FARMÁCIA E BIOQUÍMICA",
+		acronym: "ITPAC",
+	},
+	{
+		_id: "60036a069fb4a00c5422a217",
+		name: "ESCOLA SUPERIOR DE CIÊNCIAS DA SAÚDE",
+		acronym: "ESCS",
+	},
+	{
+		_id: "60036a069fb4a00c5422a219",
+		name: "FACULDADE DE ENFERMAGEM",
+		acronym: "ITPAC",
+	},
+	{
+		_id: "60036a069fb4a00c5422a21b",
+		name: "FACULDADE DE MEDICINA",
+		acronym: "ITPAC",
+	},
+	{
+		_id: "60036a079fb4a00c5422a21d",
+		name: "FACULDADE DE SISTEMA DE INFORMAÇÃO",
+		acronym: "ITPAC",
+	},
+	{ _id: "60036a079fb4a00c5422a21f", name: "FACULDADE DE ADMINISTRAÇÃO" },
+	{
+		_id: "60036a079fb4a00c5422a222",
+		name: "FACULDADE LUIZ EDUARDO MAGALHÃES",
+		acronym: "FILEM",
+	},
+	{
+		_id: "60036a079fb4a00c5422a224",
+		name: "FACULDADE DE ODONTOLOGIA",
+		acronym: "ITPAC",
+	},
+	{ _id: "60036a089fb4a00c5422a226", name: "FACULDADE IGUAÇU", acronym: "FI" },
+	{
+		_id: "60036a089fb4a00c5422a229",
+		name: "FACULDADE QUIRINÓPOLIS",
+		acronym: "FAQUI",
+	},
+	{
+		_id: "60036a089fb4a00c5422a22b",
+		name: "FACULDADE MADRE THAIS",
+		acronym: "FMT",
+	},
+	{
+		_id: "60036a099fb4a00c5422a22d",
+		name: "FACULDADE SÃO BENTO DA BAHIA",
+		acronym: "",
+	},
+	{ _id: "60036a099fb4a00c5422a22f", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "60036a099fb4a00c5422a231",
+		name: "FACULDADE SANTO ANTONIO",
+		acronym: "FSA",
+	},
+	{
+		_id: "60036a099fb4a00c5422a233",
+		name: "FACULDADE DE TECNOLOGIA ENIAC-FAPI",
+		acronym: "ENIAC",
+	},
+	{
+		_id: "60036a0a9fb4a00c5422a235",
+		name: "FACULDADE DE TECNOLOGIA SENAC FLORIANÓPOLIS",
+		acronym: "SENAC FLORIANÓPOLIS",
+	},
+	{
+		_id: "60036a0a9fb4a00c5422a237",
+		name: "FACULDADE DE TECNOLOGIA INFORMÁTICA",
+		acronym: "FATI",
+	},
+	{
+		_id: "60036a0a9fb4a00c5422a23a",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE JUNQUEIRÓPOLIS",
+		acronym: "ISEJ",
+	},
+	{
+		_id: "60036a0a9fb4a00c5422a23c",
+		name: "FACULDADES INTEGRADAS MATO-GROSSENSES DE CIÊNCIAS SOCIAIS E HUMANAS",
+		acronym: "ICE",
+	},
+	{
+		_id: "60036a0b9fb4a00c5422a23f",
+		name: "FACULDADES INTEGRADAS DE PATOS",
+		acronym: "FIP",
+	},
+	{
+		_id: "60036a0b9fb4a00c5422a241",
+		name: "FACULDADE DE TECNOLOGIA IPUC",
+		acronym: "FATIPUC",
+	},
+	{
+		_id: "60036a0b9fb4a00c5422a243",
+		name: "FACULDADE INED DE RIO CLARO",
+		acronym: "CBTA",
+	},
+	{
+		_id: "60036a0c9fb4a00c5422a245",
+		name: "FACULDADE DE TECNOLOGIA TERMOMECÂNICA",
+		acronym: "FTT",
+	},
+	{
+		_id: "60036a0c9fb4a00c5422a247",
+		name: "FACULDADE DE TECNOLOGIA INTERNACIONAL",
+		acronym: "FATEC INTERNACIONAL",
+	},
+	{
+		_id: "60036a0c9fb4a00c5422a24a",
+		name: "FACULDADE DE TECNOLOGIA SÃO FRANCISCO",
+		acronym: "FATESF",
+	},
+	{
+		_id: "60036a0c9fb4a00c5422a24c",
+		name: "FACULDADE DE ENSINO SUPERIOR DE CATALÃO",
+		acronym: "FACULDADE CESUC",
+	},
+	{
+		_id: "60036a0d9fb4a00c5422a24e",
+		name: "INSTITUTO DE EDUCAÇÃO E ENSINO SUPERIOR DE CAMPINAS",
+		acronym: "IESCAMP",
+	},
+	{
+		_id: "60036a0d9fb4a00c5422a250",
+		name: "FACULDADE DE TECNOLOGIA TECBRASIL",
+		acronym: "Ftec Caxias do Sul",
+	},
+	{
+		_id: "60036a0d9fb4a00c5422a252",
+		name: "FACULDADE DE TECNOLOGIA SENAC RIO",
+		acronym: "FATEC",
+	},
+	{
+		_id: "60036a0d9fb4a00c5422a254",
+		name: "FACULDADE DE TECNOLOGIA DE TERESINA",
+		acronym: "FACULDADE CET",
+	},
+	{
+		_id: "60036a0e9fb4a00c5422a256",
+		name:
+			"INSTITUTO DE EDUCAÇÃO SUPERIOR PRESIDENTE KENNEDY - CENTRO DE FORMAÇÃO DE PROFISSIONAIS DE EDUCAÇÃO",
+		acronym: "IFESP",
+	},
+	{ _id: "60036a0e9fb4a00c5422a259", name: "FACULDADE GUARAÍ", acronym: "FAG" },
+	{
+		_id: "60036a0e9fb4a00c5422a25c",
+		name: "FACULDADE SÃO FRANCISCO DE JUAZEIRO",
+		acronym: "FASJ",
+	},
+	{
+		_id: "60036a0f9fb4a00c5422a25f",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE OLIVEIRA",
+		acronym: "ISEOL",
+	},
+	{
+		_id: "60036a0f9fb4a00c5422a261",
+		name: "CENTRO UNIVERSITÁRIO DE PATOS DE MINAS",
+		acronym: "UNIPAM",
+	},
+	{
+		_id: "60036a0f9fb4a00c5422a263",
+		name: "CENTRO UNIVERSITÁRIO DO SUL DE MINAS",
+		acronym: "UNIS-MG",
+	},
+	{
+		_id: "60036a109fb4a00c5422a266",
+		name: "FACULDADE DE GETÚLIO VARGAS",
+		acronym: "FACULDADE IDEAU",
+	},
+	{
+		_id: "60036a109fb4a00c5422a268",
+		name: "UNIVERSIDADE ESTADUAL DO RIO GRANDE DO SUL",
+		acronym: "UERGS",
+	},
+	{
+		_id: "60036a109fb4a00c5422a26a",
+		name: "FACULDADE DE TEOLOGIA INTEGRADA",
+		acronym: "FATIN",
+	},
+	{
+		_id: "60036a109fb4a00c5422a26c",
+		name: "FACULDADE MONTESSORIANO DE SALVADOR",
+		acronym: "FAMA",
+	},
+	{
+		_id: "60036a119fb4a00c5422a26e",
+		name: "FACULDADE MISSIONEIRA DO PARANÁ",
+		acronym: "FAMIPAR",
+	},
+	{
+		_id: "60036a119fb4a00c5422a270",
+		name: "FACULDADE PARAÍSO DO CEARÁ",
+		acronym: "FAP",
+	},
+	{ _id: "60036a119fb4a00c5422a272", name: "FACULDADE RAÍZES", acronym: "SER" },
+	{
+		_id: "60036a119fb4a00c5422a274",
+		name: "FACULDADE DA ACADEMIA BRASILEIRA DE EDUCAÇÃO E CULTURA",
+		acronym: "FABEC",
+	},
+	{
+		_id: "60036a129fb4a00c5422a276",
+		name: "CENTRO UNIVERSITÁRIO DE LAVRAS",
+		acronym: "UNILAVRAS",
+	},
+	{
+		_id: "60036a129fb4a00c5422a279",
+		name: "INSTITUTO DE ENSINO SUPERIOR MÚLTIPLO",
+		acronym: "IESM",
+	},
+	{
+		_id: "60036a129fb4a00c5422a27b",
+		name: "FACULDADE DE SAÚDE DE SÃO PAULO",
+		acronym: "FASSP",
+	},
+	{
+		_id: "60036a129fb4a00c5422a27e",
+		name: "FACULDADE EÇA DE QUEIROS",
+		acronym: "FACEQ",
+	},
+	{
+		_id: "60036a139fb4a00c5422a281",
+		name: "FACULDADE JOSÉ AUGUSTO VIEIRA",
+		acronym: "FJAV",
+	},
+	{ _id: "60036a139fb4a00c5422a283", name: "FACULDADE ALFA", acronym: "FA" },
+	{
+		_id: "60036a139fb4a00c5422a285",
+		name: "FACULDADE DE MARKETING E NEGÓCIOS",
+		acronym: "UNIESSA",
+	},
+	{ _id: "60036a149fb4a00c5422a287", name: "FACULDADE LS", acronym: "FACELS" },
+	{
+		_id: "60036a149fb4a00c5422a28a",
+		name: "FACULDADE DO SERIDÓ",
+		acronym: "FAS",
+	},
+	{
+		_id: "60036a149fb4a00c5422a28c",
+		name: "FACULDADES INTEGRADAS DE CIÊNCIAS HUMANAS",
+		acronym: "SAÚDE E EDUCAÇÃO DE GUARULHOS",
+	},
+	{
+		_id: "60036a149fb4a00c5422a28e",
+		name: "FACULDADE DE ENSINO SUPERIOR DOM BOSCO",
+		acronym: "FACDOMBOSCO",
+	},
+	{
+		_id: "60036a159fb4a00c5422a290",
+		name: "Faculdade de Araraquara",
+		acronym: "FS",
+	},
+	{
+		_id: "60036a159fb4a00c5422a292",
+		name: "FACULDADE DE SAÚDE IBITURUNA",
+		acronym: "FASI",
+	},
+	{
+		_id: "60036a159fb4a00c5422a294",
+		name: "FACULDADE BOAS NOVAS DE CIÊNCIAS TEOLÓGICAS",
+		acronym: "SOCIAIS E BIOTECNOLÓGICAS",
+	},
+	{
+		_id: "60036a159fb4a00c5422a296",
+		name: "FACULDADE DO LITORAL CATARINENSE",
+		acronym: "FLC",
+	},
+	{
+		_id: "60036a169fb4a00c5422a299",
+		name: "FACULDADE INEDI",
+		acronym: "CESUCA",
+	},
+	{
+		_id: "60036a169fb4a00c5422a29b",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO IBITURUNA",
+		acronym: "ISEIB",
+	},
+	{
+		_id: "60036a169fb4a00c5422a29d",
+		name: "FACULDADE POLITÉCNICA DE CAMPINAS",
+		acronym: "POLICAMP",
+	},
+	{
+		_id: "60036a179fb4a00c5422a29f",
+		name: "INSTITUTO DE ENSINO SUPERIOR E PESQUISA",
+		acronym: "INESP",
+	},
+	{
+		_id: "60036a179fb4a00c5422a2a1",
+		name: "INSTITUTO SUPERIOR DE ENSINO E PESQUISA DE ITUIUTABA",
+		acronym: "ISEPI",
+	},
+	{
+		_id: "60036a179fb4a00c5422a2a4",
+		name: "FACULDADE DE FILOSOFIA DE PASSOS",
+		acronym: "FAFIPA",
+	},
+	{
+		_id: "60036a179fb4a00c5422a2a6",
+		name: "FACULDADE DE ENFERMAGEM DE PASSOS",
+		acronym: "FAENPA",
+	},
+	{
+		_id: "60036a189fb4a00c5422a2a8",
+		name: "FACULDADE DE DIREITO DE PASSOS",
+		acronym: "FADIPA",
+	},
+	{
+		_id: "60036a189fb4a00c5422a2aa",
+		name: "FACULDADE DE ENGENHARIA DE PASSOS",
+		acronym: "FEP",
+	},
+	{
+		_id: "60036a189fb4a00c5422a2ac",
+		name: "FACULDADE DE INFORMÁTICA DE PASSOS",
+		acronym: "FIP",
+	},
+	{
+		_id: "60036a189fb4a00c5422a2ae",
+		name: "FACULDADE DE SERVIÇO SOCIAL DE PASSOS",
+		acronym: "FASESP",
+	},
+	{
+		_id: "60036a199fb4a00c5422a2b0",
+		name: "FACULDADE DE NUTRIÇÃO DA FUNDAÇÃO DE ENSINO SUPERIOR DE PASSOS",
+		acronym: "FANUTRI",
+	},
+	{
+		_id: "60036a199fb4a00c5422a2b2",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE PASSOS",
+		acronym: "FAP",
+	},
+	{
+		_id: "60036a199fb4a00c5422a2b4",
+		name: "FACULDADE EDUCAÇÃO FÍSICA DE PASSOS",
+		acronym: "FADEF",
+	},
+	{
+		_id: "60036a199fb4a00c5422a2b6",
+		name: "FACULDADE DE MODA DE PASSOS",
+		acronym: "FAMOPA",
+	},
+	{
+		_id: "60036a1a9fb4a00c5422a2b8",
+		name: "FACULDADE DE FILOSOFIA E LETRAS DE DIAMANTINA",
+		acronym: "FAFIDIA",
+	},
+	{
+		_id: "60036a1a9fb4a00c5422a2bb",
+		name: "FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS NOSSA SENHORA DE SION",
+		acronym: "FAFI/SION",
+	},
+	{
+		_id: "60036a1a9fb4a00c5422a2bd",
+		name: "FACULDADE DE CIÊNCIAS EXATAS E HUMANAS DA CAMPANHA",
+		acronym: "FCCP",
+	},
+	{
+		_id: "60036a1a9fb4a00c5422a2bf",
+		name: "FACULDADE DE CIÊNCIAS JURÍDICAS DE DIAMANTINA",
+		acronym: "FCJ",
+	},
+	{
+		_id: "60036a1b9fb4a00c5422a2c1",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE DIVINÓPOLIS",
+		acronym: "ISED",
+	},
+	{
+		_id: "60036a1b9fb4a00c5422a2c4",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE CLÁUDIO",
+		acronym: "ISEC",
+	},
+	{
+		_id: "60036a1b9fb4a00c5422a2c7",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DO ALTO SÃO FRANCISCO",
+		acronym: "ISAF",
+	},
+	{
+		_id: "60036a1c9fb4a00c5422a2c9",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE ITUIUTABA",
+		acronym: "ISEDI",
+	},
+	{
+		_id: "60036a1c9fb4a00c5422a2cb",
+		name: "FACULDADE SENAC/RS",
+		acronym: "SENACRS",
+	},
+	{
+		_id: "60036a1c9fb4a00c5422a2cd",
+		name: "Centro de Ensino Superior de Conselheiro Lafaiete",
+		acronym: "CES-CL",
+	},
+	{
+		_id: "60036a1d9fb4a00c5422a2d0",
+		name: "FACULDADE PINHALZINHO",
+		acronym: "HORUS",
+	},
+	{
+		_id: "60036a1d9fb4a00c5422a2d3",
+		name: "FACULDADE DA FRONTEIRA - FAF",
+		acronym: "FAF",
+	},
+	{
+		_id: "60036a1d9fb4a00c5422a2d5",
+		name: "FACULDADE DE CIÊNCIAS EDUCACIONAIS DE SERGIPE",
+		acronym: "FCES",
+	},
+	{
+		_id: "60036a1e9fb4a00c5422a2d8",
+		name: "FACULDADE DE ADMINISTRAÇÃO DE EMPRESAS IBRAFEM",
+		acronym: "IBRAFEM",
+	},
+	{
+		_id: "60036a1e9fb4a00c5422a2da",
+		name: "FACULDADE VICENTINA - FAVI",
+		acronym: "FAVI",
+	},
+	{
+		_id: "60036a1e9fb4a00c5422a2dd",
+		name: "FACULDADE DE PRESIDENTE VENCESLAU",
+		acronym: "FAPREV",
+	},
+	{
+		_id: "60036a1e9fb4a00c5422a2df",
+		name: "FACULDADE DE CIÊNCIAS GERENCIAIS ALVES FORTES",
+		acronym: "FACE - ALFOR",
+	},
+	{
+		_id: "60036a1f9fb4a00c5422a2e1",
+		name: "FACULDADES INTEGRADAS DA VITÓRIA DE SANTO ANTÃO",
+		acronym: "FAINTVISA",
+	},
+	{
+		_id: "60036a1f9fb4a00c5422a2e3",
+		name: "FACULDADE DE CIÊNCIAS DA SAÚDE ARCHIMEDES THEODORO",
+		acronym: "FAC - SAUDE ARTHE",
+	},
+	{ _id: "60036a1f9fb4a00c5422a2e5", name: "FACULDADE JANGADA", acronym: "FJ" },
+	{
+		_id: "60036a1f9fb4a00c5422a2e7",
+		name: "FACULDADE CATÓLICA DE POUSO ALEGRE",
+		acronym: "FACAPA",
+	},
+	{
+		_id: "60036a209fb4a00c5422a2e9",
+		name:
+			"FACULDADE DE DIREITO DA FUNDAÇÃO ESCOLA SUPERIOR DO MINISTÉRIO PÚBLICO",
+		acronym: "",
+	},
+	{
+		_id: "60036a209fb4a00c5422a2eb",
+		name: "CENTRO UNIVERSITÁRIO EURÍPEDES DE MARÍLIA",
+		acronym: "UNIVEM",
+	},
+	{
+		_id: "60036a209fb4a00c5422a2ed",
+		name: "FACULDADE EVANGÉLICA DE TECNOLOGIA",
+		acronym: "CIÊNCIAS E BIOTECNOLOGIA DA CGADB",
+	},
+	{
+		_id: "60036a209fb4a00c5422a2f0",
+		name: "FACULDADE DE NANUQUE",
+		acronym: "FANAN",
+	},
+	{
+		_id: "60036a219fb4a00c5422a2f2",
+		name: "FACULDADE CERES",
+		acronym: "FACERES",
+	},
+	{
+		_id: "60036a219fb4a00c5422a2f4",
+		name: "FACULDADE DE TEOLOGIA EVANGÉLICA EM CURITIBA - FATEV",
+		acronym: "FATEV",
+	},
+	{
+		_id: "60036a219fb4a00c5422a2f6",
+		name: "FACULDADES INTEGRADAS SÉVIGNÉ",
+		acronym: "FAE SÉVIGNÉ",
+	},
+	{
+		_id: "60036a229fb4a00c5422a2f9",
+		name: "FACULDADE ANGLICANA DE TAPEJARA",
+		acronym: "FAT",
+	},
+	{
+		_id: "60036a229fb4a00c5422a2fc",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE MINAS GERAIS",
+		acronym: "IESMIG",
+	},
+	{
+		_id: "60036a229fb4a00c5422a2fe",
+		name: "FACULDADE NOVO HAMBURGO",
+		acronym: "FACULDADE IENH",
+	},
+	{
+		_id: "60036a239fb4a00c5422a301",
+		name: "FACULDADE DE DESENVOLVIMENTO E INTEGRAÇÃO REGIONAL",
+		acronym: "FADIRE",
+	},
+	{
+		_id: "60036a239fb4a00c5422a303",
+		name: "FACULDADE TEOLÓGICA BATISTA DE BRASÍLIA",
+		acronym: "FTBB",
+	},
+	{
+		_id: "60036a239fb4a00c5422a305",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO SANTA CRUZ",
+		acronym: "ISED",
+	},
+	{
+		_id: "60036a239fb4a00c5422a307",
+		name: "FACULDADE SANTA CRUZ",
+		acronym: "FACRUZ",
+	},
+	{
+		_id: "60036a249fb4a00c5422a309",
+		name: "FACULDADE DIOCESANA SÃO JOSÉ",
+		acronym: "FADISI",
+	},
+	{
+		_id: "60036a249fb4a00c5422a30b",
+		name: "FACULDADE DOM PEDRO II",
+		acronym: "FDPII",
+	},
+	{
+		_id: "60036a249fb4a00c5422a30d",
+		name: "FACULDADE DE ENFERMAGEM SÃO VICENTE DE PAULA",
+		acronym: "FESVIP",
+	},
+	{
+		_id: "60036a249fb4a00c5422a30f",
+		name: "FACULDADE AMÉRICA LATINA",
+		acronym: "",
+	},
+	{
+		_id: "60036a249fb4a00c5422a311",
+		name: "FACULDADES INTEGRADAS DO BRASIL",
+		acronym: "FACBRASIL",
+	},
+	{
+		_id: "60036a259fb4a00c5422a313",
+		name: "FACULDADES INTEGRADAS TORRICELLI",
+		acronym: "FIT",
+	},
+	{
+		_id: "60036a259fb4a00c5422a315",
+		name: "ESCOLA SUPERIOR ASSOCIADA DE GOIÂNIA",
+		acronym: "ESUP",
+	},
+	{
+		_id: "60036a259fb4a00c5422a317",
+		name: "FACULDADES INTEGRADAS IPITANGA",
+		acronym: "UNIBAHIA",
+	},
+	{
+		_id: "60036a259fb4a00c5422a319",
+		name: "FACULDADES INTEGRADAS PROMOVE DE BRASILIA",
+		acronym: "",
+	},
+	{
+		_id: "60036a269fb4a00c5422a31b",
+		name: "FACULDADES INTEGRADAS DA UNIÃO DE ENSINO SUPERIOR CERTO",
+		acronym: "UNICERTO",
+	},
+	{
+		_id: "60036a269fb4a00c5422a31e",
+		name: "FACULDADE ANHANGUERA DE VALINHOS",
+		acronym: "",
+	},
+	{
+		_id: "60036a269fb4a00c5422a320",
+		name: "FACULDADES INTEGRADAS IESGO",
+		acronym: "IESGO",
+	},
+	{
+		_id: "60036a279fb4a00c5422a322",
+		name: "ESCOLA SUPERIOR DE CIÊNCIAS SOCIAIS",
+		acronym: "FGV",
+	},
+	{
+		_id: "60036a279fb4a00c5422a324",
+		name: "FACULDADE PERNAMBUCANA DE SAÚDE",
+		acronym: "FPS",
+	},
+	{
+		_id: "60036a279fb4a00c5422a326",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS E EXATAS DO SERTÃO DO SÃO FRANCISCO",
+		acronym: "FACESF",
+	},
+	{
+		_id: "60036a279fb4a00c5422a328",
+		name: "FACULDADE MARIO SCHENBERG",
+		acronym: "FMS",
+	},
+	{
+		_id: "60036a289fb4a00c5422a32b",
+		name: "FACULDADE CATÓLICA NOSSA SENHORA DAS VITÓRIAS",
+		acronym: "FCNSV",
+	},
+	{
+		_id: "60036a289fb4a00c5422a32d",
+		name: "FACULDADE DAMAS DA INSTRUÇÃO CRISTÃ",
+		acronym: "FADIC",
+	},
+	{
+		_id: "60036a289fb4a00c5422a32f",
+		name: "CENTRO UNIVERSITÁRIO DA FUNDAÇÃO EDUCACIONAL DE BARRETOS",
+		acronym: "UNIFEB",
+	},
+	{
+		_id: "60036a299fb4a00c5422a332",
+		name: "FACULDADE CATÓLICA SANTA TERESINHA",
+		acronym: "FCST",
+	},
+	{
+		_id: "60036a299fb4a00c5422a334",
+		name: "FACULDADE ANHANGUERA DE CUIABÁ",
+		acronym: "FAC",
+	},
+	{
+		_id: "60036a299fb4a00c5422a336",
+		name: "FACULDADE DE COMPUTAÇÃO DE MONTES CLAROS",
+		acronym: "FACOMP",
+	},
+	{
+		_id: "60036a299fb4a00c5422a338",
+		name: "FACULDADE CIDADE VERDE",
+		acronym: "FCV",
+	},
+	{
+		_id: "60036a2a9fb4a00c5422a33a",
+		name: "FACULDADE EVANGÉLICA",
+		acronym: "FE",
+	},
+	{
+		_id: "60036a2a9fb4a00c5422a33c",
+		name: "FACULDADE FILADÉLFIA",
+		acronym: "FAFIL",
+	},
+	{
+		_id: "60036a2a9fb4a00c5422a33f",
+		name: "FACULDADE DOM LUIS DE ORLEANS E BRAGANÇA",
+		acronym: "FARRP",
+	},
+	{
+		_id: "60036a2a9fb4a00c5422a341",
+		name: "SINAL - FACULDADE DE TEOLOGIA E FILOSOFIA",
+		acronym: "SINAL",
+	},
+	{
+		_id: "60036a2b9fb4a00c5422a343",
+		name: "FACULDADE DE TECNOLOGIA DARCY RIBEIRO",
+		acronym: "FTDR",
+	},
+	{
+		_id: "60036a2b9fb4a00c5422a345",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DO MUNICÍPIO DE ITAPERUNA",
+		acronym: "ISEMI",
+	},
+	{
+		_id: "60036a2b9fb4a00c5422a348",
+		name: "FACULDADE UNILAGOS",
+		acronym: "UNILAGOS",
+	},
+	{
+		_id: "60036a2c9fb4a00c5422a34b",
+		name: "FUNDAÇÃO DE ENSINO SUPERIOR DE CLEVELÂNDIA",
+		acronym: "FESC",
+	},
+	{
+		_id: "60036a2c9fb4a00c5422a34e",
+		name: "FACULDADES INTEGRADAS DO VALE DO IVAÍ",
+		acronym: "",
+	},
+	{
+		_id: "60036a2c9fb4a00c5422a350",
+		name: "FACULDADE PEDRO II",
+		acronym: "FAPE2",
+	},
+	{
+		_id: "60036a2c9fb4a00c5422a352",
+		name: "FACULDADE DE TECNOLOGIA TUPY DE SÃO BENTO DO SUL",
+		acronym: "FTT-SBS",
+	},
+	{
+		_id: "60036a2d9fb4a00c5422a354",
+		name: "FACULDADE DE TECNOLOGIA IPEP DE CAMPINAS",
+		acronym: "FATEC CAMPINAS",
+	},
+	{
+		_id: "60036a2d9fb4a00c5422a356",
+		name: "FACULDADE DE TECNOLOGIA SAINT PASTOUS",
+		acronym: "FSP",
+	},
+	{
+		_id: "60036a2d9fb4a00c5422a358",
+		name: "FACULDADE PORTAL",
+		acronym: "PORTAL",
+	},
+	{
+		_id: "60036a2d9fb4a00c5422a35a",
+		name: "ESCOLA SUPERIOR NACIONAL DE SEGUROS",
+		acronym: "ESNS",
+	},
+	{
+		_id: "60036a2e9fb4a00c5422a35c",
+		name: "FACULDADE CIÊNCIAS DA VIDA",
+		acronym: "FCV",
+	},
+	{
+		_id: "60036a2e9fb4a00c5422a35e",
+		name: "FACULDADE MARANHENSE SÃO JOSÉ DOS COCAIS",
+		acronym: "FSJ",
+	},
+	{
+		_id: "60036a2e9fb4a00c5422a361",
+		name: "FACULDADE DE EDUCAÇÃO DE BACABAL - FEBAC",
+		acronym: "FEBAC",
+	},
+	{
+		_id: "60036a2f9fb4a00c5422a363",
+		name: "FACULDADE DE TECNOLOGIA SÃO FRANCISCO",
+	},
+	{
+		_id: "60036a2f9fb4a00c5422a365",
+		name: "FACULDADE PAULISTA DE PESQUISA E ENSINO SUPERIOR",
+		acronym: "FAPPES",
+	},
+	{
+		_id: "60036a2f9fb4a00c5422a367",
+		name: "FACULDADES INTEGRADAS DOM PEDRO II",
+		acronym: "DOMPEDRO",
+	},
+	{
+		_id: "60036a2f9fb4a00c5422a369",
+		name: "FACULDADES INTEGRADAS ADVENTISTAS DE MINAS GERAIS",
+		acronym: "FADMINAS",
+	},
+	{
+		_id: "60036a309fb4a00c5422a36c",
+		name: "FACULDADE DE ALMENARA",
+		acronym: "ALFA",
+	},
+	{
+		_id: "60036a309fb4a00c5422a36f",
+		name: "FACULDADE SERRA DA MESA",
+		acronym: "FASEM",
+	},
+	{
+		_id: "60036a309fb4a00c5422a371",
+		name: "Centro de Educação Superior Única",
+		acronym: "UNICA",
+	},
+	{ _id: "60036a309fb4a00c5422a373", name: "FACULDADE OMNI", acronym: "OMNI" },
+	{
+		_id: "60036a319fb4a00c5422a375",
+		name: "FACULDADE IBGEN - INSTITUTO BRASILEIRO DE GESTÃO DE NEGÓCIOS",
+		acronym: "IBGEN",
+	},
+	{
+		_id: "60036a319fb4a00c5422a378",
+		name: "FACULDADE MADRE TEREZA",
+		acronym: "FAMAT",
+	},
+	{
+		_id: "60036a319fb4a00c5422a37a",
+		name: "FACULDADE TEOLÓGICA BATISTA DE SÃO PAULO",
+		acronym: "FTBSP",
+	},
+	{
+		_id: "60036a329fb4a00c5422a37c",
+		name: "FACULDADE DE TECNOLOGIA PASTOR DOHMS",
+		acronym: "TECNODOHMS",
+	},
+	{
+		_id: "60036a329fb4a00c5422a37e",
+		name: "FACULDADE SÃO TOMAZ DE AQUINO",
+		acronym: "FSTA",
+	},
+	{
+		_id: "60036a329fb4a00c5422a380",
+		name: "INSTITUTO UVB.BR",
+		acronym: "IUVB",
+	},
+	{
+		_id: "60036a329fb4a00c5422a382",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE MATO GROSSO",
+		acronym: "IESMT",
+	},
+	{
+		_id: "60036a339fb4a00c5422a384",
+		name: "INSTITUTO DE ENSINO SUPERIOR DE CURITIBA",
+		acronym: "IESC",
+	},
+	{
+		_id: "60036a339fb4a00c5422a386",
+		name: "FACULDADE DE ARACAJU",
+		acronym: "FACAR",
+	},
+	{
+		_id: "60036a339fb4a00c5422a388",
+		name: "FACULDADE DE TECNOLOGIA RADIAL SANTO ANDRÉ",
+		acronym: "FATEC  RADIAL",
+	},
+	{
+		_id: "60036a339fb4a00c5422a38a",
+		name: "FACULDADE DE TECNOLOGIA CACHOEIRO DE ITAPEMIRIM",
+		acronym: "FACI",
+	},
+	{
+		_id: "60036a349fb4a00c5422a38c",
+		name: "FACULDADE PARAENSE DE ENSINO",
+		acronym: "FAPEN",
+	},
+	{
+		_id: "60036a349fb4a00c5422a38e",
+		name: "INSTITUTO DE ENSINO SUPERIOR DO RIO GRANDE DO NORTE",
+		acronym: "IESRN",
+	},
+	{
+		_id: "60036a349fb4a00c5422a390",
+		name: "INSTITUTO MARANHENSE DE ENSINO E CULTURA",
+		acronym: "IMEC",
+	},
+	{
+		_id: "60036a349fb4a00c5422a392",
+		name: "FACULDADE DE ENSINO DE MINAS GERAIS",
+		acronym: "FACEMG",
+	},
+	{
+		_id: "60036a349fb4a00c5422a394",
+		name: "FACULDADE DE ENSINO SUPERIOR DA AMAZÔNIA",
+		acronym: "FESAM",
+	},
+	{
+		_id: "60036a359fb4a00c5422a396",
+		name: "FACULDADE JUIZ DE FORA",
+		acronym: "FJF",
+	},
+	{
+		_id: "60036a359fb4a00c5422a399",
+		name: "FACULDADE EVANGÉLICA DE GOIANÉSIA",
+		acronym: "",
+	},
+	{
+		_id: "60036a359fb4a00c5422a39b",
+		name: "FACULDADE DE TECNOLOGIA ENSITEC",
+		acronym: "ENSITEC",
+	},
+	{
+		_id: "60036a369fb4a00c5422a39d",
+		name: "FACULDADE DE TECNOLOGIA DE MINAS GERAIS",
+		acronym: "FATEMG",
+	},
+	{ _id: "60036a369fb4a00c5422a3a0", name: "FACULDADE FRUTAL", acronym: "FAF" },
+	{
+		_id: "60036a369fb4a00c5422a3a2",
+		name: "FACULDADE GUAIRACÁ",
+		acronym: "FAG",
+	},
+	{ _id: "60036a369fb4a00c5422a3a4", name: "FACULDADE JAUENSE", acronym: "" },
+	{
+		_id: "60036a379fb4a00c5422a3a6",
+		name: "FACULDADE DE TECNOLOGIA SENAC DO RIO GRANDE DO SUL",
+		acronym: "SENAC/RS",
+	},
+	{
+		_id: "60036a379fb4a00c5422a3a9",
+		name: "FACULDADE DE TECNOLOGIA DA PARAÍBA",
+		acronym: "FATECPB",
+	},
+	{
+		_id: "60036a379fb4a00c5422a3ab",
+		name: "FACULDADE DE TECNOLOGIA IAPEC",
+		acronym: "IAPEC",
+	},
+	{
+		_id: "60036a389fb4a00c5422a3ad",
+		name: "FACULDADE MAURÍCIO DE NASSAU DE JOÃO PESSOA",
+		acronym: "FMN JOÃO PESSOA",
+	},
+	{
+		_id: "60036a389fb4a00c5422a3af",
+		name: "FACULDADE DE DIREITO DE ALTA FLORESTA",
+		acronym: "",
+	},
+	{
+		_id: "60036a389fb4a00c5422a3b1",
+		name: "INSTITUTO DE EDUCAÇÃO SUPERIOR DE POUSO ALEGRE",
+		acronym: "FAPA",
+	},
+	{
+		_id: "60036a389fb4a00c5422a3b3",
+		name: "FACULDADE VASCO DA GAMA",
+		acronym: "FVG",
+	},
+	{
+		_id: "60036a389fb4a00c5422a3b5",
+		name: "FACULDADE DE TECNOLOGIA DO UNIUOL",
+		acronym: "UNIUOL",
+	},
+	{
+		_id: "60036a399fb4a00c5422a3b7",
+		name: "FACULDADE DE TECNOLOGIA NOVO RUMO",
+		acronym: "",
+	},
+	{
+		_id: "60036a399fb4a00c5422a3b9",
+		name: "CENTRO UNIVERSITÁRIO FACVEST",
+		acronym: "FACVEST",
+	},
+	{
+		_id: "60036a399fb4a00c5422a3bb",
+		name: "FACULDADE BAIANA DE DIREITO E GESTÃO",
+		acronym: "",
+	},
+	{
+		_id: "60036a399fb4a00c5422a3bd",
+		name: "FUNDAÇÃO UNIVERSIDADE FEDERAL DO TOCANTINS",
+		acronym: "UFT",
+	},
+	{
+		_id: "60036a3a9fb4a00c5422a3bf",
+		name: "FACULDADE MAURÍCIO DE NASSAU DE NATAL",
+		acronym: "FMN NATAL",
+	},
+	{
+		_id: "60036a3a9fb4a00c5422a3c1",
+		name: "FACULDADE DAS ÁGUAS EMENDADAS - FAE",
+		acronym: "FAE",
+	},
+	{
+		_id: "60036a3a9fb4a00c5422a3c3",
+		name: "FACULDADE LUCIANO FEIJÃO",
+		acronym: "FLF",
+	},
+	{
+		_id: "60036a3a9fb4a00c5422a3c5",
+		name: "FACULDADE REGIONAL DE ALAGOINHAS",
+		acronym: "FARAL",
+	},
+	{
+		_id: "60036a3b9fb4a00c5422a3c7",
+		name: "FACULDADE BRASILEIRA DE EDUCAÇÃO E CULTURA",
+		acronym: "FABEC BRASIL",
+	},
+	{
+		_id: "60036a3b9fb4a00c5422a3c9",
+		name: "FACULDADE MAUÁ DE BRASÍLIA",
+		acronym: "MAUADF",
+	},
+	{
+		_id: "60036a3b9fb4a00c5422a3cb",
+		name: "INSTITUTO FLORENCE DE ENSINO SUPERIOR",
+		acronym: "IFES",
+	},
+	{
+		_id: "60036a3b9fb4a00c5422a3cd",
+		name: "ESCOLA SUPERIOR PROFESSOR PAULO MARTINS",
+		acronym: "ESPAM",
+	},
+	{
+		_id: "60036a3c9fb4a00c5422a3d0",
+		name: "CENTRO UNIVERSITÁRIO DA FUNDAÇÃO EDUCACIONAL GUAXUPÉ",
+		acronym: "UNIFEG",
+	},
+	{
+		_id: "60036a3c9fb4a00c5422a3d2",
+		name: "AVM - FACULDADE INTEGRADA",
+		acronym: "IAVM",
+	},
+	{
+		_id: "60036a3c9fb4a00c5422a3d5",
+		name: "FACULDADE BRASIL CENTRAL",
+		acronym: "FBC",
+	},
+	{
+		_id: "60036a3d9fb4a00c5422a3d7",
+		name: "FACULDADE DECISION DE NEGÓCIOS",
+		acronym: "FACULDADE DECISION",
+	},
+	{
+		_id: "60036a3d9fb4a00c5422a3d9",
+		name: "FACULDADE MAURÍCIO DE NASSAU DE CAMPINA GRANDE",
+		acronym: "FMN CG",
+	},
+	{
+		_id: "60036a3d9fb4a00c5422a3db",
+		name: "FACULDADE DE INTEGRAÇÃO DO SERTÃO",
+		acronym: "FIS",
+	},
+	{ _id: "60036a3d9fb4a00c5422a3dd", name: "FACULDADE MUNDIAL", acronym: "" },
+	{
+		_id: "60036a3e9fb4a00c5422a3df",
+		name: "FACULDADE DE TECNOLOGIA SENAI ROBERTO MANGE",
+		acronym: "FATEC SENAI RM",
+	},
+	{
+		_id: "60036a3e9fb4a00c5422a3e1",
+		name: "FACULDADE ARNALDO HORÁCIO FERREIRA",
+		acronym: "FAAHF",
+	},
+	{
+		_id: "60036a3e9fb4a00c5422a3e3",
+		name: "FACULDADE MÉTODO DE SÃO PAULO",
+		acronym: "FAMESP",
+	},
+	{
+		_id: "60036a3e9fb4a00c5422a3e6",
+		name: "INSTITUTO DE EDUCAÇÃO SUPERIOR RAIMUNDO SÁ",
+		acronym: "IESRSA",
+	},
+	{
+		_id: "60036a3f9fb4a00c5422a3e8",
+		name: "FACULDADE ANHANGUERA DE LIMEIRA",
+		acronym: "",
+	},
+	{
+		_id: "60036a3f9fb4a00c5422a3ea",
+		name: "Faculdade Anhanguera de Indaiatuba",
+		acronym: "",
+	},
+	{
+		_id: "60036a3f9fb4a00c5422a3ed",
+		name: "FACULDADE ALIANÇA",
+		acronym: "FACE",
+	},
+	{
+		_id: "60036a409fb4a00c5422a3f0",
+		name: "FACULDADE DE ENSINO SUPERIOR SANTA BARBARA",
+		acronym: "FAESB",
+	},
+	{
+		_id: "60036a409fb4a00c5422a3f2",
+		name: "FACULDADE DE TECNOLOGIA SENAC TUBARÃO",
+		acronym: "SENAC",
+	},
+	{
+		_id: "60036a409fb4a00c5422a3f4",
+		name: "FACULDADE DE TECNOLOGIA SENAC CHAPECÓ",
+		acronym: "SENAC",
+	},
+	{
+		_id: "60036a409fb4a00c5422a3f6",
+		name: "FACULDADE DE TECNOLOGIA SENAC BLUMENAU",
+		acronym: "SENAC",
+	},
+	{
+		_id: "60036a419fb4a00c5422a3f8",
+		name: "FACULDADE DE TECNOLOGIA LUIZ ADELAR SCHEUER",
+		acronym: "FATEC- JF",
+	},
+	{
+		_id: "60036a419fb4a00c5422a3fa",
+		name: "FACULDADE DE CIÊNCIAS JURÍDICAS E GERENCIAIS DE OLIVEIRA",
+		acronym: "FACIJUGO",
+	},
+	{
+		_id: "60036a419fb4a00c5422a3fc",
+		name: "FACULDADES INTEGRADAS DE CATAGUASES",
+		acronym: "FIC",
+	},
+	{
+		_id: "60036a419fb4a00c5422a3fe",
+		name: "FACULDADE DE TECNOLOGIA SENAI CIMATEC",
+		acronym: "SENAI CIMATEC",
+	},
+	{
+		_id: "60036a429fb4a00c5422a400",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO CARLOS CHAGAS",
+		acronym: "ISECC",
+	},
+	{
+		_id: "60036a429fb4a00c5422a402",
+		name: "CENTRO UNIVERSITÁRIO DE CARATINGA",
+		acronym: "UNEC",
+	},
+	{
+		_id: "60036a429fb4a00c5422a404",
+		name: "CENTRO SUPERIOR DE ENSINO E PESQUISA DE MACHADO",
+		acronym: "CESEP",
+	},
+	{
+		_id: "60036a439fb4a00c5422a407",
+		name: "FACULDADE SÃO FRANCISCO DE PIUMHI",
+		acronym: "FASPI",
+	},
+	{
+		_id: "60036a439fb4a00c5422a409",
+		name: "UNIVERSIDADE DE RIO VERDE",
+		acronym: "FESURV",
+	},
+	{
+		_id: "60036a439fb4a00c5422a40b",
+		name: "FACULDADE DE TECNOLOGIA DO AMAPÁ",
+		acronym: "META",
+	},
+	{
+		_id: "60036a439fb4a00c5422a40d",
+		name: "FACULDADE DE TECNOLOGIA PENTÁGONO",
+		acronym: "FATEP",
+	},
+	{ _id: "60036a439fb4a00c5422a40f", name: "FACULDADE DE BAURU", acronym: "-" },
+	{
+		_id: "60036a449fb4a00c5422a411",
+		name: "FACULDADE DE TECNOLOGIA INTEGRAL",
+		acronym: "CETI",
+	},
+	{
+		_id: "60036a449fb4a00c5422a413",
+		name: "FACULDADE DE TECNOLOGIA CENACAP",
+		acronym: "CENACAP",
+	},
+	{
+		_id: "60036a449fb4a00c5422a416",
+		name: "CENTRO UNIVERSITÁRIO DE FORMIGA",
+		acronym: "UNIFORMG",
+	},
+	{
+		_id: "60036a459fb4a00c5422a418",
+		name: "FUNDAÇÃO UNIVERSIDADE FEDERAL DO VALE DO SÃO FRANCISCO",
+		acronym: "UNIVASF",
+	},
+	{
+		_id: "60036a459fb4a00c5422a41a",
+		name: "FACULDADE DE TECNOLOGIA DE JOÃO PESSOA",
+		acronym: "FATEC",
+	},
+	{
+		_id: "60036a459fb4a00c5422a41c",
+		name: "FACULDADE DE TECNOLOGIA ANCHIETA",
+		acronym: "FTA",
+	},
+	{
+		_id: "60036a459fb4a00c5422a41e",
+		name: "FACULDADE DE TECNOLOGIA SÃO MATEUS",
+		acronym: "FATESM",
+	},
+	{
+		_id: "60036a469fb4a00c5422a420",
+		name: "FACULDADE JK - ASA NORTE",
+		acronym: "-",
+	},
+	{
+		_id: "60036a469fb4a00c5422a422",
+		name: "FACULDADE DE TECNOLOGIA CETEP",
+		acronym: "CETEP",
+	},
+	{
+		_id: "60036a469fb4a00c5422a425",
+		name: "FACULDADE EVANGÉLICA CRISTO REI",
+		acronym: "FECR",
+	},
+	{
+		_id: "60036a469fb4a00c5422a427",
+		name: "FACULDADE SENAC PERNAMBUCO",
+		acronym: "SENACPE",
+	},
+	{
+		_id: "60036a479fb4a00c5422a429",
+		name: "FACULDADE DE TECNOLOGIA INFNET RIO DE JANEIRO",
+		acronym: "INSTITUTO INFNET",
+	},
+	{
+		_id: "60036a479fb4a00c5422a42b",
+		name: "FACULDADE DE ENSINO SUPERIOR DO INTERIOR PAULISTA",
+		acronym: "FAIP",
+	},
+	{
+		_id: "60036a479fb4a00c5422a42e",
+		name: "FACULDADE CENECISTA DE SENHOR DO BONFIM",
+		acronym: "FACESB",
+	},
+	{
+		_id: "60036a489fb4a00c5422a430",
+		name: "FACULDADE DE TECNOLOGIA SENAC PELOTAS",
+		acronym: "FATEC SENAC PELOTAS",
+	},
+	{
+		_id: "60036a489fb4a00c5422a432",
+		name: "FATECE - FACULDADE DE TECNOLOGIA",
+		acronym: "CIÊNCIAS E EDUCAÇÃO",
+	},
+	{
+		_id: "60036a489fb4a00c5422a434",
+		name: "FACULDADE DE TECNOLOGIA SENAC PASSO FUNDO",
+		acronym: "SENAC PASSO FUNDO",
+	},
+	{
+		_id: "60036a489fb4a00c5422a436",
+		name: "FACULDADE DE TECNOLOGIA RADIAL CURITIBA",
+		acronym: "FATEC RADIAL CTBA",
+	},
+	{
+		_id: "60036a499fb4a00c5422a438",
+		name: "CENTRO UNIVERSITÁRIO METODISTA",
+		acronym: "IPA",
+	},
+	{
+		_id: "60036a499fb4a00c5422a43a",
+		name: "CENTRO UNIVERSITÁRIO SENAC",
+		acronym: "SENACSP",
+	},
+	{
+		_id: "60036a499fb4a00c5422a43c",
+		name: "FACULDADE ANHANGUERA DE RIO CLARO",
+		acronym: "",
+	},
+	{
+		_id: "60036a499fb4a00c5422a43e",
+		name: "CENTRO UNIVERSITÁRIO PADRE ANCHIETA",
+		acronym: "UNIANCHIETA",
+	},
+	{
+		_id: "60036a4a9fb4a00c5422a440",
+		name: "FACULDADE DE TECNOLOGIA DE BOTUCATU",
+		acronym: "FATEC BT",
+	},
+	{
+		_id: "60036a4a9fb4a00c5422a442",
+		name: "INSTITUTO NACIONAL DE EDUCAÇÃO DE SURDOS",
+		acronym: "INES",
+	},
+	{
+		_id: "60036a4a9fb4a00c5422a444",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DO PARANÁ",
+		acronym: "INSEP",
+	},
+	{
+		_id: "60036a4a9fb4a00c5422a446",
+		name: "FACULDADE UNIÃO DE GOYAZES",
+		acronym: "FUG",
+	},
+	{
+		_id: "60036a4b9fb4a00c5422a448",
+		name: "FACULDADE DE TECNOLOGIA DE GARÇA",
+		acronym: "FATECGA",
+	},
+	{
+		_id: "60036a4b9fb4a00c5422a44a",
+		name: "FACULDADE DE TECNOLOGIA DE JUNDIAÍ",
+		acronym: "FATEC/JD",
+	},
+	{
+		_id: "60036a4b9fb4a00c5422a44c",
+		name: "FACULDADE DE TECNOLOGIA DE MAUÁ",
+		acronym: "FATEC MAUÁ",
+	},
+	{
+		_id: "60036a4b9fb4a00c5422a44e",
+		name: "FACULDADE DE TECNOLOGIA DE MOCOCA",
+		acronym: "FATEC",
+	},
+	{
+		_id: "60036a4b9fb4a00c5422a450",
+		name: "FACULDADE DE TECNOLOGIA DE SÃO JOSÉ DO RIO PRETO",
+		acronym: "FATECRP",
+	},
+	{
+		_id: "60036a4c9fb4a00c5422a452",
+		name: "FACULDADE DE TECNOLOGIA ZONA LESTE",
+		acronym: "FATEC-ZL",
+	},
+	{
+		_id: "60036a4c9fb4a00c5422a455",
+		name: "FACULDADE DE ITAPECERICA DA SERRA",
+		acronym: "FIT",
+	},
+	{
+		_id: "60036a4c9fb4a00c5422a458",
+		name: "FACULDADE POLITEC",
+		acronym: "FAP",
+	},
+	{
+		_id: "60036a4d9fb4a00c5422a45a",
+		name: "CENTRO UNIVERSITÁRIO FLUMINENSE",
+		acronym: "UNIFLU",
+	},
+	{
+		_id: "60036a4d9fb4a00c5422a45c",
+		name: "FACULDADE DE TECNOLOGIA DE CATALÃO",
+		acronym: "FATECA",
+	},
+	{
+		_id: "60036a4d9fb4a00c5422a45e",
+		name: "FACULDADE DE TECNOLOGIA INTENSIVA",
+		acronym: "FATECI",
+	},
+	{
+		_id: "60036a4d9fb4a00c5422a460",
+		name: "FACULDADE TECNOLOGIA EDUVALE - AVARÉ",
+		acronym: "FATEC EDUVALE",
+	},
+	{
+		_id: "60036a4e9fb4a00c5422a462",
+		name: "FACULDADE DE TECNOLOGIA TUPY CURITIBA",
+		acronym: "FTT-CWB",
+	},
+	{
+		_id: "60036a4e9fb4a00c5422a464",
+		name: "CENTRO DE EDUCAÇÃO SUPERIOR BARNABITA",
+		acronym: "CESB",
+	},
+	{
+		_id: "60036a4e9fb4a00c5422a467",
+		name: "FACULDADE DE CIÊNCIAS GERENCIAIS",
+		acronym: "FACIG",
+	},
+	{
+		_id: "60036a4f9fb4a00c5422a469",
+		name: "FACULDADE DE TECNOLOGIA FAMA",
+		acronym: "FAMA",
+	},
+	{
+		_id: "60036a4f9fb4a00c5422a46b",
+		name: "FACULDADE BATISTA DO ESTADO DO RIO DE JANEIRO - FABERJ",
+		acronym: "FABERJ",
+	},
+	{
+		_id: "60036a4f9fb4a00c5422a46d",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DO ICESP",
+		acronym: "ISE-ICESP",
+	},
+	{
+		_id: "60036a4f9fb4a00c5422a46f",
+		name: "FACULDADE DE TECNOLOGIA DE GRAVATAÍ",
+		acronym: "FAQI",
+	},
+	{
+		_id: "60036a509fb4a00c5422a471",
+		name: "FACULDADE TECNOLÓGICA INAP",
+		acronym: "FAT- INAP",
+	},
+	{
+		_id: "60036a509fb4a00c5422a473",
+		name: "FACULDADE DE TECNOLOGIA JARDIM",
+		acronym: "FATEJ",
+	},
+	{
+		_id: "60036a509fb4a00c5422a476",
+		name: "FACULDADE DE ROSEIRA",
+		acronym: "FARO",
+	},
+	{
+		_id: "60036a509fb4a00c5422a478",
+		name: "FACULDADE DE TECNOLOGIA PEDRO ROGÉRIO GARCIA",
+		acronym: "FATTEP",
+	},
+	{
+		_id: "60036a519fb4a00c5422a47a",
+		name: "FACULDADE DE TECNOLOGIA DE CURITIBA",
+		acronym: "FATEC-PR",
+	},
+	{
+		_id: "60036a519fb4a00c5422a47c",
+		name: "FACULDADE DE TECNOLOGIA IBRATEC DE JOÃO PESSOA",
+		acronym: "UNIBRATEC",
+	},
+	{
+		_id: "60036a519fb4a00c5422a47e",
+		name: "FACULDADE DE TECNOLOGIA EQUIPE DARWIN",
+		acronym: "FTED",
+	},
+	{
+		_id: "60036a519fb4a00c5422a480",
+		name: "FACULDADE DE TECNOLOGIA TECBRASIL - UNIDADE PORTO ALEGRE",
+		acronym: "Ftec Porto Alegre",
+	},
+	{
+		_id: "60036a529fb4a00c5422a482",
+		name: "FACULDADE DE TECNOLOGIA TECBRASIL - UNIDADE BENTO GONÇALVES",
+		acronym: "Ftec Bento Gonçalves",
+	},
+	{ _id: "60036a529fb4a00c5422a484", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "60036a529fb4a00c5422a486",
+		name: "FACULDADE DE TECNOLOGIA SENAI ÍTALO BOLOGNA",
+		acronym: "FATECIB",
+	},
+	{
+		_id: "60036a529fb4a00c5422a488",
+		name: "FACULDADE DE TECNOLOGIA SENAI DE DESENVOLVIMENTO GERENCIAL",
+		acronym: "FATESG",
+	},
+	{
+		_id: "60036a539fb4a00c5422a48a",
+		name: "ESCOLA SUPERIOR DE ENGENHARIA E GESTÃO DE SÃO PAULO - ESEG",
+		acronym: "ESEG",
+	},
+	{
+		_id: "60036a539fb4a00c5422a48c",
+		name: "FACULDADE DE TECNOLOGIA SENAI PORTO ALEGRE",
+		acronym: "FATEC SENAI",
+	},
+	{
+		_id: "60036a539fb4a00c5422a48e",
+		name: "INSTITUTO CATÓLICO DE ESTUDOS SUPERIORES DO PIAUÍ",
+		acronym: "ICESPI",
+	},
+	{
+		_id: "60036a539fb4a00c5422a491",
+		name: "FACULDADE DE CERES",
+		acronym: "FACERES",
+	},
+	{
+		_id: "60036a549fb4a00c5422a493",
+		name: "FACULDADE JOAQUIM NABUCO - PAULISTA",
+		acronym: "FJN",
+	},
+	{
+		_id: "60036a549fb4a00c5422a495",
+		name: "FACULDADE TOBIAS BARRETO",
+		acronym: "FTB",
+	},
+	{
+		_id: "60036a549fb4a00c5422a497",
+		name: "FACULDADE JATAIENSE",
+		acronym: "FAJA",
+	},
+	{
+		_id: "60036a559fb4a00c5422a49a",
+		name:
+			"FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS E DE TECNOLOGIAS DE AGUA BOA",
+		acronym: "FACESA",
+	},
+	{
+		_id: "60036a559fb4a00c5422a49c",
+		name: "FACULDADE ANHANGUERA DE SANTA BÁRBARA",
+		acronym: "",
+	},
+	{
+		_id: "60036a559fb4a00c5422a49e",
+		name: "FACULDADE ANHANGUERA DE TAUBATÉ",
+		acronym: "",
+	},
+	{
+		_id: "60036a559fb4a00c5422a4a0",
+		name: "FACULDADE DE CIÊNCIAS JURÍDICAS DE ALAGOAS",
+		acronym: "FCJAL",
+	},
+	{
+		_id: "60036a569fb4a00c5422a4a2",
+		name: "FACULDADE DE TECNOLOGIA SENAI SÃO JOSÉ",
+		acronym: "SENAISC",
+	},
+	{
+		_id: "60036a569fb4a00c5422a4a4",
+		name: "FACULDADE DE TECNOLOGIA SENAI ITAJAÍ",
+		acronym: "FATEC SENAI ITAJAÍ",
+	},
+	{
+		_id: "60036a569fb4a00c5422a4a6",
+		name: "FACULDADE DE TECNOLOGIA DE PIRACICABA",
+		acronym: "FATEP",
+	},
+	{
+		_id: "60036a569fb4a00c5422a4a8",
+		name: "FACULDADE JOAQUIM NABUCO RECIFE",
+		acronym: "FJN",
+	},
+	{
+		_id: "60036a569fb4a00c5422a4aa",
+		name: "FACULDADE METROPOLITANA DE RIO DO SUL",
+		acronym: "FAMESUL",
+	},
+	{
+		_id: "60036a579fb4a00c5422a4ac",
+		name: "FACULDADE DE TECNOLOGIA SENAC GOIÁS",
+		acronym: "",
+	},
+	{
+		_id: "60036a579fb4a00c5422a4af",
+		name: "CENTRO UNIVERSITÁRIO BARRIGA VERDE",
+		acronym: "UNIBAVE",
+	},
+	{
+		_id: "60036a579fb4a00c5422a4b1",
+		name: "CENTRO DE ENSINO SUPERIOR DE UBERABA",
+		acronym: "CESUBE",
+	},
+	{
+		_id: "60036a589fb4a00c5422a4b3",
+		name: "FACULDADE NOSSA CIDADE",
+		acronym: "FNC",
+	},
+	{
+		_id: "60036a589fb4a00c5422a4b5",
+		name: "FACULDADE DE TECNOLOGIA PAULO FREIRE",
+		acronym: "FATEP-DF",
+	},
+	{
+		_id: "60036a589fb4a00c5422a4b7",
+		name: "FACULDADE EVILÁSIO FORMIGA",
+		acronym: "FEF",
+	},
+	{
+		_id: "60036a589fb4a00c5422a4b9",
+		name: "FACULDADE NAZARENA DO BRASIL",
+		acronym: "FNB",
+	},
+	{
+		_id: "60036a599fb4a00c5422a4bc",
+		name: "FACULDADE PERUIBE",
+		acronym: "FPBE",
+	},
+	{ _id: "60036a599fb4a00c5422a4be", name: "FACULDADE ALIANÇA" },
+	{
+		_id: "60036a599fb4a00c5422a4c1",
+		name: "FACULDADE MINEIRENSE",
+		acronym: "FAMA",
+	},
+	{
+		_id: "60036a5a9fb4a00c5422a4c3",
+		name: "FACULDADE DE TECNOLOGIA ROGACIONISTA",
+		acronym: "ROGA",
+	},
+	{
+		_id: "60036a5a9fb4a00c5422a4c5",
+		name: "FACULDADE DE COMUNICAÇÃO SOCIAL DE PASSOS",
+		acronym: "FACOMP",
+	},
+	{
+		_id: "60036a5a9fb4a00c5422a4c7",
+		name: "FACULDADE DE TECNOLOGIA INED - UNIDADE IPATINGA",
+		acronym: "FATEC IPATINGA",
+	},
+	{
+		_id: "60036a5a9fb4a00c5422a4c9",
+		name: "FACULDADE DE ENSINO SUPERIOR DO NORDESTE",
+		acronym: "FAESNE",
+	},
+	{
+		_id: "60036a5b9fb4a00c5422a4cb",
+		name: "FACULDADE DE TECNOLOGIA CÉSAR LATTES",
+		acronym: "",
+	},
+	{
+		_id: "60036a5b9fb4a00c5422a4cd",
+		name: "FACULDADE DE DIREITO DE PEDRO LEOPOLDO",
+		acronym: "FADIPEL",
+	},
+	{
+		_id: "60036a5b9fb4a00c5422a4cf",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO PROFESSORA NAIR FORTES ABU-MERHY",
+		acronym: "ISEFOR",
+	},
+	{
+		_id: "60036a5b9fb4a00c5422a4d2",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE MATIAS BARBOSA",
+		acronym: "ISEMB",
+	},
+	{
+		_id: "60036a5c9fb4a00c5422a4d4",
+		name: "FACULDADE AÇÃO",
+		acronym: "FCTVALE",
+	},
+	{
+		_id: "60036a5c9fb4a00c5422a4d6",
+		name: "FACULDADE DE TECNOLOGIA INED - UNIDADE LAGOA DA PAMPULHA",
+		acronym: "FATEC/PITÁGORAS",
+	},
+	{
+		_id: "60036a5c9fb4a00c5422a4d8",
+		name: "FACULDADES INTEGRADAS DE CACOAL",
+		acronym: "UNESC",
+	},
+	{
+		_id: "60036a5c9fb4a00c5422a4da",
+		name: "FACULDADES INTEGRADAS PITÁGORAS",
+		acronym: "FIP-MOC",
+	},
+	{
+		_id: "60036a5d9fb4a00c5422a4dc",
+		name: "INSTITUTO DE FILOSOFIA E TEOLOGIA DE GOIÁS",
+		acronym: "IFITEG",
+	},
+	{
+		_id: "60036a5d9fb4a00c5422a4df",
+		name: "FACULDADE DE INHUMAS - FAC-MAIS",
+		acronym: "FACMAIS",
+	},
+	{
+		_id: "60036a5d9fb4a00c5422a4e1",
+		name: "FACULDADE DE TECNOLOGIA DE PORTO ALEGRE",
+		acronym: "FAQI",
+	},
+	{
+		_id: "60036a5d9fb4a00c5422a4e3",
+		name: "FACULDADE LITERATUS",
+		acronym: "FAL",
+	},
+	{
+		_id: "60036a5e9fb4a00c5422a4e5",
+		name: "FACULDADE DO VALE ELVIRA DAYRELL - FAVED",
+		acronym: "FAVED",
+	},
+	{
+		_id: "60036a5e9fb4a00c5422a4e8",
+		name: "FACULDADE INTEGRAÇÃO TIETE",
+		acronym: "FIT",
+	},
+	{
+		_id: "60036a5e9fb4a00c5422a4ea",
+		name: "FACULDADE DE TECNOLOGIA SENAI CETIND",
+		acronym: "",
+	},
+	{
+		_id: "60036a5f9fb4a00c5422a4ec",
+		name: "FACULDADE DE TECNOLOGIA DE PALMAS",
+		acronym: "FTP",
+	},
+	{
+		_id: "60036a5f9fb4a00c5422a4ee",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS DOS PALMARES",
+		acronym: "FACIP",
+	},
+	{
+		_id: "60036a5f9fb4a00c5422a4f0",
+		name: "FACULDADE DE TECNOLOGIA ÁLVARES DE AZEVEDO",
+		acronym: "FAATESP",
+	},
+	{ _id: "60036a5f9fb4a00c5422a4f2", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "60036a609fb4a00c5422a4f5",
+		name: "FACULDADE PITÁGORAS DE BETIM",
+		acronym: "PITÁGORAS-BETIM",
+	},
+	{
+		_id: "60036a609fb4a00c5422a4f7",
+		name: "FACULDADE DO CENTRO EDUCACIONAL MINEIRO - FACEM",
+		acronym: "FACEM-BH",
+	},
+	{
+		_id: "60036a609fb4a00c5422a4f9",
+		name: "FACULDADE DE TECNOLOGIA SENAC JARAGUÁ DO SUL",
+		acronym: "",
+	},
+	{
+		_id: "60036a609fb4a00c5422a4fb",
+		name: "FACULDADE DE TECNOLOGIA AMÉRICA DO SUL",
+		acronym: "",
+	},
+	{
+		_id: "60036a619fb4a00c5422a4fe",
+		name: "FACULDADE TERRA NORDESTE",
+		acronym: "FATENE",
+	},
+	{
+		_id: "60036a619fb4a00c5422a501",
+		name: "FACULDADE PADRE ANCHIETA DE CAJAMAR",
+		acronym: "",
+	},
+	{
+		_id: "60036a619fb4a00c5422a503",
+		name: "FACULDADE DE EDUCAÇÃO FÍSICA DE ARAGUAÍNA",
+		acronym: "ITPAC",
+	},
+	{
+		_id: "60036a629fb4a00c5422a505",
+		name: "FACULDADES INTEGRADAS DE MINEIROS",
+		acronym: "FIMES",
+	},
+	{
+		_id: "60036a629fb4a00c5422a507",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE GOIANA",
+		acronym: "I.S.E.G.",
+	},
+	{
+		_id: "60036a629fb4a00c5422a50a",
+		name: "FACULDADE DE BALSAS",
+		acronym: "UNIBALSAS",
+	},
+	{
+		_id: "60036a629fb4a00c5422a50c",
+		name: "FACULDADE PANAMERICANA DE JI-PARANÁ",
+		acronym: "",
+	},
+	{
+		_id: "60036a639fb4a00c5422a50e",
+		name: "FACULDADE JK - UNIDADE I - GAMA",
+		acronym: "",
+	},
+	{
+		_id: "60036a639fb4a00c5422a510",
+		name: "FACULDADE DE ENFERMAGEM DE BELO JARDIM",
+		acronym: "FAEB",
+	},
+	{
+		_id: "60036a639fb4a00c5422a512",
+		name: "FACULDADES INTEGRADAS BARROS MELO",
+		acronym: "FIBAM",
+	},
+	{
+		_id: "60036a639fb4a00c5422a514",
+		name: "FACULDADE DE TECNOLOGIA SENAI BELO HORIZONTE",
+		acronym: "FATEC SENAI BH",
+	},
+	{
+		_id: "60036a649fb4a00c5422a516",
+		name: "FACULDADE PROFESSOR MIGUEL ÂNGELO DA SILVA SANTOS",
+		acronym: "FEMASS",
+	},
+	{
+		_id: "60036a649fb4a00c5422a518",
+		name: "FACULDADE UNIGRAN CAPITAL",
+		acronym: "UNIGRAN CAPITAL",
+	},
+	{
+		_id: "60036a649fb4a00c5422a51a",
+		name: "FACULDADE DE ENFERMAGEM NOVA ESPERANÇA DE MOSSORÓ - FACENE/RN",
+		acronym: "FACENE/RN",
+	},
+	{ _id: "60036a649fb4a00c5422a51c", name: "FACULDADE SÃO PAULO" },
+	{
+		_id: "60036a659fb4a00c5422a51e",
+		name: "ESCOLA SUPERIOR PAULISTA DE ADMINISTRAÇÃO - ESPA",
+		acronym: "ESPA",
+	},
+	{ _id: "60036a659fb4a00c5422a520", name: "FACULDADE RIO CLARO", acronym: "" },
+	{
+		_id: "60036a659fb4a00c5422a523",
+		name: "FACULDADE CIDADE DE GUANHÃES - FACIG",
+		acronym: "FACIG",
+	},
+	{
+		_id: "60036a669fb4a00c5422a525",
+		name: "FACULDADE METROPOLITANA DA AMAZÔNIA",
+		acronym: "FAMAZ",
+	},
+	{
+		_id: "60036a669fb4a00c5422a528",
+		name: "FACULDADE METROPOLITANA DE MARABÁ",
+		acronym: "METROPOLITANA",
+	},
+	{
+		_id: "60036a669fb4a00c5422a52a",
+		name: "FACULDADE DOM PEDRO II DE TECNOLOGIA",
+		acronym: "FAB",
+	},
+	{
+		_id: "60036a669fb4a00c5422a52c",
+		name: "FACULDADE PASCHOAL DANTAS",
+		acronym: "FPD",
+	},
+	{
+		_id: "60036a679fb4a00c5422a52e",
+		name: "FACULDADE ANHANGUERA JARAGUÁ DO SUL",
+		acronym: "FATEJA",
+	},
+	{
+		_id: "60036a679fb4a00c5422a530",
+		name: "FACULDADE DE TECNOLOGIA DO VALE DO IVAÍ",
+		acronym: "FATEC-IVAI",
+	},
+	{
+		_id: "60036a679fb4a00c5422a532",
+		name: "FACULDADES INTEGRADAS CAMPO-GRANDENSES",
+		acronym: "FIC",
+	},
+	{
+		_id: "60036a679fb4a00c5422a534",
+		name: "UNIVERSIDADE FEDERAL DO RECÔNCAVO DA BAHIA",
+		acronym: "UFRB",
+	},
+	{
+		_id: "60036a689fb4a00c5422a536",
+		name: "FUNDAÇÃO UNIVERSIDADE FEDERAL DA GRANDE DOURADOS",
+		acronym: "UFGD",
+	},
+	{
+		_id: "60036a689fb4a00c5422a539",
+		name: "FACULDADE REGIONAL PALMITOS",
+		acronym: "FAP",
+	},
+	{
+		_id: "60036a689fb4a00c5422a53b",
+		name: "CENTRO UNIVERSITÁRIO CATÓLICO SALESIANO AUXILIUM",
+		acronym: "UNISALESIANO",
+	},
+	{
+		_id: "60036a689fb4a00c5422a53d",
+		name: "FACULDADE INTEGRADA TIRADENTES",
+		acronym: "FITS",
+	},
+	{
+		_id: "60036a699fb4a00c5422a53f",
+		name: "FACULDADE ADVENTISTA DA BAHIA",
+		acronym: "FADBA",
+	},
+	{
+		_id: "60036a699fb4a00c5422a541",
+		name: "FACULDADE DE TECNOLOGIA SENAI CAMPO GRANDE",
+		acronym: "",
+	},
+	{
+		_id: "60036a699fb4a00c5422a543",
+		name: "FACULDADE SÃO FRANCISCO DA PARAÍBA",
+		acronym: "FASP",
+	},
+	{
+		_id: "60036a699fb4a00c5422a545",
+		name: "FACULDADE DE TECNOLOGIA HERRERO",
+		acronym: "FATEC",
+	},
+	{ _id: "60036a6a9fb4a00c5422a547", name: "FACULDADE PARQUE", acronym: "FAP" },
+	{
+		_id: "60036a6a9fb4a00c5422a549",
+		name: "FACULDADE DE EXCELÊNCIA EDUCACIONAL DO RIO GRANDE DO NORTE",
+		acronym: "SUDERN",
+	},
+	{
+		_id: "60036a6a9fb4a00c5422a54b",
+		name: "FACULDADE CENTRO MATO-GROSSENSE",
+		acronym: "",
+	},
+	{
+		_id: "60036a6a9fb4a00c5422a54d",
+		name: "FACULDADE DE TECNOLOGIA MACHADO DE ASSIS",
+		acronym: "FAMA",
+	},
+	{
+		_id: "60036a6b9fb4a00c5422a550",
+		name: "FACULDADE DO NORTE GOIANO",
+		acronym: "FNG",
+	},
+	{
+		_id: "60036a6b9fb4a00c5422a552",
+		name: "FACULDADE APOGEU",
+		acronym: "APOGEU",
+	},
+	{
+		_id: "60036a6b9fb4a00c5422a554",
+		name: "FACULDADE DE TECNOLOGIA FATEP",
+		acronym: "FATEP",
+	},
+	{
+		_id: "60036a6c9fb4a00c5422a556",
+		name: "FACULDADE DE OURO PRETO DO OESTE",
+		acronym: "UNEOURO",
+	},
+	{
+		_id: "60036a6c9fb4a00c5422a558",
+		name: "FACULDADE CATÓLICA DE RONDONIA",
+		acronym: "FCR",
+	},
+	{
+		_id: "60036a6c9fb4a00c5422a55a",
+		name: "FACULDADE DE ADMINISTRAÇÃO E NEGÓCIOS EM RIBEIRÃO PRETO",
+		acronym: "",
+	},
+	{
+		_id: "60036a6c9fb4a00c5422a55c",
+		name: "FACULDADE DE CIÊNCIAS GERENCIAIS EM VOTUPORANGA",
+		acronym: "",
+	},
+	{
+		_id: "60036a6c9fb4a00c5422a55e",
+		name: "FACULDADE DE CIÊNCIAS GERENCIAIS BARÃO DE JUNDIAÍ",
+		acronym: "FCG",
+	},
+	{
+		_id: "60036a6d9fb4a00c5422a560",
+		name: "FACULDADE DE ENSINO SUPERIOR KM 125",
+		acronym: "",
+	},
+	{
+		_id: "60036a6d9fb4a00c5422a562",
+		name: "FACULDADE DE TECNOLOGIA ASSESSORITEC",
+		acronym: "",
+	},
+	{
+		_id: "60036a6d9fb4a00c5422a564",
+		name: "FACULDADE DE EDUCAÇÃO E MEIO AMBIENTE",
+		acronym: "FAEMA",
+	},
+	{
+		_id: "60036a6d9fb4a00c5422a566",
+		name: "FACULDADE ANHANGUERA DE CAXIAS DO SUL",
+		acronym: "FACS",
+	},
+	{
+		_id: "60036a6e9fb4a00c5422a568",
+		name: "FACULDADE DE TECNOLOGIA FUNDETEC",
+		acronym: "FATEF",
+	},
+	{
+		_id: "60036a6e9fb4a00c5422a56a",
+		name: "FACULDADE DE TECNOLOGIA TECMED",
+		acronym: "TECMED",
+	},
+	{
+		_id: "60036a6e9fb4a00c5422a56c",
+		name: "FACULDADE ANGLO-AMERICANO DE JOÃO PESSOA",
+		acronym: "FAAJP",
+	},
+	{
+		_id: "60036a6e9fb4a00c5422a56e",
+		name: "FACULDADE ANGLO-AMERICANO DE CAXIAS DO SUL",
+		acronym: "FAACS",
+	},
+	{
+		_id: "60036a6f9fb4a00c5422a570",
+		name: "FACULDADE ANGLO-AMERICANO DE PASSO FUNDO",
+		acronym: "FAAPF",
+	},
+	{
+		_id: "60036a6f9fb4a00c5422a572",
+		name: "FACULDADE ANHANGÜERA DE SOROCABA",
+		acronym: "FSO",
+	},
+	{
+		_id: "60036a6f9fb4a00c5422a574",
+		name: "FACULDADE ANHANGÜERA DE SÃO JOSÉ",
+		acronym: "",
+	},
+	{
+		_id: "60036a6f9fb4a00c5422a576",
+		name: "FACULDADE ANHANGÜERA DE PIRACICABA",
+		acronym: "",
+	},
+	{
+		_id: "60036a709fb4a00c5422a579",
+		name: "FACULDADE DE AGRONEGÓCIO PARAÍSO DO NORTE",
+		acronym: "FAPAN",
+	},
+	{
+		_id: "60036a709fb4a00c5422a57c",
+		name: "FACULDADE RIO SONO",
+		acronym: "RISO",
+	},
+	{ _id: "60036a709fb4a00c5422a57e", name: "FACULDADE DELTA" },
+	{
+		_id: "60036a719fb4a00c5422a581",
+		name: "FACULDADE PORTO DAS ÁGUAS",
+		acronym: "FAPAG",
+	},
+	{
+		_id: "60036a719fb4a00c5422a583",
+		name: "FACULDADE CENTRO PAULISTANO",
+		acronym: "",
+	},
+	{
+		_id: "60036a719fb4a00c5422a585",
+		name: "FACULDADE DE TECNOLOGIA DE NOVA ANDRADINA",
+		acronym: "",
+	},
+	{ _id: "60036a729fb4a00c5422a587", name: "FACULDADE NOROESTE", acronym: "-" },
+	{
+		_id: "60036a729fb4a00c5422a589",
+		name: "FACULDADE NOVA ROMA",
+		acronym: "FNR",
+	},
+	{
+		_id: "60036a729fb4a00c5422a58b",
+		name: "FACULDADE DE TECNOLOGIA GESTÃO & MARKETING",
+		acronym: "IBGM / FGM",
+	},
+	{
+		_id: "60036a729fb4a00c5422a58d",
+		name: "FACULDADE ALTERNATIVA DE ENSINO SUPERIOR DO AGRESTE - FAESA",
+		acronym: "",
+	},
+	{
+		_id: "60036a729fb4a00c5422a58f",
+		name: "ESCOLA DOMINICANA DE TEOLOGIA",
+		acronym: "",
+	},
+	{
+		_id: "60036a739fb4a00c5422a591",
+		name: "FACULDADES INTEGRADAS VIANNA JÚNIOR",
+		acronym: "FIVJ",
+	},
+	{
+		_id: "60036a739fb4a00c5422a593",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS DE CRUZEIRO",
+		acronym: "FACIC",
+	},
+	{
+		_id: "60036a739fb4a00c5422a596",
+		name: "FACULDADE DE TECNOLOGIA EGÍDIO JOSÉ DA SILVA",
+		acronym: "FATEGIDIO",
+	},
+	{
+		_id: "60036a749fb4a00c5422a599",
+		name: "FACULDADE CENECISTA DE RIO BONITO",
+		acronym: "FACERB",
+	},
+	{
+		_id: "60036a749fb4a00c5422a59b",
+		name: "FACULDADE MESSIANICA",
+		acronym: "",
+	},
+	{
+		_id: "60036a749fb4a00c5422a59d",
+		name: "FACULDADE DE TECNOLOGIA SENAC DF",
+		acronym: "FAC SENAC DF",
+	},
+	{
+		_id: "60036a759fb4a00c5422a5a0",
+		name: "FACULDADE PRESBITERIANA AUGUSTO GALVÃO",
+		acronym: "FAPAG",
+	},
+	{
+		_id: "60036a759fb4a00c5422a5a2",
+		name: "FACULDADE DE PATROCINIO",
+		acronym: "IESP",
+	},
+	{
+		_id: "60036a759fb4a00c5422a5a4",
+		name: "FACULDADE SANTA EMÍLIA",
+		acronym: "",
+	},
+	{
+		_id: "60036a759fb4a00c5422a5a6",
+		name: "FACULDADE CATÓLICA DO CARIRI",
+		acronym: "",
+	},
+	{
+		_id: "60036a769fb4a00c5422a5a9",
+		name: "FACULDADE REGIONAL DE RIACHÃO DO JACUÍPE",
+		acronym: "FARJ",
+	},
+	{
+		_id: "60036a769fb4a00c5422a5ab",
+		name: "FACULDADE DE TECNOLOGIA DE SANTA CATARINA",
+		acronym: "FATESC",
+	},
+	{
+		_id: "60036a769fb4a00c5422a5ad",
+		name: "FACULDADE DE TECNOLOGIA E CIENCIAS DO NORTE DO PARANÁ",
+		acronym: "FATECIE",
+	},
+	{
+		_id: "60036a769fb4a00c5422a5af",
+		name: "CENTRO UNIVERSITÁRIO MUNICIPAL DE SÃO JOSÉ",
+		acronym: "USJ",
+	},
+	{
+		_id: "60036a779fb4a00c5422a5b1",
+		name: "FACULDADE DE TECNOLOGIA ALFA DE UMUARAMA",
+		acronym: "",
+	},
+	{
+		_id: "60036a779fb4a00c5422a5b3",
+		name: "FACULDADE UNA DE CONTAGEM",
+		acronym: "FUNAC",
+	},
+	{
+		_id: "60036a779fb4a00c5422a5b5",
+		name: "FACULDADE BI MINAS",
+		acronym: "FACULDADE IBS",
+	},
+	{
+		_id: "60036a779fb4a00c5422a5b7",
+		name: "FACULDADE KENNEDY DE BELO HORIZONTE",
+		acronym: "FKBH",
+	},
+	{
+		_id: "60036a789fb4a00c5422a5b9",
+		name: "FACISA-UNAI FACULDADE DE CIÊNCIAS DA SAÚDE DE UNAÍ",
+		acronym: "FACISA-UNAI",
+	},
+	{
+		_id: "60036a789fb4a00c5422a5bb",
+		name: "FACULDADE DE TECNOLOGIA CDL DE FORTALEZA",
+		acronym: "",
+	},
+	{
+		_id: "60036a789fb4a00c5422a5bd",
+		name: "INSTITUTO FEDERAL DE EDUCAÇÃO CIÊNCIA E TECNOLOGIA DE RONDÔNIA",
+		acronym: "IFRO",
+	},
+	{ _id: "60036a789fb4a00c5422a5c0", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "60036a799fb4a00c5422a5c2",
+		name: "FACULDADE DE TECNOLOGIA CENTEC - CARIRI",
+		acronym: "CENTEC",
+	},
+	{
+		_id: "60036a799fb4a00c5422a5c5",
+		name: "FACULDADES INTEGRADAS DE ITARARÉ",
+		acronym: "FAFIT-FACIC",
+	},
+	{
+		_id: "60036a799fb4a00c5422a5c8",
+		name: "FACULDADE ANTÔNIO MENEGHETTI",
+		acronym: "AMF",
+	},
+	{
+		_id: "60036a7a9fb4a00c5422a5ca",
+		name: "FACULDADE DE TECNOLOGIA SENAI FELIX GUISARD",
+		acronym: "",
+	},
+	{
+		_id: "60036a7a9fb4a00c5422a5cc",
+		name: "FACULDADE DE TECNOLOGIA SENAI NADIR DIAS DE FIGUEIREDO",
+		acronym: "",
+	},
+	{
+		_id: "60036a7a9fb4a00c5422a5ce",
+		name: "FACULDADE DE TECNOLOGIA SENAI ANCHIETA",
+		acronym: "",
+	},
+	{
+		_id: "60036a7a9fb4a00c5422a5d0",
+		name: "FACULDADE DE TECNOLOGIA SENAI MARIANO FERRAZ",
+		acronym: "",
+	},
+	{
+		_id: "60036a7b9fb4a00c5422a5d2",
+		name: "FACULDADE DE TECNOLOGIA SENAI ANTÔNIO ADOLPHO LOBBE",
+		acronym: "",
+	},
+	{
+		_id: "60036a7b9fb4a00c5422a5d4",
+		name: "FACULDADE DE CIÊNCIAS GERENCIAIS E EMPREENDEDORISMO - FACIGE",
+		acronym: "FACIGE",
+	},
+	{
+		_id: "60036a7b9fb4a00c5422a5d6",
+		name: "FACULDADE DE TECNOLOGIA EVOLUÇÃO",
+		acronym: "FECET",
+	},
+	{
+		_id: "60036a7b9fb4a00c5422a5d8",
+		name: "FACULDADE ANHANGÜERA DE CAMPINAS",
+		acronym: "",
+	},
+	{
+		_id: "60036a7c9fb4a00c5422a5da",
+		name: "ESCOLA SUPERIOR DE ARTES CÉLIA HELENA",
+		acronym: "",
+	},
+	{
+		_id: "60036a7c9fb4a00c5422a5dc",
+		name: "FACULDADE DE EDUCAÇÃO  ACREANO EUCLIDES DA CUNHA",
+		acronym: "INEC",
+	},
+	{
+		_id: "60036a7c9fb4a00c5422a5df",
+		name: "FACULDADE VÉRTICE",
+		acronym: "VÉRTICE",
+	},
+	{
+		_id: "60036a7c9fb4a00c5422a5e1",
+		name: "FACULDADE DIOCESANA DE MOSSORÓ",
+		acronym: "",
+	},
+	{ _id: "60036a7d9fb4a00c5422a5e3", name: "FACULDADE DE CIÊNCIAS HUMANAS" },
+	{
+		_id: "60036a7d9fb4a00c5422a5e5",
+		name: "ESCOLA SUPERIOR DE SAÚDE DE ARCOVERDE",
+		acronym: "ESSA",
+	},
+	{
+		_id: "60036a7d9fb4a00c5422a5e8",
+		name: "FACULDADE PITÁGORAS DE POÇOS DE CALDAS",
+		acronym: "",
+	},
+	{
+		_id: "60036a7e9fb4a00c5422a5ea",
+		name: "FACULDADE PITÁGORAS DE GUARAPARI",
+		acronym: "",
+	},
+	{
+		_id: "60036a7e9fb4a00c5422a5ec",
+		name: "FACULDADE PITÁGORAS DE SÃO LUIZ",
+		acronym: "",
+	},
+	{
+		_id: "60036a7e9fb4a00c5422a5ee",
+		name: "FACULDADE DE TECNOLOGIA PITÁGORAS - UNIDADE LONDRINA",
+		acronym: "",
+	},
+	{
+		_id: "60036a7e9fb4a00c5422a5f0",
+		name: "FACULDADE DE TECNOLOGIA DE TAUBATÉ",
+		acronym: "ETEP",
+	},
+	{
+		_id: "60036a7f9fb4a00c5422a5f2",
+		name: "FACULDADE ANHANGUERA DE ITAPECERICA DA SERRA",
+		acronym: "",
+	},
+	{
+		_id: "60036a7f9fb4a00c5422a5f5",
+		name: "FACULDADE DE CONCHAS",
+		acronym: "",
+	},
+	{
+		_id: "60036a7f9fb4a00c5422a5f7",
+		name: "FACULDADE DE CIÊNCIAS MÉDICAS DA BAHIA",
+		acronym: "CIENCIAS MEDICAS",
+	},
+	{
+		_id: "60036a7f9fb4a00c5422a5f9",
+		name: "FACULDADE FASIPE",
+		acronym: "FASIPE",
+	},
+	{
+		_id: "60036a809fb4a00c5422a5fb",
+		name: "FACULDADE BATISTA PIONEIRA",
+		acronym: "",
+	},
+	{
+		_id: "60036a809fb4a00c5422a5fd",
+		name: "FACULDADE DO TRABALHO",
+		acronym: "FATRA",
+	},
+	{
+		_id: "60036a809fb4a00c5422a600",
+		name: "FACULDADE DE CASTANHAL",
+		acronym: "FCAT",
+	},
+	{
+		_id: "60036a809fb4a00c5422a602",
+		name: "FACULDADE INTEGRADA DAS CATARATAS",
+		acronym: "",
+	},
+	{ _id: "60036a819fb4a00c5422a604", name: "ESCOLA SUPERIOR DE ADMINISTRAÇÃO" },
+	{
+		_id: "60036a819fb4a00c5422a606",
+		name: "FUNDAÇÃO UNIVERSIDADE FEDERAL DO ABC",
+		acronym: "UFABC",
+	},
+	{
+		_id: "60036a819fb4a00c5422a608",
+		name: "FACULDADE DE TECNOLOGIA DE PRAIA GRANDE",
+		acronym: "FATECPG",
+	},
+	{
+		_id: "60036a819fb4a00c5422a60a",
+		name: "FACULDADE CLARETIANA DE TEOLOGIA",
+		acronym: "",
+	},
+	{
+		_id: "60036a829fb4a00c5422a60c",
+		name: "ESCOLA SUPERIOR DE ADMINISTRAÇÃO E GESTÃO DA BAIXADA SANTISTA",
+		acronym: "ESAGS BS",
+	},
+	{
+		_id: "60036a829fb4a00c5422a60e",
+		name: "FACULDADE INTERNACIONAL DO DELTA",
+		acronym: "INTA",
+	},
+	{ _id: "60036a829fb4a00c5422a610", name: "FACULDADE AUM", acronym: "" },
+	{
+		_id: "60036a829fb4a00c5422a612",
+		name: "FACULDADE PITÁGORAS DE FEIRA DE SANTANA",
+		acronym: "",
+	},
+	{
+		_id: "60036a839fb4a00c5422a615",
+		name: "FACULDADE INTEGRADA DE ARAGUATINS",
+		acronym: "FAIARA",
+	},
+	{
+		_id: "60036a839fb4a00c5422a617",
+		name: "CENTRO UNIVERSITÁRIO DE SETE LAGOAS",
+		acronym: "UNIFEMM",
+	},
+	{
+		_id: "60036a839fb4a00c5422a619",
+		name: "FACULDADE DE CIÊNCIAS E TECNOLOGIA DO MARANHÃO",
+		acronym: "FACEMA",
+	},
+	{ _id: "60036a849fb4a00c5422a61b", name: "FACULDADE ITOP", acronym: "ITOP" },
+	{
+		_id: "60036a849fb4a00c5422a61e",
+		name: "FACULDADE METROPOLITANA DO PLANALTO NORTE",
+		acronym: "FAMEPLAN",
+	},
+	{
+		_id: "60036a849fb4a00c5422a620",
+		name: "FACULDADE DE SÃO JOSÉ DOS CAMPOS",
+		acronym: "BILAC",
+	},
+	{
+		_id: "60036a859fb4a00c5422a623",
+		name: "FACULDADE DE TECNOLOGIA CENTEC - SERTÃO CENTRAL",
+		acronym: "FTC SERTÃO CENTRAL",
+	},
+	{
+		_id: "60036a859fb4a00c5422a625",
+		name: "FACULDADE CRUZ AZUL",
+		acronym: "FACRAZ",
+	},
+	{
+		_id: "60036a859fb4a00c5422a627",
+		name: "FACULDADE DE TECNOLOGIA INESUL DO PARANÁ",
+		acronym: "FIPAR",
+	},
+	{
+		_id: "60036a859fb4a00c5422a62a",
+		name: "FACULDADE DO MÉDIO PARNAÍBA",
+		acronym: "",
+	},
+	{
+		_id: "60036a869fb4a00c5422a62c",
+		name: "FACULDADE ESTAÇÃO",
+		acronym: "FAEST",
+	},
+	{
+		_id: "60036a869fb4a00c5422a62e",
+		name: "CENTRO UNIVERSITÁRIO ESTADUAL DA ZONA OESTE",
+		acronym: "UEZO",
+	},
+	{
+		_id: "60036a869fb4a00c5422a630",
+		name:
+			"INSTITUTO SUPERIOR DE TECNOLOGIA EM CIÊNCIAS DA COMPUTAÇÃO DO RIO DE JANEIRO",
+		acronym: "IST-RIO",
+	},
+	{
+		_id: "60036a869fb4a00c5422a632",
+		name:
+			"INSTITUTO SUPERIOR DE TECNOLOGIA EM CIÊNCIA DA COMPUTAÇÃO DE PETRÓPOLIS",
+		acronym: "ISTCCP",
+	},
+	{
+		_id: "60036a879fb4a00c5422a634",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO PROFESSOR ALDO MUYLAERT",
+		acronym: "ISEPAM",
+	},
+	{
+		_id: "60036a879fb4a00c5422a636",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE SANTO ANTÔNIO DE PÁDUA",
+		acronym: "ISE PÁDUA",
+	},
+	{
+		_id: "60036a879fb4a00c5422a638",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO DE ITAPERUNA",
+		acronym: "ISEI",
+	},
+	{
+		_id: "60036a879fb4a00c5422a63b",
+		name: "FACULDADE SANTO AUGUSTO",
+		acronym: "FAISA",
+	},
+	{
+		_id: "60036a889fb4a00c5422a63d",
+		name: "FACULDADE DE EDUCAÇÃO SÃO BRAZ",
+		acronym: "",
+	},
+	{ _id: "60036a889fb4a00c5422a63f", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "60036a889fb4a00c5422a641",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS DE MARABÁ",
+		acronym: "FACIMAB",
+	},
+	{
+		_id: "60036a889fb4a00c5422a643",
+		name: "FACULDADE DE DIREITO DE GARANHUNS",
+		acronym: "FDG",
+	},
+	{
+		_id: "60036a899fb4a00c5422a646",
+		name: "FACULDADE DE TECNOLOGIA PAULISTA",
+		acronym: "",
+	},
+	{
+		_id: "60036a899fb4a00c5422a649",
+		name: "FACULDADE POLIS DAS ARTES",
+		acronym: "",
+	},
+	{
+		_id: "60036a899fb4a00c5422a64b",
+		name:
+			"FACULDADE DE TEOLOGIA DE SÃO PAULO DA IGREJA PRESBITERIANA INDEPENDENTE DO BRASIL",
+		acronym: "",
+	},
+	{
+		_id: "60036a8a9fb4a00c5422a64e",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO BOM JESUS DO ITABAPOANA",
+		acronym: "ISEBJI",
+	},
+	{
+		_id: "60036a8a9fb4a00c5422a651",
+		name: "INSTITUTO SUPERIOR DE EDUCAÇÃO TRÊS RIOS",
+		acronym: "ISE TRÊS RIOS",
+	},
+	{
+		_id: "60036a8b9fb4a00c5422a654",
+		name: "Instituto Superior de Tecnologia de Paracambi",
+		acronym: "IST PARACAMBI",
+	},
+	{
+		_id: "60036a8b9fb4a00c5422a656",
+		name: "FACULDADE DE TECNOLOGIA INED - UNIDADE CONTAGEM",
+		acronym: "",
+	},
+	{
+		_id: "60036a8b9fb4a00c5422a658",
+		name: "UNIVERSIDADE ESTADUAL DE RORAIMA",
+		acronym: "UERR",
+	},
+	{
+		_id: "60036a8b9fb4a00c5422a65b",
+		name: "FACULDADE EDUCACIONAL DE MATELÂNDIA",
+		acronym: "FAMA",
+	},
+	{
+		_id: "60036a8c9fb4a00c5422a65d",
+		name: "FACULDADE DE TECNOLOGIA DE SÃO BERNARDO DO CAMPO",
+		acronym: "FATEC-SB",
+	},
+	{
+		_id: "60036a8c9fb4a00c5422a65f",
+		name: "FACULDADE INTERNACIONAL SIGNORELLI",
+		acronym: "",
+	},
+	{
+		_id: "60036a8c9fb4a00c5422a661",
+		name: "FACULDADE SOGIPA DE EDUCAÇÃO FÍSICA",
+		acronym: "",
+	},
+	{ _id: "60036a8c9fb4a00c5422a663", name: "FACULDADE FACMIL", acronym: "" },
+	{
+		_id: "60036a8d9fb4a00c5422a666",
+		name: "FACULDADE DE TECNOLOGIA SENAC CAÇADOR",
+		acronym: "SENAC",
+	},
+	{
+		_id: "60036a8d9fb4a00c5422a669",
+		name: "FACULDADE DE TECNOLOGIA SENAC SÃO MIGUEL DO OESTE",
+		acronym: "5133",
+	},
+	{ _id: "60036a8d9fb4a00c5422a66b", name: "FACULDADE DINÂMICA", acronym: "" },
+	{
+		_id: "60036a8e9fb4a00c5422a66d",
+		name: "FACULDADES INTEGRADAS PADRE ALBINO",
+		acronym: "FIPA",
+	},
+	{
+		_id: "60036a8e9fb4a00c5422a66f",
+		name: "FACULDADE UIRAPURU",
+		acronym: "FAU",
+	},
+	{
+		_id: "60036a8e9fb4a00c5422a671",
+		name: "FACULDADES INTEGRADAS PAULISTA",
+		acronym: "FIP",
+	},
+	{
+		_id: "60036a8e9fb4a00c5422a673",
+		name: "FACULDADE RAIMUNDO MARINHO",
+		acronym: "FRM",
+	},
+	{
+		_id: "60036a8f9fb4a00c5422a675",
+		name: "UNIVERSIDADE ESTADUAL DE ALAGOAS - UNEAL",
+		acronym: "UNEAL",
+	},
+	{
+		_id: "60036a8f9fb4a00c5422a677",
+		name: "FACULDADE DE CIÊNCIAS JURÍDICAS DE SANTOS DUMONT",
+		acronym: "FCJSD",
+	},
+	{
+		_id: "60036a8f9fb4a00c5422a67a",
+		name: "FACULDADE DE DIREITO DE CARANGOLA",
+		acronym: "FDC",
+	},
+	{ _id: "60036a8f9fb4a00c5422a67c", name: "FACULDADE FORTIUM", acronym: "" },
+	{
+		_id: "60036a909fb4a00c5422a67e",
+		name: "FACULDADE ANHANGÜERA DE RIBEIRÃO PRETO",
+		acronym: "",
+	},
+	{
+		_id: "60036a909fb4a00c5422a681",
+		name: "FACULDADES INTEGRADAS DE TAQUARA",
+		acronym: "FACCAT",
+	},
+	{
+		_id: "60036a909fb4a00c5422a683",
+		name: "FACULDADE DE CIÊNCIAS E TECNOLOGIA DE BRASÍLIA",
+		acronym: "FACITEB",
+	},
+	{
+		_id: "60036a909fb4a00c5422a685",
+		name: "FACULDADE ANHANGÜERA DE DOURADOS",
+		acronym: "FAD",
+	},
+	{
+		_id: "60036a919fb4a00c5422a687",
+		name: "FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS E HUMANAS DE GARANHUNS",
+		acronym: "FAHUG",
+	},
+	{
+		_id: "60036a919fb4a00c5422a68a",
+		name: "FACULDADES ATIBAIA",
+		acronym: "FAAT",
+	},
+	{
+		_id: "60036a919fb4a00c5422a68c",
+		name: "FACULDADES UNIFICADAS DOCTUM DE CATAGUASES",
+		acronym: "FACULDADES DOCTUM",
+	},
+	{
+		_id: "60036a929fb4a00c5422a68e",
+		name: "FACULDADES UNIFICADAS DOCTUM DE GUARAPARI",
+		acronym: "FACULDADES DOCTUM",
+	},
+	{
+		_id: "60036a929fb4a00c5422a691",
+		name: "FACULDADES UNIFICADAS DOCTUM DE IÚNA",
+		acronym: "FACULDADES DOCTUM",
+	},
+	{
+		_id: "60036a929fb4a00c5422a694",
+		name: "FACULDADES UNIFICADAS DOCTUM DE LEOPOLDINA",
+		acronym: "FACULDADES DOCTUM",
+	},
+	{
+		_id: "60036a939fb4a00c5422a696",
+		name: "FACULDADE PORTO-ALEGRENSE",
+		acronym: "FAPA",
+	},
+	{
+		_id: "60036a939fb4a00c5422a698",
+		name: "FACULDADE GUILHERME GUIMBALA",
+		acronym: "FGG",
+	},
+	{
+		_id: "60036a939fb4a00c5422a69a",
+		name: "FUNDAÇÃO UNIVERSIDADE FEDERAL DO PAMPA - UNIPAMPA",
+		acronym: "UNIPAMPA",
+	},
+	{
+		_id: "60036a939fb4a00c5422a69c",
+		name: "FACULDADE SERIGY",
+		acronym: "FASERGY",
+	},
+	{
+		_id: "60036a949fb4a00c5422a69f",
+		name: "FACULDADES INTEGRADAS ASMEC",
+		acronym: "ASMEC",
+	},
+	{
+		_id: "60036a949fb4a00c5422a6a1",
+		name: "FACULDADES UNIFICADAS DOCTUM DE TEÓFILO OTONI",
+		acronym: "FACULDADES DOCTUM",
+	},
+	{
+		_id: "60036a949fb4a00c5422a6a3",
+		name: "FACULDADES UNIVERSITAS",
+		acronym: "",
+	},
+	{
+		_id: "60036a949fb4a00c5422a6a5",
+		name: "FACULDADE IMPACTA DE TECNOLOGIA",
+		acronym: "FIT",
+	},
+	{
+		_id: "60036a959fb4a00c5422a6a7",
+		name: "INSTITUTO DE ENSINO SUPERIOR INTEGRADO-IESI",
+		acronym: "FENORD",
+	},
+	{ _id: "60036a959fb4a00c5422a6a9", name: "FACULDADES OPET", acronym: "" },
+	{
+		_id: "60036a959fb4a00c5422a6ab",
+		name: "FACULDADE DE TECNOLOGIA DE MINAS GERAIS - FATEMIG",
+		acronym: "",
+	},
+	{
+		_id: "60036a959fb4a00c5422a6ad",
+		name:
+			"FACULDADES INTEGRADAS DA UNIÃO EDUCACIONAL DO PLANALTO CENTRAL - FACIPLAC",
+		acronym: "FACIPLAC",
+	},
+	{
+		_id: "60036a969fb4a00c5422a6b0",
+		name: "FACULDADE PARA O DESENVOLVIMENTO DO SUDESTE TOCANTINENSE",
+		acronym: "FADES",
+	},
+	{
+		_id: "60036a969fb4a00c5422a6b2",
+		name: "FACULDADE ANHANGÜERA DE BAURU",
+		acronym: "",
+	},
+	{
+		_id: "60036a969fb4a00c5422a6b4",
+		name: "FACULDADE CAMPO REAL",
+		acronym: "CAMPO REAL",
+	},
+	{
+		_id: "60036a969fb4a00c5422a6b6",
+		name: "FACULDADE DE CIÊNCIA",
+		acronym: "TECNOLOGIA E EDUCAÇÃO",
+	},
+	{
+		_id: "60036a979fb4a00c5422a6b8",
+		name: "FACULDADE GUARAPUAVA",
+		acronym: "FG",
+	},
+	{
+		_id: "60036a979fb4a00c5422a6ba",
+		name: "FACULDADE CATHEDRAL",
+		acronym: "FACES",
+	},
+	{
+		_id: "60036a979fb4a00c5422a6bc",
+		name: "FACULDADES VALE DO CARANGOLA - FAVALE",
+		acronym: "FAVALE",
+	},
+	{
+		_id: "60036a979fb4a00c5422a6be",
+		name: "FACULDADE PRESIDENTE ANTÔNIO CARLOS",
+		acronym: "FAPAC",
+	},
+	{
+		_id: "60036a989fb4a00c5422a6c0",
+		name: "FACULDADE ANHANGUERA DE ANÁPOLIS",
+		acronym: "FAAA",
+	},
+	{
+		_id: "60036a989fb4a00c5422a6c2",
+		name: "FACULDADE ANHANGUERA DE JACAREÍ",
+		acronym: "",
+	},
+	{
+		_id: "60036a989fb4a00c5422a6c4",
+		name: "FACULDADES INTEGRADAS DO NORTE DE MINAS - FUNORTE",
+		acronym: "FUNORTE",
+	},
+	{
+		_id: "60036a989fb4a00c5422a6c6",
+		name: "FACULDADE ADVENTISTA DE HORTOLÂNDIA",
+		acronym: "",
+	},
+	{
+		_id: "60036a999fb4a00c5422a6c8",
+		name: "LIBERTAS - FACULDADES INTEGRADAS",
+		acronym: "LIBERTAS",
+	},
+	{
+		_id: "60036a999fb4a00c5422a6ca",
+		name: "FACULDADES INTEGRADAS SÃO JUDAS TADEU",
+		acronym: "SJT",
+	},
+	{
+		_id: "60036a999fb4a00c5422a6cc",
+		name: "FACULDADE DE TECNOLOGIA DE PRESIDENTE PRUDENTE",
+		acronym: "FATEC",
+	},
+	{
+		_id: "60036a999fb4a00c5422a6ce",
+		name: "FACULDADE DE TECNOLOGIA DE BRAGANÇA PAULISTA",
+		acronym: "",
+	},
+	{
+		_id: "60036a9a9fb4a00c5422a6d1",
+		name: "FACULDADE DE VARGEM GRANDE PAULISTA",
+		acronym: "",
+	},
+	{
+		_id: "60036a9a9fb4a00c5422a6d3",
+		name: "FACULDADE DE CIÊNCIAS HUMANAS E SOCIAIS DE ARARIPINA - FACISA",
+		acronym: "FACISA",
+	},
+	{
+		_id: "60036a9a9fb4a00c5422a6d5",
+		name: "FACULDADE ANHANGUERA DE JOINVILLE",
+		acronym: "",
+	},
+	{
+		_id: "60036a9b9fb4a00c5422a6d7",
+		name: "FACULDADE DE TECNOLOGIA DE SÃO JOSÉ DOS CAMPOS",
+		acronym: "ETEP",
+	},
+	{
+		_id: "60036a9b9fb4a00c5422a6d9",
+		name: "FACULDADES UNIDAS DO VALE DO ARAGUAIA",
+		acronym: "UNIVAR",
+	},
+	{
+		_id: "60036a9b9fb4a00c5422a6db",
+		name: "CENTRO UNIVERSITÁRIO SÃO JOSÉ DE ITAPERUNA",
+		acronym: "",
+	},
+	{
+		_id: "60036a9b9fb4a00c5422a6dd",
+		name: "UNIVERSIDADE DO ESTADO DO AMAPÁ",
+		acronym: "UEAP",
+	},
+	{
+		_id: "60036a9c9fb4a00c5422a6e0",
+		name: "FACULDADE MUNICIPAL DE PALHOÇA",
+		acronym: "FMP",
+	},
+	{
+		_id: "60036a9c9fb4a00c5422a6e3",
+		name: "FAMAC - FACULDADE DE MACHADINHO DO OESTE",
+		acronym: "FAMAC",
+	},
+	{
+		_id: "60036a9c9fb4a00c5422a6e5",
+		name: "FACULDADE OBOÉ - FACO",
+		acronym: "FACO",
+	},
+	{
+		_id: "60036a9d9fb4a00c5422a6e8",
+		name: "INSTITUTO LOGOS DE EDUCAÇÃO SUPERIOR",
+		acronym: "ILES",
+	},
+	{
+		_id: "60036a9d9fb4a00c5422a6ea",
+		name: "FACULDADE DE TECNOLOGIA DE VALENÇA",
+		acronym: "FACTIVA",
+	},
+	{
+		_id: "60036a9d9fb4a00c5422a6ec",
+		name: "FACULDADE DE TECNOLOGIA DE ENSINO SUPERIOR - FATEC",
+		acronym: "CENTES",
+	},
+	{
+		_id: "60036a9d9fb4a00c5422a6ee",
+		name: "FACULDADE DE TEOLOGIA E CIÊNCIAS HUMANAS",
+	},
+	{
+		_id: "60036a9e9fb4a00c5422a6f0",
+		name: "FACULDADE DE TECNOLOGIA BANDEIRANTES",
+		acronym: "BANDTEC",
+	},
+	{
+		_id: "60036a9e9fb4a00c5422a6f2",
+		name: "INSTITUTO SÃO PAULO DE ESTUDOS SUPERIORES",
+		acronym: "ITESP",
+	},
+	{ _id: "60036a9e9fb4a00c5422a6f5", name: "FACULDADE HSM", acronym: "" },
+	{ _id: "60036a9f9fb4a00c5422a6f8", name: "FACULDADE LÍDER", acronym: "FAL" },
+	{
+		_id: "60036a9f9fb4a00c5422a6fa",
+		name: "FACULDADE NORTE CAPIXABA DE SAO MATEUS",
+		acronym: "",
+	},
+	{
+		_id: "60036a9f9fb4a00c5422a6fd",
+		name: "FACULDADE UNIÃO ARARUAMA DE ENSINO S/S Ltda.",
+		acronym: "FAC-UNILAGOS",
+	},
+	{
+		_id: "60036aa09fb4a00c5422a700",
+		name: "FACULDADE CENTRO OESTE",
+		acronym: "FACEOPAR",
+	},
+	{
+		_id: "60036aa09fb4a00c5422a702",
+		name: "ESCOLA SUPERIOR NACIONAL DE SEGUROS - UNIDADE SÃO PAULO",
+		acronym: "ESNS-SP",
+	},
+	{
+		_id: "60036aa09fb4a00c5422a704",
+		name: "FACULDADE ANHANGUERA DE SUMARÉ",
+		acronym: "FACSUMARÉ",
+	},
+	{
+		_id: "60036aa09fb4a00c5422a707",
+		name: "FACULDADE DE TECNOLOGIA ALTO MÉDIO SÃO FRANCISCO",
+		acronym: "FAC FUNAM",
+	},
+	{
+		_id: "60036aa19fb4a00c5422a709",
+		name: "FACULDADE ESPECIALIZADA NA ÁREA DE SAÚDE DO RIO GRANDE DO SUL",
+		acronym: "FASURGS",
+	},
+	{
+		_id: "60036aa19fb4a00c5422a70b",
+		name: "FACULDADE METROPOLITANA DE ANÁPOLIS",
+		acronym: "FAMA",
+	},
+	{
+		_id: "60036aa19fb4a00c5422a70d",
+		name: "FACULDADE DE TECNOLOGIA DA SERRA GAÚCHA - CAXIAS DO SUL",
+		acronym: "FTSG",
+	},
+	{
+		_id: "60036aa19fb4a00c5422a70f",
+		name: "FACULDADE DE TECNOLOGIA DE MACAPÁ",
+		acronym: "FTA",
+	},
+	{
+		_id: "60036aa29fb4a00c5422a711",
+		name: "FACULDADE DE EDUCAÇÃO E CULTURA DE VILHENA",
+		acronym: "FAEV",
+	},
+	{
+		_id: "60036aa29fb4a00c5422a713",
+		name: "FACULDADE ANGLO-AMERICANO DE CHAPECÓ",
+		acronym: "FAACH",
+	},
+	{
+		_id: "60036aa29fb4a00c5422a716",
+		name: "FACULDADE PITÁGORAS DE VOTORANTIM - SOROCABA",
+		acronym: "-",
+	},
+	{
+		_id: "60036aa29fb4a00c5422a718",
+		name: "FACULDADE DE TECNOLOGIA INED - UNIDADE BETIM",
+		acronym: "FATECBETIM",
+	},
+	{
+		_id: "60036aa39fb4a00c5422a71a",
+		name: "FACULDADE PAULO SETUBAL",
+		acronym: "FPS",
+	},
+	{
+		_id: "60036aa39fb4a00c5422a71c",
+		name: "FACULDADE DE TECNOLOGIA DO ISTITUTO EUROPEO DI DESIGN",
+		acronym: "IED SP",
+	},
+	{
+		_id: "60036aa39fb4a00c5422a71e",
+		name: "FACULDADE DO POVO",
+		acronym: "FAP",
+	},
+	{
+		_id: "60036aa39fb4a00c5422a720",
+		name: "FACULDADE DE TECNOLOGIA INSPIRAR",
+		acronym: "Inspirar",
+	},
+	{
+		_id: "60036aa49fb4a00c5422a723",
+		name: "FACULDADE EVOLUÇÃO ALTO OESTE POTIGUAR",
+		acronym: "FACEP",
+	},
+	{
+		_id: "60036aa49fb4a00c5422a725",
+		name:
+			"INSTITUTO NACIONAL DE ENSINO SUPERIOR E PÓS-GRADUAÇÃO PADRE GERVÁSIO",
+		acronym: "INAPÓS",
+	},
+	{
+		_id: "60036aa49fb4a00c5422a727",
+		name: "FACULDADE DE CIÊNCIAS APLICADAS E TECNOLÓGICAS DO LITORAL SUL",
+		acronym: "FACSUL",
+	},
+	{
+		_id: "60036aa49fb4a00c5422a729",
+		name: "FACULDADE EVANGÉLICA DE TAGUATINGA",
+		acronym: "FE TAGUATINGA",
+	},
+	{
+		_id: "60036aa59fb4a00c5422a72c",
+		name: "FACULDADE DO SERTÃO BAIANO",
+		acronym: "FASBE",
+	},
+	{
+		_id: "60036aa59fb4a00c5422a72e",
+		name: "FACULDADE DE TECNOLOGIA INED - UNIDADE VENDA NOVA",
+		acronym: "",
+	},
+	{ _id: "60036aa59fb4a00c5422a730", name: "FACULDADE PRISMA", acronym: "FAP" },
+	{
+		_id: "60036aa69fb4a00c5422a732",
+		name: "ESCOLA DE DIREITO DE BRASÍLIA",
+		acronym: "EDB",
+	},
+	{
+		_id: "60036aa69fb4a00c5422a735",
+		name: "FACULDADE PADRE ANCHIETA DE VÁRZEA PAULISTA",
+		acronym: "ANCHIETA",
+	},
+	{
+		_id: "60036aa69fb4a00c5422a738",
+		name: "FACULDADE DE TECNOLOGIA LA SALLE - ESTRELA",
+		acronym: "FACSALLE",
+	},
+	{
+		_id: "60036aa79fb4a00c5422a73b",
+		name: "FACULDADE METROPOLITANA SÃO CARLOS",
+		acronym: "FAMESC",
+	},
+	{
+		_id: "60036aa79fb4a00c5422a73d",
+		name: "FACULDADE METROPOLITANA SÃO CARLOS BJI",
+		acronym: "FAMESC-BJI",
+	},
+	{
+		_id: "60036aa79fb4a00c5422a73f",
+		name: "FACULDADE MOGIANA DO ESTADO DE SÃO PAULO",
+		acronym: "FAMOESP",
+	},
+	{
+		_id: "60036aa79fb4a00c5422a741",
+		name: "FACULDADE DE TECNOLOGIA DA SERRA GAÚCHA - BENTO CONÇALVES",
+		acronym: "FTSG",
+	},
+	{
+		_id: "60036aa89fb4a00c5422a743",
+		name: "FACULDADE BRASILEIRA DE ESTUDOS AVANÇADOS",
+		acronym: "FABEA",
+	},
+	{
+		_id: "60036aa89fb4a00c5422a745",
+		name: "FACULDADE DE MÚSICA SOUZA LIMA",
+		acronym: "FMSL",
+	},
+	{
+		_id: "60036aa89fb4a00c5422a747",
+		name: "FACULDADE DE TECNOLOGIA DE SETE LAGOAS",
+		acronym: "FASSETE",
+	},
+	{
+		_id: "60036aa89fb4a00c5422a749",
+		name: "ESCOLA SUPERIOR DE AVIAÇÃO CIVIL",
+		acronym: "ESAC",
+	},
+	{
+		_id: "60036aa99fb4a00c5422a74b",
+		name: "FACULDADE DE TECNOLOGIA FINACI",
+		acronym: "FINACI",
+	},
+	{ _id: "60036aa99fb4a00c5422a74e", name: "FACULDADE DE EDUCAÇÃO" },
+	{
+		_id: "60036aa99fb4a00c5422a750",
+		name: "FACULDADES UNIDAS DE PESQUISA",
+		acronym: "CIÊNCIAS E SAÚDE LTDA",
+	},
+	{
+		_id: "60036aa99fb4a00c5422a752",
+		name: "FACULDADE TEOLÓGICA DA ASSEMBLÉIA DE DEUS EM CURITIBA",
+		acronym: "FATADC",
+	},
+	{
+		_id: "60036aaa9fb4a00c5422a754",
+		name: "FACULDADE UNIÃO DE CAMPO MOURÃO",
+		acronym: "",
+	},
+	{
+		_id: "60036aaa9fb4a00c5422a756",
+		name: "FACULDADE DE TECNOLOGIA TECBRASIL - UNIDADE NOVO HAMBURGO",
+		acronym: "Ftec Novo Hamburgo",
+	},
+	{
+		_id: "60036aaa9fb4a00c5422a758",
+		name: "FACULDADE IBMEC DISTRITO FEDERAL",
+		acronym: "IBMEC/DF",
+	},
+	{
+		_id: "60036aaa9fb4a00c5422a75a",
+		name: "FACULDADE EDUCACIONAL DE FRANCISCO BELTRÃO",
+		acronym: "FEFB",
+	},
+	{
+		_id: "60036aab9fb4a00c5422a75c",
+		name: "IPOG - INSTITUTO DE PÓS-GRADUAÇÃO & GRADUAÇÃO",
+		acronym: "IPOG",
+	},
+	{
+		_id: "60036aab9fb4a00c5422a75e",
+		name: "FACULDADE DE TECNOLOGIA LOURENÇO FILHO",
+		acronym: "FATEC - FLF",
+	},
+	{
+		_id: "60036aab9fb4a00c5422a760",
+		name: "FACULDADE DE GOIÂNIA - UNIDADE 1",
+		acronym: "FAG",
+	},
+	{
+		_id: "60036aab9fb4a00c5422a762",
+		name: "FACULDADE ADJETIVO CETEP",
+		acronym: "ADJETIVO-CETEP",
+	},
+	{
+		_id: "60036aac9fb4a00c5422a765",
+		name: "FACULDADE PRINCESA DO OESTE",
+		acronym: "FPO",
+	},
+	{
+		_id: "60036aac9fb4a00c5422a768",
+		name: "FACULDADE CANÇÃO NOVA",
+		acronym: "FCN",
+	},
+	{
+		_id: "60036aac9fb4a00c5422a76a",
+		name: "FACULDADES EVANGÉLICAS INTEGRADAS CANTARES DE SALOMÃO",
+		acronym: "FEICS",
+	},
+	{
+		_id: "60036aad9fb4a00c5422a76d",
+		name: "FACULDADE SÃO FIDELIS",
+		acronym: "FSF",
+	},
+	{
+		_id: "60036aad9fb4a00c5422a770",
+		name: "FACULDADE DE TECNOLOGIA ATENEU",
+		acronym: "",
+	},
+	{
+		_id: "60036aad9fb4a00c5422a772",
+		name: "FACULDADE ISEIB DE BETIM",
+		acronym: "FISBE",
+	},
+	{
+		_id: "60036aae9fb4a00c5422a774",
+		name: "FACULDADE PITÁGORAS DE CONTAGEM",
+		acronym: "PIT Contagem",
+	},
+	{
+		_id: "60036aae9fb4a00c5422a777",
+		name: "FACULDADES FUTURÃO",
+		acronym: "CENTEFF",
+	},
+	{
+		_id: "60036aae9fb4a00c5422a779",
+		name: "FACULDADE PITÁGORAS DE GOVERNADOR VALADARES",
+		acronym: "PIT GV",
+	},
+	{
+		_id: "60036aaf9fb4a00c5422a77c",
+		name: "FACULDADE DE PORTO FELIZ",
+		acronym: "",
+	},
+	{
+		_id: "60036aaf9fb4a00c5422a77e",
+		name: "FACULDADE SANTO AGOSTINHO DE SETE LAGOAS",
+		acronym: "FASASETE",
+	},
+	{
+		_id: "60036aaf9fb4a00c5422a780",
+		name: "ESCOLA SUPERIOR ABERTA DO BRASIL",
+		acronym: "ESAB",
+	},
+	{
+		_id: "60036aaf9fb4a00c5422a782",
+		name: "FACULDADE SAGRADA FAMÍLIA",
+		acronym: "FASF",
+	},
+	{
+		_id: "60036ab09fb4a00c5422a785",
+		name: "FACULDADE ITAPURANGA",
+		acronym: "",
+	},
+	{
+		_id: "60036ab09fb4a00c5422a787",
+		name: "FACULDADE DE TECNOLOGIA BSG-U",
+		acronym: "FBSG-U",
+	},
+	{
+		_id: "60036ab09fb4a00c5422a789",
+		name: "FACULDADE DE MARÍLIA",
+		acronym: "FAMAR",
+	},
+	{
+		_id: "60036ab09fb4a00c5422a78b",
+		name: "FACULDADE UNIVERSO",
+		acronym: "FAUNI",
+	},
+	{
+		_id: "60036ab19fb4a00c5422a78d",
+		name:
+			"INSTITUTO SUPERIOR DE CIÊNCIAS HUMANAS E SOCIAIS APLICADAS DE ABAETÉ",
+		acronym: "ISAB",
+	},
+	{
+		_id: "60036ab19fb4a00c5422a78f",
+		name: "Faculdade Presidente Antônio Carlos de Betim",
+		acronym: "FUNEC Betim",
+	},
+	{
+		_id: "60036ab19fb4a00c5422a792",
+		name: "Faculdade Presidente Antônio Carlos de Aimorés",
+		acronym: "FUNEC Aimorés",
+	},
+	{
+		_id: "60036ab29fb4a00c5422a794",
+		name: "Faculdade Presidente Antônio Carlos de Belo Horizonte",
+		acronym: "FUNEC Belo Horizonte",
+	},
+	{ _id: "60036ab29fb4a00c5422a796", name: "FACULDADE BETIM", acronym: "FABE" },
+	{
+		_id: "60036ab29fb4a00c5422a798",
+		name: "Faculdade Presidente Antônio Carlos de Almenara",
+		acronym: "FUNEC Almenara",
+	},
+	{
+		_id: "60036ab29fb4a00c5422a79b",
+		name: "Faculdade Presidente Antônio Carlos de Baependi",
+		acronym: "FUNEES Baependi",
+	},
+	{
+		_id: "60036ab39fb4a00c5422a79d",
+		name: "Faculdade Presidente Antônio Carlos de Ponte Nova",
+		acronym: "FUNEES Ponte Nova",
+	},
+	{
+		_id: "60036ab39fb4a00c5422a7a0",
+		name: "Faculdade Presidente Antônio Carlos de Raul Soares",
+		acronym: "FUNEES Raul Soares",
+	},
+	{
+		_id: "60036ab39fb4a00c5422a7a3",
+		name: "Faculdade Presidente Antônio Carlos de São Francisco",
+		acronym: "FUNEES São Francisco",
+	},
+	{
+		_id: "60036ab49fb4a00c5422a7a6",
+		name: "Faculdade Presidente Antônio Carlos de São João Nepomuceno",
+		acronym: "FUNEES SJN",
+	},
+	{
+		_id: "60036ab49fb4a00c5422a7a8",
+		name: "Faculdade Presidente Antônio Carlos de São Lourenço",
+		acronym: "FUNEES São Lourenço",
+	},
+	{
+		_id: "60036ab49fb4a00c5422a7aa",
+		name: "Faculdade Presidente Antônio Carlos de Campo Belo",
+		acronym: "FUNEES Campo Belo",
+	},
+	{
+		_id: "60036ab59fb4a00c5422a7ad",
+		name: "Faculdade Presidente Antônio Carlos de Vazante",
+		acronym: "FEES Vazante",
+	},
+	{
+		_id: "60036ab59fb4a00c5422a7af",
+		name: "Faculdade Presidente Antônio Carlos de Curvelo",
+		acronym: "FUNEES Curvelo",
+	},
+	{
+		_id: "60036ab59fb4a00c5422a7b2",
+		name: "Faculdade Presidente Antônio Carlos de Várzea da Palma",
+		acronym: "FEES Várzea da Palma",
+	},
+	{
+		_id: "60036ab69fb4a00c5422a7b5",
+		name: "Faculdade Presidente Antônio Carlos de Itanhandu",
+		acronym: "FUNEES Itanhandu",
+	},
+	{
+		_id: "60036ab69fb4a00c5422a7b8",
+		name: "Faculdade Presidente Antônio Carlos de Lambari",
+		acronym: "FUNEES Lambari",
+	},
+	{
+		_id: "60036ab69fb4a00c5422a7bb",
+		name: "Faculdade Presidente Antônio Carlos de Barão de Cocais",
+		acronym: "",
+	},
+	{
+		_id: "60036ab79fb4a00c5422a7bd",
+		name: "Faculdade Presidente Antônio Carlos de Mariana",
+		acronym: "FUNEC Mariana",
+	},
+	{
+		_id: "60036ab79fb4a00c5422a7c0",
+		name: "Faculdade Presidente Antônio Carlos de Bocaiúva",
+		acronym: "FUNEES Bocaiúva",
+	},
+	{
+		_id: "60036ab79fb4a00c5422a7c2",
+		name: "Faculdade Presidente Antônio Carlos de Montes Claros",
+		acronym: "FUNEC Montes Claros",
+	},
+	{
+		_id: "60036ab79fb4a00c5422a7c4",
+		name: "Faculdade Presidente Antônio Carlos de Nova Lima",
+		acronym: "FUNEC Nova Lima",
+	},
+	{
+		_id: "60036ab89fb4a00c5422a7c7",
+		name: "Faculdade Presidente Antônio Carlos de Porteirinha",
+		acronym: "FUNEES Porteirinha",
+	},
+	{
+		_id: "60036ab89fb4a00c5422a7c9",
+		name: "Faculdade Presidente Antônio Carlos de Sabará",
+		acronym: "FUNEES Sabará",
+	},
+	{
+		_id: "60036ab89fb4a00c5422a7cb",
+		name: "Faculdade Presidente Antônio Carlos de Teófilo Otoni",
+		acronym: "FUNEES Teófilo Otoni",
+	},
+	{
+		_id: "60036ab99fb4a00c5422a7cd",
+		name: "Faculdade de Educação e Estudos Sociais de Uberlândia",
+		acronym: "FUNEES Uberlândia",
+	},
+	{
+		_id: "60036ab99fb4a00c5422a7d0",
+		name: "Faculdade Presidente Antônio Carlos de Carmópolis",
+		acronym: "FUNEES C. de Minas",
+	},
+	{
+		_id: "60036ab99fb4a00c5422a7d2",
+		name: "Faculdade Presidente Antônio Carlos de Contagem",
+		acronym: "FACEC Contagem",
+	},
+	{
+		_id: "60036ab99fb4a00c5422a7d4",
+		name: "Faculdade Presidente Antônio Carlos de Governador Valadares",
+		acronym: "FAU G. Valadares",
+	},
+	{
+		_id: "60036aba9fb4a00c5422a7d6",
+		name: "Faculdade de Educação e Estudos Sociais de Governador Valadares",
+		acronym: "FUNEES G. Valadares",
+	},
+	{
+		_id: "60036aba9fb4a00c5422a7d8",
+		name: "FACULDADE TRÊS PONTAS",
+		acronym: "FATEP",
+	},
+	{
+		_id: "60036aba9fb4a00c5422a7da",
+		name: "Faculdade Presidente Antônio Carlos de Itabira",
+		acronym: "FUNEES Itabira",
+	},
+	{
+		_id: "60036aba9fb4a00c5422a7dd",
+		name: "Faculdade Presidente Antônio Carlos de Itambacuri",
+		acronym: "FUNEES Itambacuri",
+	},
+	{
+		_id: "60036abb9fb4a00c5422a7e0",
+		name: "Faculdade Presidente Antõnio Carlos de Perdões",
+		acronym: "FUNEES Perdões",
+	},
+	{
+		_id: "60036abb9fb4a00c5422a7e3",
+		name: "Faculdade Presidente Antônio Carlos de Ribeirão das Neves",
+		acronym: "FUNEES R. das Neves",
+	},
+	{
+		_id: "60036abb9fb4a00c5422a7e5",
+		name: "Faculdade Presidente Antônio Carlos de São João Del Rei",
+		acronym: "FUNEES SJDR",
+	},
+	{
+		_id: "60036abc9fb4a00c5422a7e8",
+		name: "Instituto Superior de Ciências Agrárias",
+		acronym: "ISAP",
+	},
+	{
+		_id: "60036abc9fb4a00c5422a7eb",
+		name: "Faculdade Presidente Antônio Carlos de Arcos",
+		acronym: "FUNEES Arcos",
+	},
+	{
+		_id: "60036abd9fb4a00c5422a7ee",
+		name: "Faculdade Presidente Antônio Carlos de Elói Mendes",
+		acronym: "FUNEES",
+	},
+	{
+		_id: "60036abd9fb4a00c5422a7f1",
+		name: "Faculdade Presidente Antônio Carlos de Lagoa Santa",
+		acronym: "FUNEES",
+	},
+	{
+		_id: "60036abd9fb4a00c5422a7f4",
+		name: "Faculdade Presidente Antônio Carlos de Divino",
+		acronym: "FUNEES",
+	},
+	{
+		_id: "60036abe9fb4a00c5422a7f7",
+		name: "Faculdade Presidente Antônio Carlos de Senhora dos Remédios",
+		acronym: "FUNEES",
+	},
+	{
+		_id: "60036abe9fb4a00c5422a7fa",
+		name: "Faculdade Presidente Antônio Carlos de Central de Minas",
+		acronym: "FUNEES",
+	},
+	{
+		_id: "60036abe9fb4a00c5422a7fd",
+		name: "Faculdade Presidente Antônio Carlos de Felixlândia",
+		acronym: "FUNEES",
+	},
+	{
+		_id: "60036abf9fb4a00c5422a800",
+		name: "Faculdade Presidente Antônio Carlos de Uruana de Minas",
+		acronym: "FUNEES",
+	},
+	{ _id: "60036abf9fb4a00c5422a802", name: "FACULDADE DE CIÊNCIAS GERENCIAIS" },
+	{
+		_id: "60036abf9fb4a00c5422a805",
+		name: "Faculdade Presidente Antônio Carlos de Timóteo",
+		acronym: "FECT",
+	},
+	{
+		_id: "60036ac09fb4a00c5422a807",
+		name: "Faculdade Presidente Antônio Carlos de Uberaba",
+		acronym: "",
+	},
+	{
+		_id: "60036ac09fb4a00c5422a809",
+		name: "Faculdade Presidente Antônio Carlos de Itabirito",
+		acronym: "",
+	},
+	{
+		_id: "60036ac09fb4a00c5422a80c",
+		name: "Faculdade Presidente Antônio Carlos de Tupaciguara",
+		acronym: "",
+	},
+	{
+		_id: "60036ac09fb4a00c5422a80e",
+		name: "Faculdade Presidente Antônio Carlos de Uberlândia",
+		acronym: "",
+	},
+	{
+		_id: "60036ac19fb4a00c5422a810",
+		name: "Faculdade Presidente Antônio Carlos de Congonhas",
+		acronym: "",
+	},
+	{
+		_id: "60036ac19fb4a00c5422a813",
+		name: "INSTITUTO SUPERIOR DE ENSINO E PESQUISA DE CAMBUÍ",
+		acronym: "ISEPEC",
+	},
+	{
+		_id: "60036ac19fb4a00c5422a815",
+		name: "Faculdade Presidente Antônio Carlos de Itajubá",
+		acronym: "",
+	},
+	{ _id: "60036ac29fb4a00c5422a817", name: "NOVA FACULDADE", acronym: "NF" },
+	{
+		_id: "60036ac29fb4a00c5422a819",
+		name: "FACULDADE EFICAZ",
+		acronym: "FACULDADE EFICAZ",
+	},
+	{
+		_id: "60036ac29fb4a00c5422a81b",
+		name: "FACULDADE DE TECNOLOGIA PORTO DAS MONÇÕES",
+		acronym: "FAMO",
+	},
+	{ _id: "60036ac29fb4a00c5422a81e", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{ _id: "60036ac39fb4a00c5422a820", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{ _id: "60036ac39fb4a00c5422a822", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "60036ac39fb4a00c5422a825",
+		name: "FACULDADE DE TECNOLOGIA FRANCISCO MORATO",
+		acronym: "FFRAMO",
+	},
+	{
+		_id: "60036ac39fb4a00c5422a827",
+		name: "FACULDADE TEOLÓGICA EVANGÉLICA DO RIO DE JANEIRO",
+		acronym: "FATERJ",
+	},
+	{
+		_id: "60036ac49fb4a00c5422a829",
+		name: "UNIVERSIDADE FEDERAL DA INTEGRAÇÃO LATINO-AMERICANA",
+		acronym: "UNILA",
+	},
+	{
+		_id: "60036ac49fb4a00c5422a82c",
+		name: "Universidade Estadual do Norte do Paraná",
+		acronym: "UENP",
+	},
+	{
+		_id: "60036ac49fb4a00c5422a82e",
+		name: "UNIVERSIDADE ALTO VALE DO RIO DO PEIXE",
+		acronym: "UNIARP",
+	},
+	{
+		_id: "60036ac59fb4a00c5422a830",
+		name: "UNIVERSIDADE FEDERAL DO OESTE DO PARÁ",
+		acronym: "UFOPA",
+	},
+	{
+		_id: "60036ac59fb4a00c5422a832",
+		name: "Faculdade Presidente Antônio Carlos de Ipatinga",
+		acronym: "",
+	},
+	{
+		_id: "60036ac59fb4a00c5422a834",
+		name: "Faculdade de Direito de Ipatinga",
+		acronym: "FADIPA",
+	},
+	{
+		_id: "60036ac59fb4a00c5422a836",
+		name: "Faculdade Presidente Antônio Carlos de Bom Despacho",
+		acronym: "",
+	},
+	{
+		_id: "60036ac69fb4a00c5422a838",
+		name: "Faculdade Presidente Antônio Carlos de Conselheiro Lafaiete",
+		acronym: "",
+	},
+	{
+		_id: "60036ac69fb4a00c5422a83b",
+		name: "Faculdade Presidente Antônio Carlos de Visconde do Rio Branco",
+		acronym: "",
+	},
+	{
+		_id: "60036ac69fb4a00c5422a83d",
+		name: "Faculdade Presidente Antônio Carlos de Leopoldina",
+		acronym: "",
+	},
+	{
+		_id: "60036ac69fb4a00c5422a83f",
+		name:
+			"UNIVERSIDADE DA INTEGRAÇÃO INTERNACIONAL DA LUSOFONIA AFRO-BRASILEIRA",
+		acronym: "UNILAB",
+	},
+	{ _id: "60036ac79fb4a00c5422a842", name: "Instituto Federal de Educação" },
+	{ _id: "60036ac79fb4a00c5422a844", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "60036ac79fb4a00c5422a846",
+		name: "UNIVERSIDADE FEDERAL DA FRONTEIRA SUL",
+		acronym: "UFFS",
+	},
+	{
+		_id: "60036ac79fb4a00c5422a848",
+		name: "Faculdade de Tecnologia de Mogi das Cruzes",
+		acronym: "FATEC-MC",
+	},
+	{ _id: "60036ac89fb4a00c5422a84b", name: "INSTITUTO FEDERAL DE EDUCAÇÃO" },
+	{
+		_id: "60036ac89fb4a00c5422a84d",
+		name: "Faculdade de Tecnologia de São José dos Campos - Jessen Vidal",
+		acronym: "FATECSJCAMPOS",
+	},
+	{
+		_id: "60036ac89fb4a00c5422a84f",
+		name: "Faculdade Presidente Antônio Carlos de Ubá",
+		acronym: "",
+	},
+	{
+		_id: "60036ac99fb4a00c5422a851",
+		name: "FACULDADE DOM HEITOR SALES",
+		acronym: "-",
+	},
+	{
+		_id: "60036ac99fb4a00c5422a853",
+		name: "Faculdade de Tecnologia Santo André",
+		acronym: "FATEC-SA",
+	},
+	{
+		_id: "60036ac99fb4a00c5422a856",
+		name: "Faculdade de Tecnologia de Itaquaquecetuba",
+		acronym: "Fatec Itaqua",
+	},
+	{
+		_id: "60036ac99fb4a00c5422a858",
+		name: "FACULDADE DE CIÊNCIAS EXATAS DE GARANHUNS",
+		acronym: "FACEG",
+	},
+	{
+		_id: "60036aca9fb4a00c5422a85a",
+		name: "FATEC Cruzeiro Prof. Waldomiro May",
+		acronym: "",
+	},
+	{
+		_id: "60036aca9fb4a00c5422a85c",
+		name: "Faculdade de Tecnologia de Piracicaba",
+		acronym: "Fatec Piracicaba",
+	},
+	{
+		_id: "60036aca9fb4a00c5422a85e",
+		name: "Faculdade de Tecnologia de Pindamonhangaba",
+		acronym: "FATEC PI",
+	},
+	{
+		_id: "60036aca9fb4a00c5422a860",
+		name: "FACULDADE DE TECONOLOGIA DA ZONA SUL",
+		acronym: "FATEC ZONASUL",
+	},
+	{
+		_id: "60036acb9fb4a00c5422a862",
+		name: "Faculdade de Tecnologia de Bauru",
+		acronym: "FATEC",
+	},
+	{
+		_id: "60036acb9fb4a00c5422a864",
+		name:
+			"Faculdade de Tecnologia de Itapetininga - Prof.Antônio Belizandro Barbosa Rezende",
+		acronym: "Fatec - Itapetininga",
+	},
+	{
+		_id: "60036acb9fb4a00c5422a866",
+		name: "Faculdade de Tecnologia Dom Amaury Castanho",
+		acronym: "Fatec Itu",
+	},
+	{
+		_id: "60036acb9fb4a00c5422a868",
+		name: "Faculdade de Tecnologia de Sertãozinho",
+		acronym: "FATEC SERTÃOZINHO",
+	},
+	{
+		_id: "60036acc9fb4a00c5422a86a",
+		name: "Faculdade de Tecnologia de Araçatuba",
+		acronym: "FATEC Araçatuba",
+	},
+	{
+		_id: "60036acc9fb4a00c5422a86d",
+		name: "Faculdade de Tecnologia de Capão Bonito",
+		acronym: "FATEC-CB",
+	},
+	{
+		_id: "60036acc9fb4a00c5422a86f",
+		name: "Faculdade de Tecnologia Dr. Thomaz Novelino",
+		acronym: "FATEC Franca",
+	},
+	{
+		_id: "60036acd9fb4a00c5422a871",
+		name: "Faculdade de Tecnologia de Osasco - Prefeito Hirant Sanazar",
+		acronym: "Fatec Osasco",
+	},
+	{
+		_id: "60036acd9fb4a00c5422a873",
+		name: "FACULDADE DE TECNOLOGIA DE LINS",
+		acronym: "FATEC LINS",
+	},
+	{
+		_id: "60036acd9fb4a00c5422a875",
+		name: "Faculdade de Tecnologia de São Caetano do Sul",
+		acronym: "FATEC SCS",
+	},
+	{
+		_id: "60036acd9fb4a00c5422a877",
+		name: "Faculdade de Tecnologia do Ipiranga",
+		acronym: "FATECIPI",
+	},
+	{
+		_id: "60036acd9fb4a00c5422a879",
+		name: "Faculdade de Tecnologia de Guarulhos",
+		acronym: "FATEC GR",
+	},
+	{
+		_id: "60036ace9fb4a00c5422a87b",
+		name: "FACULDADE DE TECNOLOGIA DE JABOTICABAL",
+		acronym: "FATEC JB",
+	},
+	{
+		_id: "60036ace9fb4a00c5422a87d",
+		name: "Faculdade de Tecnologia de Barueri",
+		acronym: "Fatec Barueri",
+	},
+	{
+		_id: "60036ace9fb4a00c5422a87f",
+		name: "Faculdade de Tecnologia de Jales",
+		acronym: "Fatec Jales",
+	},
+	{
+		_id: "60036ace9fb4a00c5422a881",
+		name:
+			"Faculdade de Tecnologia Estudante Rafael Almeida Camarinha - Marilia",
+		acronym: "Fatec Marilia",
+	},
+	{
+		_id: "60036acf9fb4a00c5422a883",
+		name: "Faculdade de Tecnologia de São Sebastião",
+		acronym: "Fatec SS",
+	},
+	{
+		_id: "60036acf9fb4a00c5422a885",
+		name:
+			"FACULDADE DE TECNOLOGIA DE TATUÍ - PROF. WILSON ROBERTO RIBEIRO DE CAMARGO",
+		acronym: "FATEC TATUÍ",
+	},
+	{
+		_id: "60036acf9fb4a00c5422a887",
+		name: "Faculdade de Tecnologia de Carapicuiba",
+		acronym: "FATEC",
+	},
+	{
+		_id: "60036acf9fb4a00c5422a889",
+		name: "Faculdade de Tecnologia de Catanduva",
+		acronym: "FATEC Catanduva",
+	},
+	{
+		_id: "60036ad09fb4a00c5422a88b",
+		name: "Faculdade de Tecnologia Apoena",
+		acronym: "FTA",
+	},
+	{
+		_id: "60036ad09fb4a00c5422a88e",
+		name: "Faculdade do Bico do Papagaio",
+		acronym: "FABIC",
+	},
+	{
+		_id: "60036ad09fb4a00c5422a890",
+		name: "FACULDADE DE CIÊNCIAS GERENCIAIS DE GUARAPARI",
+		acronym: "",
+	},
+];
+
+export default colleges;

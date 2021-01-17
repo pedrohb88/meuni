@@ -3,19 +3,14 @@ const mongoose = require('mongoose');
 const schema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'User',
+        required: true
     },
-    city: {
-        type: String
-    },
-    state: {
-        type: String
+    photo: {
+        type: String,
     },
     birthday: {
         type: Date
-    },
-    college: {
-        type: String
     },
     degree: {
         type: String

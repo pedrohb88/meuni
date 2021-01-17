@@ -10,6 +10,14 @@ const schema = new mongoose.Schema({
         required: true,
         unique: true,
     },
+    college: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'College'
+    },
+    location: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Location'
+    },
     password: {
         type: String,
         required: true,

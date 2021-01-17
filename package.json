@@ -2,7 +2,7 @@
   "name": "meuni",
   "version": "1.0.0",
   "description": "A MeUni é uma plataforma gameficada que tem como objetivo agrupar e disponibilizar informações sobre o acesso e permanência em instituições de ensino superior de forma colaborativa. ",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server",
     "server": "nodemon server",

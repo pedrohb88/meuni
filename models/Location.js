@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 
 const schema = new mongoose.Schema({
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+    photo: {
+        type: String,
     },
     city: {
         type: String,
@@ -13,30 +12,43 @@ const schema = new mongoose.Schema({
         type: String, 
         required: true,
     },
-    housingCost: {
+    housingCost: [
+        {
         value: {type: String},
         description: {type: String},
         user: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
         },
-    },
-    transportCost: {
+        college: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'College'
+        }
+    }],
+    transportCost: [{
         value: {type: String},
         description: {type: String},
         user: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
         },
-    },
-    feedCost: {
+        college: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'College'
+        }
+    }],
+    feedCost: [{
         value: {type: String},
         description: {type: String},
         user: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
         },
-    },
+        college: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'College'
+        }
+    }],
     studentBenefits: [
         {
             value: {type: String},
@@ -44,6 +56,10 @@ const schema = new mongoose.Schema({
             user: {
                 type: mongoose.Schema.Types.ObjectId,
                 ref: 'User'
+            },
+            college: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'College'
             }
         }
     ],
@@ -54,6 +70,10 @@ const schema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
         },
+        college: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'College'
+        }
     }],
     locationDetailing: [{
         value: {type: String},
@@ -62,6 +82,10 @@ const schema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
         },
+        college: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'College'
+        }
     }],
     availableHousingPlaces: [{
         value: {type: String},
@@ -71,6 +95,10 @@ const schema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
         },
+        college: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'College'
+        }
     }],
     replies: [
         {
